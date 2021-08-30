@@ -1,0 +1,12 @@
+amplify/
+node_modules/
+public/
+bin/
+.vscode/
+.storybook/
+.husky/
+.next/
+.github/
+out/
+*.config.js
+hooks/
