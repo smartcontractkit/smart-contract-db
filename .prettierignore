@@ -6,7 +6,6 @@
 node_modules
 public
 config
-data
 .cache
 .vscode
 .husky
