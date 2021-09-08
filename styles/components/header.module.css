@@ -1,0 +1,17 @@
+.grid {
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.75rem;
+    color: #1F2529;
+    font-weight: 900;
+}
+
+.contribute {
+    color: #95A1AD;
+}
+
+.contributeLogo {
+    color: #25292E;
+}
