@@ -52,6 +52,12 @@ module.exports = {
         devDependencies: ['**/*.stories.tsx'],
       },
     ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
   settings: {
     'import/parsers': {
