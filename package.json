@@ -31,7 +31,7 @@
     "@storybook/react": "^6.3.8",
     "@svgr/webpack": "^5.5.0",
     "@types/react": "17.0.17",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.28.1",
     "babel-loader": "^8.2.2",
     "eslint": "7.32.0",
