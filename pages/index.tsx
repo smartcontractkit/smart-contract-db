@@ -1,8 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { Header } from '../src/header'
+import React, { ReactElement } from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+// import Image from 'next/image';
+import { Header } from '../src/header';
+// import styles from '../styles/Home.module.css';
 
-const Home: NextPage = () => {
+const Home: NextPage = (): ReactElement => {
   return (
     <div>
       <Head>
@@ -11,18 +14,16 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header/>
-      <main >
+      <Header />
+      <main>
         <h1>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
       </main>
 
-      <footer>
-        Footer
-      </footer>
+      <footer>Footer</footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
