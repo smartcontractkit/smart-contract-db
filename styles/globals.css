@@ -1,7 +1,6 @@
 body {
-  font-family: 'Circular Std';
-  padding-top: 1rem;
   text-align: center;
+  padding: 1.5rem 15rem 0 15rem;
 }
 
 @font-face {

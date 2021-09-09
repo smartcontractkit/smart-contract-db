@@ -17,6 +17,10 @@ const theme = createTheme({
       default: '#fff',
     },
   },
+
+  typography: {
+    fontFamily: 'Circular Std',
+  },
 });
 
 export default theme;

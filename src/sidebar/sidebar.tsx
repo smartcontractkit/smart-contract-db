@@ -2,11 +2,9 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-// import styles from '../../styles/components/sidebar.module.css'
 import { makeStyles } from '@material-ui/core/styles';
 
-// use list
-// thoughts for Routing - nav items ticket #11
+// TODO: for Routing - nav items ticket #11
 // look into how to use with import { useRouter } from 'next/router';
 // use the adapter versions?
 // I.E. NextLinkComposed and Link
@@ -24,10 +22,14 @@ const useStyles = makeStyles({
   subNavHeading: {
     color: '#95A1AD',
   },
+  hr: {
+    backgroundColor: '#D3DDE5',
+    width: '50%',
+    margin: '0.5rem 0 1rem 1rem',
+  },
 });
 
-// primary={<Typography className={classes.nested}>Books</Typography>}
-
+// TODO: refactor this layout with Routing - nav items ticket #11
 export const Sidebar: React.FC = () => {
   const classes = useStyles();
   return (
@@ -78,7 +80,7 @@ export const Sidebar: React.FC = () => {
           <ListItemText disableTypography primary="Libraries" />
         </ListItem>
       </List>
-      <hr />
+      <hr className={classes.hr} />
       <ListItem>
         <ListItemText primary="Glossary" />
       </ListItem>
