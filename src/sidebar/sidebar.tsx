@@ -17,7 +17,8 @@ const useStyles = makeStyles({
     paddingBottom: '0rem',
   },
   container: {
-    width: '25%',
+    paddingRight: '6rem',
+    paddingLeft: '1rem',
   },
   subNavHeading: {
     color: '#95A1AD',
