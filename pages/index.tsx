@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { HeroBanner } from '../src/hero-banner';
 import { Header } from '../src/header';
 
 const Home: NextPage = (): ReactElement => {
@@ -16,9 +17,7 @@ const Home: NextPage = (): ReactElement => {
 
       <Header />
       <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <HeroBanner />
       </main>
 
       <footer>Footer</footer>
