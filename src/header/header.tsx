@@ -18,7 +18,6 @@ const useStyles = makeStyles({
     color: '#25292e',
   },
   logo: {
-    // textAlign: 'left',
     paddingLeft: '1.75rem !important',
   },
 });
