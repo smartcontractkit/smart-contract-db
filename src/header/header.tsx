@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { makeStyles } from '@material-ui/core/styles';
+import Link from '../link';
 
 const useStyles = makeStyles({
   container: {
@@ -27,9 +27,9 @@ export const Header: React.FC = () => {
 
   return (
     <header className={classes.container}>
-      <div className={classes.logo}>
+      <Link href="/" className={classes.logo}>
         <img src="/img/logo/logo.svg" alt="chainlink logo" />
-      </div>
+      </Link>
       <div>
         <Link href="https://github.com/thisdot/chainlink-developer-ecosystem">
           <span className={classes.contribute}>Contribute at </span>

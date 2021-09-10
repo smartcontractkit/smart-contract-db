@@ -1,16 +1,11 @@
 import React, { ReactElement } from 'react';
 import type { GetStaticPropsContext, NextPage } from 'next';
-import Layout from '../src/layout';
-import { Sidebar } from '../src/sidebar';
+// import Layout from '../src/layout';
+// import { Sidebar } from '../src/sidebar';
 import { HeroBanner } from '../src/hero-banner';
 
 const Home: NextPage = (): ReactElement => {
-  return (
-    <Layout>
-      <Sidebar />
-      <HeroBanner />
-    </Layout>
-  );
+  return <HeroBanner />;
 };
 
 export default Home;
