@@ -29,10 +29,11 @@ const useStyles = makeStyles({
   },
   description: {
     color: '#4D545C',
-    width: '80%',
+    width: '55%',
   },
 });
 
+// TODO: tweak for tablet/mobile screens
 export const HeroBanner: React.FC = () => {
   const classes = useStyles();
   return (
