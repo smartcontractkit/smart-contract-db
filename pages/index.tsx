@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import type { GetStaticPropsContext, NextPage } from 'next';
 import Head from 'next/head';
 import { Header } from '../src/header';
+import { Sidebar } from '../src/sidebar';
 
 const Home: NextPage = (): ReactElement => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = (): ReactElement => {
       </Head>
 
       <Header />
+      <Sidebar />
       <main>
         <h1>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
