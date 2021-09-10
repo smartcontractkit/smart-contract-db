@@ -1,16 +1,15 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-  grid: {
+  container: {
+    display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
     paddingBottom: '2.5rem',
-  },
-  contributeContainer: {
-    textAlign: 'right',
   },
   contribute: {
     color: '#95a1ad',
@@ -19,7 +18,6 @@ const useStyles = makeStyles({
     color: '#25292e',
   },
   logo: {
-    textAlign: 'left',
     paddingLeft: '1.75rem !important',
   },
 });
@@ -28,20 +26,18 @@ export const Header: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <header>
-      <Grid container spacing={3} className={classes.grid}>
-        <Grid item xs={6} className={classes.logo}>
-          <img src="/img/logo/logo.svg" alt="chainlink logo" />
-        </Grid>
-        <Grid item xs={6} className={classes.contributeContainer}>
-          <Link href="https://github.com/thisdot/chainlink-developer-ecosystem">
-            <span className={classes.contribute}>Contribute at </span>
-            <span className={classes.contributeLogo}>
-              <GitHubIcon /> <b>GitHub</b>
-            </span>
-          </Link>
-        </Grid>
-      </Grid>
+    <header className={classes.container}>
+      <div className={classes.logo}>
+        <img src="/img/logo/logo.svg" alt="chainlink logo" />
+      </div>
+      <div>
+        <Link href="https://github.com/thisdot/chainlink-developer-ecosystem">
+          <span className={classes.contribute}>Contribute at </span>
+          <span className={classes.contributeLogo}>
+            <GitHubIcon /> <b>GitHub</b>
+          </span>
+        </Link>
+      </div>
     </header>
   );
 };
