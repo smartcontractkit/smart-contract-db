@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import type { NextPage } from 'next';
+import type { GetStaticPropsContext, NextPage } from 'next';
 import Head from 'next/head';
 import { Header } from '../src/header';
 
@@ -27,3 +27,13 @@ const Home: NextPage = (): ReactElement => {
 };
 
 export default Home;
+
+export function getStaticProps({ locale }: GetStaticPropsContext): any {
+  return {
+    props: {
+      /* eslint-disable global-require */
+      /* eslint-disable import/no-dynamic-require */
+      messages: require(`../locales/${locale}.json`),
+    },
+  };
+}

@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
   reactStrictMode: true,
   excludeFile: (str) => /\.(stories|test)\.(js|jsx|ts|tsx)/.test(str),
   webpack(config) {
