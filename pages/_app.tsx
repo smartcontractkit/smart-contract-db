@@ -1,10 +1,30 @@
 import React, { ReactElement } from 'react';
 import type { AppProps } from 'next/app';
+import { IntlErrorCode, NextIntlProvider } from 'next-intl';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import '../styles/globals.css';
+
+function onError(error) {
+  if (process.env.NODE_ENV !== 'production') {
+    if (error.code === IntlErrorCode.MISSING_MESSAGE) {
+      console.warn(error);
+    } else {
+      console.error(error);
+    }
+  }
+}
+
+function getMessageFallback({ namespace, key, error }) {
+  const path = [namespace, key].filter((part) => part != null).join('.');
+
+  if (error.code === IntlErrorCode.MISSING_MESSAGE) {
+    return `${path} is not yet translated`;
+  }
+  return `Fix translation message at: ${path}`;
+}
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   React.useEffect(() => {
@@ -24,7 +44,9 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <NextIntlProvider messages={pageProps.messages} onError={onError} getMessageFallback={getMessageFallback}>
+          <Component {...pageProps} />
+        </NextIntlProvider>
       </ThemeProvider>
     </>
   );
