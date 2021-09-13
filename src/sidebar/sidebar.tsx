@@ -24,8 +24,12 @@ const useStyles = makeStyles({
     width: '50%',
     margin: '0.5rem 0 1rem 1rem',
   },
+  links: {
+    color: '#1F2529',
+  },
 });
 
+// have paths be /education/path?
 const educationNav = [
   { title: 'Books', path: '/books' },
   { title: 'Tutorials', path: '/tutorials' },
@@ -35,6 +39,7 @@ const educationNav = [
   { title: 'Schools', path: '/schools' },
 ];
 
+// have paths be /tools/path?
 const toolsNav = [
   { title: 'IDEs', path: '/ides' },
   { title: 'Frameworks', path: '/frameworks' },
@@ -57,41 +62,41 @@ export const Sidebar: React.FC = () => {
       {nav.map((navItem) => {
         if (navItem.path === null) {
           return (
-            <>
+            <React.Fragment key={navItem.title}>
               <ListItem>
                 <ListItemText primary={navItem.title} className={classes.subNavHeading} />
               </ListItem>
               <List component="div" className={classes.nested}>
                 {navItem.children.map((childItem) => {
                   return (
-                    <ListItem>
-                      <Link href={childItem.path}>
+                    <ListItem key={childItem.title}>
+                      <Link href={childItem.path} className={classes.links} underline="none">
                         <ListItemText disableTypography primary={childItem.title} />
                       </Link>
                     </ListItem>
                   );
                 })}
               </List>
-            </>
+            </React.Fragment>
           );
         }
 
         if (navItem.title === 'Glossary') {
           return (
-            <>
+            <React.Fragment key={navItem.title}>
               <hr className={classes.hr} />
               <ListItem>
-                <Link href={navItem.path}>
+                <Link href={navItem.path} className={classes.links} underline="none">
                   <ListItemText primary={navItem.title} />
                 </Link>
               </ListItem>
-            </>
+            </React.Fragment>
           );
         }
 
         return (
-          <ListItem>
-            <Link href={navItem.path}>
+          <ListItem key={navItem.title}>
+            <Link href={navItem.path} className={classes.links} underline="none">
               <ListItemText primary={navItem.title} />
             </Link>
           </ListItem>

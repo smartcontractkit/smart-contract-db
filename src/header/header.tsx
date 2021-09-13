@@ -16,6 +16,9 @@ const useStyles = makeStyles({
   },
   contributeLogo: {
     color: '#25292e',
+    '&:hover': {
+      color: '#0AA6E5',
+    },
   },
   logo: {
     paddingLeft: '1.75rem !important',
@@ -31,7 +34,7 @@ export const Header: React.FC = () => {
         <img src="/img/logo/logo.svg" alt="chainlink logo" />
       </Link>
       <div>
-        <Link href="https://github.com/thisdot/chainlink-developer-ecosystem">
+        <Link href="https://github.com/thisdot/chainlink-developer-ecosystem" underline="none">
           <span className={classes.contribute}>Contribute at </span>
           <span className={classes.contributeLogo}>
             <GitHubIcon /> <b>GitHub</b>
