@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { makeStyles } from '@material-ui/core/styles';
+import Link from '../link';
 
 const useStyles = makeStyles({
   container: {
@@ -16,6 +16,9 @@ const useStyles = makeStyles({
   },
   contributeLogo: {
     color: '#25292e',
+    '&:hover': {
+      color: '#0AA6E5',
+    },
   },
   logo: {
     paddingLeft: '1.75rem !important',
@@ -27,11 +30,11 @@ export const Header: React.FC = () => {
 
   return (
     <header className={classes.container}>
-      <div className={classes.logo}>
+      <Link href="/" className={classes.logo}>
         <img src="/img/logo/logo.svg" alt="chainlink logo" />
-      </div>
+      </Link>
       <div>
-        <Link href="https://github.com/thisdot/chainlink-developer-ecosystem">
+        <Link href="https://github.com/thisdot/chainlink-developer-ecosystem" underline="none">
           <span className={classes.contribute}>Contribute at </span>
           <span className={classes.contributeLogo}>
             <GitHubIcon /> <b>GitHub</b>

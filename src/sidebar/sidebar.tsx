@@ -3,11 +3,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
-
-// TODO: for Routing - nav items ticket #11
-// look into how to use with import { useRouter } from 'next/router';
-// use the adapter versions?
-// I.E. NextLinkComposed and Link
+import Link from '../link';
 
 const useStyles = makeStyles({
   nested: {
@@ -28,63 +24,84 @@ const useStyles = makeStyles({
     width: '50%',
     margin: '0.5rem 0 1rem 1rem',
   },
+  links: {
+    color: '#1F2529',
+  },
 });
 
-// TODO: refactor this layout with Routing - nav items ticket #11
+// have paths be /education/path?
+const educationNav = [
+  { title: 'Books', path: '/books' },
+  { title: 'Tutorials', path: '/tutorials' },
+  { title: 'Courses', path: '/courses' },
+  { title: 'Workshops', path: '/workshops' },
+  { title: 'Trainers', path: '/trainers' },
+  { title: 'Schools', path: '/schools' },
+];
+
+// have paths be /tools/path?
+const toolsNav = [
+  { title: 'IDEs', path: '/ides' },
+  { title: 'Frameworks', path: '/frameworks' },
+  { title: 'Libraries', path: '/libraries' },
+];
+
+const nav = [
+  { title: 'Communities', path: '/communities' },
+  { title: 'Consultants', path: '/consultants' },
+  { title: 'Events', path: '/events' },
+  { title: 'Education', path: null, children: educationNav },
+  { title: 'Tools', path: null, children: toolsNav },
+  { title: 'Glossary', path: '/glossary' },
+];
+
 export const Sidebar: React.FC = () => {
   const classes = useStyles();
   return (
     <List component="nav" className={classes.container}>
-      <ListItem>
-        <ListItemText primary="Communities" />
-      </ListItem>
-      <ListItem>
-        <ListItemText primary="Consultants" />
-      </ListItem>
-      <ListItem>
-        <ListItemText primary="Events" />
-      </ListItem>
-      <ListItem>
-        <ListItemText primary="Education" className={classes.subNavHeading} />
-      </ListItem>
-      <List component="div" className={classes.nested}>
-        <ListItem>
-          <ListItemText disableTypography primary="Books" />
-        </ListItem>
-        <ListItem>
-          <ListItemText disableTypography primary="Tutorials" />
-        </ListItem>
-        <ListItem>
-          <ListItemText disableTypography primary="Courses" />
-        </ListItem>
-        <ListItem>
-          <ListItemText disableTypography primary="Workshops" />
-        </ListItem>
-        <ListItem>
-          <ListItemText disableTypography primary="Trainers" />
-        </ListItem>
-        <ListItem>
-          <ListItemText disableTypography primary="Schools" />
-        </ListItem>
-      </List>
-      <ListItem>
-        <ListItemText primary="Tools" className={classes.subNavHeading} />
-      </ListItem>
-      <List component="div" className={classes.nested}>
-        <ListItem>
-          <ListItemText disableTypography primary="IDEs" />
-        </ListItem>
-        <ListItem>
-          <ListItemText disableTypography primary="Frameworks" />
-        </ListItem>
-        <ListItem>
-          <ListItemText disableTypography primary="Libraries" />
-        </ListItem>
-      </List>
-      <hr className={classes.hr} />
-      <ListItem>
-        <ListItemText primary="Glossary" />
-      </ListItem>
+      {nav.map((navItem) => {
+        if (navItem.path === null) {
+          return (
+            <React.Fragment key={navItem.title}>
+              <ListItem>
+                <ListItemText primary={navItem.title} className={classes.subNavHeading} />
+              </ListItem>
+              <List component="div" className={classes.nested}>
+                {navItem.children.map((childItem) => {
+                  return (
+                    <ListItem key={childItem.title}>
+                      <Link href={childItem.path} className={classes.links} underline="none">
+                        <ListItemText disableTypography primary={childItem.title} />
+                      </Link>
+                    </ListItem>
+                  );
+                })}
+              </List>
+            </React.Fragment>
+          );
+        }
+
+        if (navItem.title === 'Glossary') {
+          return (
+            <React.Fragment key={navItem.title}>
+              <hr className={classes.hr} />
+              <ListItem>
+                <Link href={navItem.path} className={classes.links} underline="none">
+                  <ListItemText primary={navItem.title} />
+                </Link>
+              </ListItem>
+            </React.Fragment>
+          );
+        }
+
+        return (
+          <ListItem key={navItem.title}>
+            <Link href={navItem.path} className={classes.links} underline="none">
+              <ListItemText primary={navItem.title} />
+            </Link>
+          </ListItem>
+        );
+      })}
     </List>
   );
 };

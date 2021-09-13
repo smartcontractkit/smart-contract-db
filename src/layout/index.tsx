@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { makeStyles } from '@material-ui/core/styles';
 import { Header } from '../header';
+import { Sidebar } from '../sidebar';
 
 const useStyles = makeStyles({
   container: {
@@ -29,7 +30,10 @@ const Layout: React.FC = ({ children }) => {
 
       <div className={classes.container}>
         <Header />
-        <main className={classes.main}>{children}</main>
+        <main className={classes.main}>
+          <Sidebar />
+          {children}
+        </main>
         <footer>Footer</footer>
       </div>
     </>
