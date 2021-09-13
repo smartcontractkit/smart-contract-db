@@ -34,7 +34,6 @@ const Layout: React.FC = ({ children }) => {
           <Sidebar />
           {children}
         </main>
-        <footer>Footer</footer>
       </div>
     </>
   );

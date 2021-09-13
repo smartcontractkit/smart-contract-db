@@ -1,9 +1,13 @@
 import React, { ReactElement } from 'react';
 import type { GetStaticPropsContext, NextPage } from 'next';
-import { HeroBanner } from '../src/hero-banner';
+import { Content } from '../src/content';
 
 const Home: NextPage = (): ReactElement => {
-  return <HeroBanner />;
+  return (
+    <>
+      <Content />
+    </>
+  );
 };
 
 export default Home;

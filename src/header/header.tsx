@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
   return (
     <header className={classes.container}>
       <Link href="/" className={classes.logo}>
-        <img src="/img/logo/logo.svg" alt="chainlink logo" />
+        <img src="/img/logo.svg" alt="chainlink logo" />
       </Link>
       <div>
         <Link href="https://github.com/thisdot/chainlink-developer-ecosystem" underline="none">
