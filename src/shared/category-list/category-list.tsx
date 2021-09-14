@@ -1,8 +1,8 @@
 import React from 'react';
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { List, ListItem, Divider, ListItemText, ListItemAvatar, Avatar } from '@material-ui/core';
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     container: {
       width: '100%',
@@ -22,16 +22,28 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
 
   return (
     <List className={classes.container}>
-      {data.map(({ id, title, src, description }, index) => (
-        <>
-          <ListItem key={id} alignItems="flex-start">
-            <ListItemAvatar>
-              <Avatar alt={title} src={src} />
-            </ListItemAvatar>
-            <ListItemText primary={title} secondary={<>{description}</>} />
+      {data.map(({ id, title, src, startDate, description }, index) => (
+        <React.Fragment key={id}>
+          <ListItem alignItems="flex-start">
+            {src !== undefined ? (
+              <ListItemAvatar>
+                <Avatar alt={title} src={src} />
+              </ListItemAvatar>
+            ) : null}
+
+            <ListItemText
+              primary={title}
+              secondary={
+                <>
+                  {startDate}
+                  <br />
+                  {description}
+                </>
+              }
+            />
           </ListItem>
           {data.length === index + 1 ? '' : <Divider variant="inset" component="li" />}
-        </>
+        </React.Fragment>
       ))}
     </List>
   );
