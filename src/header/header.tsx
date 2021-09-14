@@ -23,6 +23,7 @@ const useStyles = makeStyles({
   logo: {
     paddingLeft: '1.75rem !important',
   },
+  links: { textDecoration: 'none' },
 });
 
 export const Header: React.FC = () => {
@@ -34,12 +35,16 @@ export const Header: React.FC = () => {
         <img src="/img/logo.svg" alt="chainlink logo" />
       </Link>
       <div>
-        <Link href="https://github.com/thisdot/chainlink-developer-ecosystem" underline="none">
+        <a
+          href="https://github.com/thisdot/chainlink-developer-ecosystem"
+          rel="noopener noreferrer"
+          className={classes.links}
+        >
           <span className={classes.contribute}>Contribute at </span>
           <span className={classes.contributeLogo}>
             <GitHubIcon /> <b>GitHub</b>
           </span>
-        </Link>
+        </a>
       </div>
     </header>
   );

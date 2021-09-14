@@ -1,48 +1,58 @@
 import React from 'react';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { List, ListItem, Divider, ListItemText, ListItemAvatar, Avatar } from '@material-ui/core';
 
-const useStyles = makeStyles(() =>
-  createStyles({
-    container: {
-      width: '100%',
-    },
-    inline: {
-      display: 'inline',
-    },
-  })
-);
+const useStyles = makeStyles({
+  links: { textDecoration: 'none', color: '#1F2529' },
+  container: {
+    width: '100%',
+  },
+  events: {
+    color: '#0A5480',
+  },
+});
 
 export interface CategoryListProps {
   data; // TODO: combine types
 }
 
+function dateFormatter(date: string): string {
+  const newDate: Date = new Date(date);
+  return new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(newDate);
+}
+
 export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
   const classes = useStyles();
-
+  // const options = { year: 'numeric', month: 'long', day: 'numeric' } as const;
   return (
     <List className={classes.container}>
-      {data.map(({ id, title, src, startDate, description }, index) => (
+      {data.map(({ id, title, src, startDate, description, link }, index) => (
         <React.Fragment key={id}>
-          <ListItem alignItems="flex-start">
-            {src !== undefined ? (
-              <ListItemAvatar>
-                <Avatar alt={title} src={src} />
-              </ListItemAvatar>
-            ) : null}
-
-            <ListItemText
-              primary={title}
-              secondary={
-                <>
-                  {startDate}
-                  <br />
-                  {description}
-                </>
-              }
-            />
-          </ListItem>
-          {data.length === index + 1 ? '' : <Divider variant="inset" component="li" />}
+          <a href={link} rel="noopener noreferrer" className={classes.links}>
+            <ListItem alignItems="flex-start">
+              {src !== undefined ? (
+                <ListItemAvatar>
+                  <Avatar alt={title} src={src} />
+                </ListItemAvatar>
+              ) : (
+                ''
+              )}
+              {startDate !== undefined ? (
+                <div>
+                  <ListItemText primary={title} />
+                  <ListItemText disableTypography secondary={dateFormatter(startDate)} className={classes.events} />
+                  <ListItemText secondary={description} />
+                </div>
+              ) : (
+                <ListItemText primary={title} secondary={<>{description}</>} />
+              )}
+            </ListItem>
+            {data.length === index + 1 ? '' : <Divider component="li" />}
+          </a>
         </React.Fragment>
       ))}
     </List>
