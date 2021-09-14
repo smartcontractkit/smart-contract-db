@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
+// import { NextLinkComposed } from '../link';
 
 const useStyles = makeStyles({
   card: {
@@ -10,8 +11,6 @@ const useStyles = makeStyles({
   },
   bannerBackground: {
     display: 'flex',
-    maxHeight: '27vh',
-    maxWidth: '100vw',
     backgroundImage: `url(${'/img/contribute-banner.svg'})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
@@ -39,11 +38,14 @@ const useStyles = makeStyles({
     backgroundColor: '#0AA6E5',
     color: '#FFFFFF',
     fontSize: '1rem',
-    fontWeight: 'bold',
+    borderRadius: '2rem',
+    padding: '0.5rem 2rem 0.5rem 2rem',
+    textTransform: 'none',
   },
   emoji: {
     paddingLeft: '1rem',
   },
+  links: { textDecoration: 'none' },
 });
 
 // TODO: tweak for tablet/mobile screens
@@ -59,12 +61,16 @@ export const ContributeBanner: React.FC = () => {
               Create a PR if you see mistakes, room for improvement, or new opportunities to help dev team..
             </Typography>
           </div>
-          <Button variant="contained" className={classes.button}>
-            Contribute
-            <span role="img" aria-label="hang loose hand sign" className={classes.emoji}>
-              🤙
-            </span>
-          </Button>
+          <a
+            href="https://github.com/thisdot/chainlink-developer-ecosystem"
+            rel="noopener noreferrer"
+            className={classes.links}
+          >
+            <Button className={classes.button}>
+              Contribute
+              <img src="/img/hangloose.svg" alt="hangloose hand sign" className={classes.emoji} />
+            </Button>
+          </a>
         </div>
       </Container>
     </div>

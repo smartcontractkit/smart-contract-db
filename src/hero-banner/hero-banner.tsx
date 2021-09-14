@@ -6,8 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   bannerBackground: {
     display: 'flex',
-    maxHeight: '27vh',
-    maxWidth: '100vw',
+    height: '30vh',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundImage: `url(${'/img/hero-banner.svg'})`,
