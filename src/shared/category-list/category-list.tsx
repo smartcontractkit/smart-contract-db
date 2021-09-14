@@ -27,7 +27,6 @@ function dateFormatter(date: string): string {
 
 export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
   const classes = useStyles();
-  // const options = { year: 'numeric', month: 'long', day: 'numeric' } as const;
   return (
     <List className={classes.container}>
       {data.map(({ id, title, src, startDate, description, link }, index) => (
