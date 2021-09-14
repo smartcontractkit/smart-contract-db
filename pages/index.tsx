@@ -3,11 +3,7 @@ import type { GetStaticPropsContext, NextPage } from 'next';
 import { Content } from '../src/content';
 
 const Home: NextPage = (): ReactElement => {
-  return (
-    <>
-      <Content />
-    </>
-  );
+  return <Content />;
 };
 
 export default Home;
