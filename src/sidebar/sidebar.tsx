@@ -29,7 +29,6 @@ const useStyles = makeStyles({
   },
 });
 
-// have paths be /education/path?
 const educationNav = [
   { title: 'Books', path: '/books' },
   { title: 'Tutorials', path: '/tutorials' },
@@ -39,7 +38,6 @@ const educationNav = [
   { title: 'Schools', path: '/schools' },
 ];
 
-// have paths be /tools/path?
 const toolsNav = [
   { title: 'IDEs', path: '/ides' },
   { title: 'Frameworks', path: '/frameworks' },

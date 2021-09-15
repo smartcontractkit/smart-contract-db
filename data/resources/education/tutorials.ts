@@ -1,9 +1,9 @@
 // Can be excluded for initial launch
-export interface Trainer {
+export interface Tutorial {
   id: string;
   title: string;
   description: string;
   link: string;
 }
 
-export const trainers: Trainer[] = [];
+export const tutorials: Tutorial[] = [];

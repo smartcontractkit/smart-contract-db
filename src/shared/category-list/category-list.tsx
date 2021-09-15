@@ -1,6 +1,15 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { List, ListItem, Divider, ListItemText, ListItemAvatar, Avatar } from '@material-ui/core';
+import {
+  List,
+  ListItem,
+  Divider,
+  ListItemText,
+  ListItemAvatar,
+  Avatar,
+  Typography,
+  Container,
+} from '@material-ui/core';
 
 const useStyles = makeStyles({
   links: { textDecoration: 'none', color: '#1F2529' },
@@ -27,6 +36,13 @@ function dateFormatter(date: string): string {
 
 export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
   const classes = useStyles();
+  if (data.length === 0) {
+    return (
+      <Container>
+        <Typography>Coming soon..</Typography>
+      </Container>
+    );
+  }
   return (
     <List className={classes.container}>
       {data.map(({ id, title, src, startDate, description, link }, index) => (
