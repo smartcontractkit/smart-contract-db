@@ -49,13 +49,9 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
         <React.Fragment key={id}>
           <a href={link} rel="noopener noreferrer" className={classes.links}>
             <ListItem alignItems="flex-start">
-              {src !== undefined ? (
-                <ListItemAvatar>
-                  <Avatar alt={title} src={src} />
-                </ListItemAvatar>
-              ) : (
-                ''
-              )}
+              <ListItemAvatar>
+                <Avatar alt={title} src={src} />
+              </ListItemAvatar>
               {startDate !== undefined ? (
                 <div>
                   <ListItemText primary={title} />
