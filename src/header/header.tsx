@@ -30,8 +30,8 @@ export const Header: React.FC = () => {
   const classes = useStyles();
   const [resourceTitle, setResourceTitle] = useState('');
 
-  const updatedCategoryTitle = (e: Event) => {
-    setResourceTitle(e.detail?.text); // fix ts issue
+  const updatedCategoryTitle = (e) => {
+    setResourceTitle(e.detail.text);
   };
 
   useEffect(() => {
