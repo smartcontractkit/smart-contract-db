@@ -1,7 +1,6 @@
-import { Container, Typography } from '@material-ui/core';
-import React, { ReactElement } from 'react';
+import { Container } from '@material-ui/core';
+import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { makeStyles } from '@material-ui/core/styles';
 import { CategoryList } from 'src/shared/category-list';
 import { communities } from '@/data/resources/communities';
 import { consultants } from '@/data/resources/consultants';
@@ -15,15 +14,6 @@ import { schools } from '@/data/resources/education/schools';
 import { ides } from '@/data/resources/tools/ides';
 import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
-
-const useStyles = makeStyles({
-  heading: {
-    fontSize: '1.5rem',
-    textAlign: 'left',
-    fontWeight: 'bold',
-    paddingTop: '4rem',
-  },
-});
 
 interface ResourceBody {
   id: string;
@@ -58,10 +48,17 @@ const resourceBody: ResourceBody[] = [
 ];
 
 export default function Resources({ resource, title }: { resource: Data; title: string }): ReactElement {
-  const classes = useStyles();
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent('categoryPage-updated', {
+        bubbles: true,
+        detail: { text: title },
+      })
+    );
+  }, [title]);
+
   return (
     <Container>
-      <Typography className={classes.heading}>{title}</Typography>
       <CategoryList data={resource} />
     </Container>
   );
