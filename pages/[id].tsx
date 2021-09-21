@@ -50,7 +50,7 @@ const resourceBody: ResourceBody[] = [
 export default function Resources({ resource, title }: { resource: Data; title: string }): ReactElement {
   useEffect(() => {
     window.dispatchEvent(
-      new CustomEvent('categoryPage-updated', {
+      new CustomEvent('category-page-updated', {
         bubbles: true,
         detail: { text: title },
       })

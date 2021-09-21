@@ -21,6 +21,7 @@ const theme = createTheme({
 
   typography: {
     fontFamily: 'Circular Std',
+    fontSize: 16,
   },
 });
 

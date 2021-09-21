@@ -35,9 +35,9 @@ export const Header: React.FC = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('categoryPage-updated', (e) => updatedCategoryTitle(e));
+    window.addEventListener('category-page-updated', (e) => updatedCategoryTitle(e));
     return () => {
-      window.removeEventListener('categoryPage-updated', updatedCategoryTitle);
+      window.removeEventListener('category-page-updated', updatedCategoryTitle);
     };
   }, [resourceTitle]);
 

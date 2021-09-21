@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import React from 'react';
+import React, { useEffect } from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -22,6 +22,23 @@ const useStyles = makeStyles({
   },
   disabledLinks: {
     color: '#95A1AD',
+  },
+  id: {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    paddingTop: '1.5rem',
+    paddingBottom: '1.5rem',
+  },
+  title: {
+    fontSize: '1.125rem',
+  },
+  description: {
+    fontSize: '1rem',
+    color: '#78838F',
+    paddingTop: '0.55rem',
+  },
+  listItem: {
+    display: 'block',
   },
 });
 
@@ -58,18 +75,33 @@ const glossaryNav = [
 // TODO: make mobile friendly
 export const GlossaryList: React.FC = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent('category-page-updated', {
+        bubbles: true,
+        detail: { text: 'Glossary' },
+      })
+    );
+  });
+
   return (
     <div className={classes.container}>
       <List>
         {glossary.map((glossaryItem) => (
           <React.Fragment key={Object.keys(glossaryItem)[0]}>
-            <ListItem alignItems="flex-start">
-              <ListItemText id={Object.keys(glossaryItem)[0]} primary={Object.keys(glossaryItem)[0]} />
+            <ListItem alignItems="flex-start" className={classes.id}>
+              <ListItemText
+                disableTypography
+                id={Object.keys(glossaryItem)[0]}
+                primary={Object.keys(glossaryItem)[0]}
+              />
             </ListItem>
             {Object.values(glossaryItem)[0].map(({ title, description }) => (
               <React.Fragment key={title}>
-                <ListItem alignItems="flex-start">
-                  <ListItemText primary={title} secondary={<>{description}</>} />
+                <ListItem className={classes.listItem}>
+                  <div className={classes.title}>{title}</div>
+                  <div className={classes.description}>{description}</div>
                 </ListItem>
               </React.Fragment>
             ))}

@@ -1,1 +1,1 @@
-export * from './glossary-list-section';
+export * from './glossary-section';
