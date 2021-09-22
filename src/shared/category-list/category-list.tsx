@@ -10,6 +10,7 @@ import {
   Typography,
   Container,
 } from '@material-ui/core';
+import Initicon from 'react-initicon';
 
 const useStyles = makeStyles({
   links: { textDecoration: 'none', color: '#1F2529' },
@@ -43,14 +44,21 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
       </Container>
     );
   }
+
+  const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
+
   return (
     <List className={classes.container}>
-      {data.map(({ id, title, src, startDate, description, link }, index) => (
+      {data.map(({ id, title, src, startDate, description, link }, index: number) => (
         <React.Fragment key={id}>
           <a href={link} rel="noopener noreferrer" className={classes.links}>
             <ListItem alignItems="flex-start">
               <ListItemAvatar>
-                <Avatar alt={title} src={src} />
+                {src ? (
+                  <Avatar alt={title} src={src} />
+                ) : (
+                  <Initicon size={40} text={title} seed={identiconSeedMax(9)} single={false} />
+                )}
               </ListItemAvatar>
               {startDate !== undefined ? (
                 <div>
