@@ -42,4 +42,15 @@ export const events: Event[] = [
     link: 'https://blockchain-expo.com/northamerica/',
     src: '/img/blockchain-expo.jpg',
   },
+    {
+    id: 'chainlink-2021-fall-hackathon',
+    title: 'Chainlink Fall 2021 Hackathon',
+    description:
+      'Join us for our biggest hackathon yet, where you’ll get the chance to build the next generation of hybrid smart contracts alongside developers, creators, artists, and industry-leading mentors from across the blockchain ecosystem.',
+    startDate: '10-22-2021',
+    endDate: '11-28-2021',
+    location: 'Virtual',
+    link: 'https://chain.link/hackathon/',
+    src: '/img/chainlink_fall_hackathon.jpeg',
+  },
 ];
