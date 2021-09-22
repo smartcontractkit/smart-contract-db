@@ -25,6 +25,6 @@ All pull requests made on GitHub will be reviewed for the following criteria:
 - Value: the contribution should add value to the smart contract community. Please avoid submitting changes in order to market products.
 - Quality: each resource type must be from a reputable source.
 
-# Report bugs using Github's [issues](https://github.com/thisdot/chainlink-developer-ecosystem/issues)
+# Report bugs using Github's [issues](https://github.com/thisdot/smart-contract-db/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/thisdot/chainlink-developer-ecosystem/issues/new).
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/thisdot/smart-contract-db/issues/new).

@@ -62,7 +62,7 @@ export const ContributeBanner: React.FC = () => {
             </Typography>
           </div>
           <a
-            href="https://github.com/thisdot/chainlink-developer-ecosystem"
+            href="https://github.com/thisdot/smart-contract-db"
             rel="noopener noreferrer"
             className={classes.links}
           >
