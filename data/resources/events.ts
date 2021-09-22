@@ -42,7 +42,7 @@ export const events: Event[] = [
     link: 'https://blockchain-expo.com/northamerica/',
     src: '/img/blockchain-expo.jpg',
   },
-    {
+  {
     id: 'chainlink-2021-fall-hackathon',
     title: 'Chainlink Fall 2021 Hackathon',
     description:
@@ -52,5 +52,15 @@ export const events: Event[] = [
     location: 'Virtual',
     link: 'https://chain.link/hackathon/',
     src: '/img/chainlink_fall_hackathon.jpeg',
+   },{
+    id: 'chainlink-spanish-bootcamp',
+    title: 'Bootcamp en Español para desarrolladores de Smart Contracts',
+    description:
+      'Aprende a programar contratos inteligentes en Solidity y conéctelos a datos del mundo real en una sesión grupal en vivo dirigida por un instructor con expertos Chainlink Developer Advocates.',
+    startDate: '09-27-2021',
+    endDate: '10-01-2021',
+    location: 'Virtual',
+    link: 'https://chain.link/es/bootcamp/',
+    src: '/img/esp_bootcamp.png',
   },
 ];
