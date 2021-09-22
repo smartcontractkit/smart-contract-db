@@ -41,8 +41,7 @@ export const HeroBanner: React.FC = () => {
         <Typography className={classes.title}>Learn about</Typography>
         <Typography className={classes.title}>Smart Contracts.</Typography>
         <Typography className={classes.description}>
-          Everything you’ve ever wanted to know about smart contracts, crypto and more, brought to you by
-          SmartContracts.
+          Everything you’ve ever wanted to know about smart contracts, crypto and more. Created by the community, for the community.
         </Typography>
       </div>
     </Container>
