@@ -11,7 +11,7 @@ If you have web resources that can benefit the growing smart contracts community
 Please follow these steps when submitting a new pull request:
 
 1. Fork the repo and create your branch from `main`.
-2. Make changes to resource files in `data/resources`.
+2. Make changes to resource files in `data/resources`. Images should be added in `/public/img/`.
 3. Ensure your resource was added successfully by running the project.
 4. Make sure your code lints.
 5. Submit the pull request!
