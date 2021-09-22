@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
       <Grid container spacing={10} className={classes.grid}>
         <Grid item xs={2}>
           <Link href="/" onClick={() => setResourceTitle('')}>
-            <img src="/img/logo.svg" alt="chainlink logo" />
+            <img src="/img/logo.svg" alt="smartcontract DB logo" />
           </Link>
         </Grid>
         <Grid item xs={2} className={classes.categoryTitle}>
@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
         </Grid>
         <Grid item xs={8} className={classes.contributeContainer}>
           <a
-            href="https://github.com/thisdot/chainlink-developer-ecosystem"
+            href="https://github.com/thisdot/smart-contract-db"
             rel="noopener noreferrer"
             className={classes.links}
           >
