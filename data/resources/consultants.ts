@@ -27,7 +27,7 @@ export const consultants: Consultant[] = [
     title: 'Chainsafe',
     description: 'The only blockchain R&D firm with a multi-chain perspective.',
     link: 'https://chainsafe.io/',
-    src: '/img/chainsafe.svg',
+    src: '/img/chainsafe.png',
   },
   {
     id: 'hack-bg',
