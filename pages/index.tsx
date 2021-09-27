@@ -14,7 +14,7 @@ const Home: NextPage = (): ReactElement => {
 
 export default Home;
 
-export function getStaticProps({ locale }: GetStaticPropsContext): any {
+export function getStaticProps({ locale }: GetStaticPropsContext) {
   return {
     props: {
       /* eslint-disable global-require */

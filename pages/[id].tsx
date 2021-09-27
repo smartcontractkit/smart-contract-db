@@ -1,7 +1,7 @@
-import { Container } from '@material-ui/core';
 import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { CategoryList } from 'src/shared/category-list';
+import { makeStyles } from '@material-ui/core/styles';
 import { communities } from '@/data/resources/communities';
 import { consultants } from '@/data/resources/consultants';
 import { events } from '@/data/resources/events';
@@ -14,7 +14,6 @@ import { schools } from '@/data/resources/education/schools';
 import { ides } from '@/data/resources/tools/ides';
 import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
-import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   section: {
