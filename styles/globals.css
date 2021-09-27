@@ -1,6 +1,7 @@
 body {
   text-align: center;
-  padding: 1.5rem 15rem 0 15rem;
+  max-width: 1200px;
+  margin: 0 auto !important;
 }
 
 @font-face {
