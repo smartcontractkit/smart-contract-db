@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core';
+import { Container, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { CategoryList } from 'src/shared/category-list';
@@ -14,6 +14,14 @@ import { schools } from '@/data/resources/education/schools';
 import { ides } from '@/data/resources/tools/ides';
 import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
+
+const useStyles = makeStyles({
+  heading: {
+    fontSize: '1.5rem',
+    textAlign: 'left',
+    fontWeight: 'bold',
+  },
+});
 
 interface ResourceBody {
   id: string;
@@ -57,8 +65,14 @@ export default function Resources({ resource, title }: { resource: Data; title: 
     );
   }, [title]);
 
+  const classes = useStyles();
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <Container>
+      {/* hide depending on screen size */}
+      {isMatch ? <Typography className={classes.heading}>{title}</Typography> : null}
       <CategoryList data={resource} />
     </Container>
   );

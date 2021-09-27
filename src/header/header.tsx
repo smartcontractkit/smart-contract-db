@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { Drawer, IconButton, Typography, useMediaQuery, useTheme } from '@material-ui/core';
+import { Container, Drawer, IconButton, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import { Sidebar } from 'src/sidebar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from '../link';
@@ -30,12 +30,17 @@ const useStyles = makeStyles({
     fontSize: '1.5rem',
     paddingLeft: '3.5rem',
   },
-  drawerContainer: {},
+  menuContainer: {
+    paddingLeft: '2rem',
+  },
+  hamburgerContainer: {
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
   iconButtonContainer: {
     marginRight: 'auto',
     color: 'white',
   },
-
   menuIconToggle: {
     fontSize: '3rem',
     color: 'black',
@@ -68,30 +73,30 @@ export const Header: React.FC = () => {
             <img src="/img/logo.svg" alt="smartcontract DB logo" />
           </Link>
         </Grid>
+        {/* hide depending on screen size */}
         <Grid item xs={2} className={classes.categoryTitle}>
-          <b>{resourceTitle}</b>
+          {!isMatch ? <b>{resourceTitle}</b> : null}
         </Grid>
         {/* hide depending on screen size and show hamburger */}
         <Grid item xs={9} className={classes.contributeContainer}>
           {isMatch ? (
-            <>
-              <Drawer
-                anchor="left"
-                classes={{ paper: classes.drawerContainer }}
-                onClose={() => setOpenDrawer(false)}
-                open={openDrawer}
-              >
-                <Sidebar />
+            <Container>
+              <Drawer anchor="left" onClose={() => setOpenDrawer(false)} open={openDrawer}>
+                <div className={classes.menuContainer}>
+                  <Sidebar />
+                </div>
               </Drawer>
-              <Typography>Browse</Typography>
-              <IconButton
-                className={classes.iconButtonContainer}
-                onClick={() => setOpenDrawer(!openDrawer)}
-                disableRipple
-              >
-                <MenuIcon className={classes.menuIconToggle} />
-              </IconButton>
-            </>
+              <div className={classes.hamburgerContainer}>
+                <Typography>Browse</Typography>
+                <IconButton
+                  className={classes.iconButtonContainer}
+                  onClick={() => setOpenDrawer(!openDrawer)}
+                  disableRipple
+                >
+                  <MenuIcon className={classes.menuIconToggle} />
+                </IconButton>
+              </div>
+            </Container>
           ) : (
             <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
               <span className={classes.contribute}>Contribute at </span>

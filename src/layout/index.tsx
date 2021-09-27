@@ -33,6 +33,7 @@ const Layout: React.FC = ({ children }) => {
       <div className={classes.container}>
         <Header />
         <main className={classes.main}>
+          {/* hide depending on screen size */}
           {!isMatch ? <Sidebar /> : null}
 
           {children}
