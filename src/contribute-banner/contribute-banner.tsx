@@ -7,7 +7,7 @@ import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles({
   card: {
-    paddingTop: '4rem',
+    paddingBottom: '4rem',
   },
   bannerBackground: {
     display: 'flex',
@@ -61,11 +61,7 @@ export const ContributeBanner: React.FC = () => {
               Create a PR if you see mistakes, room for improvement, or new opportunities to help dev team..
             </Typography>
           </div>
-          <a
-            href="https://github.com/thisdot/smart-contract-db"
-            rel="noopener noreferrer"
-            className={classes.links}
-          >
+          <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
             <Button className={classes.button}>
               Contribute
               <img src="/img/hangloose.svg" alt="hangloose hand sign" className={classes.emoji} />

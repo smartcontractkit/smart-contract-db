@@ -11,11 +11,16 @@ import {
   Container,
 } from '@material-ui/core';
 import Initicon from 'react-initicon';
+import Link from 'src/link';
 
 const useStyles = makeStyles({
+  title: {
+    color: '#1F2529',
+  },
   links: { textDecoration: 'none', color: '#1F2529' },
   container: {
     width: '100%',
+    padding: 0,
   },
   events: {
     color: '#0A5480',
@@ -37,6 +42,7 @@ function dateFormatter(date: string): string {
 
 export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
   const classes = useStyles();
+
   if (data.length === 0) {
     return (
       <Container>
@@ -51,29 +57,39 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
     <List className={classes.container}>
       {data.map(({ id, title, src, startDate, description, link }, index: number) => (
         <React.Fragment key={id}>
-          <a href={link} rel="noopener noreferrer" className={classes.links}>
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                {src ? (
-                  <Avatar alt={title} src={src} />
-                ) : (
-                  <Initicon size={40} text={title} seed={identiconSeedMax(9)} single={false} />
-                )}
-              </ListItemAvatar>
-              {startDate !== undefined ? (
-                <div>
-                  <ListItemText primary={title} />
-                  <ListItemText disableTypography secondary={dateFormatter(startDate)} className={classes.events} />
-                  <ListItemText secondary={description} />
-                </div>
+          <ListItemLink href={link} rel="noopener noreferrer" className={classes.links}>
+            <ListItemAvatar>
+              {src ? (
+                <Avatar alt={title} src={src} />
               ) : (
-                <ListItemText primary={title} secondary={<>{description}</>} />
+                <Initicon size={40} text={title} seed={identiconSeedMax(9)} single={false} />
               )}
-            </ListItem>
-            {data.length === index + 1 ? '' : <Divider component="li" />}
-          </a>
+            </ListItemAvatar>
+            {startDate !== undefined ? (
+              <div>
+                <ListItemText primary={title} className={classes.title} />
+                <ListItemText disableTypography secondary={dateFormatter(startDate)} className={classes.events} />
+                <ListItemText secondary={description} />
+              </div>
+            ) : (
+              <ListItemText className={classes.title} primary={title} secondary={<>{description}</>} />
+            )}
+          </ListItemLink>
+          {data.length === index + 1 ? '' : <Divider component="li" />}
         </React.Fragment>
       ))}
     </List>
+  );
+};
+
+const ListItemLink = ({ children, ...props }) => {
+  const { href, rel, className } = props;
+
+  const CustomLink = (props) => <Link className={className} rel={rel} href={href} {...props} />;
+
+  return (
+    <li>
+      <ListItem component={CustomLink}>{children}</ListItem>
+    </li>
   );
 };
