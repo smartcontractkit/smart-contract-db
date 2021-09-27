@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import { Drawer, IconButton, Typography } from '@material-ui/core';
+import { Sidebar } from 'src/sidebar';
+import MenuIcon from '@material-ui/icons/Menu';
 import Link from '../link';
 
 const useStyles = makeStyles({
@@ -24,11 +27,22 @@ const useStyles = makeStyles({
   categoryTitle: {
     fontSize: '1.5rem',
   },
+  drawerContainer: {},
+  iconButtonContainer: {
+    marginLeft: 'auto',
+    color: 'white',
+  },
+
+  menuIconToggle: {
+    fontSize: '3rem',
+    color: 'black',
+  },
 });
 
 export const Header: React.FC = () => {
   const classes = useStyles();
   const [resourceTitle, setResourceTitle] = useState('');
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   const updatedCategoryTitle = (e) => {
     setResourceTitle(e.detail.text);
@@ -52,17 +66,26 @@ export const Header: React.FC = () => {
         <Grid item xs={2} className={classes.categoryTitle}>
           <b>{resourceTitle}</b>
         </Grid>
+        {/* hide depending on screen size and show hamburger */}
         <Grid item xs={8} className={classes.contributeContainer}>
-          <a
-            href="https://github.com/thisdot/smart-contract-db"
-            rel="noopener noreferrer"
-            className={classes.links}
+          <Drawer
+            anchor="right"
+            classes={{ paper: classes.drawerContainer }}
+            onClose={() => setOpenDrawer(false)}
+            open={openDrawer}
           >
+            <Sidebar />
+          </Drawer>
+          <Typography>Browse</Typography>
+          <IconButton className={classes.iconButtonContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
+            <MenuIcon className={classes.menuIconToggle} />
+          </IconButton>
+          {/* <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
             <span className={classes.contribute}>Contribute at </span>
             <span className={classes.contributeLogo}>
               <GitHubIcon /> <b>GitHub</b>
             </span>
-          </a>
+          </a> */}
         </Grid>
       </Grid>
     </header>
