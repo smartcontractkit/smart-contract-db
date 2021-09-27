@@ -13,7 +13,6 @@ import { ContributeBanner } from '../contribute-banner';
 const useStyles = makeStyles({
   container: {
     padding: 0,
-    paddingBottom: '11.75rem',
   },
   heading: {
     fontSize: '1.5rem',

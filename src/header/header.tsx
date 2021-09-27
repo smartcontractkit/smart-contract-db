@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   links: { textDecoration: 'none' },
   categoryTitle: {
     fontSize: '1.5rem',
-    paddingLeft: '3.5rem',
+    paddingLeft: '4rem',
   },
 });
 

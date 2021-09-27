@@ -11,19 +11,32 @@ import {
   Container,
 } from '@material-ui/core';
 import Initicon from 'react-initicon';
-import Link from 'src/link';
 
 const useStyles = makeStyles({
-  title: {
-    color: '#1F2529',
-  },
-  links: { textDecoration: 'none', color: '#1F2529' },
   container: {
     width: '100%',
     padding: 0,
   },
-  events: {
+  title: {
+    color: '#1F2529',
+  },
+  subTitle: {
     color: '#0A5480',
+    paddingBottom: '0.75rem',
+    margin: 0,
+  },
+  listItem: {
+    paddingTop: '1.25rem',
+    paddingBottom: '1.25rem',
+  },
+  avatarContainer: {
+    marginRight: '1.5rem',
+  },
+  avatar: { width: '88px', height: '88px' },
+  links: {
+    textDecoration: 'none',
+    color: '#1F2529',
+    padding: 0,
   },
 });
 
@@ -57,22 +70,22 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
     <List className={classes.container}>
       {data.map(({ id, title, src, startDate, description, link }, index: number) => (
         <React.Fragment key={id}>
-          <ListItemLink href={link} rel="noopener noreferrer" className={classes.links}>
-            <ListItemAvatar>
+          <ListItemLink rel="noopener noreferrer" href={link}>
+            <ListItemAvatar className={classes.avatarContainer}>
               {src ? (
-                <Avatar alt={title} src={src} />
+                <Avatar className={classes.avatar} alt={title} src={src} variant="square" />
               ) : (
-                <Initicon size={40} text={title} seed={identiconSeedMax(9)} single={false} />
+                <Initicon size={88} text={title} seed={identiconSeedMax(9)} single={false} />
               )}
             </ListItemAvatar>
             {startDate !== undefined ? (
               <div>
-                <ListItemText primary={title} className={classes.title} />
-                <ListItemText disableTypography secondary={dateFormatter(startDate)} className={classes.events} />
+                <ListItemText className={classes.title} primary={title} />
+                <ListItemText className={classes.subTitle} disableTypography secondary={dateFormatter(startDate)} />
                 <ListItemText secondary={description} />
               </div>
             ) : (
-              <ListItemText className={classes.title} primary={title} secondary={<>{description}</>} />
+              <ListItemText primary={title} secondary={<>{description}</>} />
             )}
           </ListItemLink>
           {data.length === index + 1 ? '' : <Divider component="li" />}
@@ -83,13 +96,14 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
 };
 
 const ListItemLink = ({ children, ...props }) => {
-  const { href, rel, className } = props;
-
-  const CustomLink = (props) => <Link className={className} rel={rel} href={href} {...props} />;
+  const classes = useStyles();
+  const { href, rel } = props;
 
   return (
-    <li>
-      <ListItem component={CustomLink}>{children}</ListItem>
+    <li className={classes.listItem}>
+      <ListItem className={classes.links} component="a" rel={rel} to={href}>
+        {children}
+      </ListItem>
     </li>
   );
 };
