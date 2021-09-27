@@ -70,40 +70,29 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
     <List className={classes.container}>
       {data.map(({ id, title, src, startDate, description, link }, index: number) => (
         <React.Fragment key={id}>
-          <ListItemLink rel="noopener noreferrer" href={link}>
-            <ListItemAvatar className={classes.avatarContainer}>
-              {src ? (
-                <Avatar className={classes.avatar} alt={title} src={src} variant="square" />
+          <li className={classes.listItem}>
+            <ListItem className={classes.links} component="a" rel="noopener noreferrer" href={link}>
+              <ListItemAvatar className={classes.avatarContainer}>
+                {src ? (
+                  <Avatar className={classes.avatar} alt={title} src={src} variant="square" />
+                ) : (
+                  <Initicon size={88} text={title} seed={identiconSeedMax(9)} single={false} />
+                )}
+              </ListItemAvatar>
+              {startDate !== undefined ? (
+                <div>
+                  <ListItemText className={classes.title} primary={title} />
+                  <ListItemText className={classes.subTitle} disableTypography secondary={dateFormatter(startDate)} />
+                  <ListItemText secondary={description} />
+                </div>
               ) : (
-                <Initicon size={88} text={title} seed={identiconSeedMax(9)} single={false} />
+                <ListItemText primary={title} secondary={<>{description}</>} />
               )}
-            </ListItemAvatar>
-            {startDate !== undefined ? (
-              <div>
-                <ListItemText className={classes.title} primary={title} />
-                <ListItemText className={classes.subTitle} disableTypography secondary={dateFormatter(startDate)} />
-                <ListItemText secondary={description} />
-              </div>
-            ) : (
-              <ListItemText primary={title} secondary={<>{description}</>} />
-            )}
-          </ListItemLink>
+            </ListItem>
+          </li>
           {data.length === index + 1 ? '' : <Divider component="li" />}
         </React.Fragment>
       ))}
     </List>
-  );
-};
-
-const ListItemLink = ({ children, ...props }) => {
-  const classes = useStyles();
-  const { href, rel } = props;
-
-  return (
-    <li className={classes.listItem}>
-      <ListItem className={classes.links} component="a" rel={rel} to={href}>
-        {children}
-      </ListItem>
-    </li>
   );
 };
