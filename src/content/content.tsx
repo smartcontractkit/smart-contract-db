@@ -12,13 +12,17 @@ import { ContributeBanner } from '../contribute-banner';
 
 const useStyles = makeStyles({
   container: {
-    paddingBottom: '10rem',
+    padding: 0,
+    paddingBottom: '11.75rem',
   },
   heading: {
     fontSize: '1.5rem',
     textAlign: 'left',
     fontWeight: 'bold',
-    paddingTop: '4rem',
+    paddingBottom: '0.5rem',
+  },
+  section: {
+    paddingBottom: '4rem',
   },
 });
 
@@ -54,23 +58,24 @@ const homePageBody: HomePageBody[] = [
  */
 export const Content: React.FC = () => {
   const classes = useStyles();
+
   return (
     <Container className={classes.container}>
       {homePageBody.map((item) => {
         if (item.title === 'Events') {
           return (
-            <React.Fragment key={item.title}>
+            <section className={classes.section} key={item.title}>
               <ContributeBanner />
               <Typography className={classes.heading}>{item.title}</Typography>
               <CategoryList data={item.data} />
-            </React.Fragment>
+            </section>
           );
         }
         return (
-          <React.Fragment key={item.title}>
+          <section className={classes.section} key={item.title}>
             <Typography className={classes.heading}>{item.title}</Typography>
             <CategoryList data={item.data} />
-          </React.Fragment>
+          </section>
         );
       })}
     </Container>

@@ -6,23 +6,26 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from '../link';
 
 const useStyles = makeStyles({
+  root: {
+    paddingLeft: 0,
+  },
   nested: {
-    paddingLeft: '1.5rem',
+    paddingLeft: '0.5rem',
     fontSize: '0.875rem',
     paddingTop: '0rem',
     paddingBottom: '0rem',
   },
   container: {
-    paddingRight: '6rem',
-    paddingLeft: '1rem',
+    paddingRight: '1.5rem',
+    // paddingLeft: '1rem',
   },
   subNavHeading: {
     color: '#95A1AD',
   },
   hr: {
     backgroundColor: '#D3DDE5',
-    width: '50%',
-    margin: '0.5rem 0 1rem 1rem',
+    width: '140px',
+    margin: '0.5rem 0 0.625rem',
   },
   links: {
     color: '#1F2529',
@@ -62,7 +65,7 @@ export const Sidebar: React.FC = () => {
         if (navItem.path === null) {
           return (
             <React.Fragment key={navItem.title}>
-              <ListItem>
+              <ListItem className={classes.root}>
                 <ListItemText primary={navItem.title} className={classes.subNavHeading} />
               </ListItem>
               <List component="div" className={classes.nested}>
@@ -84,7 +87,7 @@ export const Sidebar: React.FC = () => {
           return (
             <React.Fragment key={navItem.title}>
               <hr className={classes.hr} />
-              <ListItem>
+              <ListItem className={classes.root}>
                 <Link href={navItem.path} className={classes.links} underline="none">
                   <ListItemText primary={navItem.title} />
                 </Link>
@@ -94,7 +97,7 @@ export const Sidebar: React.FC = () => {
         }
 
         return (
-          <ListItem key={navItem.title}>
+          <ListItem key={navItem.title} className={classes.root}>
             <Link href={navItem.path} className={classes.links} underline="none">
               <ListItemText primary={navItem.title} />
             </Link>

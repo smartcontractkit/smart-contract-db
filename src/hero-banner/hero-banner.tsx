@@ -4,9 +4,14 @@ import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
+  container: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    paddingBottom: '3.75rem',
+  },
   bannerBackground: {
     display: 'flex',
-    height: '30vh',
+    height: '40vh',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundImage: `url(${'/img/hero-banner.svg'})`,
@@ -36,13 +41,16 @@ const useStyles = makeStyles({
 export const HeroBanner: React.FC = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.bannerBackground}>
-      <div className={classes.overlay}>
-        <Typography className={classes.title}>Learn about</Typography>
-        <Typography className={classes.title}>Smart Contracts.</Typography>
-        <Typography className={classes.description}>
-          Everything you’ve ever wanted to know about smart contracts, crypto and more. Created by the community, for the community.
-        </Typography>
+    <Container className={classes.container}>
+      <div className={classes.bannerBackground}>
+        <div className={classes.overlay}>
+          <Typography className={classes.title}>Learn about</Typography>
+          <Typography className={classes.title}>Smart Contracts.</Typography>
+          <Typography className={classes.description}>
+            Everything you’ve ever wanted to know about smart contracts, crypto and more. Created by the community, for
+            the community.
+          </Typography>
+        </div>
       </div>
     </Container>
   );
