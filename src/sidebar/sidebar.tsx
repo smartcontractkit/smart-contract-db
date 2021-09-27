@@ -55,6 +55,7 @@ const nav = [
 
 export const Sidebar: React.FC = () => {
   const classes = useStyles();
+
   return (
     <List component="nav" className={classes.container}>
       {nav.map((navItem) => {

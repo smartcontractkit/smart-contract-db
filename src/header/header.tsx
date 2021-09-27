@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { Drawer, IconButton, Typography } from '@material-ui/core';
+import { Drawer, IconButton, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import { Sidebar } from 'src/sidebar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Link from '../link';
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   },
   drawerContainer: {},
   iconButtonContainer: {
-    marginLeft: 'auto',
+    marginRight: 'auto',
     color: 'white',
   },
 
@@ -47,6 +47,8 @@ export const Header: React.FC = () => {
   const updatedCategoryTitle = (e) => {
     setResourceTitle(e.detail.text);
   };
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
   useEffect(() => {
     window.addEventListener('category-page-updated', (e) => updatedCategoryTitle(e));
@@ -68,24 +70,33 @@ export const Header: React.FC = () => {
         </Grid>
         {/* hide depending on screen size and show hamburger */}
         <Grid item xs={8} className={classes.contributeContainer}>
-          <Drawer
-            anchor="right"
-            classes={{ paper: classes.drawerContainer }}
-            onClose={() => setOpenDrawer(false)}
-            open={openDrawer}
-          >
-            <Sidebar />
-          </Drawer>
-          <Typography>Browse</Typography>
-          <IconButton className={classes.iconButtonContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
-            <MenuIcon className={classes.menuIconToggle} />
-          </IconButton>
-          {/* <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
-            <span className={classes.contribute}>Contribute at </span>
-            <span className={classes.contributeLogo}>
-              <GitHubIcon /> <b>GitHub</b>
-            </span>
-          </a> */}
+          {isMatch ? (
+            <>
+              <Drawer
+                anchor="left"
+                classes={{ paper: classes.drawerContainer }}
+                onClose={() => setOpenDrawer(false)}
+                open={openDrawer}
+              >
+                <Sidebar />
+              </Drawer>
+              <Typography>Browse</Typography>
+              <IconButton
+                className={classes.iconButtonContainer}
+                onClick={() => setOpenDrawer(!openDrawer)}
+                disableRipple
+              >
+                <MenuIcon className={classes.menuIconToggle} />
+              </IconButton>
+            </>
+          ) : (
+            <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
+              <span className={classes.contribute}>Contribute at </span>
+              <span className={classes.contributeLogo}>
+                <GitHubIcon /> <b>GitHub</b>
+              </span>
+            </a>
+          )}
         </Grid>
       </Grid>
     </header>
