@@ -76,31 +76,43 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
 
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
 
+  const isPastDue = (date: string) => new Date(date).getTime() < Date.now();
+
   return (
     <List className={classes.container}>
-      {data.map(({ id, title, src, startDate, description, link }, index: number) => (
+      {data.map(({ id, title, src, startDate, endDate, description, link }, index: number) => (
         <React.Fragment key={id}>
-          <li className={classes.listItem}>
-            <ListItem className={classes.links} component="a" rel="noopener noreferrer" href={link}>
-              <ListItemAvatar className={classes.avatarContainer}>
-                {src ? (
-                  <Avatar className={classes.avatar} alt={title} src={src} variant="square" />
-                ) : (
-                  <Initicon size={88} text={title} seed={identiconSeedMax(9)} single={false} />
-                )}
-              </ListItemAvatar>
-              {startDate !== undefined ? (
-                <div>
-                  <ListItemText className={classes.title} primary={title} />
-                  <ListItemText className={classes.subTitle} disableTypography secondary={dateFormatter(startDate)} />
-                  <ListItemText secondary={description} />
-                </div>
-              ) : (
-                <ListItemText primary={title} secondary={<>{description}</>} />
-              )}
-            </ListItem>
-          </li>
-          {data.length === index + 1 ? '' : <Divider component="li" />}
+          {isPastDue(endDate) ? (
+            ''
+          ) : (
+            <>
+              <li className={classes.listItem}>
+                <ListItem className={classes.links} component="a" rel="noopener noreferrer" href={link}>
+                  <ListItemAvatar className={classes.avatarContainer}>
+                    {src ? (
+                      <Avatar className={classes.avatar} alt={title} src={src} variant="square" />
+                    ) : (
+                      <Initicon size={88} text={title} seed={identiconSeedMax(9)} single={false} />
+                    )}
+                  </ListItemAvatar>
+                  {startDate !== undefined ? (
+                    <div>
+                      <ListItemText className={classes.title} primary={title} />
+                      <ListItemText
+                        className={classes.subTitle}
+                        disableTypography
+                        secondary={dateFormatter(startDate)}
+                      />
+                      <ListItemText secondary={description} />
+                    </div>
+                  ) : (
+                    <ListItemText primary={title} secondary={<>{description}</>} />
+                  )}
+                </ListItem>
+              </li>
+              {data.length === index + 1 ? '' : <Divider component="li" />}
+            </>
+          )}
         </React.Fragment>
       ))}
     </List>
