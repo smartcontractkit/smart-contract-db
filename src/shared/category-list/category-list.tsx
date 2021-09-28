@@ -45,11 +45,21 @@ export interface CategoryListProps {
 }
 
 function dateFormatter(date: string): string {
+  let dateFormat = null;
   const newDate: Date = new Date(date);
+
+  if (newDate.getHours() > 0) {
+    dateFormat = {
+      hour: 'numeric',
+      minute: 'numeric',
+    };
+  }
+
   return new Intl.DateTimeFormat('en-US', {
     month: 'long',
     day: 'numeric',
     year: 'numeric',
+    ...dateFormat,
   }).format(newDate);
 }
 
@@ -59,7 +69,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
   if (data.length === 0) {
     return (
       <Container>
-        <Typography>Coming soon..</Typography>
+        <Typography>Coming soon...</Typography>
       </Container>
     );
   }
