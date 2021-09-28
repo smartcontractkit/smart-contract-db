@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     paddingTop: '1.5rem',
     paddingBottom: '1.5rem',
     alignItems: 'center',
+    flexWrap: 'nowrap',
   },
   contributeContainer: {
     textAlign: 'right',
@@ -29,9 +30,6 @@ const useStyles = makeStyles({
   categoryTitle: {
     fontSize: '1.5rem',
     paddingLeft: '3.5rem',
-  },
-  menuContainer: {
-    paddingLeft: '2rem',
   },
   hamburgerContainer: {
     display: 'inline-flex',
@@ -82,7 +80,7 @@ export const Header: React.FC = () => {
           {isMatch ? (
             <Container>
               <Drawer anchor="left" onClose={() => setOpenDrawer(false)} open={openDrawer}>
-                <div className={classes.menuContainer}>
+                <div role="presentation" onClick={() => setOpenDrawer(false)}>
                   <Sidebar />
                 </div>
               </Drawer>

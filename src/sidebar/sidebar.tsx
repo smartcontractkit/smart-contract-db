@@ -11,8 +11,17 @@ const useStyles = makeStyles({
   root: {
     paddingLeft: 0,
   },
+  smallRoot: {
+    paddingLeft: '2rem',
+  },
   nested: {
     paddingLeft: '0.5rem',
+    fontSize: '0.875rem',
+    paddingTop: '0rem',
+    paddingBottom: '0rem',
+  },
+  smallNested: {
+    paddingLeft: '2.5rem',
     fontSize: '0.875rem',
     paddingTop: '0rem',
     paddingBottom: '0rem',
@@ -21,6 +30,9 @@ const useStyles = makeStyles({
     paddingRight: '1.5rem',
     // paddingLeft: '1rem',
   },
+  smallContainer: {
+    paddingRight: 0,
+  },
   subNavHeading: {
     color: '#95A1AD',
   },
@@ -28,6 +40,11 @@ const useStyles = makeStyles({
     backgroundColor: '#D3DDE5',
     width: '140px',
     margin: '0.5rem 0 0.625rem',
+  },
+  smHr: {
+    backgroundColor: '#D3DDE5',
+    width: '160px',
+    margin: '0.5rem 0 0.625rem 2rem',
   },
   links: {
     color: '#1F2529',
@@ -78,15 +95,15 @@ export const Sidebar: React.FC = () => {
 
   return (
     <>
-      <List component="nav" className={classes.container}>
+      <List component="nav" className={isMatch ? classes.smallContainer : classes.container}>
         {nav.map((navItem) => {
           if (navItem.path === null) {
             return (
               <React.Fragment key={navItem.title}>
-                <ListItem className={classes.root}>
+                <ListItem className={isMatch ? classes.smallRoot : classes.root}>
                   <ListItemText primary={navItem.title} className={classes.subNavHeading} />
                 </ListItem>
-                <List component="div" className={classes.nested}>
+                <List component="div" className={isMatch ? classes.smallNested : classes.nested}>
                   {navItem.children.map((childItem) => {
                     return (
                       <ListItem key={childItem.title}>
@@ -104,8 +121,8 @@ export const Sidebar: React.FC = () => {
           if (navItem.title === 'Glossary') {
             return (
               <React.Fragment key={navItem.title}>
-                <hr className={classes.hr} />
-                <ListItem className={classes.root}>
+                <hr className={isMatch ? classes.smHr : classes.hr} />
+                <ListItem className={isMatch ? classes.smallRoot : classes.root}>
                   <Link href={navItem.path} className={classes.links} underline="none">
                     <ListItemText primary={navItem.title} />
                   </Link>
@@ -130,7 +147,7 @@ export const Sidebar: React.FC = () => {
           }
 
           return (
-            <ListItem key={navItem.title} className={classes.root}>
+            <ListItem key={navItem.title} className={isMatch ? classes.smallRoot : classes.root}>
               <Link href={navItem.path} className={classes.links} underline="none">
                 <ListItemText primary={navItem.title} />
               </Link>
