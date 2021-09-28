@@ -12,6 +12,7 @@ const useStyles = makeStyles({
   iconButtonContainer: {
     marginRight: 'auto',
     color: 'white',
+    paddingRight: '0',
   },
   menuIconToggle: {
     fontSize: '3rem',
@@ -24,7 +25,7 @@ export const HamburgerMenu: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
-    <Container>
+    <>
       <Drawer anchor="left" onClose={() => setOpenDrawer(false)} open={openDrawer}>
         <div role="presentation" onClick={() => setOpenDrawer(false)}>
           <Sidebar />
@@ -36,6 +37,6 @@ export const HamburgerMenu: React.FC = () => {
           <MenuIcon className={classes.menuIconToggle} />
         </IconButton>
       </div>
-    </Container>
+    </>
   );
 };

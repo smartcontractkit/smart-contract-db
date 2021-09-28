@@ -1,7 +1,7 @@
-import { Container, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { CategoryList } from 'src/shared/category-list';
+import { makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import { communities } from '@/data/resources/communities';
 import { consultants } from '@/data/resources/consultants';
 import { events } from '@/data/resources/events';
@@ -20,6 +20,9 @@ const useStyles = makeStyles({
     fontSize: '1.5rem',
     textAlign: 'left',
     fontWeight: 'bold',
+  },
+  section: {
+    paddingBottom: '4rem',
   },
 });
 
@@ -56,6 +59,10 @@ const resourceBody: ResourceBody[] = [
 ];
 
 export default function Resources({ resource, title }: { resource: Data; title: string }): ReactElement {
+  const classes = useStyles();
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent('category-page-updated', {
@@ -65,16 +72,12 @@ export default function Resources({ resource, title }: { resource: Data; title: 
     );
   }, [title]);
 
-  const classes = useStyles();
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-
   return (
-    <Container>
+    <section className={classes.section}>
       {/* hide depending on screen size */}
       {isMatch ? <Typography className={classes.heading}>{title}</Typography> : null}
       <CategoryList data={resource} />
-    </Container>
+    </section>
   );
 }
 

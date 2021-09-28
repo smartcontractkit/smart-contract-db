@@ -11,9 +11,9 @@ import '../styles/globals.css';
 function onError(error) {
   if (process.env.NODE_ENV !== 'production') {
     if (error.code === IntlErrorCode.MISSING_MESSAGE) {
-      console.warn(error);
+      console.warn(error); // eslint-disable-line no-console
     } else {
-      console.error(error);
+      console.error(error); // eslint-disable-line no-console
     }
   }
 }
