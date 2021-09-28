@@ -25,36 +25,42 @@ const useStyles = makeStyles({
   enabledlinks: {
     textAlign: 'center',
     padding: '0.625rem',
+    flexGrow: 0,
+    flexBasis: '18%',
   },
   disabledLinks: {
     textAlign: 'center',
     color: '#95A1AD',
     padding: '0.625rem',
+    flexGrow: 0,
+    flexBasis: '18%',
   },
   firstId: {
     fontSize: '1.5rem',
     fontWeight: 'bold',
-    paddingBottom: '2rem',
+    padding: '0 0 2rem 0',
   },
   id: {
     fontSize: '1.5rem',
     fontWeight: 'bold',
-    paddingTop: '2rem',
-    paddingBottom: '2rem',
+    padding: '0 0 2rem 0',
   },
   title: {
     fontSize: '1.125rem',
+    paddingBottom: '0.5rem',
   },
   description: {
     fontSize: '1rem',
     color: '#78838F',
-    paddingTop: '0.55rem',
   },
   list: {
     padding: 0,
+    maxWidth: '29.25rem',
+    marginRight: '80px',
   },
   listItem: {
     display: 'block',
+    padding: '0 0 2rem 0',
   },
 });
 
@@ -132,7 +138,7 @@ export const GlossaryList: React.FC = () => {
           if (index.disabled === true) {
             return (
               <React.Fragment key={index.id}>
-                <Grid item xs={3} className={classes.disabledLinks}>
+                <Grid item className={classes.disabledLinks}>
                   {index.id}
                 </Grid>
               </React.Fragment>
@@ -140,7 +146,7 @@ export const GlossaryList: React.FC = () => {
           }
           return (
             <React.Fragment key={index.id}>
-              <Grid item xs={3} className={classes.enabledlinks}>
+              <Grid item className={classes.enabledlinks}>
                 <a className={classes.link} href={`#${index.id}`}>
                   {index.id}
                 </a>
