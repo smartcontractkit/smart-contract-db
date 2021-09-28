@@ -5,6 +5,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Link from '../link';
 
 const useStyles = makeStyles({
+  section: {
+    position: 'sticky',
+    top: 0,
+  },
   grid: {
     paddingTop: '1.5rem',
     paddingBottom: '1.5rem',
@@ -45,7 +49,7 @@ export const Header: React.FC = () => {
   }, [resourceTitle]);
 
   return (
-    <header>
+    <header className={classes.section}>
       <Grid container className={classes.grid}>
         <Grid item xs={1}>
           <Link href="/" onClick={() => setResourceTitle('')}>
