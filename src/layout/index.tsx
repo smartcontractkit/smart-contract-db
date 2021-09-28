@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   main: {
     flexGrow: 1,
     display: 'flex',
+    alignItems: 'flex-start',
   },
 });
 

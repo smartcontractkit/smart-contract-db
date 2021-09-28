@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     maxHeight: '25vh',
     paddingTop: '0.875rem',
     position: 'sticky',
+    top: '123px',
   },
   link: {
     color: '#000000de',

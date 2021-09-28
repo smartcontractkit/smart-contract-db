@@ -17,7 +17,8 @@ const useStyles = makeStyles({
   },
   container: {
     paddingRight: '1.5rem',
-    // paddingLeft: '1rem',
+    position: 'sticky',
+    top: '123px',
   },
   subNavHeading: {
     color: '#95A1AD',
