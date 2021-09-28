@@ -3,14 +3,26 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import { useMediaQuery, useTheme } from '@material-ui/core';
 import Link from '../link';
 
 const useStyles = makeStyles({
   root: {
     paddingLeft: 0,
   },
+  smallRoot: {
+    paddingLeft: '1.5rem',
+    paddingRight: '7.5rem',
+  },
   nested: {
     paddingLeft: '0.5rem',
+    fontSize: '0.875rem',
+    paddingTop: '0rem',
+    paddingBottom: '0rem',
+  },
+  smallNested: {
+    paddingLeft: '2rem',
     fontSize: '0.875rem',
     paddingTop: '0rem',
     paddingBottom: '0rem',
@@ -20,6 +32,9 @@ const useStyles = makeStyles({
     position: 'sticky',
     top: '123px',
   },
+  smallContainer: {
+    paddingRight: 0,
+  },
   subNavHeading: {
     color: '#95A1AD',
   },
@@ -28,9 +43,33 @@ const useStyles = makeStyles({
     width: '140px',
     margin: '0.5rem 0 0.625rem',
   },
+  smHr: {
+    backgroundColor: '#D3DDE5',
+    width: '200px',
+    margin: '0.5rem 0 0.625rem 1.5rem',
+  },
   links: {
     color: '#1F2529',
   },
+  smLinks: {
+    color: '#1F2529',
+    '&:hover': {
+      color: '#0AA6E5',
+    },
+  },
+  contributeContainer: {
+    backgroundColor: '#F7F9FA',
+  },
+  contribute: {
+    color: '#95a1ad',
+  },
+  contributeLogo: {
+    color: '#25292e',
+    '&:hover': {
+      color: '#0AA6E5',
+    },
+  },
+  contributeLinks: { textDecoration: 'none' },
 });
 
 const educationNav = [
@@ -59,51 +98,75 @@ const nav = [
 
 export const Sidebar: React.FC = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
-    <List component="nav" className={classes.container}>
-      {nav.map((navItem) => {
-        if (navItem.path === null) {
-          return (
-            <React.Fragment key={navItem.title}>
-              <ListItem className={classes.root}>
-                <ListItemText primary={navItem.title} className={classes.subNavHeading} />
-              </ListItem>
-              <List component="div" className={classes.nested}>
-                {navItem.children.map((childItem) => {
-                  return (
-                    <ListItem key={childItem.title}>
-                      <Link href={childItem.path} className={classes.links} underline="none">
-                        <ListItemText disableTypography primary={childItem.title} />
-                      </Link>
-                    </ListItem>
-                  );
-                })}
-              </List>
-            </React.Fragment>
-          );
-        }
+    <>
+      <List component="nav" className={isMatch ? classes.smallContainer : classes.container}>
+        {nav.map((navItem) => {
+          if (navItem.path === null) {
+            return (
+              <React.Fragment key={navItem.title}>
+                <ListItem className={isMatch ? classes.smallRoot : classes.root}>
+                  <ListItemText primary={navItem.title} className={classes.subNavHeading} />
+                </ListItem>
+                <List component="div" className={isMatch ? classes.smallNested : classes.nested}>
+                  {navItem.children.map((childItem) => {
+                    return (
+                      <ListItem key={childItem.title}>
+                        <Link
+                          href={childItem.path}
+                          className={isMatch ? classes.smLinks : classes.links}
+                          underline="none"
+                        >
+                          <ListItemText disableTypography primary={childItem.title} />
+                        </Link>
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </React.Fragment>
+            );
+          }
 
-        if (navItem.title === 'Glossary') {
-          return (
-            <React.Fragment key={navItem.title}>
-              <hr className={classes.hr} />
-              <ListItem className={classes.root}>
-                <Link href={navItem.path} className={classes.links} underline="none">
-                  <ListItemText primary={navItem.title} />
-                </Link>
-              </ListItem>
-            </React.Fragment>
-          );
-        }
+          if (navItem.title === 'Glossary') {
+            return (
+              <React.Fragment key={navItem.title}>
+                <hr className={isMatch ? classes.smHr : classes.hr} />
+                <ListItem className={isMatch ? classes.smallRoot : classes.root}>
+                  <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
+                    <ListItemText primary={navItem.title} />
+                  </Link>
+                </ListItem>
+                {/* hide depending on screen size */}
+                {isMatch ? (
+                  <ListItem className={classes.contributeContainer}>
+                    <a
+                      href="https://github.com/thisdot/smart-contract-db"
+                      rel="noopener noreferrer"
+                      className={classes.contributeLinks}
+                    >
+                      <span className={classes.contribute}>Contribute at </span>
+                      <span className={classes.contributeLogo}>
+                        <GitHubIcon /> <b>GitHub</b>
+                      </span>
+                    </a>
+                  </ListItem>
+                ) : null}
+              </React.Fragment>
+            );
+          }
 
-        return (
-          <ListItem key={navItem.title} className={classes.root}>
-            <Link href={navItem.path} className={classes.links} underline="none">
-              <ListItemText primary={navItem.title} />
-            </Link>
-          </ListItem>
-        );
-      })}
-    </List>
+          return (
+            <ListItem key={navItem.title} className={isMatch ? classes.smallRoot : classes.root}>
+              <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
+                <ListItemText primary={navItem.title} />
+              </Link>
+            </ListItem>
+          );
+        })}
+      </List>
+    </>
   );
 };
