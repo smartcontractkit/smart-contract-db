@@ -50,6 +50,12 @@ const useStyles = makeStyles({
   links: {
     color: '#1F2529',
   },
+  smLinks: {
+    color: '#1F2529',
+    '&:hover': {
+      color: '#0AA6E5',
+    },
+  },
   contributeContainer: {
     backgroundColor: '#F7F9FA',
   },
@@ -108,7 +114,11 @@ export const Sidebar: React.FC = () => {
                   {navItem.children.map((childItem) => {
                     return (
                       <ListItem key={childItem.title}>
-                        <Link href={childItem.path} className={classes.links} underline="none">
+                        <Link
+                          href={childItem.path}
+                          className={isMatch ? classes.smLinks : classes.links}
+                          underline="none"
+                        >
                           <ListItemText disableTypography primary={childItem.title} />
                         </Link>
                       </ListItem>
@@ -124,7 +134,7 @@ export const Sidebar: React.FC = () => {
               <React.Fragment key={navItem.title}>
                 <hr className={isMatch ? classes.smHr : classes.hr} />
                 <ListItem className={isMatch ? classes.smallRoot : classes.root}>
-                  <Link href={navItem.path} className={classes.links} underline="none">
+                  <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
                     <ListItemText primary={navItem.title} />
                   </Link>
                 </ListItem>
@@ -149,7 +159,7 @@ export const Sidebar: React.FC = () => {
 
           return (
             <ListItem key={navItem.title} className={isMatch ? classes.smallRoot : classes.root}>
-              <Link href={navItem.path} className={classes.links} underline="none">
+              <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
                 <ListItemText primary={navItem.title} />
               </Link>
             </ListItem>

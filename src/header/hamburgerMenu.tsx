@@ -5,6 +5,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Sidebar } from 'src/sidebar';
 
 const useStyles = makeStyles({
+  hamburgerMenu: {
+    paddingTop: '3.625rem',
+  },
   hamburgerContainer: {
     display: 'inline-flex',
     alignItems: 'center',
@@ -27,7 +30,7 @@ export const HamburgerMenu: React.FC = () => {
   return (
     <>
       <Drawer anchor="left" onClose={() => setOpenDrawer(false)} open={openDrawer}>
-        <div role="presentation" onClick={() => setOpenDrawer(false)}>
+        <div role="presentation" onClick={() => setOpenDrawer(false)} className={classes.hamburgerMenu}>
           <Sidebar />
         </div>
       </Drawer>
