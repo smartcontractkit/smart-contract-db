@@ -4,7 +4,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { Container, useMediaQuery, useTheme } from '@material-ui/core';
+import { useMediaQuery, useTheme } from '@material-ui/core';
 import Link from '../link';
 
 const useStyles = makeStyles({
@@ -12,7 +12,8 @@ const useStyles = makeStyles({
     paddingLeft: 0,
   },
   smallRoot: {
-    paddingLeft: '2rem',
+    paddingLeft: '1.5rem',
+    paddingRight: '7.5rem',
   },
   nested: {
     paddingLeft: '0.5rem',
@@ -21,7 +22,7 @@ const useStyles = makeStyles({
     paddingBottom: '0rem',
   },
   smallNested: {
-    paddingLeft: '2.5rem',
+    paddingLeft: '2rem',
     fontSize: '0.875rem',
     paddingTop: '0rem',
     paddingBottom: '0rem',
@@ -43,8 +44,8 @@ const useStyles = makeStyles({
   },
   smHr: {
     backgroundColor: '#D3DDE5',
-    width: '160px',
-    margin: '0.5rem 0 0.625rem 2rem',
+    width: '200px',
+    margin: '0.5rem 0 0.625rem 1.5rem',
   },
   links: {
     color: '#1F2529',
