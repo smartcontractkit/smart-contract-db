@@ -52,7 +52,8 @@ export const events: Event[] = [
     location: 'Virtual',
     link: 'https://chain.link/hackathon/',
     src: '/img/chainlink_fall_hackathon.jpeg',
-   },{
+  },
+  {
     id: 'chainlink-spanish-bootcamp',
     title: 'Bootcamp en Español para desarrolladores de Smart Contracts',
     description:

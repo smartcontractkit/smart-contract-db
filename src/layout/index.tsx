@@ -8,6 +8,7 @@ const useStyles = makeStyles({
   container: {
     display: 'flex',
     flexDirection: 'column',
+    padding: '0 1.5rem',
   },
   main: {
     flexGrow: 1,

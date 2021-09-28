@@ -11,23 +11,35 @@ const useStyles = makeStyles({
   container: {
     display: 'flex',
   },
-  grid: {
+  searchGrid: {
     textAlign: 'right',
     maxHeight: '25vh',
-    paddingTop: '1rem',
+    paddingTop: '0.875rem',
+    position: 'sticky',
   },
-  links: {
+  link: {
+    color: '#000000de',
     textDecoration: 'none',
-    color: 'inherit',
+  },
+  enabledlinks: {
+    textAlign: 'center',
+    padding: '0.625rem',
   },
   disabledLinks: {
+    textAlign: 'center',
     color: '#95A1AD',
+    padding: '0.625rem',
+  },
+  firstId: {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    paddingBottom: '2rem',
   },
   id: {
     fontSize: '1.5rem',
     fontWeight: 'bold',
-    paddingTop: '1.5rem',
-    paddingBottom: '1.5rem',
+    paddingTop: '2rem',
+    paddingBottom: '2rem',
   },
   title: {
     fontSize: '1.125rem',
@@ -36,6 +48,9 @@ const useStyles = makeStyles({
     fontSize: '1rem',
     color: '#78838F',
     paddingTop: '0.55rem',
+  },
+  list: {
+    padding: 0,
   },
   listItem: {
     display: 'block',
@@ -85,12 +100,14 @@ export const GlossaryList: React.FC = () => {
     );
   });
 
+  const listItemClass = (index: number) => (index ? classes.id : classes.firstId);
+
   return (
     <div className={classes.container}>
-      <List>
-        {glossary.map((glossaryItem) => (
+      <List className={classes.list}>
+        {glossary.map((glossaryItem, index) => (
           <React.Fragment key={Object.keys(glossaryItem)[0]}>
-            <ListItem alignItems="flex-start" className={classes.id}>
+            <ListItem alignItems="flex-start" className={listItemClass(index)}>
               <ListItemText
                 disableTypography
                 id={Object.keys(glossaryItem)[0]}
@@ -109,7 +126,7 @@ export const GlossaryList: React.FC = () => {
         ))}
       </List>
 
-      <Grid container className={classes.grid}>
+      <Grid container className={classes.searchGrid}>
         {glossaryNav.map((index) => {
           if (index.disabled === true) {
             return (
@@ -122,8 +139,8 @@ export const GlossaryList: React.FC = () => {
           }
           return (
             <React.Fragment key={index.id}>
-              <Grid item xs={3}>
-                <a href={`#${index.id}`} className={classes.links}>
+              <Grid item xs={3} className={classes.enabledlinks}>
+                <a className={classes.link} href={`#${index.id}`}>
                   {index.id}
                 </a>
               </Grid>
