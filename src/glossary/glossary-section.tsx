@@ -92,6 +92,25 @@ const glossaryNav = [
 export const GlossaryList: React.FC = () => {
   const classes = useStyles();
 
+  const handleScroll = () => {
+    const element = document.querySelector('#__next > div > header');
+    const text = document.querySelector('#__next > div > main > div > ul');
+
+    const distanceToTop = window.pageYOffset;  //+ element.getBoundingClientRect().top;
+    const elementHeight = element.offsetHeight;
+    const { scrollTop } = document.documentElement;
+
+    let opacity = 1;
+
+    if (scrollTop > distanceToTop) {
+      opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+    }
+
+    if (opacity >= 0) {
+      text.style.opacity = opacity;
+    }
+  };
+
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent('category-page-updated', {
@@ -99,6 +118,7 @@ export const GlossaryList: React.FC = () => {
         detail: { text: 'Glossary' },
       })
     );
+    window.addEventListener('scroll', handleScroll);
   });
 
   const listItemClass = (index: number) => (index ? classes.id : classes.firstId);
