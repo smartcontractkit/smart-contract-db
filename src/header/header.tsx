@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Drawer, IconButton, Typography, useMediaQuery, useTheme } from '@material-ui/core';
-import { Sidebar } from 'src/sidebar';
-import MenuIcon from '@material-ui/icons/Menu';
+import { useMediaQuery, useTheme } from '@material-ui/core';
 import Link from '../link';
+import { HamburgerMenu } from './hamburgerMenu';
 
 const useStyles = makeStyles({
   grid: {
@@ -31,24 +30,11 @@ const useStyles = makeStyles({
     fontSize: '1.5rem',
     paddingLeft: '3.5rem',
   },
-  hamburgerContainer: {
-    display: 'inline-flex',
-    alignItems: 'center',
-  },
-  iconButtonContainer: {
-    marginRight: 'auto',
-    color: 'white',
-  },
-  menuIconToggle: {
-    fontSize: '3rem',
-    color: 'black',
-  },
 });
 
 export const Header: React.FC = () => {
   const classes = useStyles();
   const [resourceTitle, setResourceTitle] = useState('');
-  const [openDrawer, setOpenDrawer] = useState(false);
 
   const updatedCategoryTitle = (e) => {
     setResourceTitle(e.detail.text);
@@ -78,23 +64,7 @@ export const Header: React.FC = () => {
         {/* hide depending on screen size and show hamburger */}
         <Grid item xs={9} className={classes.contributeContainer}>
           {isMatch ? (
-            <Container>
-              <Drawer anchor="left" onClose={() => setOpenDrawer(false)} open={openDrawer}>
-                <div role="presentation" onClick={() => setOpenDrawer(false)}>
-                  <Sidebar />
-                </div>
-              </Drawer>
-              <div className={classes.hamburgerContainer}>
-                <Typography>Browse</Typography>
-                <IconButton
-                  className={classes.iconButtonContainer}
-                  onClick={() => setOpenDrawer(!openDrawer)}
-                  disableRipple
-                >
-                  <MenuIcon className={classes.menuIconToggle} />
-                </IconButton>
-              </div>
-            </Container>
+            <HamburgerMenu />
           ) : (
             <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
               <span className={classes.contribute}>Contribute at </span>
