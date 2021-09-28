@@ -27,9 +27,14 @@ const useStyles = makeStyles({
     },
   },
   links: { textDecoration: 'none' },
+  logo: {
+    width: '10.25rem',
+    textAlign: 'left',
+  },
   categoryTitle: {
     fontSize: '1.5rem',
-    paddingLeft: '4rem',
+    textAlign: 'left',
+    flexBasis: '56%',
   },
 });
 
@@ -51,15 +56,15 @@ export const Header: React.FC = () => {
   return (
     <header className={classes.section}>
       <Grid container className={classes.grid}>
-        <Grid item xs={1}>
+        <Grid item className={classes.logo}>
           <Link href="/" onClick={() => setResourceTitle('')}>
-            <img src="/img/logo.svg" alt="smartcontract DB logo" />
+            <img src="/img/logo.svg" alt="Smart Contract DB logo" />
           </Link>
         </Grid>
-        <Grid item xs={2} className={classes.categoryTitle}>
+        <Grid item className={classes.categoryTitle}>
           <b>{resourceTitle}</b>
         </Grid>
-        <Grid item xs={9} className={classes.contributeContainer}>
+        <Grid item xs={3} className={classes.contributeContainer}>
           <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
             <span className={classes.contribute}>Contribute at </span>
             <span className={classes.contributeLogo}>
