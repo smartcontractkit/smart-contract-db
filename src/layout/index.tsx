@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useMediaQuery } from '@material-ui/core';
 import { Header } from '../header';
 import { Sidebar } from '../sidebar';
 
@@ -19,7 +20,8 @@ const useStyles = makeStyles({
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
-
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <>
       <Head>
@@ -33,7 +35,8 @@ const Layout: React.FC = ({ children }) => {
       <div className={classes.container}>
         <Header />
         <main className={classes.main}>
-          <Sidebar />
+          {/* hide depending on screen size */}
+          {!isMatch ? <Sidebar /> : null}
           {children}
         </main>
       </div>
