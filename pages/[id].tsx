@@ -66,18 +66,31 @@ export default function Resources({ resource, title }: { resource: Data; title: 
   const handleScroll = () => {
     const element = document.querySelector('#__next > div > header') as HTMLElement;
     const text = document.querySelector('#__next > div > main > section > ul') as HTMLElement;
+    const pTag = document.querySelector('#__next > div > main > section > p') as HTMLElement;
+    const header = element.offsetTop;
+    let elementHeight;
+
     if (text !== null) {
       const textList = text.children as unknown as HTMLElement;
 
       for (let i = 0; i < text.children.length; i += 1) {
-        const header = element.offsetTop;
-        const elementHeight = textList[i].offsetTop;
+        elementHeight = textList[i].offsetTop;
 
         if (elementHeight < header) {
           textList[i].style.opacity = '0.3';
         } else {
           textList[i].style.opacity = '1';
         }
+      }
+    }
+
+    if (pTag !== null) {
+      elementHeight = pTag.offsetTop;
+
+      if (elementHeight - 50 < header) {
+        pTag.style.opacity = '0.3';
+      } else {
+        pTag.style.opacity = '1';
       }
     }
   };
