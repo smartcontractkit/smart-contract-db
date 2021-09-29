@@ -105,12 +105,12 @@ export const GlossaryList: React.FC = () => {
 
       const headerOffest = Math.abs(distanceToTop - header);
 
-      if (elementHeight > headerOffest) {
+      if (elementHeight < headerOffest) {
         // opacity = 0.3;
-        text.style.opacity = 0.3;
+        textList[i].style.opacity = 0.3;
       } else {
         // opacity = 1;
-        text.style.opacity = 1;
+        textList[i].style.opacity = 1;
       }
     }
 
