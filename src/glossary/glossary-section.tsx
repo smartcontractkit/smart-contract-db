@@ -4,12 +4,18 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { Typography, useMediaQuery } from '@material-ui/core';
 import { glossary } from '@/data/resources/glossary/glossary';
 
 const useStyles = makeStyles({
   container: {
     display: 'flex',
+  },
+  heading: {
+    fontSize: '1.5rem',
+    textAlign: 'left',
+    fontWeight: 'bold',
   },
   searchGrid: {
     textAlign: 'right',
@@ -91,42 +97,26 @@ const glossaryNav = [
 // TODO: make mobile friendly
 export const GlossaryList: React.FC = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleScroll = () => {
     const element = document.querySelector('#__next > div > header') as HTMLElement;
     const text = document.querySelector('#__next > div > main > div > ul') as HTMLElement;
-    const textList = text.children as HTMLCollection;
+    if (text !== null) {
+      const textList = text.children as unknown as HTMLElement;
 
-    // WIP try and check to see what needs to dim out
-    for (let i = 0; i < text.children.length; i += 1) {
-      const distanceToTop = window.pageYOffset;
-      const header = element.offsetHeight;
-      const elementHeight = textList[i].offsetTop;
+      for (let i = 0; i < text.children.length; i += 1) {
+        const header = element.offsetTop;
+        const elementHeight = textList[i].offsetTop;
 
-      const headerOffest = Math.abs(distanceToTop - header);
-
-      if (elementHeight < headerOffest) {
-        // opacity = 0.3;
-        textList[i].style.opacity = 0.3;
-      } else {
-        // opacity = 1;
-        textList[i].style.opacity = 1;
+        if (elementHeight < header) {
+          textList[i].style.opacity = '0.3';
+        } else {
+          textList[i].style.opacity = '1';
+        }
       }
     }
-
-    // const distanceToTop = window.pageYOffset;
-    // const header = element.offsetHeight;
-    // const elementHeight = text.offsetTop;
-
-    // const headerOffest = Math.abs(distanceToTop - header);
-
-    // if (elementHeight > headerOffest) {
-    //   // opacity = 0.3;
-    //   text.style.opacity = 0.3;
-    // } else {
-    //   // opacity = 1;
-    //   text.style.opacity = 1;
-    // }
   };
 
   useEffect(() => {
@@ -136,7 +126,11 @@ export const GlossaryList: React.FC = () => {
         detail: { text: 'Glossary' },
       })
     );
+
     window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   });
 
   const listItemClass = (index: number) => (index ? classes.id : classes.firstId);
@@ -144,6 +138,7 @@ export const GlossaryList: React.FC = () => {
   return (
     <div className={classes.container}>
       <List className={classes.list}>
+        {isMatch ? <Typography className={classes.heading}>Glossary</Typography> : null}
         {glossary.map((glossaryItem, index) => (
           <React.Fragment key={Object.keys(glossaryItem)[0]}>
             <ListItem alignItems="flex-start" className={listItemClass(index)}>

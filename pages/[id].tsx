@@ -63,6 +63,25 @@ export default function Resources({ resource, title }: { resource: Data; title: 
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
+  const handleScroll = () => {
+    const element = document.querySelector('#__next > div > header') as HTMLElement;
+    const text = document.querySelector('#__next > div > main > section > ul') as HTMLElement;
+    if (text !== null) {
+      const textList = text.children as unknown as HTMLElement;
+
+      for (let i = 0; i < text.children.length; i += 1) {
+        const header = element.offsetTop;
+        const elementHeight = textList[i].offsetTop;
+
+        if (elementHeight < header) {
+          textList[i].style.opacity = '0.3';
+        } else {
+          textList[i].style.opacity = '1';
+        }
+      }
+    }
+  };
+
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent('category-page-updated', {
@@ -70,6 +89,11 @@ export default function Resources({ resource, title }: { resource: Data; title: 
         detail: { text: title },
       })
     );
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [title]);
 
   return (
