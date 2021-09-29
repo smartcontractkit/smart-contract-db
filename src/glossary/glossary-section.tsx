@@ -93,22 +93,40 @@ export const GlossaryList: React.FC = () => {
   const classes = useStyles();
 
   const handleScroll = () => {
-    const element = document.querySelector('#__next > div > header');
-    const text = document.querySelector('#__next > div > main > div > ul');
+    const element = document.querySelector('#__next > div > header') as HTMLElement;
+    const text = document.querySelector('#__next > div > main > div > ul') as HTMLElement;
+    const textList = text.children as HTMLCollection;
 
-    const distanceToTop = window.pageYOffset;  //+ element.getBoundingClientRect().top;
-    const elementHeight = element.offsetHeight;
-    const { scrollTop } = document.documentElement;
+    // WIP try and check to see what needs to dim out
+    for (let i = 0; i < text.children.length; i += 1) {
+      const distanceToTop = window.pageYOffset;
+      const header = element.offsetHeight;
+      const elementHeight = textList[i].offsetTop;
 
-    let opacity = 1;
+      const headerOffest = Math.abs(distanceToTop - header);
 
-    if (scrollTop > distanceToTop) {
-      opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+      if (elementHeight > headerOffest) {
+        // opacity = 0.3;
+        text.style.opacity = 0.3;
+      } else {
+        // opacity = 1;
+        text.style.opacity = 1;
+      }
     }
 
-    if (opacity >= 0) {
-      text.style.opacity = opacity;
-    }
+    // const distanceToTop = window.pageYOffset;
+    // const header = element.offsetHeight;
+    // const elementHeight = text.offsetTop;
+
+    // const headerOffest = Math.abs(distanceToTop - header);
+
+    // if (elementHeight > headerOffest) {
+    //   // opacity = 0.3;
+    //   text.style.opacity = 0.3;
+    // } else {
+    //   // opacity = 1;
+    //   text.style.opacity = 1;
+    // }
   };
 
   useEffect(() => {
