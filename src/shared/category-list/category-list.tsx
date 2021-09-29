@@ -11,14 +11,12 @@ import {
   Container,
 } from '@material-ui/core';
 import Initicon from 'react-initicon';
+import { Icon } from '../icon';
 
 const useStyles = makeStyles({
   container: {
     width: '100%',
     padding: 0,
-  },
-  title: {
-    color: '#1F2529',
   },
   subTitle: {
     color: '#0A5480',
@@ -28,12 +26,29 @@ const useStyles = makeStyles({
   listItem: {
     paddingTop: '1.25rem',
     paddingBottom: '1.25rem',
+    cursor: 'pointer',
+    '&:hover': {
+      background: '#F7F9FA',
+    },
+    '& .list-item-title': {
+      display: 'inline-block',
+      transition: 'transform 0.1s ease-out',
+    },
+    '&:hover .list-item-title': {
+      transform: 'translate(0.75rem);',
+    },
+    '& .list-item-arrow-icon': {
+      display: 'none',
+    },
+    '&:hover .list-item-arrow-icon': {
+      display: 'inline-block',
+    },
   },
   avatarContainer: {
     marginRight: '1.5rem',
   },
   avatar: { width: '88px', height: '88px' },
-  links: {
+  link: {
     textDecoration: 'none',
     color: '#1F2529',
     padding: 0,
@@ -76,12 +91,19 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
 
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
 
+  const ListItemIconText = ({ title }) => (
+    <>
+      <Icon className="list-item-arrow-icon" name="long-arrow-up" size={12} />
+      <span className="list-item-title">{title}</span>
+    </>
+  );
+
   return (
     <List className={classes.container}>
       {data.map(({ id, title, src, startDate, description, link }, index: number) => (
         <React.Fragment key={id}>
           <li className={classes.listItem}>
-            <ListItem className={classes.links} component="a" rel="noopener noreferrer" href={link}>
+            <ListItem className={classes.link} component="a" rel="noopener noreferrer" href={link}>
               <ListItemAvatar className={classes.avatarContainer}>
                 {src ? (
                   <Avatar className={classes.avatar} alt={title} src={src} variant="square" />
@@ -91,12 +113,12 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
               </ListItemAvatar>
               {startDate !== undefined ? (
                 <div>
-                  <ListItemText className={classes.title} primary={title} />
+                  <ListItemText primary={<ListItemIconText title={title} />} />
                   <ListItemText className={classes.subTitle} disableTypography secondary={dateFormatter(startDate)} />
                   <ListItemText secondary={description} />
                 </div>
               ) : (
-                <ListItemText primary={title} secondary={<>{description}</>} />
+                <ListItemText primary={<ListItemIconText title={title} />} secondary={<>{description}</>} />
               )}
             </ListItem>
           </li>
