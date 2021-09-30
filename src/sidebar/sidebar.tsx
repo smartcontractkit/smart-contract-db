@@ -4,8 +4,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+// import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { useMediaQuery, useTheme } from '@material-ui/core';
+import { Icon } from '../shared/icon';
 import Link from '../link';
 
 const useStyles = makeStyles({
@@ -134,7 +135,7 @@ export const Sidebar: React.FC = () => {
                           className={isMatch ? classes.smLinks : classes.links}
                           underline="none"
                         >
-                          <FiberManualRecordIcon className="bullet-point" fontSize="small" />
+                          <Icon className="bullet-point" name="bullet-point" />
                           <ListItemText disableTypography primary={childItem.title} />
                         </Link>
                       </ListItem>
@@ -151,8 +152,7 @@ export const Sidebar: React.FC = () => {
                 <hr className={isMatch ? classes.smHr : classes.hr} />
                 <ListItem className={isMatch ? classes.smallRoot : classes.root}>
                   <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
-                    <FiberManualRecordIcon className="bullet-point" fontSize="small" />
-
+                    <Icon className="bullet-point" name="bullet-point" />
                     <ListItemText primary={navItem.title} />
                   </Link>
                 </ListItem>
@@ -178,7 +178,7 @@ export const Sidebar: React.FC = () => {
           return (
             <ListItem key={navItem.title} className={isMatch ? classes.smallRoot : classes.root}>
               <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
-                <FiberManualRecordIcon className="bullet-point" fontSize="small" />
+                <Icon className="bullet-point" name="bullet-point" />
                 <ListItemText primary={navItem.title} />
               </Link>
             </ListItem>
