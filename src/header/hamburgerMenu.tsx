@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Drawer, IconButton, Typography, useMediaQuery, useTheme } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import ClearIcon from '@material-ui/icons/Clear';
 import { makeStyles } from '@material-ui/core/styles';
 import { Sidebar } from 'src/sidebar';
 
@@ -24,26 +25,39 @@ const useStyles = makeStyles({
     fontSize: '3rem',
     color: 'black',
   },
+  closeIconToggle: {
+    fontSize: '2rem',
+    color: 'black',
+  },
   // 768, 1024
   close: {
     position: 'fixed',
+    display: 'flex',
+    alignItems: 'center',
+    alignSelf: 'center',
     right: 0,
     paddingRight: '6rem',
-    paddingTop: '3rem',
+    paddingTop: '2.25rem',
     fontWeight: 'bold',
   },
   // 425
   smClose: {
+    display: 'flex',
+    alignItems: 'center',
+    alignSelf: 'center',
     position: 'fixed',
     right: 0,
     paddingRight: '4.5rem',
-    paddingTop: '3rem',
+    paddingTop: '2.25rem',
     fontWeight: 'bold',
   },
   // 375
   xsClose: {
+    display: 'flex',
+    alignItems: 'center',
+    alignSelf: 'center',
     textAlign: 'center',
-    paddingTop: '3rem',
+    paddingTop: '2.25rem',
     paddingBottom: '0',
     fontWeight: 'bold',
   },
@@ -73,13 +87,14 @@ export const HamburgerMenu: React.FC = () => {
     <>
       {/* change opacity to be 0.3 on openDrawer */}
       <Drawer anchor="left" className={classes.drawer} onClose={() => setOpenDrawer(false)} open={openDrawer}>
-        <Typography
+        <div
+          role="presentation"
           // eslint-disable-next-line no-nested-ternary
           className={xsMatch ? classes.xsClose : smMatch ? classes.smClose : classes.close}
           onClick={() => setOpenDrawer(false)}
         >
-          Close X
-        </Typography>
+          <p>Close</p> <ClearIcon className={classes.closeIconToggle} />
+        </div>
         <div
           role="presentation"
           onClick={() => setOpenDrawer(false)}
