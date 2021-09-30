@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   section: {
     position: 'sticky',
     top: 0,
-    paddingLeft: '1.5rem',
+    paddingLeft: '2rem',
   },
   grid: {
     paddingTop: '1.5rem',

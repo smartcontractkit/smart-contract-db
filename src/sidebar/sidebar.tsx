@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   },
   subNavHeading: {
     color: '#95A1AD',
-    paddingLeft: '1.5rem',
+    paddingLeft: '2rem',
   },
   hr: {
     backgroundColor: '#D3DDE5',
