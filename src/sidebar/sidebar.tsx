@@ -63,6 +63,13 @@ const useStyles = makeStyles({
       opacity: '1',
       // transition: 'transform 0.2s ease-in',
     },
+    '&:focus ': {
+      color: '#0AA6E5',
+    },
+    '&:focus .bullet-point': {
+      opacity: '1',
+      fill: '#0AA6E5',
+    },
   },
   smLinks: {
     display: 'flex',
