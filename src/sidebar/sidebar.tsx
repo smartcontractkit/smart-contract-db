@@ -80,7 +80,7 @@ const useStyles = makeStyles({
     color: '#0AA6E5',
     '& .bullet-point': {
       opacity: '1',
-      fill: '#0AA6E5 !important',
+      fill: '#0AA6E5',
     },
   },
   smActiveLinks: {
