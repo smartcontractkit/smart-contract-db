@@ -12,6 +12,9 @@ const useStyles = makeStyles({
     top: 0,
     paddingLeft: '2rem',
   },
+  smSection: {
+    paddingLeft: 0,
+  },
   grid: {
     paddingTop: '1.5rem',
     paddingBottom: '1.5rem',
@@ -60,7 +63,7 @@ export const Header: React.FC = () => {
   }, [resourceTitle]);
 
   return (
-    <header className={classes.section}>
+    <header className={isMatch ? classes.smSection : classes.section}>
       <Grid container className={classes.grid}>
         <Grid item className={classes.logo}>
           <Link href="/" onClick={() => setResourceTitle('')}>

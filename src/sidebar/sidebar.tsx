@@ -78,6 +78,13 @@ const useStyles = makeStyles({
     '&:hover': {
       color: '#0AA6E5',
     },
+    '& .bullet-point': {
+      opacity: '0',
+      // transition: 'transform 0.2s ease-out',
+    },
+    '&:focus ': {
+      color: '#0AA6E5',
+    },
   },
   contributeContainer: {
     backgroundColor: '#F7F9FA',
