@@ -10,8 +10,8 @@ import {
   Typography,
   Container,
 } from '@material-ui/core';
-import Initicon from 'react-initicon';
 import { Icon } from '../icon';
+import { Initicon } from '../initicon';
 
 const useStyles = makeStyles({
   container: {
