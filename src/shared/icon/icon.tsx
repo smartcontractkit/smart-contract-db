@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import { LongArrowUp } from './icons';
+import { LongArrowUp, BulletPoint } from './icons';
 
 const iconNameMap = {
   'long-arrow-up': LongArrowUp,
+  'bullet-point': BulletPoint,
 };
 
 export type IconProps = {

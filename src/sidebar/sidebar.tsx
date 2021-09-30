@@ -4,7 +4,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
+// import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { useMediaQuery, useTheme } from '@material-ui/core';
+import { Icon } from '../shared/icon';
 import Link from '../link';
 
 const useStyles = makeStyles({
@@ -37,6 +39,7 @@ const useStyles = makeStyles({
   },
   subNavHeading: {
     color: '#95A1AD',
+    paddingLeft: '2rem',
   },
   hr: {
     backgroundColor: '#D3DDE5',
@@ -49,12 +52,41 @@ const useStyles = makeStyles({
     margin: '0.5rem 0 0.625rem 1.5rem',
   },
   links: {
+    display: 'flex',
+    alignItems: 'center',
     color: '#1F2529',
+    '& .bullet-point': {
+      opacity: '0',
+      // transition: 'transform 0.2s ease-out',
+    },
+    '&:hover .bullet-point': {
+      opacity: '1',
+      // transition: 'transform 0.2s ease-in',
+    },
   },
   smLinks: {
+    display: 'flex',
+    alignItems: 'center',
     color: '#1F2529',
     '&:hover': {
       color: '#0AA6E5',
+    },
+    '& .bullet-point': {
+      opacity: '0',
+      // transition: 'transform 0.2s ease-out',
+    },
+  },
+  activeLinks: {
+    color: '#0AA6E5',
+    '& .bullet-point': {
+      opacity: '1',
+      fill: '#0AA6E5 !important',
+    },
+  },
+  smActiveLinks: {
+    color: '#0AA6E5',
+    '& .bullet-point': {
+      opacity: '0',
     },
   },
   contributeContainer: {
@@ -100,7 +132,6 @@ export const Sidebar: React.FC = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-
   return (
     <>
       <List component="nav" className={isMatch ? classes.smallContainer : classes.container}>
@@ -119,7 +150,10 @@ export const Sidebar: React.FC = () => {
                           href={childItem.path}
                           className={isMatch ? classes.smLinks : classes.links}
                           underline="none"
+                          activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
+                          // onClick={toggleClass}
                         >
+                          <Icon className="bullet-point" name="bullet-point" />
                           <ListItemText disableTypography primary={childItem.title} />
                         </Link>
                       </ListItem>
@@ -135,7 +169,13 @@ export const Sidebar: React.FC = () => {
               <React.Fragment key={navItem.title}>
                 <hr className={isMatch ? classes.smHr : classes.hr} />
                 <ListItem className={isMatch ? classes.smallRoot : classes.root}>
-                  <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
+                  <Link
+                    href={navItem.path}
+                    className={isMatch ? classes.smLinks : classes.links}
+                    underline="none"
+                    activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
+                  >
+                    <Icon className="bullet-point" name="bullet-point" />
                     <ListItemText primary={navItem.title} />
                   </Link>
                 </ListItem>
@@ -160,7 +200,13 @@ export const Sidebar: React.FC = () => {
 
           return (
             <ListItem key={navItem.title} className={isMatch ? classes.smallRoot : classes.root}>
-              <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
+              <Link
+                href={navItem.path}
+                className={isMatch ? classes.smLinks : classes.links}
+                underline="none"
+                activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
+              >
+                <Icon className="bullet-point" name="bullet-point" />
                 <ListItemText primary={navItem.title} />
               </Link>
             </ListItem>
