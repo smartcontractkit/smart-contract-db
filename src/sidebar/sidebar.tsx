@@ -63,13 +63,6 @@ const useStyles = makeStyles({
       opacity: '1',
       // transition: 'transform 0.2s ease-in',
     },
-    '&:focus ': {
-      color: '#0AA6E5',
-    },
-    '&:focus .bullet-point': {
-      opacity: '1',
-      fill: '#0AA6E5',
-    },
   },
   smLinks: {
     display: 'flex',
@@ -82,8 +75,18 @@ const useStyles = makeStyles({
       opacity: '0',
       // transition: 'transform 0.2s ease-out',
     },
-    '&:focus ': {
-      color: '#0AA6E5',
+  },
+  activeLinks: {
+    color: '#0AA6E5',
+    '& .bullet-point': {
+      opacity: '1',
+      fill: '#0AA6E5 !important',
+    },
+  },
+  smActiveLinks: {
+    color: '#0AA6E5',
+    '& .bullet-point': {
+      opacity: '0',
     },
   },
   contributeContainer: {
@@ -129,7 +132,6 @@ export const Sidebar: React.FC = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-
   return (
     <>
       <List component="nav" className={isMatch ? classes.smallContainer : classes.container}>
@@ -148,6 +150,8 @@ export const Sidebar: React.FC = () => {
                           href={childItem.path}
                           className={isMatch ? classes.smLinks : classes.links}
                           underline="none"
+                          activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
+                          // onClick={toggleClass}
                         >
                           <Icon className="bullet-point" name="bullet-point" />
                           <ListItemText disableTypography primary={childItem.title} />
@@ -165,7 +169,12 @@ export const Sidebar: React.FC = () => {
               <React.Fragment key={navItem.title}>
                 <hr className={isMatch ? classes.smHr : classes.hr} />
                 <ListItem className={isMatch ? classes.smallRoot : classes.root}>
-                  <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
+                  <Link
+                    href={navItem.path}
+                    className={isMatch ? classes.smLinks : classes.links}
+                    underline="none"
+                    activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
+                  >
                     <Icon className="bullet-point" name="bullet-point" />
                     <ListItemText primary={navItem.title} />
                   </Link>
@@ -191,7 +200,12 @@ export const Sidebar: React.FC = () => {
 
           return (
             <ListItem key={navItem.title} className={isMatch ? classes.smallRoot : classes.root}>
-              <Link href={navItem.path} className={isMatch ? classes.smLinks : classes.links} underline="none">
+              <Link
+                href={navItem.path}
+                className={isMatch ? classes.smLinks : classes.links}
+                underline="none"
+                activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
+              >
                 <Icon className="bullet-point" name="bullet-point" />
                 <ListItemText primary={navItem.title} />
               </Link>
