@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
+import theme from 'src/theme';
 // import { NextLinkComposed } from '../link';
 
 const useStyles = makeStyles({
@@ -15,13 +16,16 @@ const useStyles = makeStyles({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    padding: '2.5rem',
   },
   overlay: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     width: '100%',
-    padding: '2.5rem',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
   },
   title: {
     color: '#25292E',
@@ -33,6 +37,12 @@ const useStyles = makeStyles({
   },
   text: {
     textAlign: 'left',
+    marginRight: '1.5rem',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+      paddingBottom: '1.5rem',
+      margin: 0,
+    },
   },
   button: {
     backgroundColor: '#0AA6E5',
