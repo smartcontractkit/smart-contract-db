@@ -10,9 +10,14 @@ const useStyles = makeStyles({
     paddingTop: '3.625rem',
   },
   xsHamburgerMenu: {
-    paddingTop: '0',
+    width: '50vw',
   },
   hamburgerContainer: {
+    display: 'inline-flex',
+    alignItems: 'center',
+  },
+  opacityHamburger: {
+    opacity: '0.3',
     display: 'inline-flex',
     alignItems: 'center',
   },
@@ -29,37 +34,18 @@ const useStyles = makeStyles({
     fontSize: '2rem',
     color: 'black',
   },
-  // 768, 1024
+  closeContainer: {
+    right: 0,
+    display: 'flex',
+    position: 'fixed',
+    alignSelf: 'center',
+    alignItems: 'center',
+    fontWeight: 'bold',
+    paddingTop: '2.25rem',
+    paddingRight: '2rem',
+  },
   close: {
-    position: 'fixed',
-    display: 'flex',
-    alignItems: 'center',
-    alignSelf: 'center',
-    right: 0,
-    paddingRight: '6rem',
-    paddingTop: '2.25rem',
-    fontWeight: 'bold',
-  },
-  // 425
-  smClose: {
-    display: 'flex',
-    alignItems: 'center',
-    alignSelf: 'center',
-    position: 'fixed',
-    right: 0,
-    paddingRight: '4.5rem',
-    paddingTop: '2.25rem',
-    fontWeight: 'bold',
-  },
-  // 375
-  xsClose: {
-    display: 'flex',
-    alignItems: 'center',
-    alignSelf: 'center',
-    textAlign: 'center',
-    paddingTop: '2.25rem',
-    paddingBottom: '0',
-    fontWeight: 'bold',
+    paddingRight: '2rem',
   },
   drawer: {
     '& .MuiBackdrop-root': {
@@ -72,7 +58,6 @@ export const HamburgerMenu: React.FC = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const theme = useTheme();
-  const smMatch = useMediaQuery(theme.breakpoints.down('sm'));
   const xsMatch = useMediaQuery(theme.breakpoints.down('xs'));
   useEffect(() => {
     window.dispatchEvent(
@@ -87,13 +72,8 @@ export const HamburgerMenu: React.FC = () => {
     <>
       {/* change opacity to be 0.3 on openDrawer */}
       <Drawer anchor="left" className={classes.drawer} onClose={() => setOpenDrawer(false)} open={openDrawer}>
-        <div
-          role="presentation"
-          // eslint-disable-next-line no-nested-ternary
-          className={xsMatch ? classes.xsClose : smMatch ? classes.smClose : classes.close}
-          onClick={() => setOpenDrawer(false)}
-        >
-          <p>Close</p> <ClearIcon className={classes.closeIconToggle} />
+        <div role="presentation" className={classes.closeContainer} onClick={() => setOpenDrawer(false)}>
+          <p className={classes.close}>Close</p> <ClearIcon className={classes.closeIconToggle} />
         </div>
         <div
           role="presentation"
@@ -103,8 +83,8 @@ export const HamburgerMenu: React.FC = () => {
           <Sidebar />
         </div>
       </Drawer>
-      <div className={classes.hamburgerContainer}>
-        {!openDrawer && <Typography>Browse</Typography>}
+      <div className={openDrawer ? classes.opacityHamburger : classes.hamburgerContainer}>
+        <Typography>Browse</Typography>
         <IconButton className={classes.iconButtonContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
           <MenuIcon className={classes.menuIconToggle} />
         </IconButton>

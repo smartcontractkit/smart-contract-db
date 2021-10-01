@@ -4,7 +4,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
-// import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import { useMediaQuery, useTheme } from '@material-ui/core';
 import { Icon } from '../shared/icon';
 import Link from '../link';
@@ -16,6 +15,7 @@ const useStyles = makeStyles({
   smallRoot: {
     paddingLeft: '1.5rem',
     paddingRight: '7.5rem',
+    fontSize: '1rem',
   },
   nested: {
     paddingLeft: '0.5rem',
@@ -48,7 +48,7 @@ const useStyles = makeStyles({
   },
   smHr: {
     backgroundColor: '#D3DDE5',
-    width: '200px',
+    width: '140px',
     margin: '0.5rem 0 0.625rem 1.5rem',
   },
   links: {
@@ -57,11 +57,9 @@ const useStyles = makeStyles({
     color: '#1F2529',
     '& .bullet-point': {
       opacity: '0',
-      // transition: 'transform 0.2s ease-out',
     },
     '&:hover .bullet-point': {
       opacity: '1',
-      // transition: 'transform 0.2s ease-in',
     },
   },
   smLinks: {
@@ -73,7 +71,6 @@ const useStyles = makeStyles({
     },
     '& .bullet-point': {
       opacity: '0',
-      // transition: 'transform 0.2s ease-out',
     },
   },
   activeLinks: {
@@ -151,9 +148,8 @@ export const Sidebar: React.FC = () => {
                           className={isMatch ? classes.smLinks : classes.links}
                           underline="none"
                           activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
-                          // onClick={toggleClass}
                         >
-                          <Icon className="bullet-point" name="bullet-point" />
+                          {isMatch ? '' : <Icon className="bullet-point" name="bullet-point" />}
                           <ListItemText disableTypography primary={childItem.title} />
                         </Link>
                       </ListItem>
@@ -175,7 +171,7 @@ export const Sidebar: React.FC = () => {
                     underline="none"
                     activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
                   >
-                    <Icon className="bullet-point" name="bullet-point" />
+                    {isMatch ? '' : <Icon className="bullet-point" name="bullet-point" />}
                     <ListItemText primary={navItem.title} />
                   </Link>
                 </ListItem>
@@ -206,7 +202,7 @@ export const Sidebar: React.FC = () => {
                 underline="none"
                 activeClassName={isMatch ? classes.smActiveLinks : classes.activeLinks}
               >
-                <Icon className="bullet-point" name="bullet-point" />
+                {isMatch ? '' : <Icon className="bullet-point" name="bullet-point" />}
                 <ListItemText primary={navItem.title} />
               </Link>
             </ListItem>
