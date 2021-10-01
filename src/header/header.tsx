@@ -3,9 +3,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { useMediaQuery, useTheme } from '@material-ui/core';
+import theme from 'src/theme';
 import Link from '../link';
 import { HamburgerMenu } from './hamburgerMenu';
-import theme from 'src/theme';
 
 const useStyles = makeStyles({
   section: {
@@ -66,8 +66,8 @@ export const Header: React.FC = () => {
   const updatedCategoryTitle = (e) => {
     setResourceTitle(e.detail.text);
   };
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+  const themes = useTheme();
+  const isMatch = useMediaQuery(themes.breakpoints.down('md'));
 
   useEffect(() => {
     window.addEventListener('category-page-updated', (e) => updatedCategoryTitle(e));
