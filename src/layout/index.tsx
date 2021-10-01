@@ -24,8 +24,8 @@ const useStyles = makeStyles({
 
 const Layout: React.FC = ({ children }) => {
   const classes = useStyles();
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+  const themes = useTheme();
+  const isMatch = useMediaQuery(themes.breakpoints.down('md'));
 
   const setOpacity = (e) => {
     const container = document.querySelector('#__next > div') as HTMLElement;

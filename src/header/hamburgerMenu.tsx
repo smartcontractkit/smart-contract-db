@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     paddingTop: '3.625rem',
   },
   xsHamburgerMenu: {
+    paddingTop: '3.625rem',
     width: '50vw',
   },
   hamburgerContainer: {
@@ -30,6 +31,11 @@ const useStyles = makeStyles({
     fontSize: '3rem',
     color: 'black',
   },
+  drawer: {
+    '& .MuiBackdrop-root': {
+      opacity: '0.3 !important',
+    },
+  },
   closeIconToggle: {
     fontSize: '2rem',
     color: 'black',
@@ -47,18 +53,15 @@ const useStyles = makeStyles({
   close: {
     paddingRight: '2rem',
   },
-  drawer: {
-    '& .MuiBackdrop-root': {
-      opacity: '0.3 !important',
-    },
-  },
 });
 
 export const HamburgerMenu: React.FC = () => {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [showClose, setShowClose] = useState(false);
   const theme = useTheme();
   const xsMatch = useMediaQuery(theme.breakpoints.down('xs'));
+
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent('hamburger-menu', {
@@ -66,15 +69,25 @@ export const HamburgerMenu: React.FC = () => {
         detail: openDrawer,
       })
     );
+    if (openDrawer) {
+      setTimeout(() => {
+        setShowClose(openDrawer);
+      }, 250);
+    } else {
+      setShowClose(openDrawer);
+    }
   }, [openDrawer]);
 
   return (
     <>
       {/* change opacity to be 0.3 on openDrawer */}
       <Drawer anchor="left" className={classes.drawer} onClose={() => setOpenDrawer(false)} open={openDrawer}>
-        <div role="presentation" className={classes.closeContainer} onClick={() => setOpenDrawer(false)}>
-          <p className={classes.close}>Close</p> <ClearIcon className={classes.closeIconToggle} />
-        </div>
+        {showClose && (
+          <div role="presentation" className={classes.closeContainer} onClick={() => setOpenDrawer(false)}>
+            <p className={classes.close}>Close</p> <ClearIcon className={classes.closeIconToggle} />
+          </div>
+        )}
+
         <div
           role="presentation"
           onClick={() => setOpenDrawer(false)}

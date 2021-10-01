@@ -41,6 +41,10 @@ const useStyles = makeStyles({
     color: '#95A1AD',
     paddingLeft: '2rem',
   },
+  smSubNavHeading: {
+    color: '#95A1AD',
+    paddingLeft: '0',
+  },
   hr: {
     backgroundColor: '#D3DDE5',
     width: '140px',
@@ -137,7 +141,10 @@ export const Sidebar: React.FC = () => {
             return (
               <React.Fragment key={navItem.title}>
                 <ListItem className={isMatch ? classes.smallRoot : classes.root}>
-                  <ListItemText primary={navItem.title} className={classes.subNavHeading} />
+                  <ListItemText
+                    primary={navItem.title}
+                    className={isMatch ? classes.smSubNavHeading : classes.subNavHeading}
+                  />
                 </ListItem>
                 <List component="div" className={isMatch ? classes.smallNested : classes.nested}>
                   {navItem.children.map((childItem) => {
