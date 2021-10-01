@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useMediaQuery, useTheme } from '@material-ui/core';
 import Link from '../link';
 import { HamburgerMenu } from './hamburgerMenu';
+import theme from 'src/theme';
 
 const useStyles = makeStyles({
   section: {
@@ -20,9 +21,16 @@ const useStyles = makeStyles({
     paddingBottom: '1.5rem',
     alignItems: 'center',
     flexWrap: 'nowrap',
+    justifyContent: 'space-between',
+    [theme.breakpoints.up('lg')]: {
+      justifyContent: 'normal',
+    },
   },
   contributeContainer: {
     textAlign: 'right',
+    [theme.breakpoints.up('lg')]: {
+      flexBasis: '25%',
+    },
   },
   contribute: {
     color: '#95a1ad',
@@ -42,6 +50,12 @@ const useStyles = makeStyles({
     fontSize: '1.5rem',
     textAlign: 'left',
     flexBasis: '56%',
+    [theme.breakpoints.down('sm')]: {
+      flexBasis: '45%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      flexBasis: '26%',
+    },
   },
 });
 
@@ -71,11 +85,13 @@ export const Header: React.FC = () => {
           </Link>
         </Grid>
         {/* hide depending on screen size */}
-        <Grid item className={classes.categoryTitle}>
-          {!isMatch ? <b>{resourceTitle}</b> : null}
-        </Grid>
+        {!isMatch ? (
+          <Grid item className={classes.categoryTitle}>
+            <b>{resourceTitle}</b>
+          </Grid>
+        ) : null}
         {/* hide depending on screen size and show hamburger */}
-        <Grid item xs={3} className={classes.contributeContainer}>
+        <Grid item className={classes.contributeContainer}>
           {isMatch ? (
             <HamburgerMenu />
           ) : (
