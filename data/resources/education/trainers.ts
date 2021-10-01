@@ -4,6 +4,15 @@ export interface Trainer {
   title: string;
   description: string;
   link: string;
+  src?: string;
 }
 
-export const trainers: Trainer[] = [];
+export const trainers: Trainer[] = [
+  {
+    id: 'encode-club',
+    title: 'Encode Club',
+    description: 'Onboarding, supporting and catalysing the next generation of crypto-natives.',
+    link: 'https://www.encode.club/',
+    src: '/img/encode_club.jpg',
+  },
+];
