@@ -4,6 +4,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery } from '@material-ui/core';
 import { Header } from '../header';
 import { Sidebar } from '../sidebar';
+import theme from 'src/theme';
 
 const useStyles = makeStyles({
   container: {
@@ -12,9 +13,12 @@ const useStyles = makeStyles({
     padding: '0 1.5rem',
   },
   main: {
-    flexGrow: 1,
     display: 'flex',
+    flexGrow: 1,
     alignItems: 'flex-start',
+    [theme.breakpoints.down('md')]: {
+      display: 'block',
+    },
   },
 });
 
