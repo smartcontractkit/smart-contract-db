@@ -13,6 +13,6 @@ export const ides: IDE[] = [
     description:
       'Remix is a web browser based IDE that allows you to write, deploy and administer Solidity smart contracts, without the need to install Solidity locally.',
     link: 'https://remix.ethereum.org/',
-    src: '/img/remix-etherium.svg',
+    src: '/img/ides/remix-etherium.svg',
   },
 ];

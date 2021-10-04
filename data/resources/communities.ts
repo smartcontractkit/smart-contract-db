@@ -13,14 +13,14 @@ export const communities: Community[] = [
     description:
       'We start each morning with a newsletter covering fresh news and then post analytical and educational articles for crypto enthusiasts of all levels of expertise throughout the day. ',
     link: 'https://decenter.org/en',
-    src: '/img/deCenter.png',
+    src: '/img/communities/deCenter.png',
   },
   {
     id: 'minter-network',
     title: 'Minter Network',
     description: 'A daily news site covering all things crypto and the decentralized web.',
     link: 'https://www.minter.network/bip',
-    src: '/img/minter-network.png',
+    src: '/img/communities/minter-network.png',
   },
   {
     id: 'bitpam',
@@ -28,7 +28,7 @@ export const communities: Community[] = [
     description:
       'Bitpam is a friendly community focused in bringing individuals together to learn more about CryptoCurrency and discuss about it.',
     link: 'https://cryptominded.com/resource/bitpam-discord/',
-    src: '/img/bitpam.png',
+    src: '/img/communities/bitpam.png',
   },
   {
     id: 'crypto-aquarium',
@@ -36,14 +36,14 @@ export const communities: Community[] = [
     description:
       'Community of blockchain and cryptocurrency enthusiasts, miners, developers, investors, and entrepreneurs from all over the world. ',
     link: 'https://twitter.com/cryptoaquarium?lang=en',
-    src: '/img/crypto-aquarium.png',
+    src: '/img/communities/crypto-aquarium.png',
   },
   {
     id: 'unfolded.',
     title: 'unfolded.',
     description: `Here you'll find a brief overview of the most important crypto events. Short and useful.`,
     link: 'https://twitter.com/cryptounfolded?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
-    src: '/img/unfolded.png',
+    src: '/img/communities/unfolded.png',
   },
   {
     id: 'steemit',
@@ -51,13 +51,13 @@ export const communities: Community[] = [
     description:
       'Social network and content rewards platform that makes the crowd the beneficiaries of the attention economy. ',
     link: 'https://steemit.com/',
-    src: '/img/steemit.svg',
+    src: '/img/communities/steemit.svg',
   },
   {
     id: 'the-crypto-intro',
     title: 'The Crypto Intro',
     description: 'Basic information and foundation on blockchain and Crypto currency by Daniel Drescher.',
     link: 'https://www.goodreads.com/book/show/34137265-blockchain-basics',
-    src: '/img/the-crypto-intro.png',
+    src: '/img/communities/the-crypto-intro.png',
   },
 ];

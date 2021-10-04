@@ -19,7 +19,7 @@ export const events: Event[] = [
     endDate: '2021-09-07T06:00:00.000Z',
     location: 'Business Design Centre | London',
     link: 'https://blockchain-expo.com/global/',
-    src: '/img/blockchain-expo.jpg',
+    src: '/img/events/blockchain-expo.jpg',
   },
   {
     id: 'coin-agenda-europe',
@@ -29,7 +29,7 @@ export const events: Event[] = [
     endDate: '2021-09-29T06:00:00.000Z',
     location: 'Le Méridien Beach Plaza | Monaco, Monaco',
     link: 'https://www.eventbrite.com/e/coinagenda-europe-monaco-2021-plus-bitangels-pitch-day-tickets-163290585537',
-    src: '/img/coinAgenda.jpg',
+    src: '/img/events/coinAgenda.jpg',
   },
   {
     id: 'connecting-the-blockchain-ecosystem-north-america',
@@ -40,7 +40,7 @@ export const events: Event[] = [
     endDate: '2021-09-30T06:00:00.000Z',
     location: 'Virtual',
     link: 'https://blockchain-expo.com/northamerica/',
-    src: '/img/blockchain-expo.jpg',
+    src: '/img/events/blockchain-expo.jpg',
   },
   {
     id: 'chainlink-2021-fall-hackathon',
@@ -51,7 +51,7 @@ export const events: Event[] = [
     endDate: '2021-11-28T07:00:00.000Z',
     location: 'Virtual',
     link: 'https://chain.link/hackathon/',
-    src: '/img/chainlink_fall_hackathon.jpeg',
+    src: '/img/events/chainlink_fall_hackathon.jpeg',
   },
   {
     id: 'chainlink-spanish-bootcamp',
@@ -62,6 +62,6 @@ export const events: Event[] = [
     endDate: '2021-10-01T06:00:00.000Z',
     location: 'Virtual',
     link: 'https://chain.link/es/bootcamp/',
-    src: '/img/esp_bootcamp.png',
+    src: '/img/events/esp_bootcamp.png',
   },
 ];

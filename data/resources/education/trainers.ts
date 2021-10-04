@@ -13,6 +13,6 @@ export const trainers: Trainer[] = [
     title: 'Encode Club',
     description: 'Onboarding, supporting and catalysing the next generation of crypto-natives.',
     link: 'https://www.encode.club/',
-    src: '/img/encode_club.jpg',
+    src: '/img/trainers/encode_club.jpg',
   },
 ];

@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   },
   bannerBackground: {
     display: 'flex',
-    backgroundImage: `url(${'/img/contribute-banner.svg'})`,
+    backgroundImage: `url(${'/img/contribute/contribute-banner.svg'})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
