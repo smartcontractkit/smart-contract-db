@@ -70,6 +70,9 @@ const useStyles = makeStyles({
     padding: 0,
     maxWidth: '29.25rem',
     marginRight: '80px',
+    [theme.breakpoints.down('xs')]: {
+      marginRight: '64px',
+    },
   },
   listItem: {
     display: 'block',
