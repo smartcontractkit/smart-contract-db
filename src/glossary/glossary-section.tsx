@@ -6,6 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Typography, useMediaQuery } from '@material-ui/core';
+import theme from 'src/theme';
 import { glossary } from '@/data/resources/glossary/glossary';
 
 const useStyles = makeStyles({
@@ -20,9 +21,13 @@ const useStyles = makeStyles({
   searchGrid: {
     textAlign: 'right',
     maxHeight: '25vh',
+    minWidth: '25vw',
     paddingTop: '0.875rem',
     position: 'sticky',
     top: '123px',
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: '0',
+    },
   },
   link: {
     color: '#000000de',
@@ -33,6 +38,7 @@ const useStyles = makeStyles({
     padding: '0.625rem',
     flexGrow: 0,
     flexBasis: '18%',
+    width: '25px',
   },
   disabledLinks: {
     textAlign: 'center',
@@ -40,6 +46,7 @@ const useStyles = makeStyles({
     padding: '0.625rem',
     flexGrow: 0,
     flexBasis: '18%',
+    width: '25px',
   },
   firstId: {
     fontSize: '1.5rem',
@@ -63,6 +70,9 @@ const useStyles = makeStyles({
     padding: 0,
     maxWidth: '29.25rem',
     marginRight: '80px',
+    [theme.breakpoints.down('xs')]: {
+      marginRight: '64px',
+    },
   },
   listItem: {
     display: 'block',
@@ -103,27 +113,8 @@ const glossaryNav = [
 // TODO: make mobile friendly
 export const GlossaryList: React.FC = () => {
   const classes = useStyles();
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-
-  const handleScroll = () => {
-    const element = document.querySelector('#__next > div > header') as HTMLElement;
-    const text = document.querySelector('#__next > div > main > div > ul') as HTMLElement;
-    if (text !== null) {
-      const textList = text.children as unknown as HTMLElement;
-
-      for (let i = 0; i < text.children.length; i += 1) {
-        const header = element.offsetTop;
-        const elementHeight = textList[i].offsetTop;
-
-        if (elementHeight < header) {
-          textList[i].style.opacity = '0.3';
-        } else {
-          textList[i].style.opacity = '1';
-        }
-      }
-    }
-  };
+  const themes = useTheme();
+  const isMatch = useMediaQuery(themes.breakpoints.down('md'));
 
   useEffect(() => {
     window.dispatchEvent(
@@ -132,11 +123,6 @@ export const GlossaryList: React.FC = () => {
         detail: { text: 'Glossary' },
       })
     );
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   });
 
   const listItemClass = (index: number) => (index ? classes.id : classes.firstId);

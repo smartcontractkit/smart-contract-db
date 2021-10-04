@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useMediaQuery } from '@material-ui/core';
+import theme from 'src/theme';
 import { Header } from '../header';
 import { Sidebar } from '../sidebar';
-import theme from 'src/theme';
 
 const useStyles = makeStyles({
   container: {
