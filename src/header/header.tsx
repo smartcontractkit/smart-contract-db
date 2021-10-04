@@ -12,9 +12,19 @@ const useStyles = makeStyles({
     position: 'sticky',
     top: 0,
     paddingLeft: '2rem',
+    minHeight: '5vh',
+    background: '#FFFFFF',
+    opacity: '0.8',
+    zIndex: 1,
   },
   smSection: {
+    position: 'sticky',
+    top: 0,
     paddingLeft: 0,
+    minHeight: '5vh',
+    background: '#FFFFFF',
+    opacity: '0.8',
+    zIndex: 1,
   },
   grid: {
     paddingTop: '1.5rem',
@@ -81,7 +91,7 @@ export const Header: React.FC = () => {
       <Grid container className={classes.grid}>
         <Grid item className={classes.logo}>
           <Link href="/" onClick={() => setResourceTitle('')}>
-            <img src="/img/logo.svg" alt="Smart Contract DB logo" />
+            <img src="/img/logo.svg" alt="Smart Contract DB logo" width="118" height="69" />
           </Link>
         </Grid>
         {/* hide depending on screen size */}

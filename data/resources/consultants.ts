@@ -35,7 +35,7 @@ export const consultants: Consultant[] = [
     description:
       'Blockchain Consulting, technical development for Initial Coin Offerings and Decentralized Applications, Public and Private Blockchain Development. ',
     link: 'https://hack.bg',
-    src: '/img/hack.svg',
+    src: '/img/hack.png',
   },
   {
     id: 'protofire',
@@ -43,7 +43,7 @@ export const consultants: Consultant[] = [
     description:
       'Protofire is a team of engineers, which helps decentralized protocols and developer platforms to accelerate growth of their ecosystems.',
     link: 'https://protofire.io/',
-    src: '/img/protofire.svg',
+    src: '/img/protofire.png',
   },
   {
     id: 'this-dot-labs',

@@ -1,5 +1,4 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/core/styles';
 import theme from 'src/theme';
@@ -15,7 +14,7 @@ const useStyles = makeStyles({
     height: '22.5rem',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage: `url(${'/img/hero-banner.svg'})`,
+    backgroundImage: `url(${'/img/hero-banner.png'})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -34,6 +33,7 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     fontSize: '3.25rem',
     width: '75%',
+    lineHeight: '1.5',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
       fontSize: '2.375rem',
@@ -45,6 +45,9 @@ const useStyles = makeStyles({
   description: {
     color: '#4D545C',
     width: '55%',
+    fontSize: '1.1428571428571428rem',
+    margin: 0,
+    lineHeight: '1.5',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
@@ -58,13 +61,13 @@ export const HeroBanner: React.FC = () => {
     <Container className={classes.container}>
       <div className={classes.bannerBackground}>
         <div className={classes.overlay}>
-          <Typography className={classes.title}>
+          <div className={classes.title}>
             <span className={classes.titlePart1}>Learn about</span> <span>Smart Contracts.</span>
-          </Typography>
-          <Typography className={classes.description}>
+          </div>
+          <div className={classes.description}>
             Everything you’ve ever wanted to know about smart contracts, crypto and more. Created by the community, for
             the community.
-          </Typography>
+          </div>
         </div>
       </div>
     </Container>

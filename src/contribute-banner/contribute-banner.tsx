@@ -74,7 +74,13 @@ export const ContributeBanner: React.FC = () => {
           <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
             <Button className={classes.button}>
               Contribute
-              <img src="/img/hangloose.svg" alt="hangloose hand sign" className={classes.emoji} />
+              <img
+                src="/img/hangloose.svg"
+                alt="hangloose hand sign"
+                className={classes.emoji}
+                width="16"
+                height="17"
+              />
             </Button>
           </a>
         </div>
