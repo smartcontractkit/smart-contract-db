@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   List,
   ListItem,
@@ -10,50 +9,9 @@ import {
   Typography,
   Container,
 } from '@material-ui/core';
+import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
-
-const useStyles = makeStyles({
-  container: {
-    width: '100%',
-    padding: 0,
-  },
-  subTitle: {
-    color: '#0A5480',
-    paddingBottom: '0.75rem',
-    margin: 0,
-  },
-  listItem: {
-    paddingTop: '1.25rem',
-    paddingBottom: '1.25rem',
-    cursor: 'pointer',
-    '&:hover': {
-      background: '#F7F9FA',
-    },
-    '& .list-item-title': {
-      display: 'inline-block',
-      transition: 'transform 0.1s ease-out',
-    },
-    '&:hover .list-item-title': {
-      transform: 'translate(0.75rem);',
-    },
-    '& .list-item-arrow-icon': {
-      display: 'none',
-    },
-    '&:hover .list-item-arrow-icon': {
-      display: 'inline-block',
-    },
-  },
-  avatarContainer: {
-    marginRight: '1.5rem',
-  },
-  avatar: { width: '88px', height: '88px' },
-  link: {
-    textDecoration: 'none',
-    color: '#1F2529',
-    padding: 0,
-  },
-});
 
 export interface CategoryListProps {
   data; // TODO: combine types
@@ -79,8 +37,6 @@ function dateFormatter(date: string): string {
 }
 
 export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
-  const classes = useStyles();
-
   if (data.length === 0) {
     return (
       <Container>
@@ -99,14 +55,14 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
   );
 
   return (
-    <List className={classes.container}>
+    <List className={styles.container}>
       {data.map(({ id, title, src, startDate, description, link }, index: number) => (
         <React.Fragment key={id}>
-          <li className={classes.listItem}>
-            <ListItem className={classes.link} component="a" rel="noopener noreferrer" href={link}>
-              <ListItemAvatar className={classes.avatarContainer}>
+          <li className={styles.listItem}>
+            <ListItem className={styles.link} component="a" rel="noopener noreferrer" href={link}>
+              <ListItemAvatar className={styles.avatarContainer}>
                 {src ? (
-                  <Avatar className={classes.avatar} alt={title} src={src} variant="square" />
+                  <Avatar className={styles.avatar} alt={title} src={src} variant="square" />
                 ) : (
                   <Initicon size={88} text={title} seed={identiconSeedMax(9)} single={false} />
                 )}
@@ -114,7 +70,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
               {startDate !== undefined ? (
                 <div>
                   <ListItemText primary={<ListItemIconText title={title} />} />
-                  <ListItemText className={classes.subTitle} disableTypography secondary={dateFormatter(startDate)} />
+                  <ListItemText className={styles.subTitle} disableTypography secondary={dateFormatter(startDate)} />
                   <ListItemText secondary={description} />
                 </div>
               ) : (

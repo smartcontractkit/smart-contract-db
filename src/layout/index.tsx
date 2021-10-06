@@ -1,32 +1,10 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from '@material-ui/core';
-import theme from 'src/theme';
+import styles from './layout.module.css';
 import { Header } from '../header';
 import { Sidebar } from '../sidebar';
 
-const useStyles = makeStyles({
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    padding: '0 1.5rem',
-  },
-  main: {
-    display: 'flex',
-    flexGrow: 1,
-    alignItems: 'flex-start',
-    [theme.breakpoints.down('md')]: {
-      display: 'block',
-    },
-  },
-});
-
 const Layout: React.FC = ({ children }) => {
-  const classes = useStyles();
-  const themes = useTheme();
-  const isMatch = useMediaQuery(themes.breakpoints.down('md'));
-
   const setOpacity = (e) => {
     const container = document.querySelector('#__next > div') as HTMLElement;
     container.style.opacity = e.detail ? '0.5' : '1';
@@ -49,11 +27,13 @@ const Layout: React.FC = ({ children }) => {
         <link rel="preload" href="/fonts/CircularStd/CircularStd-Bold.ttf" as="font" crossOrigin="" />
       </Head>
 
-      <div className={classes.container}>
+      <div className={styles.container}>
         <Header />
-        <main className={classes.main}>
+        <main className={styles.main}>
           {/* hide depending on screen size */}
-          {!isMatch ? <Sidebar /> : null}
+          <div className={styles.sidebar}>
+            <Sidebar />
+          </div>
           {children}
         </main>
       </div>

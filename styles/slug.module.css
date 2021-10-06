@@ -1,0 +1,16 @@
+.heading {
+  display: none;
+}
+
+.section {
+  padding-bottom: 4rem;
+}
+
+@media only screen and (max-width: 1280px) {
+  .heading {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    display: block;
+  }
+}

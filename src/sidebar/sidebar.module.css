@@ -1,0 +1,156 @@
+.root {
+  padding-left: 0;
+  padding-right: 16px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.nested {
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.container {
+  padding-right: 1.5rem !important;
+  position: sticky;
+  top: 123px;
+  padding-top: 8px !important;
+  padding-bottom: 8px important;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subNavHeading {
+  color: #95a1ad;
+  padding-left: 2rem;
+  font-size: 1.1428571428571428rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.hr {
+  background-color: #d3dde5;
+  width: 140px;
+  margin: 0.5rem 0 0.625rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  color: #1f2529 !important;
+}
+
+.links > .bulletPoint {
+  opacity: 0;
+}
+
+.links:hover > .bulletPoint {
+  opacity: 1;
+}
+
+.activeLinks {
+  color: #0aa6e5 !important;
+}
+
+.activeLinks > .bulletPoint {
+  opacity: 1;
+  fill: #0aa6e5;
+}
+
+.contributeContainer {
+  display: none;
+}
+.contribute {
+  color: #95a1ad;
+}
+.contributeLogo {
+  color: #25292e;
+}
+.contributeLogo:hover {
+  color: #0aa6e5;
+}
+
+.contributeLogo:hover > .github {
+  fill: #0aa6e5;
+}
+
+.contributeLinks {
+  text-decoration: none;
+}
+.list {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.childRoot {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.listTitles {
+  font-size: 1.1428571428571428rem;
+  line-height: 1.5;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .root {
+    padding-left: 1.5rem;
+    padding-right: 7.5rem;
+    font-size: 1rem;
+  }
+  .nested {
+    padding-left: 2rem;
+  }
+  .container {
+    padding-right: 0;
+  }
+  .subNavHeading {
+    padding-left: 0;
+  }
+  .hr {
+    margin: 0.5rem 0 0.625rem 1.5rem;
+  }
+  .links:hover {
+    color: #0aa6e5;
+  }
+  .bulletPoint {
+    display: none;
+  }
+
+  .childRoot {
+    padding-left: 1.5rem;
+    padding-right: 7.5rem;
+    font-size: 1rem;
+  }
+
+  .contributeContainer {
+    display: block;
+    background-color: #f7f9fa;
+    list-style-type: none;
+  }
+}

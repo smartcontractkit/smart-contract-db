@@ -1,84 +1,7 @@
 /* eslint-disable no-param-reassign */
 import React, { useEffect } from 'react';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Typography, useMediaQuery } from '@material-ui/core';
-import theme from 'src/theme';
 import { glossary } from '@/data/resources/glossary/glossary';
-
-const useStyles = makeStyles({
-  container: {
-    display: 'flex',
-  },
-  heading: {
-    fontSize: '1.5rem',
-    textAlign: 'left',
-    fontWeight: 'bold',
-  },
-  searchGrid: {
-    textAlign: 'right',
-    maxHeight: '25vh',
-    minWidth: '25vw',
-    paddingTop: '0.875rem',
-    position: 'sticky',
-    top: '123px',
-    [theme.breakpoints.down('xs')]: {
-      paddingTop: '0',
-    },
-  },
-  link: {
-    color: '#000000de',
-    textDecoration: 'none',
-  },
-  enabledlinks: {
-    textAlign: 'center',
-    padding: '0.625rem',
-    flexGrow: 0,
-    flexBasis: '18%',
-    width: '25px',
-  },
-  disabledLinks: {
-    textAlign: 'center',
-    color: '#95A1AD',
-    padding: '0.625rem',
-    flexGrow: 0,
-    flexBasis: '18%',
-    width: '25px',
-  },
-  firstId: {
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    padding: '0 0 2rem 0',
-  },
-  id: {
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    padding: '0 0 2rem 0',
-  },
-  title: {
-    fontSize: '1.125rem',
-    paddingBottom: '0.5rem',
-  },
-  description: {
-    fontSize: '1rem',
-    color: '#78838F',
-  },
-  list: {
-    padding: 0,
-    maxWidth: '29.25rem',
-    marginRight: '80px',
-    [theme.breakpoints.down('xs')]: {
-      marginRight: '64px',
-    },
-  },
-  listItem: {
-    display: 'block',
-    padding: '0 0 2rem 0',
-  },
-});
+import styles from './glossary-section.module.css';
 
 const glossaryNav = [
   { id: '#', disabled: false },
@@ -112,10 +35,6 @@ const glossaryNav = [
 
 // TODO: make mobile friendly
 export const GlossaryList: React.FC = () => {
-  const classes = useStyles();
-  const themes = useTheme();
-  const isMatch = useMediaQuery(themes.breakpoints.down('md'));
-
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent('category-page-updated', {
@@ -125,55 +44,51 @@ export const GlossaryList: React.FC = () => {
     );
   });
 
-  const listItemClass = (index: number) => (index ? classes.id : classes.firstId);
+  const listItemClass = (index: number) => (index ? styles.id : styles.firstId);
 
   return (
-    <div className={classes.container}>
-      <List className={classes.list}>
-        {isMatch ? <Typography className={classes.heading}>Glossary</Typography> : null}
+    <div className={styles.container}>
+      <div className={styles.list}>
+        <div className={styles.heading}>Glossary</div>
         {glossary.map((glossaryItem, index) => (
           <React.Fragment key={Object.keys(glossaryItem)[0]}>
-            <ListItem alignItems="flex-start" className={listItemClass(index)}>
-              <ListItemText
-                disableTypography
-                id={Object.keys(glossaryItem)[0]}
-                primary={Object.keys(glossaryItem)[0]}
-              />
-            </ListItem>
+            <div className={listItemClass(index)}>
+              <div className={styles.listItemText} id={Object.keys(glossaryItem)[0]}>
+                {Object.keys(glossaryItem)[0]}
+              </div>
+            </div>
             {Object.values(glossaryItem)[0].map(({ title, description }) => (
               <React.Fragment key={title}>
-                <ListItem className={classes.listItem}>
-                  <div className={classes.title}>{title}</div>
-                  <div className={classes.description}>{description}</div>
-                </ListItem>
+                <div className={styles.listItem}>
+                  <div className={styles.title}>{title}</div>
+                  <div className={styles.description}>{description}</div>
+                </div>
               </React.Fragment>
             ))}
           </React.Fragment>
         ))}
-      </List>
+      </div>
 
-      <Grid container className={classes.searchGrid}>
+      <div className={styles.searchGrid}>
         {glossaryNav.map((index) => {
           if (index.disabled === true) {
             return (
               <React.Fragment key={index.id}>
-                <Grid item className={classes.disabledLinks}>
-                  {index.id}
-                </Grid>
+                <div className={styles.disabledLinks}>{index.id}</div>
               </React.Fragment>
             );
           }
           return (
             <React.Fragment key={index.id}>
-              <Grid item className={classes.enabledlinks}>
-                <a className={classes.link} href={`#${index.id}`}>
+              <div className={styles.enabledlinks}>
+                <a className={styles.link} href={`#${index.id}`}>
                   {index.id}
                 </a>
-              </Grid>
+              </div>
             </React.Fragment>
           );
         })}
-      </Grid>
+      </div>
     </div>
   );
 };

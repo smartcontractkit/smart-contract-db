@@ -1,0 +1,101 @@
+.section {
+  position: sticky;
+  top: 0;
+  padding-left: 2rem;
+  min-height: 75px;
+  background: #ffffff;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.smSection {
+  padding-left: 0;
+}
+
+.grid {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.contributeContainer {
+  text-align: right;
+  margin: 0;
+  box-sizing: border-box;
+}
+.contribute {
+  color: #95a1ad;
+}
+.contributeLogo {
+  color: #25292e;
+}
+
+.contributeLogo:hover {
+  color: #0aa6e5;
+}
+.contributeLogo:hover > .github {
+  fill: #0aa6e5;
+}
+
+.links {
+  text-decoration: none;
+}
+.logo {
+  width: 10.25rem;
+  text-align: left;
+  margin: 0;
+  box-sizing: border-box;
+}
+.categoryTitle {
+  font-size: 1.5rem;
+  text-align: left;
+  flex-basis: 56%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+/* lg */
+@media only screen and (max-width: 1920px) {
+  .contributeContainer {
+    flex-basis: 25%;
+  }
+}
+
+/* md */
+@media only screen and (max-width: 1280px) {
+  .section {
+    padding-left: 0;
+  }
+  .categoryTitle {
+    display: none;
+  }
+  .hamburgerMenu {
+    display: block;
+  }
+  .contribution {
+    display: none;
+  }
+}
+
+/* sm */
+@media only screen and (max-width: 960px) {
+  .categoryTitle {
+    flex-basis: 45%;
+  }
+}
+
+/* sx */
+@media only screen and (max-width: 600px) {
+  .categoryTitle {
+    flex-basis: 26%;
+  }
+}
