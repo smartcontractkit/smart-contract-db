@@ -3,6 +3,8 @@ body {
   max-width: 1200px;
   margin: 0 auto !important;
   background-color: #fff !important;
+  font-family: 'Circular Std';
+  font-size: 1rem;
 }
 
 @font-face {

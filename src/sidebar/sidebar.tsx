@@ -42,12 +42,7 @@ export const Sidebar: React.FC = () => {
                   {navItem.children.map((childItem) => {
                     return (
                       <li key={childItem.title} className={styles.childRoot}>
-                        <Link
-                          href={childItem.path}
-                          className={styles.links}
-                          underline="none"
-                          activeClassName={styles.activeLinks}
-                        >
+                        <Link href={childItem.path} className={styles.links} activeClassName={styles.activeLinks}>
                           <Icon className={styles.bulletPoint} name="bullet-point" />
                           <span>{childItem.title}</span>
                         </Link>
@@ -64,12 +59,7 @@ export const Sidebar: React.FC = () => {
               <React.Fragment key={navItem.title}>
                 <hr className={styles.hr} />
                 <li className={styles.root}>
-                  <Link
-                    href={navItem.path}
-                    className={styles.links}
-                    underline="none"
-                    activeClassName={styles.activeLinks}
-                  >
+                  <Link href={navItem.path} className={styles.links} activeClassName={styles.activeLinks}>
                     <Icon className={styles.bulletPoint} name="bullet-point" />
                     <span className={styles.listTitles}>{navItem.title}</span>
                   </Link>
@@ -93,7 +83,7 @@ export const Sidebar: React.FC = () => {
 
           return (
             <li key={navItem.title} className={styles.root}>
-              <Link href={navItem.path} className={styles.links} underline="none" activeClassName={styles.activeLinks}>
+              <Link href={navItem.path} className={styles.links} activeClassName={styles.activeLinks}>
                 <Icon className={styles.bulletPoint} name="bullet-point" />
                 <span className={styles.listTitles}>{navItem.title}</span>
               </Link>
