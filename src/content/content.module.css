@@ -1,0 +1,11 @@
+.heading {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .section {
+    padding-bottom: 4rem;
+  }

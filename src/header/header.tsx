@@ -1,83 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import { useMediaQuery, useTheme } from '@material-ui/core';
-import theme from 'src/theme';
+import dynamic from 'next/dynamic';
+import styles from './header.module.css';
 import Link from '../link';
-import { HamburgerMenu } from './hamburgerMenu';
+import { Icon } from '../shared/icon';
 
-const useStyles = makeStyles({
-  section: {
-    position: 'sticky',
-    top: 0,
-    paddingLeft: '2rem',
-    minHeight: '5vh',
-    background: '#FFFFFF',
-    opacity: '0.8',
-    zIndex: 1,
-  },
-  smSection: {
-    position: 'sticky',
-    top: 0,
-    paddingLeft: 0,
-    minHeight: '5vh',
-    background: '#FFFFFF',
-    opacity: '0.8',
-    zIndex: 1,
-  },
-  grid: {
-    paddingTop: '1.5rem',
-    paddingBottom: '1.5rem',
-    alignItems: 'center',
-    flexWrap: 'nowrap',
-    justifyContent: 'space-between',
-    [theme.breakpoints.up('lg')]: {
-      justifyContent: 'normal',
-    },
-  },
-  contributeContainer: {
-    textAlign: 'right',
-    [theme.breakpoints.up('lg')]: {
-      flexBasis: '25%',
-    },
-  },
-  contribute: {
-    color: '#95a1ad',
-  },
-  contributeLogo: {
-    color: '#25292e',
-    '&:hover': {
-      color: '#0AA6E5',
-    },
-  },
-  links: { textDecoration: 'none' },
-  logo: {
-    width: '10.25rem',
-    textAlign: 'left',
-  },
-  categoryTitle: {
-    fontSize: '1.5rem',
-    textAlign: 'left',
-    flexBasis: '56%',
-    [theme.breakpoints.down('sm')]: {
-      flexBasis: '45%',
-    },
-    [theme.breakpoints.down('xs')]: {
-      flexBasis: '26%',
-    },
-  },
-});
+const HamburgerMenu = dynamic(() => import('./hamburgerMenu').then((module) => module.HamburgerMenu));
 
 export const Header: React.FC = () => {
-  const classes = useStyles();
   const [resourceTitle, setResourceTitle] = useState('');
 
   const updatedCategoryTitle = (e) => {
     setResourceTitle(e.detail.text);
   };
-  const themes = useTheme();
-  const isMatch = useMediaQuery(themes.breakpoints.down('md'));
 
   useEffect(() => {
     window.addEventListener('category-page-updated', (e) => updatedCategoryTitle(e));
@@ -87,33 +21,35 @@ export const Header: React.FC = () => {
   }, [resourceTitle]);
 
   return (
-    <header className={isMatch ? classes.smSection : classes.section}>
-      <Grid container className={classes.grid}>
-        <Grid item className={classes.logo}>
+    <header className={styles.section}>
+      <div className={styles.grid}>
+        <div className={styles.logo}>
           <Link href="/" onClick={() => setResourceTitle('')}>
-            <img src="/img/logo.svg" alt="Smart Contract DB logo" width="118" height="69" />
+            <img src="/img/logo.webp" alt="Smart Contract DB logo" width="118" height="69" />
           </Link>
-        </Grid>
+        </div>
         {/* hide depending on screen size */}
-        {!isMatch ? (
-          <Grid item className={classes.categoryTitle}>
-            <b>{resourceTitle}</b>
-          </Grid>
-        ) : null}
+        <div className={styles.categoryTitle}>
+          <b>{resourceTitle}</b>
+        </div>
         {/* hide depending on screen size and show hamburger */}
-        <Grid item className={classes.contributeContainer}>
-          {isMatch ? (
+        <div className={styles.contributeContainer}>
+          <div className={styles.hamburgerMenu}>
             <HamburgerMenu />
-          ) : (
-            <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={classes.links}>
-              <span className={classes.contribute}>Contribute at </span>
-              <span className={classes.contributeLogo}>
-                <GitHubIcon /> <b>GitHub</b>
+          </div>
+          <div className={styles.contribution}>
+            <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={styles.links}>
+              <span className={styles.contribute}>Contribute at </span>
+              <span className={styles.contributeLogo}>
+                {/* <GitHubIcon /> <b>GitHub</b> */}
+                {/* <img src="/img/github-icon.svg" alt="github icon" width="27.42px" height="27.42px" /> */}
+                <Icon className={styles.github} name="github" size={27.42} />
+                <b>GitHub</b>
               </span>
             </a>
-          )}
-        </Grid>
-      </Grid>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };

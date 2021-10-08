@@ -1,66 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Drawer, IconButton, Typography, useMediaQuery, useTheme } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import ClearIcon from '@material-ui/icons/Clear';
-import { makeStyles } from '@material-ui/core/styles';
 import { Sidebar } from 'src/sidebar';
-
-const useStyles = makeStyles({
-  hamburgerMenu: {
-    paddingTop: '3.625rem',
-  },
-  xsHamburgerMenu: {
-    paddingTop: '3.625rem',
-    width: '50vw',
-  },
-  hamburgerContainer: {
-    display: 'inline-flex',
-    alignItems: 'center',
-  },
-  opacityHamburger: {
-    opacity: '0.3',
-    display: 'inline-flex',
-    alignItems: 'center',
-  },
-  iconButtonContainer: {
-    marginRight: 'auto',
-    color: 'white',
-    paddingRight: '0',
-  },
-  menuIconToggle: {
-    fontSize: '3rem',
-    color: 'black',
-  },
-  drawer: {
-    '& .MuiBackdrop-root': {
-      opacity: '0.3 !important',
-    },
-  },
-  closeIconToggle: {
-    fontSize: '2rem',
-    color: 'black',
-  },
-  closeContainer: {
-    right: 0,
-    display: 'flex',
-    position: 'fixed',
-    alignSelf: 'center',
-    alignItems: 'center',
-    fontWeight: 'bold',
-    paddingTop: '2.25rem',
-    paddingRight: '2rem',
-  },
-  close: {
-    paddingRight: '2rem',
-  },
-});
+import { Icon } from '../shared/icon';
+import styles from './hamburgerMenu.module.css';
 
 export const HamburgerMenu: React.FC = () => {
-  const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [showClose, setShowClose] = useState(false);
-  const theme = useTheme();
-  const xsMatch = useMediaQuery(theme.breakpoints.down('xs'));
 
   useEffect(() => {
     window.dispatchEvent(
@@ -81,26 +26,31 @@ export const HamburgerMenu: React.FC = () => {
   return (
     <>
       {/* change opacity to be 0.3 on openDrawer */}
-      <Drawer anchor="left" className={classes.drawer} onClose={() => setOpenDrawer(false)} open={openDrawer}>
+      {/* <Drawer anchor="left" className={styles.drawer} onClose={() => setOpenDrawer(false)} open={openDrawer}> */}
+      <div className={styles.drawer} role="presentation">
         {showClose && (
-          <div role="presentation" className={classes.closeContainer} onClick={() => setOpenDrawer(false)}>
-            <p className={classes.close}>Close</p> <ClearIcon className={classes.closeIconToggle} />
-          </div>
+          <>
+            <div className={styles.backdrop} />
+            <div role="presentation" className={styles.closeContainer} onClick={() => setOpenDrawer(false)}>
+              <p className={styles.close}>Close</p>
+              <Icon className={styles.closeIconToggle} name="close" size={32} />
+            </div>
+            <div className={styles.sidebar}>
+              <div role="presentation" onClick={() => setOpenDrawer(false)} className={styles.hamburgerMenu}>
+                <Sidebar />
+              </div>
+            </div>
+          </>
         )}
-
-        <div
-          role="presentation"
-          onClick={() => setOpenDrawer(false)}
-          className={xsMatch ? classes.xsHamburgerMenu : classes.hamburgerMenu}
-        >
-          <Sidebar />
-        </div>
-      </Drawer>
-      <div className={openDrawer ? classes.opacityHamburger : classes.hamburgerContainer}>
-        <Typography>Browse</Typography>
-        <IconButton className={classes.iconButtonContainer} onClick={() => setOpenDrawer(!openDrawer)} disableRipple>
-          <MenuIcon className={classes.menuIconToggle} />
-        </IconButton>
+      </div>
+      {/* </Drawer> */}
+      <div className={openDrawer ? styles.opacityHamburger : styles.hamburgerContainer}>
+        <div className={styles.browse}>Browse</div>
+        <button type="button" className={styles.iconButtonContainer} onClick={() => setOpenDrawer(!openDrawer)}>
+          <span className={styles.menuLabel}>
+            <Icon className={styles.menuIconToggle} name="hamburger" size={48} />
+          </span>
+        </button>
       </div>
     </>
   );

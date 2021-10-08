@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { CategoryList } from 'src/shared/category-list';
-import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
+import styles from '../styles/slug.module.css';
 import { communities } from '@/data/resources/communities';
 import { consultants } from '@/data/resources/consultants';
 import { events } from '@/data/resources/events';
@@ -14,17 +14,6 @@ import { schools } from '@/data/resources/education/schools';
 import { ides } from '@/data/resources/tools/ides';
 import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
-
-const useStyles = makeStyles({
-  heading: {
-    fontSize: '1.5rem',
-    textAlign: 'left',
-    fontWeight: 'bold',
-  },
-  section: {
-    paddingBottom: '4rem',
-  },
-});
 
 interface ResourceBody {
   id: string;
@@ -59,10 +48,6 @@ const resourceBody: ResourceBody[] = [
 ];
 
 export default function Resources({ resource, title }: { resource: Data; title: string }): ReactElement {
-  const classes = useStyles();
-  const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent('category-page-updated', {
@@ -73,9 +58,9 @@ export default function Resources({ resource, title }: { resource: Data; title: 
   }, [title]);
 
   return (
-    <section className={classes.section}>
+    <section className={styles.section}>
       {/* hide depending on screen size */}
-      {isMatch ? <div className={classes.heading}>{title}</div> : null}
+      <div className={styles.heading}>{title}</div>
       <CategoryList data={resource} />
     </section>
   );

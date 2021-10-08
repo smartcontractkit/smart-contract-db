@@ -12,7 +12,7 @@ export const consultants: Consultant[] = [
     title: 'Applied Blockchain',
     description: 'We build applications with added trust and data privacy',
     link: 'https://appliedblockchain.com/',
-    src: '/img/applied-blockchain.svg',
+    src: '/img/consultants/applied-blockchain.svg',
   },
   {
     id: 'block-42',
@@ -20,14 +20,14 @@ export const consultants: Consultant[] = [
     description:
       'Block42 is investing into the most promising decentralized blockchain ecosystems and help them grow and secure their networks by developing products on top of them.',
     link: 'https://block42.tech/',
-    src: '/img/block42.svg',
+    src: '/img/consultants/block42.svg',
   },
   {
     id: 'chainsafe',
     title: 'Chainsafe',
     description: 'The only blockchain R&D firm with a multi-chain perspective.',
     link: 'https://chainsafe.io/',
-    src: '/img/chainsafe.png',
+    src: '/img/consultants/chainsafe.png',
   },
   {
     id: 'hack-bg',
@@ -35,7 +35,7 @@ export const consultants: Consultant[] = [
     description:
       'Blockchain Consulting, technical development for Initial Coin Offerings and Decentralized Applications, Public and Private Blockchain Development. ',
     link: 'https://hack.bg',
-    src: '/img/hack.png',
+    src: '/img/consultants/hack.png',
   },
   {
     id: 'protofire',
@@ -43,7 +43,7 @@ export const consultants: Consultant[] = [
     description:
       'Protofire is a team of engineers, which helps decentralized protocols and developer platforms to accelerate growth of their ecosystems.',
     link: 'https://protofire.io/',
-    src: '/img/protofire.png',
+    src: '/img/consultants/protofire.png',
   },
   {
     id: 'this-dot-labs',
@@ -51,6 +51,6 @@ export const consultants: Consultant[] = [
     description:
       'Provides architectural guidance, staff augmentation, on demand Subject Matter Experts, temporary CTOs, one-on-one pairing, mentorship, and open source strategy support.',
     link: 'https://www.thisdot.co/',
-    src: '/img/this-dot-labs.svg',
+    src: '/img/consultants/this-dot-labs.svg',
   },
 ];
