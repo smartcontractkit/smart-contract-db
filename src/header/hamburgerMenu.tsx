@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Drawer, IconButton, useMediaQuery, useTheme } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import ClearIcon from '@material-ui/icons/Clear';
 import { Sidebar } from 'src/sidebar';
+import { Icon } from '../shared/icon';
 import styles from './hamburgerMenu.module.css';
 
 export const HamburgerMenu: React.FC = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const [showClose, setShowClose] = useState(false);
-  const theme = useTheme();
-  const xsMatch = useMediaQuery(theme.breakpoints.down('xs'));
 
   useEffect(() => {
     window.dispatchEvent(
@@ -36,14 +32,11 @@ export const HamburgerMenu: React.FC = () => {
           <>
             <div className={styles.backdrop} />
             <div role="presentation" className={styles.closeContainer} onClick={() => setOpenDrawer(false)}>
-              <p className={styles.close}>Close</p> <ClearIcon className={styles.closeIconToggle} />
+              <p className={styles.close}>Close</p>
+              <Icon className={styles.closeIconToggle} name="close" size={32} />
             </div>
             <div className={styles.sidebar}>
-              <div
-                role="presentation"
-                onClick={() => setOpenDrawer(false)}
-                className={xsMatch ? styles.xsHamburgerMenu : styles.hamburgerMenu}
-              >
+              <div role="presentation" onClick={() => setOpenDrawer(false)} className={styles.hamburgerMenu}>
                 <Sidebar />
               </div>
             </div>
@@ -54,7 +47,9 @@ export const HamburgerMenu: React.FC = () => {
       <div className={openDrawer ? styles.opacityHamburger : styles.hamburgerContainer}>
         <div className={styles.browse}>Browse</div>
         <button type="button" className={styles.iconButtonContainer} onClick={() => setOpenDrawer(!openDrawer)}>
-          <MenuIcon className={styles.menuIconToggle} />
+          <span className={styles.menuLabel}>
+            <Icon className={styles.menuIconToggle} name="hamburger" size={48} />
+          </span>
         </button>
       </div>
     </>
