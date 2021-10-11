@@ -14,6 +14,8 @@ import { schools } from '@/data/resources/education/schools';
 import { ides } from '@/data/resources/tools/ides';
 import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
+import { exchanges } from '@/data/resources/tools/exchanges';
+import { languages } from '@/data/resources/tools/languages';
 
 interface ResourceBody {
   id: string;
@@ -45,6 +47,8 @@ const resourceBody: ResourceBody[] = [
   { id: 'frameworks', title: 'Frameworks', data: frameworks },
   { id: 'ides', title: 'IDEs', data: ides },
   { id: 'libraries', title: 'Libraries', data: libraries },
+  { id: 'exchanges', title: 'Exchanges', data: exchanges },
+  { id: 'languages', title: 'Languages', data: languages },
 ];
 
 export default function Resources({ resource, title }: { resource: Data; title: string }): ReactElement {

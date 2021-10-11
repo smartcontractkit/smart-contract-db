@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* PWA primary color */}
           <link rel="preload" href="/fonts/CircularStd/CircularStd-Medium.ttf" as="font" crossOrigin="" />
           <link rel="preload" href="/fonts/CircularStd/CircularStd-Bold.ttf" as="font" crossOrigin="" />
         </Head>
