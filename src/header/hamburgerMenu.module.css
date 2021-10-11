@@ -12,18 +12,19 @@
   align-items: center;
 }
 .iconButtonContainer {
-  margin-right: auto;
-  color: white;
-  padding-right: 0;
+  padding: 12px !important;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .menuIconToggle {
   font-size: 3rem;
   color: black;
 }
-
-/* .drawer > .MuiBackdrop-root {
-  opacity: 0.3 !important;
-} */
 
 .drawer > div.MuiBackdrop-root {
   opacity: 0.3 !important;
