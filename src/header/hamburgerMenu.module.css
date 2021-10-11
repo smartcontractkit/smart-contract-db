@@ -12,82 +12,20 @@
   align-items: center;
 }
 .iconButtonContainer {
-  padding: 12px !important;
-  font-size: 1.7142857142857142rem;
-  border-radius: 50%;
-  border: 0;
-  cursor: pointer;
-  margin: 0;
-  display: inline-flex;
-  outline: 0;
-  position: relative;
-  align-items: center;
-  user-select: none;
-  vertical-align: middle;
-  justify-content: center;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
+  margin-right: auto;
+  color: white;
+  padding-right: 0;
 }
 .menuIconToggle {
   font-size: 3rem;
   color: black;
 }
 
-.menuLabel {
-  width: 100%;
-  display: flex;
-  align-items: inherit;
-  justify-content: inherit;
-}
+/* .drawer > .MuiBackdrop-root {
+  opacity: 0.3 !important;
+} */
 
-/* .drawer {
-    '& .MuiBackdrop-root': {
-      opacity: 0.3 !important;
-    }
-  } */
-
-.drawer {
-  position: fixed;
-  z-index: 1300;
-  inset: 0px;
-}
-
-.backdrop {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  z-index: -1;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-tap-highlight-color: transparent;
-  opacity: 0.3;
-  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-}
-
-.sidebar {
-  top: 0;
-  flex: 1 0 auto;
-  height: 100%;
-  display: flex;
-  outline: 0;
-  z-index: 1200;
-  position: fixed;
-  overflow-y: auto;
-  flex-direction: column;
-  transform: none;
-  transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-  background-color: #fff;
-  opacity: 1;
-  box-shadow: 0px 8px 10px -5px rgb(0 0 0 / 20%), 0px 16px 24px 2px rgb(0 0 0 / 14%), 0px 6px 30px 5px rgb(0 0 0 / 12%);
-}
-
-.drawer > .MuiBackdrop-root {
+.drawer > div.MuiBackdrop-root {
   opacity: 0.3 !important;
 }
 
@@ -103,7 +41,7 @@
   align-items: center;
   font-weight: bold;
   padding-top: 2.25rem;
-  padding-right: 2rem;
+  padding-right: 2.75rem;
 }
 .close {
   padding-right: 2rem;
@@ -111,10 +49,6 @@
 .browse {
   font-size: 1.1428571428571428rem;
   line-height: 1.5;
-}
-
-.hidden {
-  display: none;
 }
 
 /* sx */
