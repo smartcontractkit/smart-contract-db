@@ -128,7 +128,7 @@
     padding-left: 2rem;
   }
   .container {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
   .subNavHeading {
     padding-left: 0;

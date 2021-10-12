@@ -26,9 +26,9 @@
   color: black;
 }
 
-.drawer > div.MuiBackdrop-root {
+/* .drawer > div.MuiBackdrop-root {
   opacity: 0.3 !important;
-}
+} */
 
 .closeIconToggle {
   font-size: 2rem;

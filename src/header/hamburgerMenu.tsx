@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Sidebar } from 'src/sidebar';
 import { Drawer } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import { Icon } from '../shared/icon';
 import styles from './hamburgerMenu.module.css';
 
+const useStyles = makeStyles({
+  drawer: {
+    '& .MuiBackdrop-root': {
+      opacity: '0.3 !important',
+    },
+  },
+});
+
 export const HamburgerMenu: React.FC = () => {
+  const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
   const [showClose, setShowClose] = useState(false);
 
@@ -27,7 +37,7 @@ export const HamburgerMenu: React.FC = () => {
   return (
     <>
       {/* change opacity to be 0.3 on openDrawer */}
-      <Drawer anchor="left" className={styles.drawer} onClose={() => setOpenDrawer(false)} open={openDrawer}>
+      <Drawer anchor="left" className={classes.drawer} onClose={() => setOpenDrawer(false)} open={openDrawer}>
         {showClose && (
           <div role="presentation" className={styles.closeContainer} onClick={() => setOpenDrawer(false)}>
             <p className={styles.close}>Close</p> <Icon className={styles.closeIconToggle} name="close" size={32} />
