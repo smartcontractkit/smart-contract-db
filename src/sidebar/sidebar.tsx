@@ -21,6 +21,7 @@ const toolsNav = [
   { title: 'Validators', path: '/validators' },
   { title: 'Wallets', path: '/wallets' },
   { title: 'Deploy', path: '/deploy' },
+  { title: 'Monitoring', path: '/monitoring' },
   { title: 'Administration', path: '/administration' },
   { title: 'Security', path: '/security' },
 ];

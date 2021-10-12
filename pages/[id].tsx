@@ -19,8 +19,11 @@ import { languages } from '@/data/resources/tools/languages';
 import { validators } from '@/data/resources/tools/validators';
 import { wallets } from '@/data/resources/tools/wallets';
 import { deploy } from '@/data/resources/tools/deploy';
+import { monitoring } from '@/data/resources/tools/monitoring';
+import { administration } from '@/data/resources/tools/administration';
 import { security } from '@/data/resources/tools/security';
 import { administration } from '@/data/resources/tools/administration';
+
 
 interface ResourceBody {
   id: string;
@@ -57,6 +60,7 @@ const resourceBody: ResourceBody[] = [
   { id: 'validators', title: 'Validators', data: validators },
   { id: 'wallets', title: 'Wallets', data: wallets },
   { id: 'deploy', title: 'Deploy', data: deploy },
+  { id: 'monitoring', title: 'Monitoring', data: monitoring },
   { id: 'administration', title: 'Administration', data: administration },
   { id: 'security', title: 'Security', data: security },
 ];
