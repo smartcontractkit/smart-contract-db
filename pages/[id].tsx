@@ -22,6 +22,8 @@ import { deploy } from '@/data/resources/tools/deploy';
 import { monitoring } from '@/data/resources/tools/monitoring';
 import { administration } from '@/data/resources/tools/administration';
 import { security } from '@/data/resources/tools/security';
+import { administration } from '@/data/resources/tools/administration';
+
 
 interface ResourceBody {
   id: string;
