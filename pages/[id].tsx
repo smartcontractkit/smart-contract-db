@@ -18,6 +18,7 @@ import { exchanges } from '@/data/resources/tools/exchanges';
 import { languages } from '@/data/resources/tools/languages';
 import { validators } from '@/data/resources/tools/validators';
 import { wallets } from '@/data/resources/tools/wallets';
+import { test } from '@/data/resources/tools/test';
 import { deploy } from '@/data/resources/tools/deploy';
 import { monitoring } from '@/data/resources/tools/monitoring';
 import { administration } from '@/data/resources/tools/administration';
@@ -57,6 +58,7 @@ const resourceBody: ResourceBody[] = [
   { id: 'languages', title: 'Languages', data: languages },
   { id: 'validators', title: 'Validators', data: validators },
   { id: 'wallets', title: 'Wallets', data: wallets },
+  { id: 'test', title: 'Test', data: test },
   { id: 'deploy', title: 'Deploy', data: deploy },
   { id: 'monitoring', title: 'Monitoring', data: monitoring },
   { id: 'administration', title: 'Administration', data: administration },
