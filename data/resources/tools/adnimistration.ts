@@ -21,6 +21,6 @@ export const administration: Administration[] = [
     description:
       'Manticor is a high-performance Digital Derivatives Trading Platform that provides the features and products that are both expected and required by high-volume, institutional and other sophisticated traders.',
     link: 'https://www.kaleido.io/',
-    src: '/img/tools/security/kaleido.webp',
+    src: '/img/tools/administration/kaleido.webp',
   },
 ];
