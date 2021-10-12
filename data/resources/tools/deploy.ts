@@ -16,7 +16,7 @@ export const deploy: Deploy[] = [
     src: '/img/deploy/etherscan.jpg',
   },
   {
-    id: 'open zeppelin supernode',
+    id: 'open-zeppelin-supernode',
     title: 'Open Zeppelin Supernode',
     description:
       'OpenZeppelin provides a complete suite of security products to build, manage, and inspect all aspects of software development and operations for Ethereum projects.',
@@ -46,7 +46,7 @@ export const deploy: Deploy[] = [
     src: '/img/deploy/quicknode.jpg',
   },
   {
-    id: 'linkPool naaS',
+    id: 'linkPool-naaS',
     title: 'LinkPool NaaS',
     description:
       'LinkPool is a chainlink node service provider that creates tools and infrastructure for Chainlink nodes and other services such as staking and the Chainlink Marketplace.',
@@ -77,7 +77,7 @@ export const deploy: Deploy[] = [
     src: '/img/libraries/Hardhat-color-logotype-vertical.svg',
   },
   {
-    id: 'dapp tools',
+    id: 'dapp-tools',
     title: 'Dapp Tools',
     description: 'Command line tools and smart contract libraries for Ethereum smart contract development',
     link: 'https://dapp.tools/',
