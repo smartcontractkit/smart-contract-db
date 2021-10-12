@@ -30,6 +30,13 @@ function dateFormatter(date: string): string {
 export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
 
+  // const ListItemIconText = ({ title }) => (
+  //   <>
+  //     <Icon className="list-item-arrow-icon" name="long-arrow-up" size={12} />
+  //     <span className="list-item-title">{title}</span>
+  //   </>
+  // );
+
   return (
     <div className={styles.container}>
       {data.map(({ id, title, src, startDate, description, link }, index: number) => (
@@ -49,6 +56,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
                 {startDate !== undefined ? (
                   <div>
                     <div className={styles.title}>
+                      {/* <ListItemIconText title={title} /> */}
                       <Icon className={styles.listItemArrowIcon} name="long-arrow-up" size={12} />
                       <span className={styles.listItemTitle}>{title}</span>
                     </div>
@@ -58,6 +66,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
                 ) : (
                   <div>
                     <div className={styles.title}>
+                      {/* <ListItemIconText title={title} /> */}
                       <Icon className={styles.listItemArrowIcon} name="long-arrow-up" size={12} />
                       <span className={styles.listItemTitle}>{title}</span>
                     </div>

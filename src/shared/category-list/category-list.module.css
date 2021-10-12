@@ -19,17 +19,33 @@
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   cursor: pointer;
+  /* '&:hover': {
+      background: #F7F9FA;
+    }
+    '& .list-item-title': {
+      display: inline-block;
+      transition: transform 0.1s ease-out;
+    },
+    '&:hover .list-item-title': {
+      transform: translate(0.75rem);
+    },
+    '& .list-item-arrow-icon': {
+      display: none;
+    },
+    '&:hover .list-item-arrow-icon': {
+      display: inline-block;
+    }, */
 }
 
 .listItem:hover {
   background: #f7f9fa;
 }
-.listItem > .link > div > .title > .listItemTitle {
+.listItem .listItemTitle {
   display: inline-block;
   transition: transform 0.1s ease-out;
 }
 
-.listItem:hover > .link > div > .title > .listItemTitle {
+.listItem:hover > .listItemTitle {
   transform: translate(0.75rem);
 }
 
@@ -37,7 +53,7 @@
   display: none;
 }
 
-.listItem:hover > .link > div > .title > .listItemArrowIcon {
+.listItem:hover > .listItemArrowIcon {
   display: inline-block;
 }
 
