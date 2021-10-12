@@ -18,6 +18,7 @@ import { exchanges } from '@/data/resources/tools/exchanges';
 import { languages } from '@/data/resources/tools/languages';
 import { security } from '@/data/resources/tools/security';
 import { administration } from '@/data/resources/tools/adnimistration';
+import { monitoring } from '@/data/resources/tools/monitoring';
 
 interface ResourceBody {
   id: string;
@@ -51,6 +52,7 @@ const resourceBody: ResourceBody[] = [
   { id: 'libraries', title: 'Libraries', data: libraries },
   { id: 'exchanges', title: 'Exchanges', data: exchanges },
   { id: 'languages', title: 'Languages', data: languages },
+  { id: 'monitoring', title: 'Monitoring', data: monitoring },
   { id: 'administration', title: 'Administration', data: administration },
   { id: 'security', title: 'Security', data: security },
 ];
