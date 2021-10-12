@@ -34,7 +34,7 @@ export const security: Security[] = [
     id: 'open-zepplin-defender',
     title: 'OpenZepplin Defender',
     description:
-      'PayPal is the faster, safer way to send money, make an online payment, receive money or set up a merchant account.',
+      'Automate your smart contract operations to deliver high-quality products faster with lower risk to users.',
     link: 'https://openzeppelin.com/defender/',
     src: '/img/libraries/open-zepplin.jpg',
   },
