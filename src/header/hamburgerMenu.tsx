@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Sidebar } from 'src/sidebar';
-import { Drawer, IconButton } from '@material-ui/core';
 import { Icon } from '../shared/icon';
 import styles from './hamburgerMenu.module.css';
 
@@ -47,12 +46,7 @@ export const HamburgerMenu: React.FC = () => {
       {/* </Drawer> */}
       <div className={openDrawer ? styles.opacityHamburger : styles.hamburgerContainer}>
         <div className={styles.browse}>Browse</div>
-        <button
-          type="button"
-          aria-label="Mobile Menu"
-          className={styles.iconButtonContainer}
-          onClick={() => setOpenDrawer(!openDrawer)}
-        >
+        <button type="button" className={styles.iconButtonContainer} onClick={() => setOpenDrawer(!openDrawer)}>
           <span className={styles.menuLabel}>
             <Icon className={styles.menuIconToggle} name="hamburger" size={48} />
           </span>

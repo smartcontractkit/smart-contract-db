@@ -1,5 +1,17 @@
-align-items: center;
+.hamburgerMenu {
+  padding-top: 3.625rem;
 }
+
+.hamburgerContainer {
+  display: inline-flex;
+  align-items: center;
+}
+.opacityHamburger {
+  opacity: 0.3;
+  display: inline-flex;
+  align-items: center;
+}
+
 .iconButtonContainer {
   padding: 12px !important;
   font-size: 1.7142857142857142rem;
@@ -80,26 +92,12 @@ align-items: center;
   opacity: 0.3 !important;
 }
 
-	@@ -103,7 +41,7 @@
-  align-items: center;
-  font-weight: bold;
-  padding-top: 2.25rem;
-  padding-right: 2rem;
+.closeIconToggle {
+  font-size: 2rem;
+  color: black;
 }
-.close {
-  padding-right: 2rem;
-	@@ -113,10 +51,6 @@
-  line-height: 1.5;
-}
-
-.hidden {
-  display: none;
-}
-
-/* sx */
-@media only screen and (max-width: 600px) {
-  .hamburgerMenu {
-    padding-top: 3.625rem;
-    width: 50vw;
-  }
-}
+.closeContainer {
+  right: 0;
+  display: flex;
+  position: fixed;
+  align-self: center;
