@@ -20,6 +20,7 @@ const toolsNav = [
   { title: 'Languages', path: '/languages' },
   { title: 'Validators', path: '/validators' },
   { title: 'Wallets', path: '/wallets' },
+  { title: 'Test', path: '/test' },
   { title: 'Deploy', path: '/deploy' },
   { title: 'Monitoring', path: '/monitoring' },
   { title: 'Administration', path: '/administration' },
