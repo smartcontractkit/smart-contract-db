@@ -16,6 +16,7 @@ import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
 import { exchanges } from '@/data/resources/tools/exchanges';
 import { languages } from '@/data/resources/tools/languages';
+import { deploy } from '@/data/resources/tools/deploy';
 import { security } from '@/data/resources/tools/security';
 import { administration } from '@/data/resources/tools/adnimistration';
 
@@ -51,6 +52,7 @@ const resourceBody: ResourceBody[] = [
   { id: 'libraries', title: 'Libraries', data: libraries },
   { id: 'exchanges', title: 'Exchanges', data: exchanges },
   { id: 'languages', title: 'Languages', data: languages },
+  { id: 'deploy', title: 'Deploy', data: deploy },
   { id: 'administration', title: 'Administration', data: administration },
   { id: 'security', title: 'Security', data: security },
 ];
