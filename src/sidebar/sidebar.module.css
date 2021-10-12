@@ -9,15 +9,24 @@
   align-items: center;
   padding-top: 8px;
   padding-bottom: 8px;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   text-decoration: none;
 }
 
 .nested {
-  padding-left: 0.5rem;
   font-size: 0.875rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  /* justify-content: flex-start; */
+  text-decoration: none;
 }
 
 .container {
@@ -92,21 +101,6 @@
 .list {
   padding-left: 0;
   margin-top: 0;
-}
-
-.childRoot {
-  padding-left: 16px;
-  padding-right: 16px;
-  width: 100%;
-  display: flex;
-  position: relative;
-  box-sizing: border-box;
-  text-align: left;
-  align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  justify-content: flex-start;
-  text-decoration: none;
 }
 
 .listTitles {

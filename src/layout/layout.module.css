@@ -6,7 +6,7 @@
 .main {
   display: flex;
   flex-grow: 1;
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 
 @media only screen and (max-width: 1280px) {

@@ -38,18 +38,16 @@ export const Sidebar: React.FC = () => {
                 <li className={styles.root}>
                   <span className={styles.subNavHeading}>{navItem.title}</span>
                 </li>
-                <ul className={styles.nested}>
-                  {navItem.children.map((childItem) => {
-                    return (
-                      <li key={childItem.title} className={styles.childRoot}>
-                        <Link href={childItem.path} className={styles.links} activeClassName={styles.activeLinks}>
-                          <Icon className={styles.bulletPoint} name="bullet-point" />
-                          <span>{childItem.title}</span>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {navItem.children.map((childItem) => {
+                  return (
+                    <li key={childItem.title} className={styles.nested}>
+                      <Link href={childItem.path} className={styles.links} activeClassName={styles.activeLinks}>
+                        <Icon className={styles.bulletPoint} name="bullet-point" />
+                        <span>{childItem.title}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
               </React.Fragment>
             );
           }

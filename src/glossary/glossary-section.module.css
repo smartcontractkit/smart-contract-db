@@ -50,14 +50,14 @@
   padding-right: 0 !important;
   padding-left: 0 !important;
   padding-top: 8px;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   text-decoration: none;
   width: 100%;
   display: flex;
   position: relative;
   box-sizing: border-box;
   text-align: left;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 .id {
   font-size: 1.5rem;
@@ -66,14 +66,14 @@
   padding-right: 0 !important;
   padding-left: 0 !important;
   padding-top: 8px;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   text-decoration: none;
   width: 100%;
   display: flex;
   position: relative;
   box-sizing: border-box;
   text-align: left;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 .title {
   font-size: 1.125rem;
@@ -101,7 +101,7 @@
   text-align: left;
   align-items: center;
   width: 100%;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   text-decoration: none;
 }
 

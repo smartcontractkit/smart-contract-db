@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
             <HamburgerMenu />
           </div>
           <div className={styles.contribution}>
-            <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={styles.links}>
+            <Link href="https://github.com/thisdot/smart-contract-db" className={styles.links}>
               <span className={styles.contribute}>Contribute at </span>
               <span className={styles.contributeLogo}>
                 {/* <GitHubIcon /> <b>GitHub</b> */}
@@ -46,7 +46,7 @@ export const Header: React.FC = () => {
                 <Icon className={styles.github} name="github" size={27.42} />
                 <b>GitHub</b>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
