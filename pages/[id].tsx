@@ -11,6 +11,7 @@ import { courses } from '@/data/resources/education/courses';
 import { workshops } from '@/data/resources/education/workshops';
 import { trainers } from '@/data/resources/education/trainers';
 import { schools } from '@/data/resources/education/schools';
+import { blockchains } from '@/data/resources/tools/blockchains';
 import { ides } from '@/data/resources/tools/ides';
 import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
@@ -50,6 +51,7 @@ const resourceBody: ResourceBody[] = [
   { id: 'trainers', title: 'Trainers', data: trainers },
   { id: 'schools', title: 'Schools', data: schools },
   { id: 'frameworks', title: 'Frameworks', data: frameworks },
+  { id: 'blockchains', title: 'Blockchains', data: blockchains },
   { id: 'ides', title: 'IDEs', data: ides },
   { id: 'libraries', title: 'Libraries', data: libraries },
   { id: 'exchanges', title: 'Exchanges', data: exchanges },
