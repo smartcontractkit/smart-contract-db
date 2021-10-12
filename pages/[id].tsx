@@ -16,8 +16,9 @@ import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
 import { exchanges } from '@/data/resources/tools/exchanges';
 import { languages } from '@/data/resources/tools/languages';
+import { wallets } from '@/data/resources/tools/wallets';
 import { security } from '@/data/resources/tools/security';
-import { administration } from '@/data/resources/tools/adnimistration';
+import { administration } from '@/data/resources/tools/administration';
 
 interface ResourceBody {
   id: string;
@@ -51,6 +52,7 @@ const resourceBody: ResourceBody[] = [
   { id: 'libraries', title: 'Libraries', data: libraries },
   { id: 'exchanges', title: 'Exchanges', data: exchanges },
   { id: 'languages', title: 'Languages', data: languages },
+  { id: 'wallets', title: 'Wallets', data: wallets },
   { id: 'administration', title: 'Administration', data: administration },
   { id: 'security', title: 'Security', data: security },
 ];
