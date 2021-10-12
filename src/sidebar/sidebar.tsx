@@ -13,6 +13,7 @@ const educationNav = [
 ];
 
 const toolsNav = [
+  { title: 'Blockchains', path: '/blockchains' },
   { title: 'IDEs', path: '/ides' },
   { title: 'Frameworks', path: '/frameworks' },
   { title: 'Libraries', path: '/libraries' },
