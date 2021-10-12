@@ -18,6 +18,7 @@ const toolsNav = [
   { title: 'Libraries', path: '/libraries' },
   { title: 'Exchanges', path: '/exchanges' },
   { title: 'Languages', path: '/languages' },
+  { title: 'Security', path: '/security' },
 ];
 
 const nav = [

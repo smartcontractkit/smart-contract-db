@@ -16,6 +16,7 @@ import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
 import { exchanges } from '@/data/resources/tools/exchanges';
 import { languages } from '@/data/resources/tools/languages';
+import { security } from '@/data/resources/tools/security';
 
 interface ResourceBody {
   id: string;
@@ -49,6 +50,7 @@ const resourceBody: ResourceBody[] = [
   { id: 'libraries', title: 'Libraries', data: libraries },
   { id: 'exchanges', title: 'Exchanges', data: exchanges },
   { id: 'languages', title: 'Languages', data: languages },
+  { id: 'security', title: 'Security', data: security },
 ];
 
 export default function Resources({ resource, title }: { resource: Data; title: string }): ReactElement {
@@ -83,14 +85,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const { id } = params;
-  let resource;
-  let title;
-  resourceBody.forEach((item) => {
-    if (item.id === id) {
-      resource = item.data;
-      title = item.title;
-    }
-  });
+  const { data: resource, title } = resourceBody.find((item) => item.id === id);
 
   return {
     props: { resource, title },
