@@ -1,7 +1,6 @@
 .hamburgerMenu {
   padding-top: 3.625rem;
 }
-
 .hamburgerContainer {
   display: inline-flex;
   align-items: center;
@@ -34,26 +33,22 @@
   font-size: 3rem;
   color: black;
 }
-
 .menuLabel {
   width: 100%;
   display: flex;
   align-items: inherit;
   justify-content: inherit;
 }
-
 /* .drawer {
     '& .MuiBackdrop-root': {
       opacity: 0.3 !important;
     }
   } */
-
 .drawer {
   position: fixed;
   z-index: 1300;
   inset: 0px;
 }
-
 .backdrop {
   top: 0;
   left: 0;
@@ -69,7 +64,6 @@
   opacity: 0.3;
   transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
-
 .sidebar {
   top: 0;
   flex: 1 0 auto;
@@ -86,11 +80,9 @@
   opacity: 1;
   box-shadow: 0px 8px 10px -5px rgb(0 0 0 / 20%), 0px 16px 24px 2px rgb(0 0 0 / 14%), 0px 6px 30px 5px rgb(0 0 0 / 12%);
 }
-
 .drawer > .MuiBackdrop-root {
   opacity: 0.3 !important;
 }
-
 .closeIconToggle {
   font-size: 2rem;
   color: black;

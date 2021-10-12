@@ -16,6 +16,8 @@ const toolsNav = [
   { title: 'IDEs', path: '/ides' },
   { title: 'Frameworks', path: '/frameworks' },
   { title: 'Libraries', path: '/libraries' },
+  { title: 'Exchanges', path: '/exchanges' },
+  { title: 'Languages', path: '/languages' },
 ];
 
 const nav = [
