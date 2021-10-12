@@ -17,6 +17,7 @@ import { libraries } from '@/data/resources/tools/libraries';
 import { exchanges } from '@/data/resources/tools/exchanges';
 import { languages } from '@/data/resources/tools/languages';
 import { wallets } from '@/data/resources/tools/wallets';
+import { deploy } from '@/data/resources/tools/deploy';
 import { security } from '@/data/resources/tools/security';
 import { administration } from '@/data/resources/tools/administration';
 
@@ -52,7 +53,11 @@ const resourceBody: ResourceBody[] = [
   { id: 'libraries', title: 'Libraries', data: libraries },
   { id: 'exchanges', title: 'Exchanges', data: exchanges },
   { id: 'languages', title: 'Languages', data: languages },
+<<<<<<< HEAD
   { id: 'wallets', title: 'Wallets', data: wallets },
+=======
+  { id: 'deploy', title: 'Deploy', data: deploy },
+>>>>>>> 71e9d02e8c9eecff586f3f124391700689643266
   { id: 'administration', title: 'Administration', data: administration },
   { id: 'security', title: 'Security', data: security },
 ];

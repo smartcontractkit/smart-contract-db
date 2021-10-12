@@ -19,6 +19,7 @@ const toolsNav = [
   { title: 'Exchanges', path: '/exchanges' },
   { title: 'Languages', path: '/languages' },
   { title: 'Wallets', path: '/wallets' },
+  { title: 'Deploy', path: '/deploy' },
   { title: 'Administration', path: '/administration' },
   { title: 'Security', path: '/security' },
 ];
