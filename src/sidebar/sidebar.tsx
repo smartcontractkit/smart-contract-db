@@ -13,9 +13,19 @@ const educationNav = [
 ];
 
 const toolsNav = [
+  { title: 'Blockchains', path: '/blockchains' },
   { title: 'IDEs', path: '/ides' },
   { title: 'Frameworks', path: '/frameworks' },
   { title: 'Libraries', path: '/libraries' },
+  { title: 'Exchanges', path: '/exchanges' },
+  { title: 'Languages', path: '/languages' },
+  { title: 'Validators', path: '/validators' },
+  { title: 'Wallets', path: '/wallets' },
+  { title: 'Test', path: '/test' },
+  { title: 'Deploy', path: '/deploy' },
+  { title: 'Monitoring', path: '/monitoring' },
+  { title: 'Administration', path: '/administration' },
+  { title: 'Security', path: '/security' },
 ];
 
 const nav = [

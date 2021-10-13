@@ -11,9 +11,19 @@ import { courses } from '@/data/resources/education/courses';
 import { workshops } from '@/data/resources/education/workshops';
 import { trainers } from '@/data/resources/education/trainers';
 import { schools } from '@/data/resources/education/schools';
+import { blockchains } from '@/data/resources/tools/blockchains';
 import { ides } from '@/data/resources/tools/ides';
 import { frameworks } from '@/data/resources/tools/frameworks';
 import { libraries } from '@/data/resources/tools/libraries';
+import { exchanges } from '@/data/resources/tools/exchanges';
+import { languages } from '@/data/resources/tools/languages';
+import { validators } from '@/data/resources/tools/validators';
+import { wallets } from '@/data/resources/tools/wallets';
+import { test } from '@/data/resources/tools/test';
+import { deploy } from '@/data/resources/tools/deploy';
+import { monitoring } from '@/data/resources/tools/monitoring';
+import { administration } from '@/data/resources/tools/administration';
+import { security } from '@/data/resources/tools/security';
 
 interface ResourceBody {
   id: string;
@@ -43,8 +53,18 @@ const resourceBody: ResourceBody[] = [
   { id: 'trainers', title: 'Trainers', data: trainers },
   { id: 'schools', title: 'Schools', data: schools },
   { id: 'frameworks', title: 'Frameworks', data: frameworks },
+  { id: 'blockchains', title: 'Blockchains', data: blockchains },
   { id: 'ides', title: 'IDEs', data: ides },
   { id: 'libraries', title: 'Libraries', data: libraries },
+  { id: 'exchanges', title: 'Exchanges', data: exchanges },
+  { id: 'languages', title: 'Languages', data: languages },
+  { id: 'validators', title: 'Validators', data: validators },
+  { id: 'wallets', title: 'Wallets', data: wallets },
+  { id: 'test', title: 'Test', data: test },
+  { id: 'deploy', title: 'Deploy', data: deploy },
+  { id: 'monitoring', title: 'Monitoring', data: monitoring },
+  { id: 'administration', title: 'Administration', data: administration },
+  { id: 'security', title: 'Security', data: security },
 ];
 
 export default function Resources({ resource, title }: { resource: Data; title: string }): ReactElement {
@@ -79,14 +99,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const { id } = params;
-  let resource;
-  let title;
-  resourceBody.forEach((item) => {
-    if (item.id === id) {
-      resource = item.data;
-      title = item.title;
-    }
-  });
+  const { data: resource, title } = resourceBody.find((item) => item.id === id);
 
   return {
     props: { resource, title },
