@@ -46,8 +46,13 @@
 
 .hr {
   background-color: #d3dde5;
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
   width: 140px;
   margin: 0.5rem 0 0.625rem;
+  list-style: none;
 }
 
 .links {
@@ -125,6 +130,7 @@
     padding-left: 0;
   }
   .hr {
+    display: block;
     margin: 0.5rem 0 0.625rem 1.5rem;
   }
   .links:hover {

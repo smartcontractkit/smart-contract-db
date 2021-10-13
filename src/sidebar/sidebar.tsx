@@ -65,7 +65,7 @@ export const Sidebar: React.FC<any> = ({ open }) => {
           if (navItem.title === 'Glossary') {
             return (
               <React.Fragment key={navItem.title}>
-                <hr className={styles.hr} />
+                <li className={styles.hr} />
                 <li className={styles.root}>
                   <Link href={navItem.path} className={styles.links} activeClassName={styles.activeLinks}>
                     <Icon className={styles.bulletPoint} name="bullet-point" />
