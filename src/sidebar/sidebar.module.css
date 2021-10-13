@@ -8,24 +8,29 @@
   text-align: left;
   align-items: center;
   padding-top: 8px;
-  padding-bottom: 8px;
-  justify-content: flex-start;
   text-decoration: none;
 }
 
 .nested {
-  padding-left: 0.5rem;
   font-size: 0.875rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
 }
 
 .container {
   padding-right: 1.5rem !important;
   position: sticky;
   top: 123px;
-  padding-top: 8px !important;
-  padding-bottom: 8px important;
+  /* padding-top: 8px !important; */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -41,8 +46,13 @@
 
 .hr {
   background-color: #d3dde5;
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
   width: 140px;
   margin: 0.5rem 0 0.625rem;
+  list-style: none;
 }
 
 .links {
@@ -94,21 +104,6 @@
   margin-top: 0;
 }
 
-.childRoot {
-  padding-left: 16px;
-  padding-right: 16px;
-  width: 100%;
-  display: flex;
-  position: relative;
-  box-sizing: border-box;
-  text-align: left;
-  align-items: center;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  justify-content: flex-start;
-  text-decoration: none;
-}
-
 .listTitles {
   font-size: 1.1428571428571428rem;
   line-height: 1.5;
@@ -128,12 +123,14 @@
     padding-left: 2rem;
   }
   .container {
-    padding-right: 0;
+    padding-right: 0 !important;
+    display: none;
   }
   .subNavHeading {
     padding-left: 0;
   }
   .hr {
+    display: block;
     margin: 0.5rem 0 0.625rem 1.5rem;
   }
   .links:hover {
@@ -153,5 +150,9 @@
     display: block;
     background-color: #f7f9fa;
     list-style-type: none;
+  }
+
+  .container.open {
+    display: block;
   }
 }

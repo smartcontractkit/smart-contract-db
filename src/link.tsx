@@ -49,7 +49,6 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(props,
     activeClassName = 'active',
     className: classNameProps,
     href,
-    noLinkStyle,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     role, // Link don't have roles.
     ...other
@@ -61,12 +60,19 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(props,
     [activeClassName]: router.asPath === pathname && activeClassName,
   });
 
-  const isExternal = typeof href === 'string' && (href.indexOf('http') === 0 || href.indexOf('mailto:') === 0);
+  const isExternal = typeof href === 'string' && (href.indexOf('https') === 0 || href.indexOf('mailto:') === 0);
 
   if (isExternal) {
-    if (noLinkStyle) {
-      return <a className={className} href={href as string} ref={ref as any} {...other} />;
-    }
+    return (
+      <a
+        className={className}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={href as string}
+        ref={ref as any}
+        {...other}
+      />
+    );
   }
 
   return <NextLinkComposed className={className} ref={ref as any} to={href} {...other} />;

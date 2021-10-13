@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './contribute.module.css';
+import Link from '../link';
 
 export const ContributeBanner: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ export const ContributeBanner: React.FC = () => {
               Create a PR if you see mistakes, room for improvement, or new opportunities to help dev team..
             </div>
           </div>
-          <a href="https://github.com/thisdot/smart-contract-db" rel="noopener noreferrer" className={styles.links}>
+          <Link href="https://github.com/thisdot/smart-contract-db" className={styles.links}>
             <button type="button" className={styles.button}>
               Contribute
               <img
@@ -23,7 +24,7 @@ export const ContributeBanner: React.FC = () => {
                 height="17"
               />
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

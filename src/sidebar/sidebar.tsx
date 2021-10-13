@@ -37,9 +37,9 @@ const nav = [
   { title: 'Glossary', path: '/glossary' },
 ];
 
-export const Sidebar: React.FC = () => {
+export const Sidebar: React.FC<any> = ({ open }) => {
   return (
-    <nav className={styles.container}>
+    <nav className={`${styles.container} ${open ? styles.open : ''}`}>
       <ul className={styles.list}>
         {nav.map((navItem) => {
           if (navItem.path === null) {
@@ -48,18 +48,16 @@ export const Sidebar: React.FC = () => {
                 <li className={styles.root}>
                   <span className={styles.subNavHeading}>{navItem.title}</span>
                 </li>
-                <ul className={styles.nested}>
-                  {navItem.children.map((childItem) => {
-                    return (
-                      <li key={childItem.title} className={styles.childRoot}>
-                        <Link href={childItem.path} className={styles.links} activeClassName={styles.activeLinks}>
-                          <Icon className={styles.bulletPoint} name="bullet-point" />
-                          <span>{childItem.title}</span>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
+                {navItem.children.map((childItem) => {
+                  return (
+                    <li key={childItem.title} className={styles.nested}>
+                      <Link href={childItem.path} className={styles.links} activeClassName={styles.activeLinks}>
+                        <Icon className={styles.bulletPoint} name="bullet-point" />
+                        <span>{childItem.title}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
               </React.Fragment>
             );
           }
@@ -67,7 +65,7 @@ export const Sidebar: React.FC = () => {
           if (navItem.title === 'Glossary') {
             return (
               <React.Fragment key={navItem.title}>
-                <hr className={styles.hr} />
+                <li className={styles.hr} />
                 <li className={styles.root}>
                   <Link href={navItem.path} className={styles.links} activeClassName={styles.activeLinks}>
                     <Icon className={styles.bulletPoint} name="bullet-point" />
