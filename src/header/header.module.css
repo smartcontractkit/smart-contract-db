@@ -52,6 +52,7 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: right;
 }
 .logo {
   width: 10.25rem;
