@@ -33,17 +33,26 @@
 }
 .contributeLogo {
   color: #25292e;
+  padding: 0 4px 0 8px;
 }
 
-.contributeLogo:hover {
-  color: #0aa6e5;
+.github {
+  color: #25292e;
 }
-.contributeLogo:hover > .github {
+
+.links:hover > .contributeLogo > .github {
   fill: #0aa6e5;
+}
+
+.links:hover > .github {
+  color: #0aa6e5;
 }
 
 .links {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }
 .logo {
   width: 10.25rem;

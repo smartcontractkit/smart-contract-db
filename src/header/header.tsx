@@ -39,13 +39,11 @@ export const Header: React.FC = () => {
           </div>
           <div className={styles.contribution}>
             <Link href="https://github.com/thisdot/smart-contract-db" className={styles.links}>
-              <span className={styles.contribute}>Contribute at </span>
-              <span className={styles.contributeLogo}>
-                {/* <GitHubIcon /> <b>GitHub</b> */}
-                {/* <img src="/img/github-icon.svg" alt="github icon" width="27.42px" height="27.42px" /> */}
+              <div className={styles.contribute}>Contribute at </div>
+              <div className={styles.contributeLogo}>
                 <Icon className={styles.github} name="github" size={27.42} />
-                <b>GitHub</b>
-              </span>
+              </div>
+              <div className={styles.github}>GitHub</div>
             </Link>
           </div>
         </div>
