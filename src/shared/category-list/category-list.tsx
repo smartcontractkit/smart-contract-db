@@ -33,13 +33,6 @@ export const CategoryList: React.FC<CategoryListProps> = ({ name, data }) => {
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
   const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
 
-  // const ListItemIconText = ({ title }) => (
-  //   <>
-  //     <Icon className="list-item-arrow-icon" name="long-arrow-up" size={12} />
-  //     <span className="list-item-title">{title}</span>
-  //   </>
-  // );
-
   return (
     <div className={styles.container}>
       {dataWithOngoingDates.length ? (
@@ -59,7 +52,6 @@ export const CategoryList: React.FC<CategoryListProps> = ({ name, data }) => {
                   </div>
                   <div>
                     <div className={styles.title}>
-                      {/* <ListItemIconText title={title} /> */}
                       <Icon className={styles.listItemArrowIcon} name="long-arrow-up" size={12} />
                       <span className={styles.listItemTitle}>{title}</span>
                     </div>
