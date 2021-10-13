@@ -6,14 +6,11 @@
 .main {
   display: flex;
   flex-grow: 1;
-  align-items: flex-start !important;
+  align-items: flex-start;
 }
 
 @media only screen and (max-width: 1280px) {
   .main {
     display: block;
-  }
-  .sidebar {
-    display: none;
   }
 }

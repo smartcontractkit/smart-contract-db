@@ -34,7 +34,6 @@
   position: sticky;
   top: 123px;
   padding-top: 8px !important;
-  padding-bottom: 8px important;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -123,6 +122,7 @@
   }
   .container {
     padding-right: 0 !important;
+    display: none;
   }
   .subNavHeading {
     padding-left: 0;
@@ -147,5 +147,9 @@
     display: block;
     background-color: #f7f9fa;
     list-style-type: none;
+  }
+
+  .container.open {
+    display: block;
   }
 }

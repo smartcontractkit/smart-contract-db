@@ -27,9 +27,9 @@ const nav = [
   { title: 'Glossary', path: '/glossary' },
 ];
 
-export const Sidebar: React.FC = () => {
+export const Sidebar: React.FC<any> = ({ open }) => {
   return (
-    <nav className={styles.container}>
+    <nav className={`${styles.container} ${open ? styles.open : ''}`}>
       <ul className={styles.list}>
         {nav.map((navItem) => {
           if (navItem.path === null) {

@@ -30,10 +30,7 @@ const Layout: React.FC = ({ children }) => {
       <div className={styles.container}>
         <Header />
         <main className={styles.main}>
-          {/* hide depending on screen size */}
-          <div className={styles.sidebar}>
-            <Sidebar />
-          </div>
+          <Sidebar />
           {children}
         </main>
       </div>
