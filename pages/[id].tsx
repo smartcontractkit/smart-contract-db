@@ -81,7 +81,7 @@ export default function Resources({ resource, title }: { resource: Data; title: 
     <section className={styles.section}>
       {/* hide depending on screen size */}
       <div className={styles.heading}>{title}</div>
-      <CategoryList data={resource} />
+      <CategoryList name={title} data={resource} />
     </section>
   );
 }
