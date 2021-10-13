@@ -3,8 +3,10 @@ import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
+import { isDatePast } from 'src/content/events';
 
 export interface CategoryListProps {
+  name?: string; // category's name
   data; // TODO: combine types
 }
 
@@ -27,8 +29,9 @@ function dateFormatter(date: string): string {
   }).format(newDate);
 }
 
-export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
+export const CategoryList: React.FC<CategoryListProps> = ({ name, data }) => {
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
+  const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
 
   // const ListItemIconText = ({ title }) => (
   //   <>
@@ -39,52 +42,39 @@ export const CategoryList: React.FC<CategoryListProps> = ({ data }) => {
 
   return (
     <div className={styles.container}>
-      {data.map(({ id, title, src, startDate, description, link }, index: number) => (
-        <React.Fragment key={id}>
-          <ul className={styles.ul}>
-            <li className={styles.listItem}>
-              <Link className={styles.link} rel="noopener noreferrer" href={link}>
-                <div className={styles.avatarContainer}>
-                  {src ? (
-                    <div className={styles.avatar}>
-                      <img alt={title} src={src} width="88" height="88" />
-                    </div>
-                  ) : (
-                    <Initicon size={88} text={title} seed={identiconSeedMax(9)} single={false} />
-                  )}
-                </div>
-                {startDate !== undefined ? (
+      {dataWithOngoingDates.length ? (
+        <ul className={styles.ul}>
+          {data.map(({ id, title, src, startDate, description, link }, index: number) => (
+            <React.Fragment key={id}>
+              <li className={styles.listItem}>
+                <Link className={styles.link} rel="noopener noreferrer" href={link}>
+                  <div className={styles.avatarContainer}>
+                    {src ? (
+                      <div className={styles.avatar}>
+                        <img alt={title} src={src} width="88" height="" />
+                      </div>
+                    ) : (
+                      <Initicon size={88} text={title} seed={identiconSeedMax(9)} single={false} />
+                    )}
+                  </div>
                   <div>
                     <div className={styles.title}>
                       {/* <ListItemIconText title={title} /> */}
                       <Icon className={styles.listItemArrowIcon} name="long-arrow-up" size={12} />
                       <span className={styles.listItemTitle}>{title}</span>
                     </div>
-                    <div className={styles.subTitle}>{dateFormatter(startDate)}</div>
+                    {startDate ? <div className={styles.subTitle}>{dateFormatter(startDate)}</div> : ''}
                     <div className={styles.listItemText}>{description}</div>
                   </div>
-                ) : (
-                  <div>
-                    <div className={styles.title}>
-                      {/* <ListItemIconText title={title} /> */}
-                      <Icon className={styles.listItemArrowIcon} name="long-arrow-up" size={12} />
-                      <span className={styles.listItemTitle}>{title}</span>
-                    </div>
-                    <div className={styles.listItemText}>{description}</div>
-                  </div>
-                )}
-              </Link>
-            </li>
-          </ul>
-          {data.length === index + 1 ? (
-            ''
-          ) : (
-            <ul className={styles.ul}>
-              <li className={styles.hr} />
-            </ul>
-          )}
-        </React.Fragment>
-      ))}
+                </Link>
+              </li>
+              {data.length !== index + 1 ? <li className={styles.hr} /> : ''}
+            </React.Fragment>
+          ))}
+        </ul>
+      ) : (
+        <h1>No new {name.toLocaleLowerCase() || 'content'}. Please check back soon.</h1>
+      )}
     </div>
   );
 };
