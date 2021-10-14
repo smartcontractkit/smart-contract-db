@@ -14,7 +14,6 @@ const educationNav = [
 
 const toolsNav = [
   { title: 'Blockchains', path: '/blockchains' },
-  { title: 'Learn', path: '/learn' },
   { title: 'IDEs', path: '/ides' },
   { title: 'Frameworks', path: '/frameworks' },
   { title: 'Libraries', path: '/libraries' },
