@@ -2,7 +2,7 @@ import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { CategoryList } from 'src/shared/category-list';
 import styles from '../styles/slug.module.css';
-import { communities } from '@/data/resources/communities';
+import { communities } from '@/data/resources/communities/communities';
 import { consultants } from '@/data/resources/consultants';
 import { events } from '@/data/resources/events';
 import { books } from '@/data/resources/education/books';
