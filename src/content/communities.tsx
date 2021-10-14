@@ -1,7 +1,7 @@
 import React from 'react';
 import { CategoryList } from 'src/shared/category-list';
 import styles from './content.module.css';
-import { communities } from '@/data/resources/communities';
+import { communities } from '@/data/resources/communities/communities';
 
 export const Communities: React.FC = () => {
   return (
