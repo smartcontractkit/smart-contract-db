@@ -54,7 +54,7 @@ export const developer: Developer[] = [
     description:
       'Community for Blockchain developers. Ethereum, Solidity, Web3, Dapp, Smart contract, DeFi programming',
     link: 'https://forum.eattheblocks.com/',
-    src: '',
+    src: '/img/communities/developers/eat-the-blocks-forum.jpg',
   },
   {
     id: 'chainlink-discord',

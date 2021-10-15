@@ -13,7 +13,7 @@ export const incubatorsAccelerators: IncubatorsAccelerators[] = [
     description:
       'Our due diligence process is a commercial collaboration. If your technology is ready to be demonstrated, we will take you to potential customers and partners to jointly substantiate the market opportunity.',
     link: 'https://rhapsodyvp.com/',
-    src: '',
+    src: '/img/communities/incubators-accelerators/rhapsody-ventures.png',
   },
   {
     id: 'binance-labs',
