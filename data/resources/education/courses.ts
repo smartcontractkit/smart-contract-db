@@ -29,10 +29,11 @@ export const courses: Course[] = [
     src: '',
   },
   {
-    id: 'crypto-zombies',
-    title: 'Crypto Zombies',
-    description: '',
-    link: 'https://cryptozombies.io/',
-    src: '',
+    id: 'ivan-on-tech',
+    title: 'Ivan on Tech',
+    description:
+      'Become a Highly-Paid Professional in Months! 30+ Industry-Recognized Blockchain & Cryptocurrencies Certification Courses. Learn More!',
+    link: 'https://academy.ivanontech.com/',
+    src: '/img/courses/ivan-on-tech.svg',
   },
 ];
