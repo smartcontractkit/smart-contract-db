@@ -154,7 +154,7 @@ export const frameworks: Framework[] = [
   },
   {
     id: 'use-dapp',
-    title: 'useDapp',
+    title: 'UseDapp',
     description: 'Framework for rapid DApp development.',
     link: 'https://usedapp.io/',
     src: '',
@@ -172,7 +172,7 @@ export const frameworks: Framework[] = [
     description:
       'Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.',
     link: 'https://nextjs.org/',
-    src: '/img/tools/frameworks/next.js.svg',
+    src: '/img/tools/frameworks/nextjs.png',
   },
   {
     id: 'angular',
@@ -221,7 +221,7 @@ export const frameworks: Framework[] = [
   },
   {
     id: 'create-eth-app',
-    title: 'create-eth-app',
+    title: 'Create-eth-app',
     description: 'Kickstart your dapp frontend development with create-eth-app | ethereum.org',
     link: 'https://ethereum.org/en/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/',
     src: '',
