@@ -8,13 +8,6 @@ export interface Library {
 
 export const libraries: Library[] = [
   {
-    id: 'hardhat',
-    title: 'Hardhat',
-    description: 'Ethereum development environment for professionals.',
-    link: 'https://hardhat.org/',
-    src: '/img/libraries/Hardhat-color-logotype-vertical.svg',
-  },
-  {
     id: 'truffle',
     title: 'Truffle Suite',
     description: 'The Truffle Suite gets developers from idea to dapp as comfortably as possible.',
