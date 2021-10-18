@@ -13,6 +13,7 @@ export const frameworks: Framework[] = [
     description:
       'Stellar is an open-source network for currencies and payments. Stellar makes it possible to create, send and trade digital representations of all forms of money—dollars, pesos, bitcoin, pretty much anything. It’s designed so all the world’s financial systems can work together on a single network.',
     link: 'https://www.stellar.org/?locale=en',
+    src: '/img/tools/frameworks/stellar.png',
   },
   {
     id: 'tezos',
@@ -20,6 +21,7 @@ export const frameworks: Framework[] = [
     description:
       'Tezos is an open-source platform that addresses key barriers facing blockchain adoption for assets and applications backed by a global community of validators, researchers, and builders. By design, Tezos embraces long-term upgradability, open participation, collaboration, and smart contract safety.',
     link: 'https://tezos.com/',
+    src: '/img/tools/frameworks/tezos.png',
   },
   {
     id: 'hyperledger-fabric',
@@ -27,6 +29,7 @@ export const frameworks: Framework[] = [
     description:
       'Hyperledger Fabric is intended as a foundation for developing applications or solutions with a modular architecture. Hyperledger Fabric allows components, such as consensus and membership services, to be plug-and-play. Its modular and versatile design satisfies a broad range of industry use cases. It offers a unique approach to consensus that enables performance at scale while preserving privacy.',
     link: 'https://www.hyperledger.org/use/fabric',
+    src: '/img/tools/frameworks/hyperledger-fabric.png',
   },
   {
     id: 'hyperledger-sawtooth',
@@ -34,6 +37,7 @@ export const frameworks: Framework[] = [
     description:
       'Hyperledger Sawtooth offers a flexible and modular architecture separates the core system from the application domain, so smart contracts can specify the business rules for applications without needing to know the underlying design of the core system.',
     link: 'https://www.hyperledger.org/use/sawtooth',
+    src: '/img/tools/frameworks/hyperledger-sawtooth.png',
   },
   {
     id: 'hedera-hashgraph',
@@ -41,6 +45,7 @@ export const frameworks: Framework[] = [
     description:
       'Providing a new form of distributed consensus, Hedera Hashgraph platform is lightning secure, fast and fair platform that does not need to compute a heavy proof of work algorithm. Hedera empowers and enables developers to build an entirely new class of decentralized applications that are scalable.',
     link: 'https://hedera.com/',
+    src: '/img/tools/frameworks/hedera-hashgraph.png',
   },
   {
     id: 'hardhat',
@@ -120,8 +125,8 @@ export const frameworks: Framework[] = [
   {
     id: 'solidity-template',
     title: 'Solidity Template',
-    description: '',
-    link: '',
+    description: 'Template for building testing and deploying solidity smart contracts',
+    link: 'https://github.com/PaulRBerg/solidity-template',
     src: '/img/languages/solidity-logo.svg',
   },
   {
@@ -196,9 +201,9 @@ export const frameworks: Framework[] = [
   {
     id: 'alchemy-build',
     title: 'Alchemy Build',
-    description: '',
-    link: '',
-    src: '',
+    description: `Whether you're a beginner, working on a side project, or one of the largest teams in the blockchain space, Alchemy makes Ethereum development easy with enhanced APIs, node infrastructure, and developer tooling. Get started for free!`,
+    link: 'https://www.alchemy.com/',
+    src: '/img/tools/frameworks/alchemy-build.jpg',
   },
   {
     id: 'infura',
@@ -210,36 +215,38 @@ export const frameworks: Framework[] = [
   {
     id: 'web3-react',
     title: 'Web3 React',
-    description: '',
-    link: '',
+    description: 'A simple, maximally extensible, dependency minimized framework for building modern Ethereum dApps',
+    link: 'https://github.com/NoahZinsmeister/web3-react',
     src: '',
   },
   {
     id: 'create-eth-app',
     title: 'create-eth-app',
-    description: '',
-    link: '',
+    description: 'Kickstart your dapp frontend development with create-eth-app | ethereum.org',
+    link: 'https://ethereum.org/en/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/',
     src: '',
   },
   {
     id: 'aragon',
     title: 'Aragon',
-    description: '',
-    link: '',
-    src: '',
+    description: 'Frictionless DAO creation and governance, powered by Aragon. Changing the world starts here.',
+    link: 'https://aragon.org/',
+    src: 'img/tools/frameworks/aragon.svg',
   },
   {
     id: 'cosmos',
     title: 'Cosmos',
-    description: '',
-    link: '',
-    src: '',
+    description:
+      'Cosmos is an ever-expanding ecosystem of interoperable and sovereign blockchain apps and services, built for a decentralized future.',
+    link: 'https://cosmos.network/',
+    src: '/img/tools/frameworks/cosmos.png',
   },
   {
     id: 'the-graph',
     title: 'TheGraph',
-    description: '',
-    link: '',
-    src: '',
+    description:
+      'The Graph is an indexing protocol for organizing blockchain data and making it easily accessible with GraphQL.',
+    link: 'https://thegraph.com/en/',
+    src: '/img/tools/frameworks/the-graph.jpg',
   },
 ];
