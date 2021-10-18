@@ -37,4 +37,34 @@ export const libraries: Library[] = [
     link: 'https://openzeppelin.com/contracts/',
     src: '/img/libraries/open-zepplin.jpg',
   },
+  {
+    id: 'web3-js',
+    title: 'Web3.js',
+    description:
+      'web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.',
+    link: 'https://web3js.readthedocs.io/en/v1.3.0/#',
+    src: '/img/libraries/web3-js.jpg',
+  },
+  {
+    id: 'web3-py',
+    title: 'Web3.py',
+    description: 'Web3.py is a Python library for interacting with Ethereum.',
+    link: 'https://web3py.readthedocs.io/en/stable/',
+    src: '/img/libraries/py.png',
+  },
+  {
+    id: 'open-ethereum',
+    title: 'OpenEthereum',
+    description: 'Fast and feature-rich ethereum client.',
+    link: 'https://openethereum.org/',
+    src: '/img/libraries/open-ethereum.png',
+  },
+  {
+    id: 'ethers-js',
+    title: 'ethers.js',
+    description:
+      'The ethers.js library aims to be a complete and compact library for interacting with the Ethereum Blockchain and its ecosystem.',
+    link: 'https://docs.ethers.io/v5/',
+    src: '/img/libraries/ethers-js.png',
+  },
 ];
