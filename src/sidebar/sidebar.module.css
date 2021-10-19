@@ -34,11 +34,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: left;
 }
 
 .subNavHeading {
   color: #95a1ad;
-  padding-left: 2rem;
   font-size: 1.1428571428571428rem;
   line-height: 1.5;
   margin: 0;
@@ -113,6 +113,16 @@
   margin-bottom: 4px;
 }
 
+.accordionTitle {
+  border: none;
+  background: none;
+  padding-left: 2rem;
+  font-family: Circular Std;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 @media only screen and (max-width: 1280px) {
   .root {
     padding-left: 1.5rem;
@@ -150,9 +160,14 @@
     display: block;
     background-color: #f7f9fa;
     list-style-type: none;
+    text-align: center;
   }
 
   .container.open {
     display: block;
+  }
+
+  .accordionTitle {
+    padding: 0;
   }
 }
