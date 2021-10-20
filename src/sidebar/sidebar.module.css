@@ -35,6 +35,7 @@
   padding: 0;
   list-style: none;
   text-align: left;
+  width: 25%;
 }
 
 .subNavHeading {
@@ -123,6 +124,16 @@
   margin-bottom: 4px;
 }
 
+.chevron {
+  /* background: #f7f9fa; */
+  /* border-radius: 555px; */
+}
+
+.chevron:hover {
+  fill: #1383bf;
+  background: #ddf6fe;
+}
+
 @media only screen and (max-width: 1280px) {
   .root {
     padding-left: 1.5rem;
@@ -138,6 +149,9 @@
   }
   .subNavHeading {
     padding-left: 0;
+    display: flex;
+    flex-flow: nowrap;
+    margin: 0;
   }
   .hr {
     display: block;
