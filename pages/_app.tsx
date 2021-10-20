@@ -55,19 +55,6 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
       <Head>
         <title>My page</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        {/* GTM-5J5DL65 */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
-        <script
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-          `,
-          }}
-        />
       </Head>
 
       <NextIntlProvider messages={pageProps.messages} onError={onError} getMessageFallback={getMessageFallback}>
