@@ -33,23 +33,6 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
     }
   }, []);
 
-  // 1. Copy the following JavaScript and paste it as close to the opening <head> tag as possible on every page of the website:
-
-  // <!-- Google Tag Manager -->
-  // <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  // new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  // j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  // 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  // })(window,document,'script','dataLayer','GTM-5J5DL65');</script>
-  // <!-- End Google Tag Manager -->
-
-  // 2. Copy the following snippet and paste it immediately after the opening <body> tag on every page of the website:
-
-  // <!-- Google Tag Manager (noscript) -->
-  // <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5J5DL65"
-  // height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  // <!-- End Google Tag Manager (noscript) -->
-
   return (
     <>
       <Head>
