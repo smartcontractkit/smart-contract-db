@@ -9,6 +9,8 @@
   align-items: center;
   padding-top: 8px;
   text-decoration: none;
+  width: 100%;
+  place-content: space-between;
 }
 
 .nested {
@@ -122,16 +124,24 @@
   cursor: pointer;
   margin-top: 4px;
   margin-bottom: 4px;
+  width: 100%;
+}
+
+.openChevron {
+  fill: #f7f9fa;
 }
 
 .chevron {
-  /* background: #f7f9fa; */
-  /* border-radius: 555px; */
+  fill: #f7f9fa;
+  transform: scaleY(-1);
 }
 
-.chevron:hover {
-  fill: #1383bf;
-  background: #ddf6fe;
+.accordionTitle:hover > .root > div > .chevron {
+  fill: #ddf6fe;
+}
+
+.accordionTitle:hover > .root > div > .openChevron {
+  fill: #ddf6fe;
 }
 
 @media only screen and (max-width: 1280px) {

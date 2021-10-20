@@ -11,12 +11,12 @@ export const Accordion: React.FC<any> = ({ title, content }) => {
         <li className={styles.root}>
           <div className={styles.subNavHeading}>{title}</div>
           {isActive ? (
-            <div className={styles.chevron}>
-              <Icon name="chevron" />
+            <div>
+              <Icon className={styles.openChevron} name="chevron" />
             </div>
           ) : (
-            <div className={styles.chevron}>
-              <Icon name="chevron" />
+            <div>
+              <Icon className={styles.chevron} name="chevron" />
             </div>
           )}
         </li>
