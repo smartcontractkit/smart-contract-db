@@ -1,12 +1,7 @@
 import React from 'react';
 import { IconPropDefaults, IconProps } from '../icon';
 
-export const Chevron: React.FC<IconProps> = ({
-  className = IconPropDefaults.className,
-  fillIn = IconPropDefaults.fillInside,
-  fillOut = IconPropDefaults.fillOutside,
-}: // color = IconPropDefaults.color,
-IconProps) => (
+export const Chevron: React.FC<IconProps> = ({ className = IconPropDefaults.className }: IconProps) => (
   <svg width="24" height="24" viewBox="0 0 24 24" className={className} xmlns="http://www.w3.org/2000/svg">
     <rect width="24" height="24" rx="12" />
     <path

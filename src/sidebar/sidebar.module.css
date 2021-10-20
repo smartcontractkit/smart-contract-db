@@ -156,6 +156,7 @@
   .container {
     padding-right: 0 !important;
     display: none;
+    width: 100%;
   }
   .subNavHeading {
     padding-left: 0;

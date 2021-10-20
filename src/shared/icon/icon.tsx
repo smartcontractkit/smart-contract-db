@@ -20,8 +20,6 @@ const IconPropDefaults = {
   className: '',
   color: 'black',
   size: 32,
-  fillInside: '',
-  fillOutside: '',
 };
 
 const Icon: FC<IconProps & { name: string }> = ({ name, ...rest }) => {
