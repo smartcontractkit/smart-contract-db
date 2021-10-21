@@ -107,3 +107,19 @@
   list-style-type: none;
   margin: 0;
 }
+
+.communitySubHeaders {
+  background: #f7f9fa;
+  width: 196px;
+  height: 36px;;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #4d545c;
+}
