@@ -25,10 +25,6 @@
   color: black;
 }
 
-/* .drawer > div.MuiBackdrop-root {
-  opacity: 0.3 !important;
-} */
-
 .closeIconToggle {
   font-size: 2rem;
   color: black;
@@ -53,7 +49,6 @@
 
 @media only screen and (max-width: 1280px) {
   .hamburgerMenu {
-    /* padding-top: 3.625rem; */
     width: 25vw;
   }
 }
