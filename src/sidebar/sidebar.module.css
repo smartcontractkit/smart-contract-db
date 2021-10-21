@@ -147,7 +147,7 @@
 @media only screen and (max-width: 1280px) {
   .root {
     padding-left: 1.5rem;
-    padding-right: 7.5rem;
+    /* padding-right: 7.5rem; */
     font-size: 1rem;
   }
   .nested {

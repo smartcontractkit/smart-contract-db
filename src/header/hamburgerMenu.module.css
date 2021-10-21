@@ -51,6 +51,13 @@
   line-height: 1.5;
 }
 
+@media only screen and (max-width: 1280px) {
+  .hamburgerMenu {
+    /* padding-top: 3.625rem; */
+    width: 25vw;
+  }
+}
+
 /* sx */
 @media only screen and (max-width: 600px) {
   .hamburgerMenu {
