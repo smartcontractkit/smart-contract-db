@@ -2,7 +2,11 @@ import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { CategoryList } from 'src/shared/category-list';
 import styles from '../styles/slug.module.css';
-import { communities } from '@/data/resources/communities/communities';
+import { ventureCapitalFunds } from '@/data/resources/communities/venture-capital-funds';
+import { grantPrograms } from '@/data/resources/communities/grant-programs';
+import { incubatorsAccelerators } from '@/data/resources/communities/incubators-accelerators';
+import { developer } from '@/data/resources/communities/developer';
+import { enterprise } from '@/data/resources/communities/enterprise';
 import { consultants } from '@/data/resources/consultants';
 import { events } from '@/data/resources/events';
 import { books } from '@/data/resources/education/books';
@@ -42,6 +46,8 @@ type Data = {
   src?: string;
 };
 
+const communities = [...ventureCapitalFunds, ...grantPrograms, ...incubatorsAccelerators, ...developer, ...enterprise];
+
 const resourceBody: ResourceBody[] = [
   { id: 'communities', title: 'Communities', data: communities },
   { id: 'consultants', title: 'Consultants', data: consultants },
@@ -76,7 +82,6 @@ export default function Resources({ resource, title }: { resource: Data; title: 
       })
     );
   }, [title]);
-
   return (
     <section className={styles.section}>
       {/* hide depending on screen size */}

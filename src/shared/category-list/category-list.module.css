@@ -110,7 +110,7 @@
 
 .communitySubHeaders {
   background: #f7f9fa;
-  width: 196px;
+  width: 25%;
   height: 36px;;
   font-weight: bold;
   font-size: 12px;
@@ -122,4 +122,5 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #4d545c;
+  white-space: nowrap;
 }
