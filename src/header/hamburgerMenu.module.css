@@ -25,10 +25,6 @@
   color: black;
 }
 
-/* .drawer > div.MuiBackdrop-root {
-  opacity: 0.3 !important;
-} */
-
 .closeIconToggle {
   font-size: 2rem;
   color: black;
@@ -49,6 +45,12 @@
 .browse {
   font-size: 1.1428571428571428rem;
   line-height: 1.5;
+}
+
+@media only screen and (max-width: 1280px) {
+  .hamburgerMenu {
+    width: 25vw;
+  }
 }
 
 /* sx */

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './sidebar.module.css';
 import { Icon } from '../shared/icon';
 import Link from '../link';
+import { Accordion } from './accordion';
 
 const educationNav = [
   { title: 'Books', path: '/books' },
@@ -43,23 +44,7 @@ export const Sidebar: React.FC<any> = ({ open }) => {
       <ul className={styles.list}>
         {nav.map((navItem) => {
           if (navItem.path === null) {
-            return (
-              <React.Fragment key={navItem.title}>
-                <li className={styles.root}>
-                  <span className={styles.subNavHeading}>{navItem.title}</span>
-                </li>
-                {navItem.children.map((childItem) => {
-                  return (
-                    <li key={childItem.title} className={styles.nested}>
-                      <Link href={childItem.path} className={styles.links} activeClassName={styles.activeLinks}>
-                        <Icon className={styles.bulletPoint} name="bullet-point" />
-                        <span>{childItem.title}</span>
-                      </Link>
-                    </li>
-                  );
-                })}
-              </React.Fragment>
-            );
+            return <Accordion key={navItem.title} title={navItem.title} content={navItem.children} />;
           }
 
           if (navItem.title === 'Glossary') {

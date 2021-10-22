@@ -44,8 +44,8 @@ export const HamburgerMenu: React.FC = () => {
           </div>
         )}
 
-        <div role="presentation" onClick={() => setOpenDrawer(false)} className={styles.hamburgerMenu}>
-          <Sidebar open={openDrawer}/>
+        <div role="presentation" className={styles.hamburgerMenu}>
+          <Sidebar open={openDrawer} />
         </div>
       </Drawer>
       <div className={openDrawer ? styles.opacityHamburger : styles.hamburgerContainer}>
