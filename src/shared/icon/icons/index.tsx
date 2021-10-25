@@ -4,3 +4,6 @@ export { GitHub } from './github';
 export { Hamburger } from './hamburger';
 export { Close } from './close';
 export { Chevron } from './chevron';
+export { Search } from './search';
+export { Subtract } from './subtract';
+export { Dismiss } from './dismiss';

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { LongArrowUp, BulletPoint, GitHub, Hamburger, Close, Chevron } from './icons';
+import { LongArrowUp, BulletPoint, GitHub, Hamburger, Close, Chevron, Search, Dismiss, Subtract } from './icons';
 
 const iconNameMap = {
   'long-arrow-up': LongArrowUp,
@@ -8,6 +8,9 @@ const iconNameMap = {
   hamburger: Hamburger,
   close: Close,
   chevron: Chevron,
+  search: Search,
+  subtract: Subtract,
+  dismiss: Dismiss,
 };
 
 export type IconProps = {
