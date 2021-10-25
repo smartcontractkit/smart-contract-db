@@ -2,11 +2,7 @@ import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { CategoryList } from 'src/shared/category-list';
 import styles from '../styles/slug.module.css';
-import { ventureCapitalFunds } from '@/data/resources/communities/venture-capital-funds';
-import { grantPrograms } from '@/data/resources/communities/grant-programs';
-import { incubatorsAccelerators } from '@/data/resources/communities/incubators-accelerators';
-import { developer } from '@/data/resources/communities/developer';
-import { enterprise } from '@/data/resources/communities/enterprise';
+import { communities } from '@/data/resources/communities/communities';
 import { consultants } from '@/data/resources/consultants';
 import { events } from '@/data/resources/events';
 import { books } from '@/data/resources/education/books';
@@ -28,11 +24,16 @@ import { deploy } from '@/data/resources/tools/deploy';
 import { monitoring } from '@/data/resources/tools/monitoring';
 import { administration } from '@/data/resources/tools/administration';
 import { security } from '@/data/resources/tools/security';
+import { VentureCapital } from '@/data/resources/communities/venture-capital-funds';
+import { GrantProgram } from '@/data/resources/communities/grant-programs';
+import { IncubatorAccelerator } from '@/data/resources/communities/incubators-accelerators';
+import { Developer } from '@/data/resources/communities/developer';
+import { Enterprise } from '@/data/resources/communities/enterprise';
 
 interface ResourceBody {
   id: string;
   title: string;
-  data: Data[];
+  data: Data[] | (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
 }
 
 type Data = {
@@ -45,8 +46,6 @@ type Data = {
   location?: string;
   src?: string;
 };
-
-const communities = [...ventureCapitalFunds, ...grantPrograms, ...incubatorsAccelerators, ...developer, ...enterprise];
 
 const resourceBody: ResourceBody[] = [
   { id: 'communities', title: 'Communities', data: communities },

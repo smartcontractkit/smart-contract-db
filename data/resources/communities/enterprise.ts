@@ -2,7 +2,7 @@ export interface Enterprise {
   Enterprise: Enterprises[];
 }
 
-export interface Enterprises {
+interface Enterprises {
   id: string;
   title: string;
   description: string;

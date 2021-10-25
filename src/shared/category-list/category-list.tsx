@@ -5,6 +5,11 @@ import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
+import { VentureCapital } from '@/data/resources/communities/venture-capital-funds';
+import { GrantProgram } from '@/data/resources/communities/grant-programs';
+import { IncubatorAccelerator } from '@/data/resources/communities/incubators-accelerators';
+import { Developer } from '@/data/resources/communities/developer';
+import { Enterprise } from '@/data/resources/communities/enterprise';
 
 export interface CategoryListProps {
   name?: string; // category's name
@@ -56,15 +61,21 @@ const list = (id, title, src, startDate, description, link, identiconSeedMax) =>
   );
 };
 
-export const CategoryList: React.FC<any> = ({ name, data }) => {
+export const CategoryList: React.FC<CategoryListProps> = ({ name, data }) => {
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
   const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
+  let communities: (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
+
+  if (name?.toLocaleLowerCase() === 'communities') {
+    communities = data;
+  }
+
   return (
     <div className={styles.container}>
       <ul className={styles.ul}>
         {/* for communities */}
         {name?.toLocaleLowerCase() === 'communities' ? (
-          data.map((communityItem) => (
+          communities.map((communityItem) => (
             <React.Fragment key={Object.keys(communityItem)[0]}>
               <div className={styles.communitySubHeaders}>{Object.keys(communityItem)}</div>{' '}
               <li className={styles.hr} />
