@@ -24,11 +24,16 @@ import { deploy } from '@/data/resources/tools/deploy';
 import { monitoring } from '@/data/resources/tools/monitoring';
 import { administration } from '@/data/resources/tools/administration';
 import { security } from '@/data/resources/tools/security';
+import { VentureCapital } from '@/data/resources/communities/venture-capital-funds';
+import { GrantProgram } from '@/data/resources/communities/grant-programs';
+import { IncubatorAccelerator } from '@/data/resources/communities/incubators-accelerators';
+import { Developer } from '@/data/resources/communities/developer';
+import { Enterprise } from '@/data/resources/communities/enterprise';
 
 interface ResourceBody {
   id: string;
   title: string;
-  data: Data[];
+  data: Data[] | (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
 }
 
 type Data = {
@@ -76,7 +81,6 @@ export default function Resources({ resource, title }: { resource: Data; title: 
       })
     );
   }, [title]);
-
   return (
     <section className={styles.section}>
       {/* hide depending on screen size */}
