@@ -17,23 +17,31 @@
   padding-bottom: 1.5rem;
   align-items: center;
   flex-wrap: nowrap;
+  /* justify-content: space-between; */
   width: 100%;
   display: flex;
   box-sizing: border-box;
 }
 
+.searchButton {
+  margin-right: 0.75rem;
+}
+
 .contributeContainer {
-  text-align: right;
-  margin: 0;
-  box-sizing: border-box;
-  margin-left: auto;
 }
-.contribute {
-  color: #95a1ad;
+
+.contribution {
+  justify-content: right;
 }
+
 .contributeLogo {
+  display: flex;
+  align-items: center;
   color: #25292e;
-  padding: 0 4px 0 8px;
+  padding: 0.875rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
 
 .github {
@@ -41,18 +49,17 @@
 }
 
 .links:hover > .contributeLogo > .github {
-  fill: #0aa6e5;
+  fill: #0a5480;
 }
 
-.links:hover > .github {
-  color: #0aa6e5;
+.links:hover > .contributeLogo {
+  background-color: #ddf6fe;
 }
 
 .links {
   text-decoration: none;
   display: flex;
   align-items: center;
-  justify-content: right;
 }
 .logo {
   width: 10.25rem;
@@ -75,7 +82,7 @@
 /* lg */
 @media only screen and (max-width: 1920px) {
   .contributeContainer {
-    flex-basis: 25%;
+    /* flex-basis: 25%; */
   }
 }
 

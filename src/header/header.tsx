@@ -3,11 +3,14 @@ import dynamic from 'next/dynamic';
 import styles from './header.module.css';
 import Link from '../link';
 import { Icon } from '../shared/icon';
+import { BootstrapTooltip } from 'src/shared/tooltip';
+import { SearchButton } from 'src/search-button';
 
 const HamburgerMenu = dynamic(() => import('./hamburgerMenu').then((module) => module.HamburgerMenu));
 
 export const Header: React.FC = () => {
   const [resourceTitle, setResourceTitle] = useState('');
+  const [show, setShow] = useState(false);
 
   const updatedCategoryTitle = (e) => {
     setResourceTitle(e.detail.text);
@@ -32,6 +35,9 @@ export const Header: React.FC = () => {
         <div className={styles.categoryTitle}>
           <b>{resourceTitle}</b>
         </div>
+        <div className={styles.searchButton}>
+          <SearchButton onClick={() => setShow(true)} />
+        </div>
         {/* hide depending on screen size and show hamburger */}
         <div className={styles.contributeContainer}>
           <div className={styles.hamburgerMenu}>
@@ -39,11 +45,11 @@ export const Header: React.FC = () => {
           </div>
           <div className={styles.contribution}>
             <Link href="https://github.com/thisdot/smart-contract-db" className={styles.links}>
-              <div className={styles.contribute}>Contribute at </div>
-              <div className={styles.contributeLogo}>
-                <Icon className={styles.github} name="github" size={27.42} />
-              </div>
-              <div className={styles.github}>GitHub</div>
+              <BootstrapTooltip title="Contribute at GitHub">
+                <button className={styles.contributeLogo}>
+                  <Icon className={styles.github} name="github" size={20} />
+                </button>
+              </BootstrapTooltip>
             </Link>
           </div>
         </div>

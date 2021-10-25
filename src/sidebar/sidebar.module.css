@@ -51,10 +51,9 @@
   background-color: #d3dde5;
   border: none;
   height: 1px;
-  margin: 0;
   flex-shrink: 0;
   width: 140px;
-  margin: 0.5rem 0 0.625rem;
+  margin: 0.5rem 0 0.625rem 2rem;
   list-style: none;
 }
 
