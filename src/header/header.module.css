@@ -17,7 +17,6 @@
   padding-bottom: 1.5rem;
   align-items: center;
   flex-wrap: nowrap;
-  justify-content: space-between;
   width: 100%;
   display: flex;
   box-sizing: border-box;
@@ -27,6 +26,7 @@
   text-align: right;
   margin: 0;
   box-sizing: border-box;
+  margin-left: auto;
 }
 .contribute {
   color: #95a1ad;

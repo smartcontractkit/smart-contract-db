@@ -6,6 +6,18 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <script async src="https://www.googletagmanager.com/gtag/js?id='GTM-5J5DL65'" />
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GTM-5J5DL65');
+          `,
+            }}
+          />
           <link rel="preload" href="/fonts/CircularStd/CircularStd-Medium.ttf" as="font" crossOrigin="" />
           <link rel="preload" href="/fonts/CircularStd/CircularStd-Bold.ttf" as="font" crossOrigin="" />
         </Head>
