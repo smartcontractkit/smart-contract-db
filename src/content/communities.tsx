@@ -7,7 +7,7 @@ export const Communities: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.communitiesHeading}>Communities</div>
-      <CategoryList name="communities" data={communities} />
+      <CategoryList name="communities" data={communities} limit={3} />
     </section>
   );
 };

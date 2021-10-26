@@ -1,7 +1,6 @@
 .root {
   padding-left: 0;
   padding-right: 16px;
-  width: 100%;
   display: flex;
   position: relative;
   box-sizing: border-box;
@@ -37,7 +36,6 @@
   padding: 0;
   list-style: none;
   text-align: left;
-  width: 25%;
 }
 
 .subNavHeading {
@@ -51,10 +49,9 @@
   background-color: #d3dde5;
   border: none;
   height: 1px;
-  margin: 0;
   flex-shrink: 0;
   width: 140px;
-  margin: 0.5rem 0 0.625rem;
+  margin: 0.5rem 0 0.625rem 2rem;
   list-style: none;
 }
 
@@ -129,11 +126,13 @@
 
 .openChevron {
   fill: #f7f9fa;
+  padding-left: 2rem;
 }
 
 .chevron {
   fill: #f7f9fa;
   transform: scaleY(-1);
+  padding-left: 2rem;
 }
 
 .accordionTitle:hover > .root > div > .chevron {
@@ -148,6 +147,9 @@
   .root {
     padding-left: 1.5rem;
     font-size: 1rem;
+  }
+  .accordionItem {
+    width: 75%;
   }
   .nested {
     padding-left: 2rem;
@@ -193,5 +195,16 @@
 
   .accordionTitle {
     padding: 0;
+  }
+
+  .chevron, .openChevron {
+    padding-left: 0;
+  }
+}
+
+/* sm */
+@media only screen and (max-width: 960px) {
+  .accordionItem {
+    width: 100%;
   }
 }
