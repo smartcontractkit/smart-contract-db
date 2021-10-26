@@ -12,7 +12,7 @@ export const Events: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.heading}>Events</div>
-      <CategoryList name="events" data={ongoingEvents} />
+      <CategoryList name="events" data={ongoingEvents} limit={5} />
     </section>
   );
 };

@@ -14,6 +14,7 @@ import { Enterprise } from '@/data/resources/communities/enterprise';
 export interface CategoryListProps {
   name?: string; // category's name
   data; // TODO: combine types
+  limit?: number;
 }
 
 function dateFormatter(date: string): string {
@@ -61,11 +62,10 @@ const list = (id, title, src, startDate, description, link, identiconSeedMax) =>
   );
 };
 
-export const CategoryList: React.FC<CategoryListProps> = ({ name, data }) => {
+export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => {
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
   const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
   let communities: (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
-
   if (name?.toLocaleLowerCase() === 'communities') {
     communities = data;
   }
@@ -79,25 +79,26 @@ export const CategoryList: React.FC<CategoryListProps> = ({ name, data }) => {
             <React.Fragment key={Object.keys(communityItem)[0]}>
               <div className={styles.communitySubHeaders}>{Object.keys(communityItem)}</div>{' '}
               <li className={styles.hr} />
-              {Object.values(communityItem)[0].map(
-                ({ id, title, src, startDate, description, link }, communityItemIndex) => (
+              {Object.values(communityItem)[0]
+                .slice(0, limit)
+                .map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
                   <React.Fragment key={id}>
                     {list(id, title, src, startDate, description, link, identiconSeedMax)}
-                    {Object.values(communityItem)[0].length !== communityItemIndex + 1 ? (
+                    {Object.values(communityItem)[0].length !== communityItemIndex + 1 &&
+                    limit !== communityItemIndex + 1 ? (
                       <li className={styles.hr} />
                     ) : (
                       ''
                     )}
                   </React.Fragment>
-                )
-              )}
+                ))}
             </React.Fragment>
           ))
         ) : dataWithOngoingDates.length && name !== 'communities' ? (
-          data.map(({ id, title, src, startDate, description, link }, index: number) => (
+          data.slice(0, limit).map(({ id, title, src, startDate, description, link }, index: number) => (
             <React.Fragment key={id}>
               {list(id, title, src, startDate, description, link, identiconSeedMax)}
-              {data.length !== index + 1 ? <li className={styles.hr} /> : ''}
+              {data.length !== index + 1 && limit !== index + 1 ? <li className={styles.hr} /> : ''}
             </React.Fragment>
           ))
         ) : (
