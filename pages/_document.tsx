@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script async src="https://www.googletagmanager.com/gtag/js?id='GTM-5J5DL65'" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id='UA-128878871-18'" />
           <script
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'GTM-5J5DL65');
+            gtag('config', 'UA-128878871-18');
           `,
             }}
           />
