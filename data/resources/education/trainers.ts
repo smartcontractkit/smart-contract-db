@@ -1,4 +1,6 @@
 // Can be excluded for initial launch
+import * as Resources from './resources.json';
+
 export interface Trainer {
   id: string;
   title: string;
@@ -7,12 +9,4 @@ export interface Trainer {
   src?: string;
 }
 
-export const trainers: Trainer[] = [
-  {
-    id: 'encode-club',
-    title: 'Encode Club',
-    description: 'Onboarding, supporting and catalysing the next generation of crypto-natives.',
-    link: 'https://www.encode.club/',
-    src: '/img/trainers/encode_club.jpg',
-  },
-];
+export const trainers: Trainer[] = Resources.Trainers;

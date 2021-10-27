@@ -1,0 +1,204 @@
+[
+  {
+    "Books": [
+      {
+        "id": "blockchain-revolution-how-the-technology-behind-bitcoin-is-changing-money-business-and-the-world-reprint",
+        "title": "Blockchain Revolution: How the Technology Behind Bitcoin Is Changing Money, Business, and the World Reprint",
+        "description": "Blockchain technology is powering our future. As the technology behind cryptocurrencies like bitcoin and Facebook's Libra, open software platforms like Ethereum, and disruptive companies like Ripple, it’s too important to ignore.",
+        "link": "https://www.amazon.com/dp/B0141ZP32E?tag=dotdashinvest-20&linkCode=ogi&th=1&psc=1&ascsubtag=4231423%7Cn458917d27da34e27a8dd91ebaed1b4ba19",
+        "src": ""
+      },
+      {
+        "id": "cryptoassets-innovative-investors-bitcoin-beyond",
+        "title": "Cryptoassets: The Innovative Investor's Guide to Bitcoin and Beyond",
+        "description": "With the rise of bitcoin and blockchain technology, investors can capitalize on the greatest investment opportunity since the Internet. Bitcoin was the first cryptoasset, but today there are over 800 and counting, including ether, ripple, litecoin, monero, and more.",
+        "link": "https://www.amazon.com/Cryptoassets-Innovative-Investors-Bitcoin-Beyond-ebook/dp/B0743MPV9R/ref=pd_sim_1/140-2860205-1384019?pd_rd_w=DgzHH&pf_rd_p=5a473303-acc6-4878-8626-2fb0b8d16176&pf_rd_r=6BG7TGKPJM09AGFN4M0A&pd_rd_r=e034d0f5-d5c5-4f08-8daa-f8112ccc4381&pd_rd_wg=HT5t6&pd_rd_i=B0743MPV9R&psc=1",
+        "src": ""
+      },
+      {
+        "id": "the-basics-of-bitcoins-and-blockchains-an-introduction-to-cryptocurrencies-and-the-technology-that-powers-them",
+        "title": "The Basics of Bitcoins and Blockchains: An Introduction to Cryptocurrencies and the Technology that Powers Them",
+        "description": "There’s a lot of information on cryptocurrency and blockchains out there. But, for the uninitiated, most of this information can be indecipherable. The Basics of Bitcoins and Blockchains provides a clear guide to this new currency and the revolutionary technology that powers it.",
+        "link": "https://www.amazon.com/dp/1633538001?tag=dotdashinvest-20&linkCode=ogi&th=1&psc=1&ascsubtag=4231423%7Cn458917d27da34e27a8dd91ebaed1b4ba19",
+        "src": ""
+      },
+      {
+        "id": "the-blockchain-developer-a-practical-guide-for-designing-implementing-publishing-testing-and-securing-distributed-blockchain-based-projects",
+        "title": "The Blockchain Developer: A Practical Guide for Designing, Implementing, Publishing, Testing, and Securing Distributed Blockchain-based Projects",
+        "description": "This book helps you understand Blockchain beyond development and crypto to better harness its power and capability. You will learn tips to start your own project, and best practices for testing, security, and even compliance. Immerse yourself in this technology and review key topics such as cryptoeconomics, coding your own Blockchain P2P network, different consensus mechanisms, decentralized ledger, mining, wallets, blocks, and transactions.",
+        "link": "https://www.amazon.com/dp/1484248465?tag=dotdashinvest-20&linkCode=ogi&th=1&psc=1&ascsubtag=4231423%7Cn458917d27da34e27a8dd91ebaed1b4ba19",
+        "src": ""
+      }
+    ],
+    "Courses": [
+      {
+        "id": "coursera-blockchain-specialization",
+        "title": "Blockchain Specialization",
+        "description": "",
+        "link": "https://www.coursera.org/specializations/blockchain",
+        "src": ""
+      },
+      {
+        "id": "ethereum-and-solidity-the-complete-developers-guide",
+        "title": "Ethereum and Solidity: The Complete Developer's Guide",
+        "description": "Use Ethereum, Solidity, and Smart Contracts to build production-ready apps based on the blockchain",
+        "link": "https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/",
+        "src": ""
+      },
+      {
+        "id": "getting-started-with-ethereum-solidity-development",
+        "title": "Become a Blockchain Developer with Ethereum and Solidity",
+        "description": "",
+        "link": "https://www.udemy.com/course/getting-started-with-ethereum-solidity-development/",
+        "src": ""
+      },
+      {
+        "id": "ivan-on-tech",
+        "title": "Ivan on Tech",
+        "description": "Become a Highly-Paid Professional in Months! 30+ Industry-Recognized Blockchain & Cryptocurrencies Certification Courses. Learn More!",
+        "link": "https://academy.ivanontech.com/",
+        "src": "/img/courses/ivan-on-tech.svg"
+      }
+    ],
+    "Schools": [
+      {
+        "id": "mit",
+        "title": "Massachusetts Institute of Technology (MIT)",
+        "description": "Become An Ethereum Blockchain Developer With One Course. Master Solidity, Web3.JS, Truffle, Metamask, Remix & More!",
+        "link": "https://www.mit.edu/"
+      },
+      {
+        "id": "cornell",
+        "title": "Cornell University",
+        "description": "Become An Ethereum Blockchain Developer With One Course. Master Solidity, Web3.JS, Truffle, Metamask, Remix & More!",
+        "link": "https://www.cornell.edu/"
+      },
+      {
+        "id": "harvard",
+        "title": "Harvard University",
+        "description": "Become An Ethereum Blockchain Developer With One Course. Master Solidity, Web3.JS, Truffle, Metamask, Remix & More!",
+        "link": "https://www.harvard.edu/"
+      },
+      {
+        "id": "california-berkeley",
+        "title": "University of California, Berkeley",
+        "description": "Become An Ethereum Blockchain Developer With One Course. Master Solidity, Web3.JS, Truffle, Metamask, Remix & More!",
+        "link": "https://www.berkeley.edu/"
+      },
+      {
+        "id": "oxford",
+        "title": "University of Oxford",
+        "description": "Become An Ethereum Blockchain Developer With One Course. Master Solidity, Web3.JS, Truffle, Metamask, Remix & More!",
+        "link": "https://www.ox.ac.uk/"
+      },
+      {
+        "id": "singapore",
+        "title": "National University of Singapore",
+        "description": "Become An Ethereum Blockchain Developer With One Course. Master Solidity, Web3.JS, Truffle, Metamask, Remix & More!",
+        "link": "https://www.nus.edu.sg/"
+      },
+      {
+        "id": "nicosia",
+        "title": "University of Nicosia",
+        "description": "Become An Ethereum Blockchain Developer With One Course. Master Solidity, Web3.JS, Truffle, Metamask, Remix & More!",
+        "link": "University of Nicosia"
+      }
+    ],
+    "Trainers": [
+      {
+        "id": "encode-club",
+        "title": "Encode Club",
+        "description": "Onboarding, supporting and catalysing the next generation of crypto-natives.",
+        "link": "https://www.encode.club/",
+        "src": "/img/trainers/encode_club.jpg"
+      }
+    ],
+    "Tutorials": [
+      {
+        "id": "consensys",
+        "title": "Consensys",
+        "description": "It’s time to assemble. Start exploring and building towards your Ethereum developer journey. We have everything you need to begin.",
+        "link": "https://consensys.net/developers/",
+        "src": "/img/tutorials/consensys.jpg"
+      },
+      {
+        "id": "eth-build",
+        "title": "ETH.Build",
+        "description": "An Educational Sandbox For Web3... And Much More.",
+        "link": "https://eth.build/",
+        "src": ""
+      },
+      {
+        "id": "free-code-camp",
+        "title": "freeCodeCamp",
+        "description": "Learn to code — for free. Build projects. Earn certifications.",
+        "link": "https://www.freecodecamp.org/news/search/?query=smart%20contracts",
+        "src": "/img/tutorials/freecodecamp.png"
+      },
+      {
+        "id": "solana-docs",
+        "title": "Solana Docs",
+        "description": "Solana is a high-performance blockchain supporting builders around the world creating crypto apps that scale today.",
+        "link": "https://docs.solana.com/",
+        "src": "/img/tutorials/solana-docs.png"
+      },
+      {
+        "id": "solidity-docs",
+        "title": "Solidity Docs",
+        "description": "Solidity is an object-oriented programming language for writing smart contracts. It is used for implementing smart contracts on various blockchain platforms, most notably, Ethereum.",
+        "link": "https://docs.soliditylang.org/en/v0.8.9/",
+        "src": "/img/languages/solidity-logo.svg"
+      },
+      {
+        "id": "learn-x-in-y-minutes",
+        "title": "Learn X in Y Minutes",
+        "description": "Learn X in Y Minutes: Scenic Programming Language Tours",
+        "link": "https://learnxinyminutes.com/",
+        "src": "/img/tutorials/learn-x-in-y-minutes.png"
+      },
+      {
+        "id": "wikipedia",
+        "title": "Wikipedia",
+        "description": "Wikipedia, the free encyclopedia",
+        "link": "https://en.wikipedia.org/wiki/Main_Page",
+        "src": "/img/tutorials/wikipedia.png"
+      },
+      {
+        "id": "ethereum-foundation",
+        "title": "Ethereum Foundation",
+        "description": "Learn about the Ethereum Foundation (EF), a non-profit organization dedicated to supporting Ethereum and related technologies.",
+        "link": "https://ethereum.org/en/foundation/",
+        "src": "/img/tutorials/ethereum-foundation.png"
+      },
+      {
+        "id": "you-tube",
+        "title": "YouTube",
+        "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+        "link": "https://www.youtube.com/",
+        "src": "/img/tutorials/youTube.png"
+      },
+      {
+        "id": "cryto-zombies",
+        "title": "CrytoZombies",
+        "description": "CryptoZombies is The Most Popular, Interactive Solidity Tutorial That Will Help You Learn Blockchain Programming on Ethereum by Building Your Own Fun Game with Zombies — Master Blockchain Development with Web3, Infura, Metamask & Ethereum Smart Contractsand Become a Blockchain Developer in Record Time!.",
+        "link": "https://cryptozombies.io/",
+        "src": "/img/tutorials/crytoZombies.png"
+      },
+      {
+        "id": "chainshot",
+        "title": "Chainshot",
+        "description": "Fast-track your Ethereum Developer career in an instructor-led and challenging bootcamp focused on discussion and application!",
+        "link": "https://www.chainshot.com/",
+        "src": "/img/tutorials/chainshot.png"
+      }
+    ],
+    "Workshops": [
+      {
+        "id": "blockchain-developer",
+        "title": "Ethereum Blockchain Developer Bootcamp With Solidity (2021)",
+        "description": "Become An Ethereum Blockchain Developer With One Course. Master Solidity, Web3.JS, Truffle, Metamask, Remix & More!",
+        "link": "https://www.udemy.com/course/blockchain-developer/"
+      }
+    ]
+  }
+]
