@@ -7,7 +7,7 @@ export const Frameworks: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.heading}>Frameworks</div>
-      <CategoryList data={frameworks} limit={5} />
+      <CategoryList data={frameworks[0]} limit={5} />
     </section>
   );
 };

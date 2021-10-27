@@ -1,4 +1,4 @@
-import * as Resources from './resources.json';
+import * as Books from './books.json';
 
 export interface Book {
   id: string;
@@ -8,4 +8,4 @@ export interface Book {
   src: string;
 }
 
-export const books: Book[] = Resources.Books;
+export const books: Book[] = Books;

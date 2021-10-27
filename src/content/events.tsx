@@ -7,7 +7,7 @@ export const isDatePast = (startDate: string, endDate: string) =>
   new Date(startDate).setHours(0, 0, 0, 0) <= new Date(endDate).setHours(0, 0, 0, 0);
 
 export const Events: React.FC = () => {
-  const ongoingEvents = events.filter(({ startDate, endDate }: Event) => !isDatePast(startDate, endDate));
+  const ongoingEvents = events[0].filter(({ startDate, endDate }: Event) => !isDatePast(startDate, endDate));
 
   return (
     <section className={styles.section}>

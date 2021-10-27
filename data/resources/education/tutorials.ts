@@ -1,5 +1,5 @@
 // Can be excluded for initial launch
-import * as Resources from './resources.json';
+import * as Tutorials from './tutorials.json';
 
 export interface Tutorial {
   id: string;
@@ -9,4 +9,4 @@ export interface Tutorial {
   src?: string;
 }
 
-export const tutorials: Tutorial[] = Resources.Trainers;
+export const tutorials: Tutorial[] = Tutorials;

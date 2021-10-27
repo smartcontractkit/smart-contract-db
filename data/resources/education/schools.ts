@@ -1,4 +1,4 @@
-import * as Resources from './resources.json';
+import * as Schools from './schools.json';
 
 export interface School {
   id: string;
@@ -7,4 +7,4 @@ export interface School {
   link: string;
 }
 
-export const schools: School[] = Resources.Schools;
+export const schools: School[] = Schools;

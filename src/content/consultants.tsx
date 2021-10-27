@@ -7,7 +7,7 @@ export const Consultants: React.FC = () => {
   return (
     <section className={styles.section}>
       <div className={styles.heading}>Consultants</div>
-      <CategoryList data={consultants} limit={5} />
+      <CategoryList data={consultants[0]} limit={5} />
     </section>
   );
 };

@@ -103,8 +103,14 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const { id } = params;
-  const { data: resource, title } = resourceBody.find((item) => item.id === id);
+  let { data: resource, title } = resourceBody.find((item) => item.id === id);
+  console.log('************************ resource **************************');
+  // console.log(resource[0]);
+  console.log(Object.values(resource));
 
+  if (id !== 'communities') {
+    resource = Object.values(resource[0]);
+  }
   return {
     props: { resource, title },
   };

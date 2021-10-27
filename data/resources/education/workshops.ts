@@ -1,4 +1,4 @@
-import * as Resources from './resources.json';
+import * as Workshops from './workshops.json';
 
 export interface Workshop {
   id: string;
@@ -7,4 +7,4 @@ export interface Workshop {
   link: string;
 }
 
-export const workshops: Workshop[] = Resources.Workshops;
+export const workshops: Workshop[] = Workshops;
