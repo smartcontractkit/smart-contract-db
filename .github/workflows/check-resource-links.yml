@@ -1,0 +1,33 @@
+name: Check Resource Links
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - cron-job 
+jobs: 
+  check-validation:
+    name: Check resource links and create PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install frontend dependencies
+        uses: bahmutov/npm-install@v1
+      - name: Check resource links
+        uses: ./.github/actions/resource-links
+      - name: Commit files and create pull request
+        uses: peter-evans/create-pull-request@v3
+        env:
+
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          commit-message: Get updated resource files
+          committer: William Hutt <whutt1994@gmail.com>
+          author: William Hutt <whutt1994@gmail.com>
+          branch: action/updated-resource-files
+          base: main
+          title: 'testing'
+          body: |
+            `testing`.
+            *testing*
