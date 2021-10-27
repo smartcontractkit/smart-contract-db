@@ -23,8 +23,8 @@ jobs:
           commit-message: Get updated resource files
           committer: William Hutt <whutt1994@gmail.com>
           author: William Hutt <whutt1994@gmail.com>
-          branch: cron-job
-          base: main
+          branch: action/updated-resource-files
+          base: cron-job
           title: 'testing'
           body: |
             `testing`.
