@@ -18,8 +18,6 @@ jobs:
         uses: ./.github/actions/resource-links
       - name: Commit files and create pull request
         uses: peter-evans/create-pull-request@v3
-        env:
-
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           commit-message: Get updated resource files
