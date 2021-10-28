@@ -1,0 +1,45 @@
+.input_container {
+  display: flex;
+  align-items: center;
+  top: 2.25rem;
+  right: 9.063rem;
+  box-shadow: 0px 10px 15px rgb(0 0 0 / 15%);
+}
+
+.input {
+  padding: 1rem 3rem;
+  border: none;
+  width: 30rem;
+  font-size: 1rem;
+  color: #95a1ad;
+  background-color: #f7f9fa;
+}
+
+.input:focus {
+  outline: 1px solid #aaeafc;
+  background-color: #ffffff;
+}
+
+.search_icon {
+  position: absolute;
+  margin-left: 1.366rem;
+}
+
+.button {
+  position: absolute;
+  margin: 1.438rem 0 1.438rem 33.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.text {
+  width: 6.281rem;
+  text-align: left;
+  margin-top: 0.125rem;
+}

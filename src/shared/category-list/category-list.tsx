@@ -77,7 +77,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit })
         {name?.toLocaleLowerCase() === 'communities' ? (
           communities.map((communityItem) => (
             <React.Fragment key={Object.keys(communityItem)[0]}>
-              <div className={styles.communitySubHeaders}>{Object.keys(communityItem)}</div>{' '}
+              <h3 className={styles.community_subHeaders}>{Object.keys(communityItem)}</h3>
               <li className={styles.hr} />
               {Object.values(communityItem)[0]
                 .slice(0, limit)

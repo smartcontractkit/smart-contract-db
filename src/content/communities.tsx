@@ -6,7 +6,7 @@ import { communities } from '@/data/resources/communities/communities';
 export const Communities: React.FC = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.communitiesHeading}>Communities</div>
+      <h2 className={styles.communitiesHeading}>Communities</h2>
       <CategoryList name="communities" data={communities} limit={3} />
     </section>
   );

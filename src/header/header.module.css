@@ -17,7 +17,6 @@
   padding-bottom: 1.5rem;
   align-items: center;
   flex-wrap: nowrap;
-  /* justify-content: space-between; */
   width: 100%;
   display: flex;
   box-sizing: border-box;
@@ -34,7 +33,7 @@
   justify-content: right;
 }
 
-.contributeLogo {
+.contribute_logo {
   display: flex;
   align-items: center;
   color: #25292e;
@@ -42,27 +41,24 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  background-color: #edeff2;
 }
 
 .github {
   color: #25292e;
 }
 
-.links:hover > .contributeLogo > .github {
+.contribute_logo:hover > .github {
   fill: #0a5480;
 }
 
-.links:hover > .contributeLogo {
+.contribute_logo:hover {
   background-color: #ddf6fe;
 }
 
-.links {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
 .logo {
-  width: 10.25rem;
+  width: 11.25rem;
   text-align: left;
   margin: 0;
   box-sizing: border-box;
@@ -70,9 +66,9 @@
 .categoryTitle {
   font-size: 1.5rem;
   text-align: left;
-  flex-basis: 56%;
   margin: 0;
   box-sizing: border-box;
+  flex: 1;
 }
 
 .hamburgerMenu {
@@ -82,7 +78,6 @@
 /* lg */
 @media only screen and (max-width: 1920px) {
   .contributeContainer {
-    /* flex-basis: 25%; */
   }
 }
 
@@ -92,26 +87,12 @@
     padding-left: 0;
   }
   .categoryTitle {
-    display: none;
+    visibility: hidden;
   }
   .hamburgerMenu {
     display: block;
   }
   .contribution {
     display: none;
-  }
-}
-
-/* sm */
-@media only screen and (max-width: 960px) {
-  .categoryTitle {
-    flex-basis: 45%;
-  }
-}
-
-/* sx */
-@media only screen and (max-width: 600px) {
-  .categoryTitle {
-    flex-basis: 26%;
   }
 }
