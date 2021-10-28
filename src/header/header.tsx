@@ -4,13 +4,12 @@ import styles from './header.module.css';
 import Link from '../link';
 import { Icon } from '../shared/icon';
 import { BootstrapTooltip } from 'src/shared/tooltip';
-import { SearchButton } from 'src/search-button';
+import { Search } from 'src/search';
 
 const HamburgerMenu = dynamic(() => import('./hamburgerMenu').then((module) => module.HamburgerMenu));
 
 export const Header: React.FC = () => {
   const [resourceTitle, setResourceTitle] = useState('');
-  const [show, setShow] = useState(false);
 
   const updatedCategoryTitle = (e) => {
     setResourceTitle(e.detail.text);
@@ -26,17 +25,17 @@ export const Header: React.FC = () => {
   return (
     <header className={styles.section}>
       <div className={styles.grid}>
-        <div className={styles.logo}>
+        <h1 className={styles.logo}>
           <Link href="/" onClick={() => setResourceTitle('')}>
             <img src="/img/logo.webp" alt="Smart Contract DB logo" width="118" height="69" />
           </Link>
-        </div>
+        </h1>
         {/* hide depending on screen size */}
-        <div className={styles.categoryTitle}>
+        <h2 className={styles.categoryTitle}>
           <b>{resourceTitle}</b>
-        </div>
+        </h2>
         <div className={styles.searchButton}>
-          <SearchButton onClick={() => setShow(true)} />
+          <Search />
         </div>
         {/* hide depending on screen size and show hamburger */}
         <div className={styles.contributeContainer}>
@@ -44,11 +43,13 @@ export const Header: React.FC = () => {
             <HamburgerMenu />
           </div>
           <div className={styles.contribution}>
-            <Link href="https://github.com/thisdot/smart-contract-db" className={styles.links}>
+            <Link href="https://github.com/thisdot/smart-contract-db" className={styles.contribute_logo}>
+              {/* TODO: fix bootstrap now that it's not a button */}
               <BootstrapTooltip title="Contribute at GitHub">
-                <button className={styles.contributeLogo}>
-                  <Icon className={styles.github} name="github" size={20} />
-                </button>
+                <>
+                  <Icon aria-hidden="true" className={styles.github} name="github" size={20} />
+                  <span className="sr-only">Contribute at GitHub</span>
+                </>
               </BootstrapTooltip>
             </Link>
           </div>
