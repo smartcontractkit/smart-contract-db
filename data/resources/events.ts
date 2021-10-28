@@ -64,4 +64,15 @@ export const events: Event[] = [
     link: 'https://chain.link/es/bootcamp/',
     src: '/img/events/esp_bootcamp.png',
   },
+    {
+    id: 'chainlink-fall-hackathon',
+    title: 'Chainlink Fall 2021 Hackathon',
+    description:
+      'Join us for our biggest hackathon yet, where you’ll get the chance to build the next generation of hybrid smart contracts alongside developers, creators, artists, and industry-leading mentors from across the blockchain ecosystem.',
+    startDate: '2021-12-22T06:00:00.000Z',
+    endDate: '2021-11-28T06:00:00.000Z',
+    location: 'Virtual',
+    link: 'https://chain.link/es/bootcamp/',
+    src: '/img/events/esp_bootcamp.png',
+  },
 ];
