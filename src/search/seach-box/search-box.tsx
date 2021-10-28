@@ -20,6 +20,7 @@ export const SearchBox: React.FC<SearchBoxProps> = ({ searchTerm, handleSearchTe
 
   const resetFocus = () => {
     clearSearchField();
+    setDisabled(true);
     inputRef.current.focus();
   };
 
