@@ -12,7 +12,7 @@ Please follow these steps when submitting a new pull request:
 
 1. Fork the repo and create your branch from `main`.
 2. Make changes to resource files in `data/resources`. Images should be added in `/public/img/`.
-3. If adding a resource with a date (eg. an new event), submit the event in ISO format.
+3. If adding a resource with a date (eg. an new event), submit the event's date in ISO format.
 4. Ensure your resource was added successfully by running the project.
 5. Make sure your code lints.
 6. Submit the pull request!
