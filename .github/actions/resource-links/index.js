@@ -71,6 +71,11 @@ const files = [
     './data/resources/tools/security.json',
     './data/resources/tools/tests.json',
     './data/resources/tools/validators.json',
-    './data/resources/tools/wallets.json'
+    './data/resources/tools/wallets.json',
+    './data/resources/communities/developer.json',
+    './data/resources/communities/enterprise.json',
+    './data/resources/communities/grant-program.json',
+    './data/resources/communities/incubators-accelerators.json',
+    './data/resources/communities/venture-capital-funds.json'
 ]
 validateResourceLinks(files);

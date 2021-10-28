@@ -5,9 +5,9 @@ import { developer, Developer } from '@/data/resources/communities/developer';
 import { enterprise, Enterprise } from '@/data/resources/communities/enterprise';
 
 export const communities: (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[] = [
-  ...ventureCapitalFunds,
-  ...grantPrograms,
-  ...incubatorsAccelerators,
-  ...developer,
-  ...enterprise,
+  Object.values(ventureCapitalFunds[0]),
+  Object.values(grantPrograms[0]),
+  Object.values(incubatorsAccelerators[0]),
+  Object.values(developer[0]),
+  Object.values(enterprise[0]),
 ];

@@ -68,6 +68,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit })
   let communities: (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
   if (name?.toLocaleLowerCase() === 'communities') {
     communities = data;
+    console.log(communities[0]);
   }
 
   return (
@@ -76,16 +77,15 @@ export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit })
         {/* for communities */}
         {name?.toLocaleLowerCase() === 'communities' ? (
           communities.map((communityItem) => (
-            <React.Fragment key={Object.keys(communityItem)[0]}>
-              <div className={styles.communitySubHeaders}>{Object.keys(communityItem)}</div>{' '}
+            <React.Fragment key={communityItem[0].tag}>
+              <div className={styles.communitySubHeaders}>{communityItem[0].tag}</div>
               <li className={styles.hr} />
-              {Object.values(communityItem)[0]
+              {communityItem
                 .slice(0, limit)
                 .map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
                   <React.Fragment key={id}>
                     {list(id, title, src, startDate, description, link, identiconSeedMax)}
-                    {Object.values(communityItem)[0].length !== communityItemIndex + 1 &&
-                    limit !== communityItemIndex + 1 ? (
+                    {communityItem.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
                       <li className={styles.hr} />
                     ) : (
                       ''
