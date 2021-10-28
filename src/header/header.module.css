@@ -3,8 +3,7 @@
   top: 0;
   padding-left: 2rem;
   min-height: 75px;
-  background: #ffffff;
-  opacity: 0.8;
+  background: linear-gradient(to bottom, rgb(255 255 255), rgb(255 255 255/ 80%), rgb(255 255 255/ 50%), transparent);
   z-index: 1;
 }
 
