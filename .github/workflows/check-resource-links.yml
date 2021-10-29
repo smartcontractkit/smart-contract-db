@@ -1,13 +1,7 @@
 name: Check Resource Links
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - cron-job 
-# on:
-#   schedule:
-#     - cron: '*/5 * * * *' # every 5 minutes for testing
+  schedule:
+    - cron: '0 0 * * *' # every day
 jobs: 
   check-validation:
     name: Check resource links and create PR
@@ -27,7 +21,7 @@ jobs:
           committer: William Hutt <whutt1994@gmail.com>
           author: William Hutt <whutt1994@gmail.com>
           branch: action/updated-resource-files
-          base: cron-job
+          base: main
           title: 'Update resource json files(s) to remove invalid resources'
           body: |
             The resource files have been updated with the latest valid resources.
