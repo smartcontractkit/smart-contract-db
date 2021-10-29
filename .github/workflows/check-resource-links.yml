@@ -1,8 +1,7 @@
 name: Check Resource Links
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
+  schedule:
+    - cron: '*/5 * * * *' # every 5 minutes for testing
     branches:
       - cron-job 
 jobs: 
