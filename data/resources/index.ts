@@ -22,11 +22,11 @@ import * as administration from '@/data/resources/tools/administration.json';
 import * as security from '@/data/resources/tools/security.json';
 
 export const resources = [
-  ...communities.map((x) => ({ ...x, type: 'Communities' })),
+  ...communities[0].map((x) => ({ ...x, type: 'Communities' })),
   // ...consultants.map((x) => ({ ...x, type: 'Consultants' })),
-  ...events.map((x) => ({ ...x, type: 'Events' })),
-  ...books.map((x) => ({ ...x, type: 'Books' })),
-  ...tutorials.map((x) => ({ ...x, type: 'Tutorials' })),
+  ...events[0].map((x) => ({ ...x, type: 'Events' })),
+  ...books[0].map((x) => ({ ...x, type: 'Books' })),
+  ...tutorials[0].map((x) => ({ ...x, type: 'Tutorials' })),
   // ...courses.map((x) => ({ ...x, type: 'Courses' })),
   // ...workshops.map((x) => ({ ...x, type: 'Workshops' })),
   // ...trainers.map((x) => ({ ...x, type: 'Tutorials' })),
