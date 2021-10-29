@@ -25,7 +25,7 @@ jobs:
           author: William Hutt <whutt1994@gmail.com>
           branch: action/updated-resource-files
           base: cron-job
-          title: 'testing'
+          title: 'Update resource json files(s) to remove invalid resources'
           body: |
-            `testing`
-            *testing*
+            The resource files have been updated with the latest valid resources.
+            *This PR was auto-generated.*

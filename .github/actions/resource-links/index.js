@@ -2,24 +2,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const core = require('@actions/core');
 
-// function communityValidation(data) {
-//     data.map((communityItem) => (
-
-//           Object.values(communityItem)[0]
-//             .map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
-//                 console.log(link)
-//             ))
-//       ))
-// }
-
 async function validation(data) {
-    // console.log(data)
-    // data.map(({ link }) => (
-    //     console.log(link)
-    //     // curl link, check resp, if good then nothing, if bad then remove resource attached to link, then pr
-    //   ))
-    // console.log(data[0])
-    // return
     const updatedResourceList = await Promise.all(data[0].map(async (resourceItem) => {
         return await fetch(resourceItem.link).then(
             response => {
@@ -42,10 +25,7 @@ async function validateResourceLinks(files) {
         const updated = await validation(resources)
         const updatedResourceLinksList = []
         updatedResourceLinksList.push(updated)
-        // console.log(file)
-        // console.log(updatedResourceLinksList)
         return fs.writeFileSync(file, JSON.stringify(updatedResourceLinksList))
-        // console.log(updatedResourceLinksList)
     })
 
 }
