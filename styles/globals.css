@@ -40,7 +40,6 @@ body {
 ::-webkit-scrollbar {
   width: 5px;
   height: 130px;
-  right: 5px;
 }
 
 /* Track */

@@ -1,0 +1,28 @@
+.searchbox_position {
+  top: 38px;
+  justify-content: flex-end;
+  right: 118px;
+}
+
+/* md */
+@media only screen and (max-width: 1280px) {
+  .searchbox_position {
+    right: 155px;
+  }
+}
+
+/* md */
+@media only screen and (max-width: 1024) {
+  .searchbox_position {
+    right: 210px;
+  }
+}
+
+/* sx */
+@media only screen and (max-width: 600px) {
+  .searchbox_position {
+    top: 0;
+    background-color: #fff;
+    width: 100vw;
+  }
+}
