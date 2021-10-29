@@ -2,14 +2,24 @@ import React, { useRef, useState } from 'react';
 import { Icon } from 'src/shared/icon';
 import styles from './search-box.module.css';
 import classNames from 'classnames';
+import { useMediaQuery } from '@/hooks/media-query';
+import { useOutsideClick } from '@/hooks/use-outside-click';
 
 type SearchBoxProps = {
   searchTerm: string;
+  isMobile: boolean;
   handleSearchTerm: (searchTerm: string) => void;
   clearSearchField: () => void;
+  onClose: () => void;
 };
 
-export const SearchBox: React.FC<SearchBoxProps> = ({ searchTerm, handleSearchTerm, clearSearchField }) => {
+export const SearchBox: React.FC<SearchBoxProps> = ({
+  searchTerm,
+  isMobile,
+  handleSearchTerm,
+  clearSearchField,
+  onClose,
+}) => {
   const inputRef = useRef(null);
   const [disabled, setDisabled] = useState(true);
 
@@ -21,8 +31,18 @@ export const SearchBox: React.FC<SearchBoxProps> = ({ searchTerm, handleSearchTe
   const resetFocus = () => {
     clearSearchField();
     setDisabled(true);
-    inputRef.current.focus();
+
+    if (!isMobile) {
+      inputRef.current.focus();
+    }
   };
+
+  useOutsideClick(inputRef, () => {
+    // exit modal if there's no search
+    if (isMobile && !searchTerm) {
+      onClose();
+    }
+  });
 
   return (
     <div className={styles.input_container}>
@@ -39,7 +59,7 @@ export const SearchBox: React.FC<SearchBoxProps> = ({ searchTerm, handleSearchTe
         className={styles.input}
         onChange={onChange}
       />
-      <button onClick={resetFocus} className={styles.button} aria-label="Close search bar" disabled={disabled}>
+      <button onClick={resetFocus} className={styles.close_button} aria-label="Close search bar" disabled={disabled}>
         <Icon name="close" size={15} color={disabled ? '#B4BFCC' : '#78838F'} />
       </button>
     </div>

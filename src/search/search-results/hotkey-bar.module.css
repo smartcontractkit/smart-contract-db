@@ -1,7 +1,7 @@
 .hotkey_bar {
   display: flex;
   justify-content: space-between;
-  width: 33.5rem;
+  width: 32.5rem;
   padding: 0.656rem 1.25rem;
   background-color: #edeff2;
   color: #95a1ad;
