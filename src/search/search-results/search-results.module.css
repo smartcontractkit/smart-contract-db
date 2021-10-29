@@ -1,0 +1,112 @@
+.results_container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  position: absolute;
+  width: 36rem;
+  align-items: flex-start;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 15px rgb(0 0 0 / 15%);
+}
+
+.results_header {
+  margin-bottom: 0.25rem;
+  padding-left: 1.25rem;
+  color: #95a1ad;
+  font-size: 0.625rem;
+}
+
+.results_list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  list-style: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  max-height: 252px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.results_list_item {
+  padding: 0.75rem 1.25rem;
+  width: 32.5rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.results_list_item:hover {
+  background: #ddf6fe;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #1f2529 !important;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.results_list_item > .link .results_list_item_title {
+  display: inline-block;
+  transition: transform 0.1s ease-out;
+}
+
+.results_list_item:hover > .link .results_list_item_title {
+  transform: translate(0.75rem);
+}
+
+.results_list_item_arrow_icon {
+  display: none;
+}
+
+.results_list_item:hover > .link .results_list_item_arrow_icon {
+  display: inline-block;
+}
+
+.results_list_item_type {
+  padding: 0.125rem 0.25rem;
+  background-color: rgba(0, 0, 0, 0.04);
+  color: #95a1ad;
+}
+
+.results_list_item:hover > .link .results_list_item_type {
+  color: #0a5480;
+}
+
+.no_results_container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 2rem;
+  position: absolute;
+  width: 36rem;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 15px rgb(0 0 0 / 15%);
+  justify-content: center;
+}
+
+.no_results_emoji_container {
+  margin: 1.5rem 0;
+}
+
+.no_results_emoji {
+  font-style: unset;
+  padding: 1rem;
+  background-color: #f7f9fa;
+  border-radius: 50%;
+}
+
+.no_results_header {
+  margin: 0 0 0.5rem;
+}
+
+.no_results_body {
+  font-size: 0.75rem;
+}
+
+.no_results_body p {
+  margin: 0;
+}

@@ -71,7 +71,6 @@
   box-sizing: border-box;
   text-align: left;
   align-items: center;
-  /* justify-content: flex-start; */
   text-decoration: none !important;
 }
 
@@ -108,10 +107,10 @@
   margin: 0;
 }
 
-.communitySubHeaders {
+.community_subHeaders {
   background: #f7f9fa;
   width: 25%;
-  height: 36px;;
+  height: 36px;
   font-weight: bold;
   font-size: 12px;
   line-height: 100%;
@@ -123,4 +122,5 @@
   text-transform: uppercase;
   color: #4d545c;
   white-space: nowrap;
+  margin: 0;
 }
