@@ -5,11 +5,6 @@ import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
-import { VentureCapital } from '@/data/resources/communities/venture-capital-funds';
-import { GrantProgram } from '@/data/resources/communities/grant-programs';
-import { IncubatorAccelerator } from '@/data/resources/communities/incubators-accelerators';
-import { Developer } from '@/data/resources/communities/developer';
-import { Enterprise } from '@/data/resources/communities/enterprise';
 
 export interface CategoryListProps {
   name?: string; // category's name
@@ -65,7 +60,7 @@ const list = (id, title, src, startDate, description, link, identiconSeedMax) =>
 export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => {
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
   const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
-  let communities: (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
+  let communities;
   if (name?.toLocaleLowerCase() === 'communities') {
     communities = data;
   }
@@ -76,16 +71,15 @@ export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit })
         {/* for communities */}
         {name?.toLocaleLowerCase() === 'communities' ? (
           communities.map((communityItem) => (
-            <React.Fragment key={Object.keys(communityItem)[0]}>
-              <h3 className={styles.community_subHeaders}>{Object.keys(communityItem)}</h3>
+            <React.Fragment key={communityItem[0].tag}>
+              <h3 className={styles.community_subHeaders}>{communityItem[0].tag}</h3>
               <li className={styles.hr} />
-              {Object.values(communityItem)[0]
+              {communityItem
                 .slice(0, limit)
                 .map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
                   <React.Fragment key={id}>
                     {list(id, title, src, startDate, description, link, identiconSeedMax)}
-                    {Object.values(communityItem)[0].length !== communityItemIndex + 1 &&
-                    limit !== communityItemIndex + 1 ? (
+                    {communityItem.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
                       <li className={styles.hr} />
                     ) : (
                       ''
