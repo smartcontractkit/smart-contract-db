@@ -5,11 +5,6 @@ import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
-import { VentureCapital } from '@/data/resources/communities/venture-capital-funds';
-import { GrantProgram } from '@/data/resources/communities/grant-programs';
-import { IncubatorAccelerator } from '@/data/resources/communities/incubators-accelerators';
-import { Developer } from '@/data/resources/communities/developer';
-import { Enterprise } from '@/data/resources/communities/enterprise';
 
 export interface CategoryListProps {
   name?: string; // category's name
@@ -65,10 +60,9 @@ const list = (id, title, src, startDate, description, link, identiconSeedMax) =>
 export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => {
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
   const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
-  let communities: (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
+  let communities;
   if (name?.toLocaleLowerCase() === 'communities') {
     communities = data;
-    console.log(communities[0]);
   }
 
   return (

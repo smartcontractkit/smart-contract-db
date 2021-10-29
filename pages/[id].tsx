@@ -28,11 +28,11 @@ import * as security from '@/data/resources/tools/security.json';
 interface ResourceBody {
   id: string;
   title: string;
-  // data: Data[] | (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
-  data: Data[];
+  data: Data[][] | Data[];
 }
 
 type Data = {
+  tag?: string;
   id: string;
   title: string;
   description: string;
@@ -99,10 +99,8 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const { id } = params;
+  // eslint-disable-next-line prefer-const
   let { data: resource, title } = resourceBody.find((item) => item.id === id);
-  console.log('************************ resource **************************');
-  // console.log(resource[0]);
-  console.log(Object.values(resource));
 
   if (id !== 'communities') {
     resource = Object.values(resource[0]);
