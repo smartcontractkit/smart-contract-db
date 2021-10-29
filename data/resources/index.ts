@@ -1,25 +1,25 @@
-import { communities } from './communities/communities';
-import { consultants } from './consultants';
-import { events } from './events';
-import { books } from './education/books';
-import { tutorials } from './education/tutorials';
-import { courses } from './education/courses';
-import { workshops } from './education/workshops';
-import { trainers } from './education/trainers';
-import { schools } from './education/schools';
-import { blockchains } from './tools/blockchains';
-import { ides } from './tools/ides';
-import { frameworks } from './tools/frameworks';
-import { libraries } from './tools/libraries';
-import { exchanges } from './tools/exchanges';
-import { languages } from './tools/languages';
-import { validators } from './tools/validators';
-import { wallets } from './tools/wallets';
-import { test } from './tools/test';
-import { deploy } from './tools/deploy';
-import { monitoring } from './tools/monitoring';
-import { administration } from './tools/administration';
-import { security } from './tools/security';
+import { communities } from '@/data/resources/communities/communities';
+import * as consultants from '@/data/resources/consultants.json';
+import * as events from '@/data/resources/events.json';
+import * as books from '@/data/resources/education/books.json';
+import * as tutorials from '@/data/resources/education/tutorials.json';
+import * as courses from '@/data/resources/education/courses.json';
+import * as workshops from '@/data/resources/education/workshops.json';
+import * as trainers from '@/data/resources/education/trainers.json';
+import * as schools from '@/data/resources/education/schools.json';
+import * as blockchains from '@/data/resources/tools/blockchain.json';
+import * as ides from '@/data/resources/tools/ides.json';
+import * as frameworks from '@/data/resources/tools/frameworks.json';
+import * as libraries from '@/data/resources/tools/libraries.json';
+import * as exchanges from '@/data/resources/tools/exchanges.json';
+import * as languages from '@/data/resources/tools/languages.json';
+import * as validators from '@/data/resources/tools/validators.json';
+import * as wallets from '@/data/resources/tools/wallets.json';
+import * as test from '@/data/resources/tools/tests.json';
+import * as deploy from '@/data/resources/tools/deploy.json';
+import * as monitoring from '@/data/resources/tools/monitoring.json';
+import * as administration from '@/data/resources/tools/administration.json';
+import * as security from '@/data/resources/tools/security.json';
 
 export const resources = [
   ...communities.map((x) => ({ ...x, type: 'Communities' })),
