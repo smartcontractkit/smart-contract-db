@@ -7,3 +7,5 @@ export { Chevron } from './chevron';
 export { Search } from './search';
 export { Subtract } from './subtract';
 export { Dismiss } from './dismiss';
+export { HotKeyArrow } from './hotkey-arrow';
+export { HotKeyReturn } from './hotkey-return';

@@ -1,4 +1,4 @@
-.button {
+.desktop_button {
   display: flex;
   align-items: center;
   background-color: #f7f9fa;
@@ -11,12 +11,20 @@
   cursor: pointer;
 }
 
+.mobile_button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: block;
+  margin-top: 3px;
+}
+
 .button:hover {
   background-color: #ffffff;
   border: 1px solid #aaeafc;
 }
 
-.searchIcon {
+.search_icon {
   margin-right: 0.493rem;
 }
 
@@ -24,4 +32,15 @@
   width: 6.281rem;
   text-align: left;
   margin-top: 0.125rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .text,
+  .subtract_icon {
+    display: none;
+  }
+
+  .input {
+    width: 24rem;
+  }
 }

@@ -11,7 +11,7 @@
   align-items: center;
 }
 .iconButtonContainer {
-  padding: 12px !important;
+  padding: 12px 0 12px 12px !important;
   border-radius: 50%;
   border: 0;
   cursor: pointer;
@@ -58,5 +58,9 @@
   .hamburgerMenu {
     padding-top: 3.625rem;
     width: 50vw;
+  }
+
+  .browse {
+    display: none;
   }
 }
