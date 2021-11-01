@@ -5,6 +5,7 @@ import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
+import { trackEvent } from 'lib/ga';
 
 export interface CategoryListProps {
   name?: string; // category's name
@@ -32,9 +33,15 @@ function dateFormatter(date: string): string {
 }
 
 const list = (id, title, src, startDate, description, link, identiconSeedMax) => {
+  const linkClicked = (action: string) => {
+    trackEvent({
+      action,
+      params: {},
+    });
+  };
   return (
     <li key={id} className={styles.listItem}>
-      <Link className={styles.link} rel="noopener noreferrer" href={link}>
+      <Link className={styles.link} rel="noopener noreferrer" href={link} onClick={() => linkClicked(`${id}-link`)}>
         <div className={styles.avatarContainer}>
           {src ? (
             <div className={styles.avatar}>

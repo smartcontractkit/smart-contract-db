@@ -9,7 +9,7 @@ export const Accordion: React.FC<any> = ({ title, content }) => {
     <div className={styles.accordionItem}>
       <button type="button" className={styles.accordionTitle} onClick={() => setIsActive(!isActive)}>
         <li className={styles.root}>
-          <div className={styles.subNavHeading}>{title}</div>
+          <div className={styles.sub_nav_heading}>{title}</div>
           {isActive ? (
             <div>
               <Icon className={styles.openChevron} name="chevron" />

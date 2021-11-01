@@ -1,9 +1,11 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { IntlErrorCode, NextIntlProvider } from 'next-intl';
 import Head from 'next/head';
 import Layout from '../src/layout';
 import '../styles/globals.css';
+import { pageView } from 'lib/ga';
+import { useRouter } from 'next/router';
 
 function onError(error) {
   if (process.env.NODE_ENV !== 'production') {
@@ -25,7 +27,21 @@ function getMessageFallback({ namespace, key, error }) {
 }
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
-  React.useEffect(() => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      pageView(url);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
+
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {

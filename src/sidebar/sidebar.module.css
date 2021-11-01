@@ -38,8 +38,7 @@
   text-align: left;
 }
 
-.subNavHeading {
-  color: #95a1ad;
+.sub_nav_heading {
   font-size: 1.1428571428571428rem;
   line-height: 1.5;
   margin: 0;
@@ -159,7 +158,7 @@
     display: none;
     width: 100%;
   }
-  .subNavHeading {
+  .sub_nav_heading {
     padding-left: 0;
     display: flex;
     flex-flow: nowrap;
@@ -197,7 +196,8 @@
     padding: 0;
   }
 
-  .chevron, .openChevron {
+  .chevron,
+  .openChevron {
     padding-left: 0;
   }
 }
