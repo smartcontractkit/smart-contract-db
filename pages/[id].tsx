@@ -25,6 +25,7 @@ import monitoring from '@/data/resources/tools/monitoring.json';
 import administration from '@/data/resources/tools/administration.json';
 import security from '@/data/resources/tools/security.json';
 import { Resource, TaggedResource } from '@/data/resources/models/resource.model';
+import { isDatePast } from '@/data/resources';
 
 interface ResourceBody {
   id: string;
@@ -66,11 +67,17 @@ export default function Resources({ resources, title }: { resources: Resource[];
       })
     );
   }, [title]);
+
+  let data = resources;
+  if (title === 'Events') {
+    data = resources.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
+  }
+
   return (
     <section className={styles.section}>
       {/* hide depending on screen size */}
       <div className={styles.heading}>{title}</div>
-      <CategoryList name={title} data={resources} />
+      <CategoryList name={title} data={data} />
     </section>
   );
 }

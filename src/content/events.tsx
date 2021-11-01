@@ -2,9 +2,7 @@ import React from 'react';
 import { CategoryList } from 'src/shared/category-list';
 import styles from './content.module.css';
 import events from '@/data/resources/events.json';
-
-export const isDatePast = (startDate: string, endDate: string) =>
-  new Date(startDate).setHours(0, 0, 0, 0) <= new Date(endDate).setHours(0, 0, 0, 0);
+import { isDatePast } from '@/data/resources';
 
 export const Events: React.FC = () => {
   const ongoingEvents = events.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));

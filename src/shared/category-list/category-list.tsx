@@ -1,6 +1,5 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import { isDatePast } from 'src/content/events';
 import { trackEvent } from 'lib/ga';
 import styles from './category-list.module.css';
 import { Icon } from '../icon';
@@ -67,43 +66,37 @@ const ListItem = (id, title, src, startDate, description, link) => {
   );
 };
 
-export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => {
-  const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
-
-  return (
-    <div className={styles.container}>
-      <ul className={styles.ul}>
-        {/* for communities */}
-        {name?.toLocaleLowerCase() === 'communities' ? (
-          data.map(({ tag, data: communities }) => (
-            <React.Fragment key={tag}>
-              <h3 className={styles.community_subHeaders}>{tag}</h3>
-              <li className={styles.hr} />
-              {communities
-                .slice(0, limit)
-                .map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
-                  <React.Fragment key={id}>
-                    {ListItem(id, title, src, startDate, description, link)}
-                    {communities.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
-                      <li className={styles.hr} />
-                    ) : (
-                      ''
-                    )}
-                  </React.Fragment>
-                ))}
-            </React.Fragment>
-          ))
-        ) : dataWithOngoingDates.length && name !== 'communities' ? (
-          data.slice(0, limit).map(({ id, title, src, startDate, description, link }, index: number) => (
-            <React.Fragment key={id}>
-              {ListItem(id, title, src, startDate, description, link)}
-              {data.length !== index + 1 && limit !== index + 1 ? <li className={styles.hr} /> : ''}
-            </React.Fragment>
-          ))
-        ) : (
-          <h1>No new {name.toLocaleLowerCase() || 'content'}. Please check back soon.</h1>
-        )}
-      </ul>
-    </div>
-  );
-};
+export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => (
+  <div className={styles.container}>
+    <ul className={styles.ul}>
+      {/* for communities */}
+      {name?.toLocaleLowerCase() === 'communities' ? (
+        data.map(({ tag, data: communities }) => (
+          <React.Fragment key={tag}>
+            <h3 className={styles.community_subHeaders}>{tag}</h3>
+            <li className={styles.hr} />
+            {communities.slice(0, limit).map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
+              <React.Fragment key={id}>
+                {ListItem(id, title, src, startDate, description, link)}
+                {communities.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
+                  <li className={styles.hr} />
+                ) : (
+                  ''
+                )}
+              </React.Fragment>
+            ))}
+          </React.Fragment>
+        ))
+      ) : data.length && name !== 'communities' ? (
+        data.slice(0, limit).map(({ id, title, src, startDate, description, link }, index: number) => (
+          <React.Fragment key={id}>
+            {ListItem(id, title, src, startDate, description, link)}
+            {data.length !== index + 1 && limit !== index + 1 ? <li className={styles.hr} /> : ''}
+          </React.Fragment>
+        ))
+      ) : (
+        <h1>No new {name.toLocaleLowerCase() || 'content'}. Please check back soon.</h1>
+      )}
+    </ul>
+  </div>
+);
