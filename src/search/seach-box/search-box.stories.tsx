@@ -1,6 +1,5 @@
-import React, { FC } from 'react';
 import { Meta } from '@storybook/react';
-import { SearchBox } from '../seach-box';
+import { SearchBox } from '.';
 
 export default {
   title: 'Molecule/Search Box',

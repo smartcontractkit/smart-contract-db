@@ -3,7 +3,7 @@ const fs = require('fs');
 const core = require('@actions/core');
 
 async function validation(data) {
-    const updatedResourceList = await Promise.all(data[0].map(async (resourceItem) => {
+    const updatedResourceList = await Promise.all(data.map(async (resourceItem) => {
         return await fetch(resourceItem.link).then(
             response => {
                 return response.status === 200 ? resourceItem : null
@@ -19,13 +19,10 @@ async function validation(data) {
 async function validateResourceLinks(files) {
     let resources
 
-    core.info('Hello Will!!!')
     files.map(async(file) => {
         resources = JSON.parse(fs.readFileSync(file))
         const updated = await validation(resources)
-        const updatedResourceLinksList = []
-        updatedResourceLinksList.push(updated)
-        return fs.writeFileSync(file, JSON.stringify(updatedResourceLinksList))
+        return fs.writeFileSync(file, JSON.stringify(updated))
     })
 
 }

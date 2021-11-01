@@ -1,6 +1,6 @@
-import { useOutsideClick } from '@/hooks/use-outside-click';
 import classNames from 'classnames';
 import React, { useEffect, useRef } from 'react';
+import { useOutsideClick } from '@/hooks/use-outside-click';
 import styles from './modal.module.css';
 
 export enum Positions {

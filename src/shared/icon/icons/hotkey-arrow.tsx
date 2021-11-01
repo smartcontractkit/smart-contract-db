@@ -1,3 +1,4 @@
+import React from 'react';
 import classNames from 'classnames';
 import { iconClassMap } from '..';
 import { IconProps, IconPropDefaults } from '../icon';
