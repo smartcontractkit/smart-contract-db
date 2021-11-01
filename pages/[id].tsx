@@ -68,15 +68,16 @@ export default function Resources({ resources, title }: { resources: Resource[];
     );
   }, [title]);
 
+  let data = resources;
   if (title === 'Events') {
-    resources = events.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
+    data = resources.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
   }
 
   return (
     <section className={styles.section}>
       {/* hide depending on screen size */}
       <div className={styles.heading}>{title}</div>
-      <CategoryList name={title} data={resources} />
+      <CategoryList name={title} data={data} />
     </section>
   );
 }
