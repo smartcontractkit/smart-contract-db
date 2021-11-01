@@ -3,8 +3,8 @@ export interface Resource {
   title: string;
   description: string;
   link: string;
-  startDate?: Date | string;
-  endDate?: Date | string;
+  startDate?: string;
+  endDate?: string;
   location?: string;
   src?: string;
 }

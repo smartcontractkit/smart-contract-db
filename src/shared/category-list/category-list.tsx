@@ -5,7 +5,6 @@ import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
-import { isDatePast } from '@/data/resources';
 
 export interface CategoryListProps {
   name?: string; // category's name
