@@ -3,7 +3,6 @@ import { IconPropDefaults, IconProps } from '../icon';
 
 export const LongArrowUp: React.FC<IconProps> = ({
   className = IconPropDefaults.className,
-  color = IconPropDefaults.color,
   size = IconPropDefaults.size,
   focusable = IconPropDefaults.focusable,
 }: IconProps) => (

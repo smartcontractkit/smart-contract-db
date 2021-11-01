@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import { BootstrapTooltip } from 'src/shared/tooltip';
+import { Search } from 'src/search';
 import styles from './header.module.css';
 import Link from '../link';
 import { Icon } from '../shared/icon';
-import { BootstrapTooltip } from 'src/shared/tooltip';
-import { Search } from 'src/search';
 
 const HamburgerMenu = dynamic(() => import('./hamburgerMenu').then((module) => module.HamburgerMenu));
 

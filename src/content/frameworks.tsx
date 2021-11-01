@@ -1,7 +1,7 @@
 import React from 'react';
 import { CategoryList } from 'src/shared/category-list';
 import styles from './content.module.css';
-import { frameworks } from '@/data/resources/tools/frameworks';
+import frameworks from '@/data/resources/tools/frameworks.json';
 
 export const Frameworks: React.FC = () => {
   return (

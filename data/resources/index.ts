@@ -1,47 +1,65 @@
-import { communities } from './communities/communities';
-import { consultants } from './consultants';
-import { events } from './events';
-import { books } from './education/books';
-import { tutorials } from './education/tutorials';
-import { courses } from './education/courses';
-import { workshops } from './education/workshops';
-import { trainers } from './education/trainers';
-import { schools } from './education/schools';
-import { blockchains } from './tools/blockchains';
-import { ides } from './tools/ides';
-import { frameworks } from './tools/frameworks';
-import { libraries } from './tools/libraries';
-import { exchanges } from './tools/exchanges';
-import { languages } from './tools/languages';
-import { validators } from './tools/validators';
-import { wallets } from './tools/wallets';
-import { test } from './tools/test';
-import { deploy } from './tools/deploy';
-import { monitoring } from './tools/monitoring';
-import { administration } from './tools/administration';
-import { security } from './tools/security';
+import consultants from '@/data/resources/consultants.json';
+import events from '@/data/resources/events.json';
+import books from '@/data/resources/education/books.json';
+import tutorials from '@/data/resources/education/tutorials.json';
+import courses from '@/data/resources/education/courses.json';
+import workshops from '@/data/resources/education/workshops.json';
+import trainers from '@/data/resources/education/trainers.json';
+import schools from '@/data/resources/education/schools.json';
+import blockchains from '@/data/resources/tools/blockchain.json';
+import ides from '@/data/resources/tools/ides.json';
+import frameworks from '@/data/resources/tools/frameworks.json';
+import libraries from '@/data/resources/tools/libraries.json';
+import exchanges from '@/data/resources/tools/exchanges.json';
+import languages from '@/data/resources/tools/languages.json';
+import validators from '@/data/resources/tools/validators.json';
+import wallets from '@/data/resources/tools/wallets.json';
+import test from '@/data/resources/tools/tests.json';
+import deploy from '@/data/resources/tools/deploy.json';
+import monitoring from '@/data/resources/tools/monitoring.json';
+import administration from '@/data/resources/tools/administration.json';
+import security from '@/data/resources/tools/security.json';
+import { communities } from './communities';
 
+/**
+ * Event filter. Hides past events once they reach their end date.
+ * @param startDate - event start date
+ * @param endDate - event end date
+ * @returns {boolean}
+ */
+export const isDatePast = (startDate: string, endDate: string) =>
+  new Date(startDate).setHours(0, 0, 0, 0) <= new Date(endDate).setHours(0, 0, 0, 0);
+
+const allCommunitites = communities.reduce((a, c) => {
+  const data = c.data.map((x) => ({ ...x, type: 'Communities', tag: c.tag }));
+  a.push(...data);
+  return a;
+}, []);
+
+/**
+ * Search prep to show type of category a resource belongs to.
+ */
 export const resources = [
-  ...communities.map((x) => ({ ...x, type: 'Communities' })),
-  // ...consultants.map((x) => ({ ...x, type: 'Consultants' })),
-  ...events.map((x) => ({ ...x, type: 'Events' })),
+  ...allCommunitites,
+  ...consultants.map((x) => ({ ...x, type: 'Consultants' })),
+  ...events.map((x) => ({ ...x, type: 'Events' })).filter(({ startDate, endDate }) => !isDatePast(startDate, endDate)),
   ...books.map((x) => ({ ...x, type: 'Books' })),
   ...tutorials.map((x) => ({ ...x, type: 'Tutorials' })),
-  // ...courses.map((x) => ({ ...x, type: 'Courses' })),
-  // ...workshops.map((x) => ({ ...x, type: 'Workshops' })),
-  // ...trainers.map((x) => ({ ...x, type: 'Tutorials' })),
-  // ...schools.map((x) => ({ ...x, type: 'Schools' })),
-  // ...blockchains.map((x) => ({ ...x, type: 'Blockchains' })),
-  // ...ides.map((x) => ({ ...x, type: 'IDEs' })),
-  // ...frameworks.map((x) => ({ ...x, type: 'Frameworks' })),
-  // ...libraries.map((x) => ({ ...x, type: 'Libraries' })),
-  // ...exchanges.map((x) => ({ ...x, type: 'Exchanges' })),
-  // ...languages.map((x) => ({ ...x, type: 'Languages' })),
-  // ...validators.map((x) => ({ ...x, type: 'Validators' })),
-  // ...wallets.map((x) => ({ ...x, type: 'Wallets' })),
-  // ...test.map((x) => ({ ...x, type: 'Test' })),
-  // ...deploy.map((x) => ({ ...x, type: 'Deploy' })),
-  // ...monitoring.map((x) => ({ ...x, type: 'Monitoring' })),
-  // ...administration.map((x) => ({ ...x, type: 'Administration' })),
-  // ...security.map((x) => ({ ...x, type: 'Security' })),
+  ...courses.map((x) => ({ ...x, type: 'Courses' })),
+  ...workshops.map((x) => ({ ...x, type: 'Workshops' })),
+  ...trainers.map((x) => ({ ...x, type: 'Tutorials' })),
+  ...schools.map((x) => ({ ...x, type: 'Schools' })),
+  ...blockchains.map((x) => ({ ...x, type: 'Blockchains' })),
+  ...ides.map((x) => ({ ...x, type: 'IDEs' })),
+  ...frameworks.map((x) => ({ ...x, type: 'Frameworks' })),
+  ...libraries.map((x) => ({ ...x, type: 'Libraries' })),
+  ...exchanges.map((x) => ({ ...x, type: 'Exchanges' })),
+  ...languages.map((x) => ({ ...x, type: 'Languages' })),
+  ...validators.map((x) => ({ ...x, type: 'Validators' })),
+  ...wallets.map((x) => ({ ...x, type: 'Wallets' })),
+  ...test.map((x) => ({ ...x, type: 'Test' })),
+  ...deploy.map((x) => ({ ...x, type: 'Deploy' })),
+  ...monitoring.map((x) => ({ ...x, type: 'Monitoring' })),
+  ...administration.map((x) => ({ ...x, type: 'Administration' })),
+  ...security.map((x) => ({ ...x, type: 'Security' })),
 ];

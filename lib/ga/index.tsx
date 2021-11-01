@@ -4,3 +4,7 @@ export const pageView = (url: string): void => {
     page_path: url,
   });
 };
+
+export const trackEvent = ({ action, params }: { action: string; params?: any }) => {
+  window.gtag('event', action, params);
+};

@@ -1,0 +1,5 @@
+name: 'Check resource links'
+description: 'Check resource links and remove them from corresponding JSON files if links are invalid'
+runs:
+  using: 'node12'
+  main: 'index.js'

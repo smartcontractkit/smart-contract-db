@@ -1,0 +1,44 @@
+[
+  {
+    "id": "truffle",
+    "title": "Truffle Suite",
+    "description": "World class development environment for blockchain dapps (decentralized applications) and smart contracts. Learn blockchain programming with our training courses & seminars. Trusted by Microsoft, Shapeshift and more!",
+    "link": "https://www.trufflesuite.com/",
+    "src": "/img/deploy/truffle.png"
+  },
+  {
+    "id": "hardhat",
+    "title": "Hardhat",
+    "description": "Ethereum development environment for professionals.",
+    "link": "https://hardhat.org/",
+    "src": "/img/libraries/Hardhat-color-logotype-vertical.svg"
+  },
+  {
+    "id": "solidity-coverage",
+    "title": "Solidity Coverage",
+    "description": "Code coverage for Solidity testing",
+    "link": "https://github.com/sc-forks/solidity-coverage",
+    "src": ""
+  },
+  {
+    "id": "brownie",
+    "title": "Brownie",
+    "description": "Brownie is a Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.",
+    "link": "https://eth-brownie.readthedocs.io/en/stable/",
+    "src": "/img/libraries/brownie-eth.png"
+  },
+  {
+    "id": "dapp-tools",
+    "title": "Dapp Tools",
+    "description": "Command line tools and smart contract libraries for Ethereum smart contract development",
+    "link": "https://dapp.tools/",
+    "src": ""
+  },
+  {
+    "id": "eth-lint",
+    "title": "Eth Lint",
+    "description": "Ethlint (Formerly Solium) analyzes your Solidity code for style & security issues and fixes them.",
+    "link": "https://ethlint.readthedocs.io/en/latest/",
+    "src": "/img/tools/test/eth-lint-solium.png"
+  }
+]

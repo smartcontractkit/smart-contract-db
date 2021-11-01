@@ -1,19 +1,15 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import { isDatePast } from 'src/content/events';
+import { trackEvent } from 'lib/ga';
 import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
-import { VentureCapital } from '@/data/resources/communities/venture-capital-funds';
-import { GrantProgram } from '@/data/resources/communities/grant-programs';
-import { IncubatorAccelerator } from '@/data/resources/communities/incubators-accelerators';
-import { Developer } from '@/data/resources/communities/developer';
-import { Enterprise } from '@/data/resources/communities/enterprise';
+import { isDatePast } from '@/data/resources';
 
 export interface CategoryListProps {
   name?: string; // category's name
-  data; // TODO: combine types
+  data;
   limit?: number;
 }
 
@@ -36,10 +32,19 @@ function dateFormatter(date: string): string {
   }).format(newDate);
 }
 
-const list = (id, title, src, startDate, description, link, identiconSeedMax) => {
+const ListItem = (id, title, src, startDate, description, link) => {
+  const linkClicked = (action: string) => {
+    trackEvent({
+      action,
+      params: {},
+    });
+  };
+
+  const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
+
   return (
     <li key={id} className={styles.listItem}>
-      <Link className={styles.link} rel="noopener noreferrer" href={link}>
+      <Link className={styles.link} rel="noopener noreferrer" href={link} onClick={() => linkClicked(`${id}-link`)}>
         <div className={styles.avatarContainer}>
           {src ? (
             <div className={styles.avatar}>
@@ -62,49 +67,37 @@ const list = (id, title, src, startDate, description, link, identiconSeedMax) =>
   );
 };
 
-export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => {
-  const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
-  const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
-  let communities: (VentureCapital | GrantProgram | IncubatorAccelerator | Developer | Enterprise)[];
-  if (name?.toLocaleLowerCase() === 'communities') {
-    communities = data;
-  }
-
-  return (
-    <div className={styles.container}>
-      <ul className={styles.ul}>
-        {/* for communities */}
-        {name?.toLocaleLowerCase() === 'communities' ? (
-          communities.map((communityItem) => (
-            <React.Fragment key={Object.keys(communityItem)[0]}>
-              <h3 className={styles.community_subHeaders}>{Object.keys(communityItem)}</h3>
-              <li className={styles.hr} />
-              {Object.values(communityItem)[0]
-                .slice(0, limit)
-                .map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
-                  <React.Fragment key={id}>
-                    {list(id, title, src, startDate, description, link, identiconSeedMax)}
-                    {Object.values(communityItem)[0].length !== communityItemIndex + 1 &&
-                    limit !== communityItemIndex + 1 ? (
-                      <li className={styles.hr} />
-                    ) : (
-                      ''
-                    )}
-                  </React.Fragment>
-                ))}
-            </React.Fragment>
-          ))
-        ) : dataWithOngoingDates.length && name !== 'communities' ? (
-          data.slice(0, limit).map(({ id, title, src, startDate, description, link }, index: number) => (
-            <React.Fragment key={id}>
-              {list(id, title, src, startDate, description, link, identiconSeedMax)}
-              {data.length !== index + 1 && limit !== index + 1 ? <li className={styles.hr} /> : ''}
-            </React.Fragment>
-          ))
-        ) : (
-          <h1>No new {name.toLocaleLowerCase() || 'content'}. Please check back soon.</h1>
-        )}
-      </ul>
-    </div>
-  );
-};
+export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => (
+  <div className={styles.container}>
+    <ul className={styles.ul}>
+      {/* for communities */}
+      {name?.toLocaleLowerCase() === 'communities' ? (
+        data.map(({ tag, data: communities }) => (
+          <React.Fragment key={tag}>
+            <h3 className={styles.community_subHeaders}>{tag}</h3>
+            <li className={styles.hr} />
+            {communities.slice(0, limit).map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
+              <React.Fragment key={id}>
+                {ListItem(id, title, src, startDate, description, link)}
+                {communities.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
+                  <li className={styles.hr} />
+                ) : (
+                  ''
+                )}
+              </React.Fragment>
+            ))}
+          </React.Fragment>
+        ))
+      ) : data.length && name !== 'communities' ? (
+        data.slice(0, limit).map(({ id, title, src, startDate, description, link }, index: number) => (
+          <React.Fragment key={id}>
+            {ListItem(id, title, src, startDate, description, link)}
+            {data.length !== index + 1 && limit !== index + 1 ? <li className={styles.hr} /> : ''}
+          </React.Fragment>
+        ))
+      ) : (
+        <h1>No new {name.toLocaleLowerCase() || 'content'}. Please check back soon.</h1>
+      )}
+    </ul>
+  </div>
+);
