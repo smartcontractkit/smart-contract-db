@@ -21,6 +21,15 @@ import administration from '@/data/resources/tools/administration.json';
 import security from '@/data/resources/tools/security.json';
 import { communities } from './communities';
 
+/**
+ * Event filter. Hides past events once they reach their end date.
+ * @param startDate - event start date
+ * @param endDate - event end date
+ * @returns {boolean}
+ */
+export const isDatePast = (startDate: string, endDate: string) =>
+  new Date(startDate).setHours(0, 0, 0, 0) <= new Date(endDate).setHours(0, 0, 0, 0);
+
 const allCommunitites = communities.reduce((a, c) => {
   const data = c.data.map((x) => ({ ...x, type: 'Communities', tag: c.tag }));
   a.push(...data);
@@ -33,7 +42,7 @@ const allCommunitites = communities.reduce((a, c) => {
 export const resources = [
   ...allCommunitites,
   ...consultants.map((x) => ({ ...x, type: 'Consultants' })),
-  ...events.map((x) => ({ ...x, type: 'Events' })),
+  ...events.map((x) => ({ ...x, type: 'Events' })).filter(({ startDate, endDate }) => !isDatePast(startDate, endDate)),
   ...books.map((x) => ({ ...x, type: 'Books' })),
   ...tutorials.map((x) => ({ ...x, type: 'Tutorials' })),
   ...courses.map((x) => ({ ...x, type: 'Courses' })),
