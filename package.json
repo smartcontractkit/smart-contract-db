@@ -26,7 +26,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@storybook/addon-actions": "^6.3.8",
-    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@svgr/webpack": "^5.5.0",
