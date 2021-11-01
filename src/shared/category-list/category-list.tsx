@@ -9,7 +9,7 @@ import Link from '../../link';
 
 export interface CategoryListProps {
   name?: string; // category's name
-  data; // TODO: combine types
+  data;
   limit?: number;
 }
 
@@ -32,13 +32,16 @@ function dateFormatter(date: string): string {
   }).format(newDate);
 }
 
-const list = (id, title, src, startDate, description, link, identiconSeedMax) => {
+const ListItem = (id, title, src, startDate, description, link) => {
   const linkClicked = (action: string) => {
     trackEvent({
       action,
       params: {},
     });
   };
+
+  const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
+
   return (
     <li key={id} className={styles.listItem}>
       <Link className={styles.link} rel="noopener noreferrer" href={link} onClick={() => linkClicked(`${id}-link`)}>
@@ -65,28 +68,23 @@ const list = (id, title, src, startDate, description, link, identiconSeedMax) =>
 };
 
 export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => {
-  const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
   const dataWithOngoingDates = data.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
-  let communities;
-  if (name?.toLocaleLowerCase() === 'communities') {
-    communities = data;
-  }
 
   return (
     <div className={styles.container}>
       <ul className={styles.ul}>
         {/* for communities */}
         {name?.toLocaleLowerCase() === 'communities' ? (
-          communities.map((communityItem) => (
-            <React.Fragment key={communityItem[0].tag}>
-              <h3 className={styles.community_subHeaders}>{communityItem[0].tag}</h3>
+          data.map(({ tag, data: communities }) => (
+            <React.Fragment key={tag}>
+              <h3 className={styles.community_subHeaders}>{tag}</h3>
               <li className={styles.hr} />
-              {communityItem
+              {communities
                 .slice(0, limit)
                 .map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
                   <React.Fragment key={id}>
-                    {list(id, title, src, startDate, description, link, identiconSeedMax)}
-                    {communityItem.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
+                    {ListItem(id, title, src, startDate, description, link)}
+                    {communities.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
                       <li className={styles.hr} />
                     ) : (
                       ''
@@ -98,7 +96,7 @@ export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit })
         ) : dataWithOngoingDates.length && name !== 'communities' ? (
           data.slice(0, limit).map(({ id, title, src, startDate, description, link }, index: number) => (
             <React.Fragment key={id}>
-              {list(id, title, src, startDate, description, link, identiconSeedMax)}
+              {ListItem(id, title, src, startDate, description, link)}
               {data.length !== index + 1 && limit !== index + 1 ? <li className={styles.hr} /> : ''}
             </React.Fragment>
           ))

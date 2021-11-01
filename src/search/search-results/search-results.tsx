@@ -12,6 +12,9 @@ type SearchResultsProps = {
   closeSearchBox: () => void;
 };
 
+const keyMapper = (id: string, type: string, tag: string) =>
+  `${id}-${type.toLocaleLowerCase()}-${tag?.toLocaleLowerCase()}`;
+
 export const ResultsList: React.FC<{ isMobile: boolean; results: any[]; closeSearchBox: () => void }> = ({
   isMobile,
   results,
@@ -20,8 +23,8 @@ export const ResultsList: React.FC<{ isMobile: boolean; results: any[]; closeSea
   <div className={styles.results_container}>
     <h4 className={styles.results_header}>Results</h4>
     <ul className={styles.results_list}>
-      {results.map(({ title, link, type }) => (
-        <li className={styles.results_list_item} key={`${title}-${type}`}>
+      {results.map(({ id, title, link, type, tag }) => (
+        <li className={styles.results_list_item} key={keyMapper(id, type, tag)}>
           <Link className={styles.link} rel="noopener noreferrer" href={link} onClick={closeSearchBox}>
             <div>
               <Icon className={styles.results_list_item_arrow_icon} name="long-arrow-up" size={12} />
