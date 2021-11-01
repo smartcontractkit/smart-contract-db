@@ -1,0 +1,22 @@
+.hotkey_bar {
+  display: flex;
+  justify-content: space-between;
+  width: 32.5rem;
+  padding: 0.656rem 1.25rem;
+  background-color: #edeff2;
+  color: #95a1ad;
+}
+
+.hotkey_bar_section {
+  display: flex;
+  align-items: center;
+}
+
+.hotkey_bar_icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotkey_bar_spacing {
+  margin-right: 0.313rem;
+}

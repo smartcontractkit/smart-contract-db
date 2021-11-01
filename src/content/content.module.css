@@ -1,0 +1,29 @@
+.heading {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.section {
+  padding-bottom: 4rem;
+}
+
+.hr {
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+  list-style-type: none;
+}
+
+.communitiesHeading {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  line-height: 1.5;
+  padding-bottom: 1.5rem;
+}

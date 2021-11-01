@@ -1,0 +1,88 @@
+.card {
+  padding-bottom: 4rem;
+}
+
+.bannerBackground {
+  display: flex;
+  background-image: url('/img/contribute/contribute-banner.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  color: #25292e;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.1428571428571428rem;
+  color: #78838f;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.text {
+  text-align: left;
+  margin-right: 1.5rem;
+}
+
+.button {
+  background-color: #0aa6e5;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 2rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  text-transform: none;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  line-height: 1.75;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  vertical-align: middle;
+  justify-content: center;
+  text-decoration: none;
+  font-family: Circular Std;
+}
+
+.emoji {
+  padding-left: 1rem;
+}
+
+.links {
+  text-decoration: none;
+}
+
+/* sx */
+@media only screen and (max-width: 600px) {
+  .overlay {
+    flex-direction: column;
+  }
+  .text {
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    margin: 0;
+  }
+}

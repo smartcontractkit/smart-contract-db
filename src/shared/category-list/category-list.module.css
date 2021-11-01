@@ -1,0 +1,134 @@
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  list-style: none;
+}
+
+.subTitle {
+  color: #0a5480;
+  padding-bottom: 0.75rem;
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.listItem {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  cursor: pointer;
+}
+
+.listItem:hover {
+  background: #f7f9fa;
+}
+.listItem > .link > div > .title > .listItemTitle {
+  display: inline-block;
+  transition: transform 0.1s ease-out;
+}
+
+.listItem:hover > .link > div > .title > .listItemTitle {
+  transform: translate(0.75rem);
+}
+
+.listItemArrowIcon {
+  display: none;
+}
+
+.listItem:hover > .link > div > .title > .listItemArrowIcon {
+  display: inline-block;
+}
+
+.avatarContainer {
+  margin-right: 1.5rem;
+  min-width: 56px;
+  flex-shrink: 0;
+}
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 0;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.4285714285714284rem;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: Circular Std;
+  line-height: 1;
+  user-select: none;
+  justify-content: center;
+}
+.link {
+  text-decoration: none;
+  color: #1f2529 !important;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+.listItemText {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #0000008a;
+  font-size: 1rem;
+  font-family: Circular Std;
+  font-weight: 400;
+  line-height: 1.43;
+}
+
+.title {
+  font-size: 1.1428571428571428rem;
+  font-family: Circular Std;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.hr {
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.community_subHeaders {
+  background: #f7f9fa;
+  width: 25%;
+  height: 36px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #4d545c;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* xs */
+@media only screen and (max-width: 600px) {
+  .community_subHeaders {
+    width: 70%;
+  }
+}
+

@@ -1,0 +1,55 @@
+body {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto !important;
+  background-color: #fff !important;
+  font-family: 'Circular Std';
+  font-size: 1rem;
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url(/fonts/CircularStd/CircularStd-Medium.ttf);
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url(/fonts/CircularStd/CircularStd-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Scrollbar-specific styles */
+
+/* Width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 130px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #edeff2;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #78838f;
+  border-radius: 10px;
+}

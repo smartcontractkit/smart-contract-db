@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+.main {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 1280px) {
+  .main {
+    display: block;
+  }
+}

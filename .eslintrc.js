@@ -10,7 +10,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:jsx-a11y/recommended',
-    'plugin:tailwind/recommended',
     'prettier',
     'prettier/prettier',
     'plugin:prettier/recommended',
@@ -51,6 +50,12 @@ module.exports = {
       'error',
       {
         devDependencies: ['**/*.stories.tsx'],
+      },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
       },
     ],
   },

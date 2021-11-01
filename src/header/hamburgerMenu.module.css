@@ -1,0 +1,66 @@
+.hamburgerMenu {
+  padding-top: 3.625rem;
+}
+.hamburgerContainer {
+  display: inline-flex;
+  align-items: center;
+}
+.opacityHamburger {
+  opacity: 0.3;
+  display: inline-flex;
+  align-items: center;
+}
+.iconButtonContainer {
+  padding: 12px 0 12px 12px !important;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.menuIconToggle {
+  font-size: 3rem;
+  color: black;
+}
+
+.closeIconToggle {
+  font-size: 2rem;
+  color: black;
+}
+.closeContainer {
+  right: 0;
+  display: flex;
+  position: fixed;
+  align-self: center;
+  align-items: center;
+  font-weight: bold;
+  padding-top: 2.25rem;
+  padding-right: 2.75rem;
+}
+.close {
+  padding-right: 2rem;
+}
+.browse {
+  font-size: 1.1428571428571428rem;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 1280px) {
+  .hamburgerMenu {
+    width: 25vw;
+  }
+}
+
+/* xs */
+@media only screen and (max-width: 600px) {
+  .hamburgerMenu {
+    padding-top: 3.625rem;
+    width: 50vw;
+  }
+
+  .browse {
+    display: none;
+  }
+}

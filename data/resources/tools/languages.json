@@ -1,0 +1,16 @@
+[
+  {
+    "id": "solidity",
+    "title": "Solidity",
+    "description": "Solidity is an object-oriented programming language for writing smart contracts. It is used for implementing smart contracts on various blockchain platforms, most notably, Ethereum.",
+    "link": "https://docs.soliditylang.org/en/v0.8.9/",
+    "src": "/img/languages/solidity-logo.svg"
+  },
+  {
+    "id": "vyper",
+    "title": "Vyper",
+    "description": "Vyper is a contract-oriented, pythonic programming language that targets the Ethereum Virtual Machine (EVM).",
+    "link": "https://vyper.readthedocs.io/en/stable/",
+    "src": "/img/languages/vyper-logo.svg"
+  }
+]

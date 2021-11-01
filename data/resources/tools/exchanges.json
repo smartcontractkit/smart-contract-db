@@ -1,0 +1,58 @@
+[
+  {
+    "id": "crypto",
+    "title": "Crypto.com",
+    "description": "Crypto.com is on a mission to accelerate the world’s transition to cryptocurrency. Through the Crypto.com Mobile App and Exchange, you can buy 150+ cryptocurrencies and stablecoins, such as Bitcoin (BTC), Ethereum (ETH), Cardano (ADA), Solana (SOL) and etc. Purchase with a credit card, debit card, crypto, or fiat bank transfer. Our ecosystem consists of financial services, payment solutions, a world-class trading platform, and decentralised finance offerings.",
+    "link": "https://crypto.com/",
+    "src": "/img/exchanges/crypto-com.png"
+  },
+  {
+    "id": "robinhood",
+    "title": "Robinhood",
+    "description": "Robinhood has commission-free investing, and tools to help shape your financial future. Sign up and get your first stock free. Limitations and fees may apply.",
+    "link": "https://robinhood.com/",
+    "src": "/img/exchanges/robinhood.png"
+  },
+  {
+    "id": "paypal",
+    "title": "Paypal",
+    "description": "PayPal is the faster, safer way to send money, make an online payment, receive money or set up a merchant account.",
+    "link": "https://www.paypal.com/",
+    "src": "/img/exchanges/paypal.jpg"
+  },
+  {
+    "id": "binance",
+    "title": "Binance",
+    "description": "Binance cryptocurrency exchange - We operate the worlds biggest bitcoin exchange and altcoin crypto exchange in the world by volume.",
+    "link": "https://www.binance.com/",
+    "src": "/img/exchanges/binance.png"
+  },
+  {
+    "id": "faucets",
+    "title": "Faucets",
+    "description": "Earn Free Cryptocurrencies : PTC, Offerwalls, Level Up & Achievements System and All In One Place!",
+    "link": "https://faucetcrypto.com/",
+    "src": "/img/exchanges/faucet.png"
+  },
+  {
+    "id": "debridge",
+    "title": "Debridge",
+    "description": "Cross-Chain Interoperability and Liquidity Transfer Protocol.",
+    "link": "https://debridge.finance/",
+    "src": "/img/exchanges/debridge.png"
+  },
+  {
+    "id": "tornadoCash",
+    "title": "TornadoCash",
+    "description": "Non-custodial Ethereum Privacy solution.",
+    "link": "https://tornado.cash/",
+    "src": "/img/exchanges/tornado-cash.png"
+  },
+  {
+    "id": "substrate",
+    "title": "Substrate",
+    "description": "Substrate enables developers to quickly and easily build future-proof blockchains optimized for any use case.",
+    "link": "https://www.substrate.io/",
+    "src": "/img/exchanges/substrate.png"
+  }
+]

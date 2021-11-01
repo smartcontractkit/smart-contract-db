@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "08:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 20
+    target-branch: main
+    labels:
+      - dependency

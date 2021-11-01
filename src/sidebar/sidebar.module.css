@@ -1,0 +1,210 @@
+.root {
+  padding-left: 0;
+  padding-right: 16px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  text-decoration: none;
+  width: 100%;
+  place-content: space-between;
+}
+
+.nested {
+  font-size: 0.875rem;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
+}
+
+.container {
+  padding-right: 1.5rem !important;
+  position: sticky;
+  top: 123px;
+  /* padding-top: 8px !important; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.sub_nav_heading {
+  font-size: 1.1428571428571428rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.hr {
+  background-color: #d3dde5;
+  border: none;
+  height: 1px;
+  flex-shrink: 0;
+  width: 140px;
+  margin: 0.5rem 0 0.625rem 2rem;
+  list-style: none;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  color: #1f2529 !important;
+  text-decoration: none;
+}
+
+.links > .bulletPoint {
+  opacity: 0;
+}
+
+.links:hover > .bulletPoint {
+  opacity: 1;
+}
+
+.activeLinks {
+  color: #0aa6e5 !important;
+}
+
+.activeLinks > .bulletPoint {
+  opacity: 1;
+  fill: #0aa6e5;
+}
+
+.contributeContainer {
+  display: none;
+}
+.contribute {
+  color: #95a1ad;
+}
+.contributeLogo {
+  color: #25292e;
+}
+.contributeLogo:hover {
+  color: #0aa6e5;
+}
+
+.contributeLogo:hover > .github {
+  fill: #0aa6e5;
+}
+
+.contributeLinks {
+  text-decoration: none;
+}
+.list {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.listTitles {
+  font-size: 1.1428571428571428rem;
+  line-height: 1.5;
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.accordionTitle {
+  border: none;
+  background: none;
+  padding-left: 2rem;
+  font-family: Circular Std;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.openChevron {
+  fill: #f7f9fa;
+  padding-left: 2rem;
+}
+
+.chevron {
+  fill: #f7f9fa;
+  transform: scaleY(-1);
+  padding-left: 2rem;
+}
+
+.accordionTitle:hover > .root > div > .chevron {
+  fill: #ddf6fe;
+}
+
+.accordionTitle:hover > .root > div > .openChevron {
+  fill: #ddf6fe;
+}
+
+@media only screen and (max-width: 1280px) {
+  .root {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+  }
+  .accordionItem {
+    width: 75%;
+  }
+  .nested {
+    padding-left: 2rem;
+  }
+  .container {
+    padding-right: 0 !important;
+    display: none;
+    width: 100%;
+  }
+  .sub_nav_heading {
+    padding-left: 0;
+    display: flex;
+    flex-flow: nowrap;
+    margin: 0;
+  }
+  .hr {
+    display: block;
+    margin: 0.5rem 0 0.625rem 1.5rem;
+  }
+  .links:hover {
+    color: #0aa6e5;
+  }
+  .bulletPoint {
+    display: none;
+  }
+
+  .childRoot {
+    padding-left: 1.5rem;
+    padding-right: 7.5rem;
+    font-size: 1rem;
+  }
+
+  .contributeContainer {
+    display: block;
+    background-color: #f7f9fa;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .container.open {
+    display: block;
+  }
+
+  .accordionTitle {
+    padding: 0;
+  }
+
+  .chevron,
+  .openChevron {
+    padding-left: 0;
+  }
+}
+
+/* sm */
+@media only screen and (max-width: 960px) {
+  .accordionItem {
+    width: 100%;
+  }
+}

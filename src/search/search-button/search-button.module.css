@@ -1,0 +1,46 @@
+.desktop_button {
+  display: flex;
+  align-items: center;
+  background-color: #f7f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.875rem 0 0.875rem 1.366rem;
+  border-radius: 1.875rem;
+  width: 11.5rem;
+  font-size: 1rem;
+  color: #95a1ad;
+  cursor: pointer;
+}
+
+.mobile_button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: block;
+  margin-top: 3px;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  border: 1px solid #aaeafc;
+}
+
+.search_icon {
+  margin-right: 0.493rem;
+}
+
+.text {
+  width: 6.281rem;
+  text-align: left;
+  margin-top: 0.125rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .text,
+  .subtract_icon {
+    display: none;
+  }
+
+  .input {
+    width: 24rem;
+  }
+}

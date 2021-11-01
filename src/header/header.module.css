@@ -1,0 +1,97 @@
+.section {
+  position: sticky;
+  top: 0;
+  padding-left: 2rem;
+  min-height: 75px;
+  background: linear-gradient(to bottom, rgb(255 255 255), rgb(255 255 255/ 80%), rgb(255 255 255/ 50%), transparent);
+  z-index: 1;
+}
+
+.smSection {
+  padding-left: 0;
+}
+
+.grid {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.searchButton {
+  margin-right: 0.75rem;
+}
+
+.contributeContainer {
+}
+
+.contribution {
+  justify-content: right;
+}
+
+.contribute_logo {
+  display: flex;
+  align-items: center;
+  color: #25292e;
+  padding: 0.875rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #edeff2;
+}
+
+.github {
+  color: #25292e;
+}
+
+.contribute_logo:hover > .github {
+  fill: #0a5480;
+}
+
+.contribute_logo:hover {
+  background-color: #ddf6fe;
+}
+
+.logo {
+  width: 11.25rem;
+  text-align: left;
+  margin: 0;
+  box-sizing: border-box;
+}
+.categoryTitle {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+/* lg */
+@media only screen and (max-width: 1920px) {
+  .contributeContainer {
+  }
+}
+
+/* md */
+@media only screen and (max-width: 1280px) {
+  .section {
+    padding-left: 0;
+  }
+  .categoryTitle {
+    visibility: hidden;
+  }
+  .hamburgerMenu {
+    display: block;
+  }
+  .contribution {
+    display: none;
+  }
+}

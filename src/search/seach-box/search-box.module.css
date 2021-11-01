@@ -1,0 +1,74 @@
+.input_container {
+  display: flex;
+  align-items: center;
+}
+
+.input_container:focus-within .search_icon {
+  border: 1px solid #aaeafc;
+  border-right: none;
+  background-color: #ffffff;
+}
+
+.input_container:focus-within .close_button {
+  border: 1px solid #aaeafc;
+  border-left: none;
+  background-color: #ffffff;
+}
+
+.input {
+  padding: 1.125rem 0.117rem 1.125rem 0.618rem;
+  border: none;
+  width: 30rem;
+  font-size: 1rem;
+  color: #95a1ad;
+  background-color: #f7f9fa;
+}
+
+.input:focus {
+  border: 1px solid #aaeafc;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.search_icon {
+  padding: 1.188rem 0 1.188rem 1.188rem;
+  background-color: #f7f9fa;
+}
+
+.close_button {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background-color: #f7f9fa;
+  padding: 1.219rem 1.219rem 1.219rem 0;
+}
+
+.text {
+  width: 6.281rem;
+  text-align: left;
+  margin-top: 0.125rem;
+}
+
+/* sx */
+@media only screen and (max-width: 600px) {
+  .input {
+    width: 81vw;
+  }
+
+  .input_container:focus-within {
+    box-shadow: 0px 10px 15px rgb(0 0 0 / 15%);
+  }
+
+  .input_container:focus-within .search_icon,
+  .input_container:focus-within .close_button,
+  .input:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+}

@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+}
+.heading {
+  display: none;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.searchGrid {
+  text-align: right;
+  max-height: 25vh;
+  min-width: 25vw;
+  padding-top: 0.875rem;
+  position: sticky;
+  top: 123px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.link {
+  color: #000000de;
+  text-decoration: none;
+}
+.enabledlinks {
+  text-align: center;
+  padding: 0.625rem;
+  flex-grow: 0;
+  flex-basis: 18%;
+  width: 25px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.disabledLinks {
+  text-align: center;
+  color: #95a1ad;
+  padding: 0.625rem;
+  flex-grow: 0;
+  flex-basis: 18%;
+  width: 25px;
+  margin: 0;
+  box-sizing: border-box;
+}
+.firstId {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 0 2rem 0;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-top: 8px;
+  /* justify-content: flex-start; */
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  /* align-items: flex-start; */
+}
+.id {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0 0 2rem 0;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-top: 8px;
+  /* justify-content: flex-start; */
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  /* align-items: flex-start; */
+}
+.title {
+  font-size: 1.125rem;
+  padding-bottom: 0.5rem;
+}
+.description {
+  font-size: 1rem;
+  color: #78838f;
+}
+.list {
+  padding: 0;
+  max-width: 29.25rem;
+  margin-right: 80px;
+  margin: 0;
+  position: relative;
+  list-style: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.listItem {
+  display: block !important;
+  padding: 0 0 2rem 0 !important;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  width: 100%;
+  /* justify-content: flex-start; */
+  text-decoration: none;
+}
+
+.listItemText {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* md */
+@media only screen and (max-width: 1280px) {
+  .heading {
+    display: block;
+  }
+}
+
+/* xs */
+@media only screen and (max-width: 600px) {
+  .list {
+    margin-right: 64px;
+  }
+  .searchGrid {
+    padding-top: 0;
+  }
+}
