@@ -2,7 +2,7 @@ import React from 'react';
 import Tooltip, { TooltipProps } from '@material-ui/core/Tooltip';
 import { makeStyles } from '@material-ui/styles';
 
-const useStylesBootstrap = makeStyles((theme) => ({
+const useStylesBootstrap = makeStyles(() => ({
   arrow: {
     color: 'black',
   },

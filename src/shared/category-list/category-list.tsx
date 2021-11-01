@@ -1,11 +1,11 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { isDatePast } from 'src/content/events';
+import { trackEvent } from 'lib/ga';
 import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
-import { trackEvent } from 'lib/ga';
 
 export interface CategoryListProps {
   name?: string; // category's name

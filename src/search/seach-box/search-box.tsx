@@ -1,8 +1,8 @@
+/* eslint-disable jsx-a11y/no-autofocus */
 import React, { useRef, useState } from 'react';
 import { Icon } from 'src/shared/icon';
-import styles from './search-box.module.css';
 import classNames from 'classnames';
-import { useMediaQuery } from '@/hooks/media-query';
+import styles from './search-box.module.css';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 
 type SearchBoxProps = {
@@ -59,7 +59,13 @@ export const SearchBox: React.FC<SearchBoxProps> = ({
         className={styles.input}
         onChange={onChange}
       />
-      <button onClick={resetFocus} className={styles.close_button} aria-label="Close search bar" disabled={disabled}>
+      <button
+        type="button"
+        onClick={resetFocus}
+        className={styles.close_button}
+        aria-label="Close search bar"
+        disabled={disabled}
+      >
         <Icon name="close" size={15} color={disabled ? '#B4BFCC' : '#78838F'} />
       </button>
     </div>

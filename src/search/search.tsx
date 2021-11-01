@@ -1,8 +1,7 @@
-import { useMediaQuery } from '@/hooks/media-query';
-import { useOutsideClick } from '@/hooks/use-outside-click';
 import React, { useState } from 'react';
 import { Modal } from 'src/shared/modal';
-import { SearchBox, SearchButton, SearchResults } from './';
+import { useMediaQuery } from '@/hooks/media-query';
+import { SearchBox, SearchButton, SearchResults } from '.';
 import { search } from './fuse';
 import styles from './search.module.css';
 
@@ -12,9 +11,9 @@ export const Search: React.FC = () => {
   const [searchResults, setSearchResults] = useState([]);
   const isMobile = useMediaQuery(640);
 
-  const handleSearchTerm = (searchTerm: string) => {
-    setSearchTerm(searchTerm);
-    const results = search(searchTerm);
+  const handleSearchTerm = (pattern: string) => {
+    setSearchTerm(pattern);
+    const results = search(pattern);
     setSearchResults(results);
   };
 

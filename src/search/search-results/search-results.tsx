@@ -12,16 +12,6 @@ type SearchResultsProps = {
   closeSearchBox: () => void;
 };
 
-export const SearchResults: React.FC<SearchResultsProps> = ({ searchTerm, isMobile, results, closeSearchBox }) => (
-  <>
-    {results.length ? (
-      <ResultsList isMobile={isMobile} results={results} closeSearchBox={closeSearchBox} />
-    ) : (
-      <NoResults searchTerm={searchTerm} />
-    )}
-  </>
-);
-
 export const ResultsList: React.FC<{ isMobile: boolean; results: any[]; closeSearchBox: () => void }> = ({
   isMobile,
   results,
@@ -49,12 +39,24 @@ export const ResultsList: React.FC<{ isMobile: boolean; results: any[]; closeSea
 export const NoResults: React.FC<{ searchTerm: string }> = ({ searchTerm }) => (
   <div className={styles.no_results_container}>
     <div className={styles.no_results_emoji_container}>
-      <i className={styles.no_results_emoji}>🤔</i>
+      <span role="img" aria-label="Thinking emoji" className={styles.no_results_emoji}>
+        🤔
+      </span>
     </div>
-    <h4 className={styles.no_results_header}>No results for '{searchTerm}'</h4>
+    <h4 className={styles.no_results_header}>No results for &#39;{searchTerm}&#39;</h4>
     <div className={styles.no_results_body}>
-      <p>We couldn't find anything matching your search.</p>
+      <p>We couldn&#39;t find anything matching your search.</p>
       <p>Try again with a different term</p>
     </div>
   </div>
+);
+
+export const SearchResults: React.FC<SearchResultsProps> = ({ searchTerm, isMobile, results, closeSearchBox }) => (
+  <>
+    {results.length ? (
+      <ResultsList isMobile={isMobile} results={results} closeSearchBox={closeSearchBox} />
+    ) : (
+      <NoResults searchTerm={searchTerm} />
+    )}
+  </>
 );

@@ -2,10 +2,10 @@ import React, { ReactElement, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { IntlErrorCode, NextIntlProvider } from 'next-intl';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { pageView } from 'lib/ga';
 import Layout from '../src/layout';
 import '../styles/globals.css';
-import { pageView } from 'lib/ga';
-import { useRouter } from 'next/router';
 
 function onError(error) {
   if (process.env.NODE_ENV !== 'production') {

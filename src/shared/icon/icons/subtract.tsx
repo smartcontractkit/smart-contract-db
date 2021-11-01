@@ -1,3 +1,4 @@
+import React from 'react';
 import { IconProps, IconPropDefaults } from '../icon';
 
 export const Subtract: React.FC<IconProps> = ({
