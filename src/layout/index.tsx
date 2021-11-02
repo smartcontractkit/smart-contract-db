@@ -22,7 +22,6 @@ const Layout: React.FC = ({ children }) => {
       <Head>
         <title>Smart Contract DB</title>
         <meta name="description" content="Resources archive for all things crypto." />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="preload" href="/fonts/CircularStd/CircularStd-Medium.ttf" as="font" crossOrigin="" />
         <link rel="preload" href="/fonts/CircularStd/CircularStd-Bold.ttf" as="font" crossOrigin="" />
       </Head>

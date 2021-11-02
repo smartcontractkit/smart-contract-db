@@ -6,6 +6,20 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta charSet="UTF-8" />
+
+          <meta content="/favicons/mstile-70x70.png" name="msapplication-square70x70" />
+          <meta content="/favicons/mstile-144x144.png" name="msapplication-square144x144" />
+          <meta content="/favicons/mstile-150x150.png" name="msapplication-square150x150" />
+          <meta content="/favicons/mstile-310x150.png" name="msapplication-wide310x150" />
+          <meta content="/favicons/mstile-310x310.png" name="msapplication-square310x310" />
+
+          <link href="/favicons/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192" />
+          <link href="/favicons/apple-touch-icon-512x512.png" rel="icon" sizes="512x512" type="image/png" />
+
+          <link href="/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+          <link href="/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+
           <script async src="https://www.googletagmanager.com/gtag/js?id='UA-128878871-18'" />
           <script
             // eslint-disable-next-line react/no-danger
