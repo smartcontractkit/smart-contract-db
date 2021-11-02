@@ -27,6 +27,7 @@
     "react": "^17.0.2",
     "react-cool-inview": "^2.0.7",
     "react-dom": "^17.0.2",
+    "react-gtm-module": "^2.0.11",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
@@ -35,8 +36,8 @@
     "@babel/core": "^7.16.0",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
-    "@storybook/react": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
     "@svgr/webpack": "^5.5.0",
     "@types/gtag.js": "0.0.4",
     "@types/react": "17.0.33",

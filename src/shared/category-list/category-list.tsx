@@ -1,6 +1,5 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import { trackEvent } from 'lib/ga';
 import styles from './category-list.module.css';
 import { Icon } from '../icon';
 import { Initicon } from '../initicon';
@@ -32,18 +31,11 @@ function dateFormatter(date: string): string {
 }
 
 const ListItem = (id, title, src, startDate, description, link) => {
-  const linkClicked = (action: string) => {
-    trackEvent({
-      action,
-      params: {},
-    });
-  };
-
   const identiconSeedMax = (max: number) => Math.floor(Math.random() * max);
 
   return (
     <li key={id} className={styles.listItem}>
-      <Link className={styles.link} rel="noopener noreferrer" href={link} onClick={() => linkClicked(`${id}-link`)}>
+      <Link className={styles.link} rel="noopener noreferrer" href={link}>
         <div className={styles.avatarContainer}>
           {src ? (
             <div className={styles.avatar}>
