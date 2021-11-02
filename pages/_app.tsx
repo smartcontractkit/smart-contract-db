@@ -2,10 +2,13 @@ import React, { ReactElement, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { IntlErrorCode, NextIntlProvider } from 'next-intl';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { pageView } from 'lib/ga';
+import TagManager from 'react-gtm-module';
 import Layout from '../src/layout';
 import '../styles/globals.css';
+
+const tagManagerArgs = {
+  gtmId: 'GTM-5J5DL65',
+};
 
 function onError(error) {
   if (process.env.NODE_ENV !== 'production') {
@@ -27,19 +30,9 @@ function getMessageFallback({ namespace, key, error }) {
 }
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
-  const router = useRouter();
-
   useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      pageView(url);
-    };
-
-    router.events.on('routeChangeComplete', handleRouteChange);
-
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router]);
+    TagManager.initialize(tagManagerArgs);
+  }, []);
 
   useEffect(() => {
     // Remove the server-side injected CSS.

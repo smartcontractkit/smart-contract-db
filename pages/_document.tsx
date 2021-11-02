@@ -20,18 +20,6 @@ export default class MyDocument extends Document {
           <link href="/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
           <link href="/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
 
-          <script async src="https://www.googletagmanager.com/gtag/js?id='UA-128878871-18'" />
-          <script
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-128878871-18');
-          `,
-            }}
-          />
           <link rel="preload" href="/fonts/CircularStd/CircularStd-Medium.ttf" as="font" crossOrigin="" />
           <link rel="preload" href="/fonts/CircularStd/CircularStd-Bold.ttf" as="font" crossOrigin="" />
         </Head>
