@@ -1,7 +1,21 @@
 .searchbox_position {
   top: 38px;
   justify-content: flex-end;
-  right: 118px;
+  right: 75vh;
+}
+
+/* 4k */
+@media (max-width: 2560) {
+  .searchbox_position {
+    right: 109vh;
+  }
+}
+
+/* lg */
+@media only screen and (max-width: 1440px) {
+  .searchbox_position {
+    right: 42vh;
+  }
 }
 
 /* md */
