@@ -50,16 +50,6 @@
     "src": "/img/events/esp_bootcamp.png"
   },
   {
-    "id": "chainlink-fall-hackathon",
-    "title": "Chainlink Fall 2021 Hackathon",
-    "description": "Join us for our biggest hackathon yet, where you’ll get the chance to build the next generation of hybrid smart contracts alongside developers, creators, artists, and industry-leading mentors from across the blockchain ecosystem.",
-    "startDate": "2021-12-22T06:00:00.000Z",
-    "endDate": "2021-11-28T06:00:00.000Z",
-    "location": "Virtual",
-    "link": "https://chain.link/hackathon",
-    "src": "/img/events/esp_bootcamp.png"
-  },
-  {
     "id": "HackOnLisk2",
     "title": "HackOnLisk2",
     "description": "Build your own blockchain application with the Lisk SDK in JavaScript. Blockchain apps should be submitted to either the DeFi or GameFi category.",
