@@ -1,9 +1,9 @@
-import { useKeyPress } from '@/hooks/use-key-press';
 import classNames from 'classnames';
 import * as React from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'src/link';
 import { Icon } from 'src/shared/icon';
+import { useKeyPress } from '@/hooks/use-key-press';
 import { HotKeyBar } from './hotkey-bar';
 import styles from './search-results.module.css';
 
