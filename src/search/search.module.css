@@ -1,7 +1,6 @@
 .searchbox_position {
   top: 38px;
-  justify-content: flex-end;
-  right: 75vh;
+  left: 48%;
 }
 
 /* 4k */
@@ -14,21 +13,21 @@
 /* lg */
 @media only screen and (max-width: 1440px) {
   .searchbox_position {
-    right: 42vh;
+    left: 46%;
   }
 }
 
 /* md */
 @media only screen and (max-width: 1280px) {
   .searchbox_position {
-    right: 155px;
+    left: 30%;
   }
 }
 
 /* md */
-@media only screen and (max-width: 1024) {
+@media only screen and (max-width: 800px) {
   .searchbox_position {
-    right: 210px;
+    left: 15%;
   }
 }
 
@@ -36,6 +35,7 @@
 @media only screen and (max-width: 600px) {
   .searchbox_position {
     top: 0;
+    left: 0;
     background-color: #fff;
     width: 100vw;
   }
