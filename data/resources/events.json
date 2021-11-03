@@ -59,4 +59,14 @@
     "link": "https://chain.link/es/bootcamp/",
     "src": "/img/events/esp_bootcamp.png"
   }
+    {
+    "id": "HackOnLisk2",
+    "title": "HackOnLisk2",
+    "description": "Build your own blockchain application with the Lisk SDK in JavaScript. Blockchain applications should be submitted to either the DeFi or GameFi category.",
+    "startDate": "2021-09-10T06:00:00.000Z",
+    "endDate": "2021-11-19T06:00:00.000Z",
+    "location": "Virtual",
+    "link": "https://secure.devpost.com/users/register",
+    "src": ""
+  }
 ]
