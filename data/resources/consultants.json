@@ -21,17 +21,17 @@
     "src": "/img/consultants/chainsafe.png"
   },
   {
-    "id": "hack-bg",
-    "title": "Hack",
-    "description": "Blockchain Consulting, technical development for Initial Coin Offerings and Decentralized Applications, Public and Private Blockchain Development. ",
-    "link": "https://hack.bg",
-    "src": "/img/consultants/hack.png"
-  },
-  {
     "id": "this-dot-labs",
     "title": "This Dot Labs",
     "description": "Provides architectural guidance, staff augmentation, on demand Subject Matter Experts, temporary CTOs, one-on-one pairing, mentorship, and open source strategy support.",
     "link": "https://www.thisdot.co/",
     "src": "/img/consultants/this-dot-labs.svg"
+  },
+  {
+    "id": "hack-bg",
+    "title": "Hack",
+    "description": "Blockchain Consulting, technical development for Initial Coin Offerings and Decentralized Applications, Public and Private Blockchain Development. ",
+    "link": "https://hack.bg",
+    "src": "/img/consultants/hack.png"
   }
 ]

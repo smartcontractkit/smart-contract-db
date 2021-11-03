@@ -19,7 +19,9 @@ import deploy from '@/data/resources/tools/deploy.json';
 import monitoring from '@/data/resources/tools/monitoring.json';
 import administration from '@/data/resources/tools/administration.json';
 import security from '@/data/resources/tools/security.json';
-import { communities } from './communities';
+import { communities, taggedCommunities } from './communities';
+import { ResourceParam } from './models/resource.model';
+import { compareStrings, compareDates } from 'lib/compare';
 
 /**
  * Event filter. Hides past events once they reach their end date.
@@ -30,17 +32,55 @@ import { communities } from './communities';
 export const isDatePast = (endDate: string) =>
   new Date(endDate).setHours(0, 0, 0, 0) <= new Date(Date.now()).setHours(0, 0, 0, 0);
 
-const allCommunitites = communities.reduce((a, c) => {
-  const data = c.data.map((x) => ({ ...x, type: 'Communities', tag: c.tag }));
-  a.push(...data);
-  return a;
-}, []);
+/**
+ * Sort resoures
+ */
+export const resourceParams: ResourceParam[] = [
+  { id: 'communities', title: 'Communities', data: communities },
+  { id: 'consultants', title: 'Consultants', data: consultants },
+  { id: 'events', title: 'Events', data: events.filter(({ endDate }) => !isDatePast(endDate)) },
+  { id: 'books', title: 'Books', data: books },
+  { id: 'tutorials', title: 'Tutorials', data: tutorials },
+  { id: 'courses', title: 'Courses', data: courses },
+  { id: 'workshops', title: 'Workshops', data: workshops },
+  { id: 'trainers', title: 'Trainers', data: trainers },
+  { id: 'schools', title: 'Schools', data: schools },
+  { id: 'frameworks', title: 'Frameworks', data: frameworks },
+  { id: 'blockchains', title: 'Blockchains', data: blockchains },
+  { id: 'ides', title: 'IDEs', data: ides },
+  { id: 'libraries', title: 'Libraries', data: libraries },
+  { id: 'exchanges', title: 'Exchanges', data: exchanges },
+  { id: 'languages', title: 'Languages', data: languages },
+  { id: 'validators', title: 'Validators', data: validators },
+  { id: 'wallets', title: 'Wallets', data: wallets },
+  { id: 'test', title: 'Test', data: test },
+  { id: 'deploy', title: 'Deploy', data: deploy },
+  { id: 'monitoring', title: 'Monitoring', data: monitoring },
+  { id: 'administration', title: 'Administration', data: administration },
+  { id: 'security', title: 'Security', data: security },
+].map(({ id, title, data }) => {
+  if (id === 'events') {
+    return {
+      id,
+      title,
+      data: data.sort(compareDates('startDate')),
+    };
+  } else if (id !== 'communities') {
+    return {
+      id,
+      title,
+      data: data.sort(compareStrings('title')),
+    };
+  }
+
+  return { id, title, data };
+});
 
 /**
  * Search prep to show type of category a resource belongs to.
  */
-export const resources = [
-  ...allCommunitites,
+export const searchList = [
+  ...taggedCommunities,
   ...consultants.map((x) => ({ ...x, type: 'Consultants' })),
   ...events.map((x) => ({ ...x, type: 'Events' })).filter(({ endDate }) => !isDatePast(endDate)),
   ...books.map((x) => ({ ...x, type: 'Books' })),
