@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 export const compareStrings =
   (key: string, order: 'asc' | 'desc' = 'asc') =>
   (a, b) => {

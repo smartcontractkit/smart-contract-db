@@ -1,3 +1,4 @@
+import { compareStrings, compareDates } from 'lib/compare';
 import consultants from '@/data/resources/consultants.json';
 import events from '@/data/resources/events.json';
 import books from '@/data/resources/education/books.json';
@@ -21,7 +22,6 @@ import administration from '@/data/resources/tools/administration.json';
 import security from '@/data/resources/tools/security.json';
 import { communities, taggedCommunities } from './communities';
 import { ResourceParam } from './models/resource.model';
-import { compareStrings, compareDates } from 'lib/compare';
 
 /**
  * Event filter. Hides past events once they reach their end date.
@@ -65,7 +65,8 @@ export const resourceParams: ResourceParam[] = [
       title,
       data: data.sort(compareDates('startDate')),
     };
-  } else if (id !== 'communities') {
+  }
+  if (id !== 'communities') {
     return {
       id,
       title,

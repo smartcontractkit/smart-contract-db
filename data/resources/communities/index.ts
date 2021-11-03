@@ -1,10 +1,10 @@
+import { compareStrings } from 'lib/compare';
 import ventureCapitalFunds from '@/data/resources/communities/venture-capital-funds.json';
 import grantPrograms from '@/data/resources/communities/grant-program.json';
 import incubatorsAccelerators from '@/data/resources/communities/incubators-accelerators.json';
 import developer from '@/data/resources/communities/developer.json';
 import enterprise from '@/data/resources/communities/enterprise.json';
 import { Resource } from '../models/resource.model';
-import { compareStrings } from 'lib/compare';
 
 export const communities: { tag: string; data: Resource[] }[] = [
   ventureCapitalFunds,
