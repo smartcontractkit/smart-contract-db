@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from 'src/shared/modal';
-import { useMediaQuery } from '@/hooks/media-query';
+import { useMediaQuery } from '@/hooks/use-media-query';
 import { SearchBox, SearchButton, SearchResults } from '.';
 import { search } from './fuse';
 import styles from './search.module.css';
