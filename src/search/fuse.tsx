@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import { resources as data } from '@/data/resources';
+import { searchList as data } from '@/data/resources';
 
 const options = {
   threshold: 0.2,
