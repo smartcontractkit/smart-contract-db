@@ -60,7 +60,7 @@ export const Sidebar: React.FC<any> = ({ open }) => {
                 {/* hide depending on screen size */}
                 <li className={styles.contributeContainer}>
                   <a
-                    href="https://github.com/thisdot/smart-contract-db"
+                    href="https://github.com/smartcontractkit/smart-contract-db"
                     rel="noopener noreferrer"
                     className={styles.contributeLinks}
                   >

@@ -30,6 +30,6 @@ All pull requests made on GitHub will be reviewed for the following criteria:
 
 This project uses [husky v7](https://github.com/typicode/husky) to lint your commits. The project uses the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) guideline.
 
-# Report bugs using Github's [issues](https://github.com/thisdot/smart-contract-db/issues)
+# Report bugs using Github's [issues](https://github.com/smartcontractkit/smart-contract-db/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/thisdot/smart-contract-db/issues/new).
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/smartcontractkit/smart-contract-db/issues/new).

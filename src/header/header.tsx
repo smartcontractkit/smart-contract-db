@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
             <HamburgerMenu />
           </div>
           <div className={styles.contribution}>
-            <Link href="https://github.com/thisdot/smart-contract-db" className={styles.contribute_logo}>
+            <Link href="https://github.com/smartcontractkit/smart-contract-db" className={styles.contribute_logo}>
               {/* TODO: fix bootstrap now that it's not a button */}
               <BootstrapTooltip title="Contribute at GitHub">
                 <>
