@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Icon } from 'src/shared/icon';
-import { useMediaQuery } from '@/hooks/media-query';
+import { useMediaQuery } from '@/hooks/use-media-query';
 import styles from './search-button.module.css';
 
 type SearchButtonProps = {
