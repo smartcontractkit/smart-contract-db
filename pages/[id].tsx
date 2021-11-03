@@ -70,7 +70,7 @@ export default function Resources({ resources, title }: { resources: Resource[];
 
   let data = resources;
   if (title === 'Events') {
-    data = resources.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
+    data = resources.filter(({ endDate }) => !isDatePast(endDate));
   }
 
   return (

@@ -5,7 +5,9 @@ import events from '@/data/resources/events.json';
 import { isDatePast } from '@/data/resources';
 
 export const Events: React.FC = () => {
-  const ongoingEvents = events.filter(({ startDate, endDate }) => !isDatePast(startDate, endDate));
+  console.log(events);
+  const ongoingEvents = events.filter(({ endDate }) => !isDatePast(endDate));
+  console.log(ongoingEvents);
 
   return (
     <section className={styles.section}>

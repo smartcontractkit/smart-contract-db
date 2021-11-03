@@ -13,7 +13,7 @@ export const ContributeBanner: React.FC = () => {
               Create a PR if you see mistakes, room for improvement, or new opportunities to help dev team..
             </div>
           </div>
-          <Link href="https://github.com/thisdot/smart-contract-db" className={styles.links}>
+          <Link href="https://github.com/smartcontractkit/smart-contract-db" className={styles.links}>
             <button type="button" className={styles.button}>
               Contribute
               <img
