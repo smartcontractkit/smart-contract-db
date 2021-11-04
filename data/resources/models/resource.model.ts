@@ -8,6 +8,7 @@ export interface Resource {
   location?: string;
   src?: string;
   tag?: string;
+  type?: string;
 }
 
 export interface TaggedResource {
