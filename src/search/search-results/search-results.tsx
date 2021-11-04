@@ -3,9 +3,10 @@ import * as React from 'react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'src/link';
 import { Icon } from 'src/shared/icon';
-import { useKeyPress } from '@/hooks/use-key-press';
 import { HotKeyBar } from './hotkey-bar';
 import styles from './search-results.module.css';
+import { useFocusTrap } from '@/hooks/use-focus';
+import { Resource } from '@/data/resources/models/resource.model';
 
 type SearchResultsProps = {
   searchTerm: string;
@@ -14,41 +15,47 @@ type SearchResultsProps = {
   closeSearchBox: () => void;
 };
 
+type ResultsListItemProps = {
+  index: number;
+  item: Resource;
+  focus: boolean;
+  setFocus: (index: number) => void;
+  closeSearchBox: () => void;
+};
+
 const keyMapper = ({ id, type, tag }: { id: string; type: string; tag: string }) =>
   `${id}-${type.toLocaleLowerCase()}-${tag?.toLocaleLowerCase()}`;
 
-export const ResultsListItem: React.FC<{ item; active; setSelected; setHovered; closeSearchBox }> = ({
-  item,
-  active,
-  setSelected,
-  setHovered,
-  closeSearchBox,
-}) => {
+export const ResultsListItem: React.FC<ResultsListItemProps> = ({ index, item, focus, setFocus, closeSearchBox }) => {
   const { title, link, type } = item;
-  const itemRef = useRef(null);
+  const linkRef = useRef(null);
 
   useEffect(() => {
-    if (active) {
-      // Move element into view when it is focused
-      itemRef.current.focus();
+    if (focus) {
+      linkRef.current.focus();
     }
-  }, [itemRef, active]);
+  }, [focus]);
 
   const handleSelect = useCallback(() => {
     // setting focus to that element when it is selected
-    setSelected(item);
-  }, [item, setSelected]);
+    setFocus(index);
+  }, [index, setFocus]);
+
+  const handleClick = () => {
+    handleSelect();
+    closeSearchBox();
+  };
 
   return (
-    <li
-      ref={itemRef}
-      className={classNames([styles.results_list_item, active ? 'active' : ''])}
-      onClick={() => setSelected(item)}
-      onMouseEnter={() => setHovered(item)}
-      onMouseLeave={() => setHovered(undefined)}
-      onKeyPress={handleSelect}
-    >
-      <Link className={styles.link} rel="noopener noreferrer" href={link} onClick={closeSearchBox}>
+    <li className={styles.results_list_item}>
+      <Link
+        ref={linkRef}
+        className={styles.link}
+        rel="noopener noreferrer"
+        href={link}
+        onKeyPress={handleSelect}
+        onClick={handleClick}
+      >
         <div>
           <Icon className={styles.results_list_item_arrow_icon} name="long-arrow-up" size={12} />
           <span className={classNames([styles.results_list_item_title, styles.truncate])}>{title}</span>
@@ -59,45 +66,12 @@ export const ResultsListItem: React.FC<{ item; active; setSelected; setHovered; 
   );
 };
 
-export const ResultsList: React.FC<{ isMobile: boolean; results: any[]; closeSearchBox: () => void }> = ({
-  isMobile,
-  results,
-  closeSearchBox,
-}) => {
-  const [selected, setSelected] = useState(undefined);
-  const downPress = useKeyPress('ArrowDown');
-  const upPress = useKeyPress('ArrowUp');
-  const enterPress = useKeyPress('Enter');
-  const [cursor, setCursor] = useState(0);
-  const [hovered, setHovered] = useState(undefined);
-
-  // Set focus down press
-  useEffect(() => {
-    if (results.length && downPress) {
-      setCursor((prevState) => (prevState < results.length - 1 ? prevState + 1 : prevState));
-    }
-  }, [downPress]);
-
-  // Set focus on up press
-  useEffect(() => {
-    if (results.length && upPress) {
-      setCursor((prevState) => (prevState > 0 ? prevState - 1 : prevState));
-    }
-  }, [upPress]);
-
-  // Set selected list item on enter press
-  useEffect(() => {
-    if (results.length && enterPress) {
-      setSelected(results[cursor]);
-    }
-  }, [cursor, enterPress]);
-
-  // Set focus on cursor hover
-  useEffect(() => {
-    if (results.length && hovered) {
-      setCursor(results.indexOf(hovered));
-    }
-  }, [hovered]);
+export const ResultsList: React.FC<{
+  isMobile: boolean;
+  results: any[];
+  closeSearchBox: () => void;
+}> = ({ isMobile, results, closeSearchBox }) => {
+  const [focus, setFocus] = useFocusTrap(results.length);
 
   return (
     <div className={styles.results_container}>
@@ -106,10 +80,10 @@ export const ResultsList: React.FC<{ isMobile: boolean; results: any[]; closeSea
         {results.map((item, i) => (
           <ResultsListItem
             key={keyMapper(item)}
-            active={i === cursor}
+            index={i}
             item={item}
-            setSelected={setSelected}
-            setHovered={setHovered}
+            focus={focus === i}
+            setFocus={setFocus}
             closeSearchBox={closeSearchBox}
           />
         ))}
@@ -134,12 +108,6 @@ export const NoResults: React.FC<{ searchTerm: string }> = ({ searchTerm }) => (
   </div>
 );
 
-export const SearchResults: React.FC<SearchResultsProps> = ({ searchTerm, isMobile, results, closeSearchBox }) => (
-  <>
-    {results.length ? (
-      <ResultsList isMobile={isMobile} results={results} closeSearchBox={closeSearchBox} />
-    ) : (
-      <NoResults searchTerm={searchTerm} />
-    )}
-  </>
+export const SearchResults: React.FC<SearchResultsProps> = (props) => (
+  <>{props.results.length ? <ResultsList {...props} /> : <NoResults searchTerm={props.searchTerm} />}</>
 );

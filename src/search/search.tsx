@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Modal } from 'src/shared/modal';
 import { useMediaQuery } from '@/hooks/use-media-query';
 import { SearchBox, SearchButton, SearchResults } from '.';
