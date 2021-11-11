@@ -58,5 +58,114 @@
     "location": "Virtual",
     "link": "https://secure.devpost.com/users/register",
     "src": ""
+  },
+  {
+    "id": "blockchain-week-rome",
+    "title": "Blockchain Week Rome",
+    "description": "The biggest Italian event dedicated to blockchain and cryptocurrencies is coming back with an unmissable second edition!",
+    "startDate": "2021-11-16T00:00:00.000Z",
+    "endDate": "2021-11-20T23:59:59.000Z",
+    "location": "Rome",
+    "link": "https://en.blockchainweekrome.com/"
+  },
+  {
+    "id": "blockchain-expo-global",
+    "title": "Blockchain Expo Global",
+    "description": "The world-leading Blockchain Expo series will arrive at the London Olympia on the 1-2 December 2022 to host its sixth annual Global event.",
+    "startDate": "2021-12-01T00:00:00.000Z",
+    "endDate": "2021-12-02T23:59:59.000Z",
+    "location": "London",
+    "link": "https://blockchain-expo.com/global/"
+  },
+  {
+    "id": "blockchain-expo-europe",
+    "title": "Blockchain Expo Europe",
+    "description": "The world leading Blockchain Expo series will return to the RAI, Amsterdam on the 23-24th November 2021 and 30th Nov – 1st December 2021 Virtually  to host its annual Europe event.",
+    "startDate": "2021-11-23T00:00:00.000Z",
+    "endDate": "2021-11-24T23:59:59.000Z",
+    "location": "Amsterdam",
+    "link": "https://blockchain-expo.com/europe/"
+  },
+  {
+    "id": "blockchain-expo-na",
+    "title": "Blockchain Expo North America",
+    "description": "The Blockchain Expo North America will return to Santa Clara on the 11th-12th May 2022. The Blockchain Expo is an technology conference and event, consisting of top-level content and thought leadership discussions looking at the Blockchain ecosystem.",
+    "startDate": "2022-05-11T00:00:00.000Z",
+    "endDate": "2022-05-12T23:59:59.000Z",
+    "location": "Santa Clara",
+    "link": "https://blockchain-expo.com/northamerica/"
+  },
+  {
+    "id": "dcentral-miami",
+    "title": "Dcentral Miami",
+    "description": "Join the largest NFT & DeFi conference during Art Basel Miami week.",
+    "startDate": "2021-11-30T00:00:00.000Z",
+    "endDate": "2021-12-01T23:59:59.000Z",
+    "location": "Miami",
+    "link": "https://www.dcentralcon.com/"
+  },
+  {
+    "id": "blockchain-fest",
+    "title": "Blockchain Fest 2022",
+    "description": "The most interactive and innovated Asian 2-day event on Blockchain, Exchanges, Cryptocurrencies, Decentralized Finance (DeFi), NFTs, Mining, Gaming and Gambling, Online Payments and Investment.",
+    "startDate": "2021-11-30T00:00:00.000Z",
+    "endDate": "2021-11-30T23:59:59.000Z",
+    "location": "Singapore",
+    "link": "https://blockchain-fest.asia/"
+  },
+  {
+    "id": "shred",
+    "title": "Shred the System: Driving the Crypto & Blockchain Revolution",
+    "description": "Now that crypto is here to stay, it’s time to up your game and find your fit. Harrisburg University’s free, one-day cryptocurrency conference, March 2, 2021, convenes the brightest minds and biggest innovators in their fields.",
+    "startDate": "2022-03-02T09:00:00.000Z",
+    "endDate": "2022-03-02T17:00:00.000Z",
+    "location": "Harrisburg",
+    "link": "https://www.harrisburgu.edu/events/cryptocurrency-conference/"
+  },
+  {
+    "id": "blockchain-africa",
+    "title": "Blockchain Africa Conference 2022",
+    "description": "Join us at Africa’s leading blockchain and cryptocurrency conference, the 8th edition of the Blockchain Africa Conference.",
+    "startDate": "2022-03-17T09:00:00.000Z",
+    "endDate": "2022-03-18T17:00:00.000Z",
+    "location": "Johannesburg",
+    "link": "https://blockchainafrica.co/"
+  },
+  {
+    "id": "paris-blockchain",
+    "title": "Paris Blockchain Week Summit",
+    "description": "PBWSummit will gather the most prominent blockchain and digital asset organisations from all around the world for two days of insightful talks in Paris!",
+    "startDate": "2022-04-13T09:00:00.000Z",
+    "endDate": "2022-04-14T17:00:00.000Z",
+    "location": "Paris",
+    "link": "https://www.pbwsummit.com/"
+  },
+  {
+    "id": "blockchain-economy",
+    "title": "Blockchain Economy",
+    "description": "We are organizing the First Blockchain event in the \"World Expo\" history. Don't miss the most global blockchain event ever and book your stand! ",
+    "startDate": "2022-05-22T09:00:00.000Z",
+    "endDate": "2022-05-22T17:00:00.000Z",
+    "location": "Istanbul",
+    "link": "https://www.blockchaineconomy.istanbul/EN/index.html"
+  },
+  {
+    "id": "solidity-collins",
+    "title": "Solidity Workshop with Patrick Collins",
+    "description": "Learn Solidity, Blockchain, and Smart Contracts with this full free course by Chainlink Lead Developer Advocate Patrick Collins. Presented by the Boston Blockchain Association",
+    "startDate": "2021-12-07T17:00:00.000Z",
+    "endDate": "2021-12-07T20:00:00.000Z",
+    "location": "Boston",
+    "link": "https://www.meetup.com/Chainlink-Boston-Connected-Smart-Contracts/events/281687222/?isFirstPublish=true"
+  },
+  {
+    "id": "polkadot-apac",
+    "title": "Polkadot Hackathon: APAC Edition",
+    "description": "The Polkadot Hackathon Global series will bring the cutting edge of blockchain to your region, kicking off in Asia Pacific (APAC) on October 22. In association with AngelHack, this seven-week hackathon is your chance to build a blockchain or hack to your heart's content.",
+    "startDate": "2021-10-22T00:00:00.000Z",
+    "endDate": "2021-12-03T23:59:59.000Z",
+    "location": "Virtual",
+    "link": "https://angelhack.notion.site/Polkadot-Hackathon-APAC-Edition-fb14eed363ee4a8e8b03014c9a89252d",
+    "src": "/img/events/polkadot-apac.png"
   }
 ]
