@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import Link from 'src/link';
 import { Icon } from 'src/shared/icon';
 import { HotKeyBar } from './hotkey-bar';
@@ -108,6 +108,7 @@ export const NoResults: React.FC<{ searchTerm: string }> = ({ searchTerm }) => (
   </div>
 );
 
-export const SearchResults: React.FC<SearchResultsProps> = (props) => (
-  <>{props.results.length ? <ResultsList {...props} /> : <NoResults searchTerm={props.searchTerm} />}</>
-);
+export const SearchResults: React.FC<SearchResultsProps> = (props) => {
+  const { results, searchTerm } = props;
+  return <>{results.length ? <ResultsList {...props} /> : <NoResults searchTerm={searchTerm} />}</>;
+};

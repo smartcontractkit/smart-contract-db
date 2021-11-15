@@ -13,6 +13,7 @@ module.exports = {
     'prettier',
     'prettier/prettier',
     'plugin:prettier/recommended',
+    'plugin:json/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

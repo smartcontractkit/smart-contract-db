@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-autofocus */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Icon } from 'src/shared/icon';
 import classNames from 'classnames';
 import styles from './search-box.module.css';
