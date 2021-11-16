@@ -1550,10 +1550,10 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-11.1.2.tgz#27996efbbc54c5f949f5e8c0a156e3aa48369b99"
   integrity sha512-+fteyVdQ7C/OoulfcF6vd1Yk0FEli4453gr8kSFbU8sKseNSizYq6df5MKz/AjwLptsxrUeIkgBdAzbziyJ3mA==
 
-"@next/eslint-plugin-next@12.0.2":
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.0.2.tgz#9dd96fbae043cf967572d805f3054b9f0aaf5b3a"
-  integrity sha512-mmMlik6cuTkcHFi6CTdLeX0aPUceBi6gP3/k9dxjMjpiTBL5qXO+zwsGmGyg01MeeSC3tJpUEqOZVnxaFvKccA==
+"@next/eslint-plugin-next@12.0.4":
+  version "12.0.4"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-12.0.4.tgz#f1751715634e200a868aa3fa42b4c3391254de81"
+  integrity sha512-3N+LG+wQQB0JLfMj4YKkefWnjcsFVBmixRWdzbVBnt/cxbVZ0izf+BR1MzvrPX1oaP0OrYk8X/9Mn9Yftuajvg==
   dependencies:
     glob "7.1.7"
 
@@ -5361,12 +5361,12 @@ eslint-config-airbnb@^18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-next@12.0.2:
-  version "12.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-12.0.2.tgz#87ea50cf062d5701294948182cea9217ac0a45a4"
-  integrity sha512-Tck3Ga3IQ+/6ziTraLc1CTQ9kw2jWzjgZtB6wsBOAvMauK25a/ociCW8SFXsYWVFb899tdqPemrTZEeXjXjrvQ==
+eslint-config-next@12.0.4:
+  version "12.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-12.0.4.tgz#22f0305770f0d11bfa034df0efea7cf9cdb37d58"
+  integrity sha512-uBOHBjYaRF0MaS5feB7lFOncHhSrtFxZy/oud6pEW/wn/JUQtZWeH/J4JyODBfX+G7h9mttgHLZNmUjNJis6Kw==
   dependencies:
-    "@next/eslint-plugin-next" "12.0.2"
+    "@next/eslint-plugin-next" "12.0.4"
     "@rushstack/eslint-patch" "^1.0.6"
     "@typescript-eslint/parser" "^4.20.0"
     eslint-import-resolver-node "^0.3.4"
