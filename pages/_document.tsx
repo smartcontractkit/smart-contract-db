@@ -14,6 +14,9 @@ export default class MyDocument extends Document {
           <meta content="/favicons/mstile-310x150.png" name="msapplication-wide310x150" />
           <meta content="/favicons/mstile-310x310.png" name="msapplication-square310x310" />
 
+          <meta property="og:title" content="Smart Contract DB" />
+          <meta property="og:url" content="https://smartcontractdb.com/" />
+
           <link href="/favicons/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192" />
           <link href="/favicons/apple-touch-icon-512x512.png" rel="icon" sizes="512x512" type="image/png" />
 
