@@ -13,7 +13,11 @@ export default class MyDocument extends Document {
           <meta content="/favicons/mstile-150x150.png" name="msapplication-square150x150" />
           <meta content="/favicons/mstile-310x150.png" name="msapplication-wide310x150" />
           <meta content="/favicons/mstile-310x310.png" name="msapplication-square310x310" />
-          <meta name="twitter:title" content="Smart Contracts DB - Learn about smart contracts" />
+          <meta name="twitter:card" content="summary_large_image">
+          <meta name="twitter:site" content="@chainlink>
+          <meta name="twitter:title" content="Smart Contract DB - learn about smart contracts">
+          <meta name="twitter:description" content="Everything you’ve ever wanted to know about smart contracts, crypto and more. ">
+          <meta name="twitter:image" content="https://github.com/smartcontractkit/smart-contract-db/blob/danielgruesso-patch-6/src/hero-banner/meta-banner.png?raw=true">
 
           <link href="/favicons/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192" />
           <link href="/favicons/apple-touch-icon-512x512.png" rel="icon" sizes="512x512" type="image/png" />
