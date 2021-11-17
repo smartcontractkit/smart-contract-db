@@ -17,8 +17,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:site" content="@chainlink>
           <meta name="twitter:title" content="Smart Contract DB - learn about smart contracts">
           <meta name="twitter:description" content="Everything you’ve ever wanted to know about smart contracts, crypto and more. ">
-          <meta name="twitter:image" content="https://github.com/smartcontractkit/smart-contract-db/blob/danielgruesso-patch-6/src/hero-banner/meta-banner.png?raw=true">
-
+          
           <link href="/favicons/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192" />
           <link href="/favicons/apple-touch-icon-512x512.png" rel="icon" sizes="512x512" type="image/png" />
 
