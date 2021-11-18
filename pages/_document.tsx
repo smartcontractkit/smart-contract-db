@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
 
           <meta property="og:title" content="Smart Contract DB" />
           <meta property="og:url" content="https://smartcontractdb.com/" />
+          <meta property="og:image" content="https://smartcontractdb.com/img/meta-banner.png" />
 
           <link href="/favicons/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192" />
           <link href="/favicons/apple-touch-icon-512x512.png" rel="icon" sizes="512x512" type="image/png" />
