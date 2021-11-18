@@ -75,5 +75,19 @@
     "description": "Fast-track your Ethereum Developer career in an instructor-led and challenging bootcamp focused on discussion and application!",
     "link": "https://www.chainshot.com/",
     "src": "/img/tutorials/chainshot.png"
+  },
+  {
+    "id": "chainlink_developer_tutorials",
+    "title": "Chainlink Developer Tutorials",
+    "description": "Access the latest developer tutorials on the official Chainlink blog.",
+    "link": "https://blog.chain.link/category/developers/",
+    "src": "/img/tutorials/chainlink.png"
+  },
+  {
+    "id": "chainlink_video_tutorials",
+    "title": "Chainlink Engineering Video Tutorials",
+    "description": "Watch the experts walk you through all things smart-contracts.",
+    "link": "https://www.youtube.com/playlist?list=PLVP9aGDn-X0QwJVbQvuKr-zrh2_DV5M6J/",
+    "src": "/img/tutorials/chainlink.png"
   }
 ]
