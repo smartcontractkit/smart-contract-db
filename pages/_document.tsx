@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
           <meta property="twitter:title" content="Smart Contract DB" />
           <meta property="twitter:url" content="https://smartcontractdb.com/" />
           <meta property="twitter:image" content="https://smartcontractdb.com/img/meta-banner.png" />
+          <meta name="twitter:card" content="summary_large_image"/>
 
           <link href="/favicons/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192" />
           <link href="/favicons/apple-touch-icon-512x512.png" rel="icon" sizes="512x512" type="image/png" />
