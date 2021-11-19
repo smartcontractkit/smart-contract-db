@@ -26,5 +26,19 @@
     "description": "Become a Highly-Paid Professional in Months! 30+ Industry-Recognized Blockchain & Cryptocurrencies Certification Courses. Learn More!",
     "link": "https://academy.ivanontech.com/",
     "src": "/img/courses/ivan-on-tech.svg"
+  },
+  {
+    "id": "solidity-beg-exp",
+    "title": "Solidity: Beginner to Expert",
+    "description": "A full introduction into all of the core concepts in blockchain, smart contracts, and full stack blockchain development.",
+    "link": "https://youtu.be/M576WGiDBdQ",
+    "src": "/img/courses/solidity_beg_expert.png"
+  },
+  {
+    "id": "dapp-u",
+    "title": "Dapp University",
+    "description": "Learn to build decentralized apps on the Ethereum Blockchain.",
+    "link": "https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ",
+    "src": "/img/courses/dapp_u.png"
   }
 ]

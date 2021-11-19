@@ -7,11 +7,32 @@
     "src": "/img/tutorials/consensys.jpg"
   },
   {
+    "id": "consensys-academy",
+    "title": "Consensys Academy",
+    "description": "Get the skills you need to become an industry-leading Ethereum developer.",
+    "link": "https://consensys.net/academy/",
+    "src": "/img/tutorials/consensys-academy.png"
+  },
+  {
+    "id": "eat-the-blocks",
+    "title": "Eat the Blocks",
+    "description": "Do you want to learn how to build Solidity smart contracts and Ethereum decentralized applications (Dapps)? On this channel, you will find a ton of high-quality tutorials on Solidity and Ethereum Dapps development",
+    "link": "https://www.youtube.com/channel/UCZM8XQjNOyG2ElPpEUtNasA",
+    "src": "/img/tutorials/eat-the-blocks.jpeg"
+  },
+  {
     "id": "eth-build",
     "title": "ETH.Build",
     "description": "An Educational Sandbox For Web3... And Much More.",
     "link": "https://eth.build/",
     "src": ""
+  },
+  {
+    "id": "ethereum-org",
+    "title": "ethereum.org",
+    "description": "An introduction to smart contracts.",
+    "link": "https://ethereum.org/en/smart-contracts/",
+    "src": "/img/tutorials/eth-icon.png"
   },
   {
     "id": "free-code-camp",
@@ -45,7 +66,7 @@
     "id": "wikipedia",
     "title": "Wikipedia",
     "description": "Wikipedia, the free encyclopedia",
-    "link": "https://en.wikipedia.org/wiki/Main_Page",
+    "link": "https://en.wikipedia.org/wiki/Smart_contract",
     "src": "/img/tutorials/wikipedia.png"
   },
   {
@@ -56,11 +77,11 @@
     "src": "/img/tutorials/ethereum-foundation.png"
   },
   {
-    "id": "you-tube",
-    "title": "YouTube",
-    "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
-    "link": "https://www.youtube.com/",
-    "src": "/img/tutorials/youTube.png"
+    "id": "nader-dabit",
+    "title": "Nader Dabit",
+    "description": "A combination of to-the-point tutorials, live coding demos, and interviews focusing on modern web development, Web3, DeFi, cloud computing, and GraphQL.",
+    "link": "https://www.youtube.com/c/naderdabit/videos",
+    "src": "/img/tutorials/nader-dabit.jpeg"
   },
   {
     "id": "cryto-zombies",
@@ -81,13 +102,27 @@
     "title": "Chainlink Developer Tutorials",
     "description": "Access the latest developer tutorials on the official Chainlink blog.",
     "link": "https://blog.chain.link/category/developers/",
-    "src": "/img/tutorials/chainlink.png"
+    "src": "/img/communities/developers/chainlink.png"
   },
   {
     "id": "chainlink_video_tutorials",
     "title": "Chainlink Engineering Video Tutorials",
     "description": "Watch the experts walk you through all things smart-contracts.",
     "link": "https://www.youtube.com/playlist?list=PLVP9aGDn-X0QwJVbQvuKr-zrh2_DV5M6J",
-    "src": "/img/tutorials/chainlink.png"
+    "src": "/img/communities/developers/chainlink.png"
+  },
+  {
+    "id": "dev.to-top-10",
+    "title": "Dev.to's Top 10 Smart Contract and Solidity Resources",
+    "description": "Learning to become a Smart Contract and Blockchain Developer can seem like a daunting task, but it doesn't have to be!",
+    "link": "https://dev.to/patrickalphac/top-10-smart-contract-solidity-developer-learning-resources-46db",
+    "src": "/img/tutorials/top10.jpeg"
+  },
+  {
+    "id": "better-programming",
+    "title": "Better Programming: How to Become a Blockchain Engineer",
+    "description": "Become a blockchain, solidity, and smart contract engineer by following these steps.",
+    "link": "https://betterprogramming.pub/how-to-become-a-blockchain-engineer-fa4386a0504f",
+    "src": "/img/tutorials/how-to.png"
   }
 ]

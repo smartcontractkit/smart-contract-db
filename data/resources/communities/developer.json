@@ -10,9 +10,9 @@
     },
     {
       "id": "reddit",
-      "title": "Reddit",
-      "description": "Reddit is a network of communities where people can dive into their interests, hobbies and passions. There's a community for whatever you're interested in on Reddit.",
-      "link": "https://www.reddit.com/",
+      "title": "Reddit - r/smartcontracts",
+      "description": "A blockchain agnostic DMZ for web3 programmers.",
+      "link": "https://www.reddit.com/r/smartcontracts/",
       "src": "/img/communities/developers/reddit.jpg"
     },
     {
@@ -49,6 +49,27 @@
       "description": "We're an inclusive, blockchain agnostic community for developers and users of hybrid smart contracts | 23,625 members",
       "link": "https://discord.com/invite/aSK4zew",
       "src": "/img/communities/developers/chainlink.png"
+    },
+    {
+      "id": "brownie-discord",
+      "title": "Brownie Discord",
+      "description": "Official discord for the Brownie framework.",
+      "link": "https://discord.gg/9zk7snTfWe",
+      "src": "/img/communities/developers/chainlink.png"
+    },
+    {
+      "id": "ethereum-discord",
+      "title": "Ethereum Discord",
+      "description": "The official Ethereum discord.",
+      "link": "https://discord.gg/CetY6Y4",
+      "src": "/img/communities/developers/eth-icon.png"
+    },
+    {
+      "id": "eth-global",
+      "title": "ETHGlobal",
+      "description": "Onboarding thousands of developers into the Ethereum ecosystem.",
+      "link": "https://ethglobal.com/",
+      "src": "/img/communities/developers/eth-global.svg"
     }
   ]
 }
