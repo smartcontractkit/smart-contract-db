@@ -11,7 +11,7 @@
     "title": "Consensys Academy",
     "description": "Get the skills you need to become an industry-leading Ethereum developer.",
     "link": "https://consensys.net/academy/",
-    "src": "/img/tutorials/consensys.jpg"
+    "src": "/img/tutorials/consensys-academy.png"
   },
   {
     "id": "eat-the-blocks",
@@ -123,6 +123,6 @@
     "title": "Better Programming: How to Become a Blockchain Engineer",
     "description": "Become a blockchain, solidity, and smart contract engineer by following these steps.",
     "link": "https://betterprogramming.pub/how-to-become-a-blockchain-engineer-fa4386a0504f",
-    "src": "/img/tutorials/how-to.jpeg"
+    "src": "/img/tutorials/how-to.png"
   }
 ]
