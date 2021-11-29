@@ -8351,12 +8351,12 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-next-intl@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.2.0.tgz#4392baf60fa9b759cfeb74c246ced02d628f1fed"
-  integrity sha512-XYHEE7+qwOsvtsZGkXYQGnZojHs6L6z2CItqPZLNI0rMpfOYgTH4uDEMRjjfk0e2E/fd7n03hAACkKGHNXg4Eg==
+next-intl@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.3.0.tgz#1e5a1fd9e556097189dee51a08bb1fecc77facd1"
+  integrity sha512-2Cv/SXpqtnbQDejIe+XWdYGCvdclxYaIC6borRDqKiOKkEqCTIcuA7utUOItcq/8xeeOmJvXL4xqiuxHlQhEXw==
   dependencies:
-    use-intl "^2.2.0"
+    use-intl "^2.3.0"
 
 next@^12.0.4:
   version "12.0.4"
@@ -11437,10 +11437,10 @@ use-composed-ref@^1.0.0:
   dependencies:
     ts-essentials "^2.0.3"
 
-use-intl@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.2.0.tgz#93d5617af91c558e55d4be08ec13493bc7d524c3"
-  integrity sha512-0DXPPRia9DYoSv4K6M6Jh6HG/WOSHy5T9lyfBNYMW2YinQAlXn0o9JWqXPfhK7J4Y+PW0iCcYOT4KPafNTMckA==
+use-intl@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.3.0.tgz#69c7f8df4ed945e498760c8719e8cc28c18858ce"
+  integrity sha512-mcA/Va6xBam1PhVVCj43FDJy9GNNERJeCZyrm2yKSCe3jS9VhOwC1IHEvM5Yoy7YNCeYrlvmTjSIU7RZRphOzw==
   dependencies:
     intl-messageformat "^9.3.18"
 
