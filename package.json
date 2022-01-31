@@ -35,7 +35,7 @@
     "@actions/github": "^5.0.0",
     "@babel/core": "^7.16.12",
     "@storybook/addon-actions": "^6.4.14",
-    "@storybook/addon-essentials": "^6.4.15",
+    "@storybook/addon-essentials": "^6.4.17",
     "@storybook/addon-links": "^6.4.15",
     "@storybook/react": "^6.4.17",
     "@svgr/webpack": "^6.2.1",
