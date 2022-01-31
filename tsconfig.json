@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -19,40 +15,16 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/data/*": [
-        "data/*"
-      ],
-      "@/config/*": [
-        "config/*"
-      ],
-      "@/constants/*": [
-        "src/constants/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ],
-      "@/atoms/*": [
-        "src/components/atoms/*"
-      ],
-      "@/molecules/*": [
-        "src/components/molecules/*"
-      ],
-      "@/organisms/*": [
-        "src/components/organisms/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ]
-    },
-    "incremental": true
+      "@/data/*": ["data/*"],
+      "@/config/*": ["config/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/types/*": ["src/types/*"],
+      "@/atoms/*": ["src/components/atoms/*"],
+      "@/molecules/*": ["src/components/molecules/*"],
+      "@/organisms/*": ["src/components/organisms/*"],
+      "@/hooks/*": ["src/hooks/*"]
+    }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.json"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.json"],
+  "exclude": ["node_modules"]
 }
