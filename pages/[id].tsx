@@ -1,9 +1,9 @@
 import React, { ReactElement, useEffect } from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { CategoryList } from 'src/shared/category-list';
-import styles from '../styles/slug.module.css';
 import { Resource } from '@/data/resources/models/resource.model';
 import { resourceParams } from '@/data/resources';
+import styles from '../styles/slug.module.css';
 
 export default function Resources({ resources, title }: { resources: Resource[]; title: string }): ReactElement {
   useEffect(() => {
