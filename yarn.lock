@@ -9675,10 +9675,10 @@ react-colorful@^5.1.2:
   resolved "https://registry.yarnpkg.com/react-colorful/-/react-colorful-5.5.0.tgz#8359f218984a927095477a190ab9927eaf865c0c"
   integrity sha512-BuzrlrM0ylg7coPkXOrRqlf2BgHLw5L44sybbr9Lg4xy7w9e5N7fGYbojOO0s8J0nvrM3PERN2rVFkvSa24lnQ==
 
-react-cool-inview@^2.0.7:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/react-cool-inview/-/react-cool-inview-2.0.8.tgz#f8b7aeaf6e880e443c339b8d5e2719374ff8fdc1"
-  integrity sha512-D8ilAp7HwRxRMA1xRAvXZF8yhbL/6WWD5nxYX+K1GwbGQuMmCkrr5Bhm/2Mgn8XlFLzAU9frQ7g0UILxt1SnOQ==
+react-cool-inview@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/react-cool-inview/-/react-cool-inview-2.0.9.tgz#f2e034bf0f57540a324c7da0c111aec95bb696e2"
+  integrity sha512-r1FM52/xElWEDxOv61QSLS23NuzcuhaIkfNL/K4FQFZ+NN/O5vEx/HTdmR1r6SPqXSBhPy5lyD7+Ot3t8F9ttQ==
 
 react-dev-utils@^11.0.3:
   version "11.0.4"
