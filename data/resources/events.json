@@ -167,5 +167,35 @@
     "location": "Virtual",
     "link": "https://angelhack.notion.site/Polkadot-Hackathon-APAC-Edition-fb14eed363ee4a8e8b03014c9a89252d",
     "src": "/img/events/polkadot-apac.png"
+  },
+  {
+    "id": "eth-denver",
+    "title": "ETHDenver 2022",
+    "description": "The largest and longest running ETH event in the world.",
+    "startDate": "2022-02-11T00:00:00.000Z",
+    "endDate": "2022-02-20T23:59:59.000Z",
+    "location": "Denver, CO",
+    "link": "https://www.ethdenver.com/",
+    "src": "/img/events/ethdenver.png"
+  },
+  {
+    "id": "road-to-web3",
+    "title": "Road to Web3",
+    "description": "A Web3 hackathon for the Web2 world. Join us to build on Web3 for the first time.",
+    "startDate": "2022-02-03T00:00:00.000Z",
+    "endDate": "2022-02-09T23:59:59.000Z",
+    "location": "Virtual",
+    "link": "https://web3.ethglobal.com/",
+    "src": "/img/events/roadtoweb3.png"
+  },
+  {
+    "id": "ethAmsterdam",
+    "title": "ETHAmsterdam",
+    "description": "A Web3 hackathon for the Web2 world. Join us to build on Web3 for the first time.",
+    "startDate": "2022-04-22T00:00:00.000Z",
+    "endDate": "2022-04-24T23:59:59.000Z",
+    "location": "Amsterdam, Netherlands",
+    "link": "https://amsterdam.ethglobal.com/",
+    "src": "/img/events/ethamsterdam.png"
   }
 ]
