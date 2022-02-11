@@ -197,5 +197,25 @@
     "location": "Amsterdam, Netherlands",
     "link": "https://amsterdam.ethglobal.com/",
     "src": "/img/events/ethamsterdam.png"
+  },
+  {
+    "id": "devconnect-amsterdam",
+    "title": "Devconnect Amsterdam",
+    "description": "A collaborative Ethereum week, built by and for everyone.",
+    "startDate": "2022-04-18T00:00:00.000Z",
+    "endDate": "2022-04-25T23:59:59.000Z",
+    "location": "Amsterdam, Netherlands",
+    "link": "https://devconnect.org/",
+    "src": "/img/events/devconnect.png"
+  },
+  {
+    "id": "solana-riptide",
+    "title": "Solana Riptide Hackathon",
+    "description": "Join Riptide, a global hackathon by Solana.",
+    "startDate": "2022-02-02T00:00:00.000Z",
+    "endDate": "2022-03-17T23:59:59.000Z",
+    "location": "Amsterdam, Netherlands",
+    "link": "https://solana.com/riptide",
+    "src": "/img/events/riptide.png"
   }
 ]
