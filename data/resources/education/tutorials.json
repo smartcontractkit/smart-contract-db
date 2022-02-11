@@ -124,5 +124,12 @@
     "description": "Become a blockchain, solidity, and smart contract engineer by following these steps.",
     "link": "https://betterprogramming.pub/how-to-become-a-blockchain-engineer-fa4386a0504f",
     "src": "/img/tutorials/how-to.png"
+  },
+  {
+    "id": "chailink-academy",
+    "title": "Chainlink Academy",
+    "description": "Learn to program with Chainlink Academy.",
+    "link": "http://chainlink.education/",
+    "src": "/img/tutorials/chainlink_academy.png"
   }
 ]
