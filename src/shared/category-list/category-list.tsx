@@ -5,6 +5,9 @@ import { Icon } from '../icon';
 import { Initicon } from '../initicon';
 import Link from '../../link';
 
+const isDatePast = (endDate: string): boolean =>
+  new Date(endDate).setHours(0, 0, 0, 0) <= new Date(Date.now()).setHours(0, 0, 0, 0);
+
 export interface CategoryListProps {
   name?: string; // category's name
   data;
@@ -58,37 +61,50 @@ const ListItem = (id, title, src, startDate, description, link) => {
   );
 };
 
-export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => (
-  <div className={styles.container}>
-    <ul className={styles.ul}>
-      {/* for communities */}
-      {name?.toLocaleLowerCase() === 'communities' ? (
-        data.map(({ tag, data: communities }) => (
-          <React.Fragment key={tag}>
-            <h3 className={styles.community_subHeaders}>{tag}</h3>
-            <li className={styles.hr} />
-            {communities.slice(0, limit).map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
-              <React.Fragment key={id}>
-                {ListItem(id, title, src, startDate, description, link)}
-                {communities.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
-                  <li className={styles.hr} />
-                ) : (
-                  ''
-                )}
-              </React.Fragment>
-            ))}
-          </React.Fragment>
-        ))
-      ) : data.length && name !== 'communities' ? (
-        data.slice(0, limit).map(({ id, title, src, startDate, description, link }, index: number) => (
+export const CategoryList: React.FC<CategoryListProps> = ({ name, data, limit }) => {
+  const filteredData = data.filter(({ endDate }) => !isDatePast(endDate));
+
+  if (filteredData.length <= 0) {
+    return <h1>No new {name.toLocaleLowerCase() || 'content'}. Please check back soon.</h1>;
+  }
+
+  if (name?.toLocaleLowerCase() === 'communities') {
+    return (
+      <div className={styles.container}>
+        <ul className={styles.ul}>
+          {filteredData.map(({ tag, data: communities }) => (
+            <React.Fragment key={tag}>
+              <h3 className={styles.community_subHeaders}>{tag}</h3>
+              <li className={styles.hr} />
+              {communities
+                .slice(0, limit)
+                .map(({ id, title, src, startDate, description, link }, communityItemIndex) => (
+                  <React.Fragment key={id}>
+                    {ListItem(id, title, src, startDate, description, link)}
+                    {communities.length !== communityItemIndex + 1 && limit !== communityItemIndex + 1 ? (
+                      <li className={styles.hr} />
+                    ) : (
+                      ''
+                    )}
+                  </React.Fragment>
+                ))}
+            </React.Fragment>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.container}>
+      <ul className={styles.ul}>
+        {filteredData.slice(0, limit).map(({ id, title, src, startDate, description, link }, index: number) => (
           <React.Fragment key={id}>
             {ListItem(id, title, src, startDate, description, link)}
-            {data.length !== index + 1 && limit !== index + 1 ? <li className={styles.hr} /> : ''}
+            {filteredData.length !== index + 1 && limit !== index + 1 ? <li className={styles.hr} /> : ''}
           </React.Fragment>
-        ))
-      ) : (
-        <h1>No new {name.toLocaleLowerCase() || 'content'}. Please check back soon.</h1>
-      )}
-    </ul>
-  </div>
-);
+        ))}
+      </ul>
+    </div>
+  );
+};

@@ -24,21 +24,12 @@ import { communities, taggedCommunities } from './communities';
 import { ResourceParam } from './models/resource.model';
 
 /**
- * Event filter. Hides past events once they reach their end date.
- * @param startDate - event start date
- * @param endDate - event end date
- * @returns {boolean}
- */
-export const isDatePast = (endDate: string) =>
-  new Date(endDate).setHours(0, 0, 0, 0) <= new Date(Date.now()).setHours(0, 0, 0, 0);
-
-/**
  * Sort resoures
  */
 export const resourceParams: ResourceParam[] = [
   { id: 'communities', title: 'Communities', data: communities },
   { id: 'consultants', title: 'Consultants', data: consultants },
-  { id: 'events', title: 'Events', data: events.filter(({ endDate }) => !isDatePast(endDate)) },
+  { id: 'events', title: 'Events', data: events },
   { id: 'books', title: 'Books', data: books },
   { id: 'tutorials', title: 'Tutorials', data: tutorials },
   { id: 'courses', title: 'Courses', data: courses },
@@ -83,7 +74,7 @@ export const resourceParams: ResourceParam[] = [
 export const searchList = [
   ...taggedCommunities,
   ...consultants.map((x) => ({ ...x, type: 'Consultants' })),
-  ...events.map((x) => ({ ...x, type: 'Events' })).filter(({ endDate }) => !isDatePast(endDate)),
+  ...events.map((x) => ({ ...x, type: 'Events' })),
   ...books.map((x) => ({ ...x, type: 'Books' })),
   ...tutorials.map((x) => ({ ...x, type: 'Tutorials' })),
   ...courses.map((x) => ({ ...x, type: 'Courses' })),
