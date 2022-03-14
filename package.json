@@ -40,7 +40,7 @@
     "@storybook/react": "^6.3.12",
     "@svgr/webpack": "^5.5.0",
     "@types/gtag.js": "0.0.8",
-    "@types/react": "17.0.36",
+    "@types/react": "17.0.40",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "babel-loader": "^8.2.3",
