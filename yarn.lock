@@ -1299,6 +1299,14 @@
     "@formatjs/intl-localematcher" "0.2.21"
     tslib "^2.1.0"
 
+"@formatjs/ecma402-abstract@^1.11.4":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-1.11.6.tgz#0e828ddfed6fb3413ae379e48fb7170fb0795db5"
+  integrity sha512-6TcI+IroIK+GTWXBJ643LBJklmCBsqLt1sUTGWfzdBcI5Y6b1L1iamrJB1B5OAQLnhzWveLbmzPYHYsFEZfeig==
+  dependencies:
+    "@formatjs/intl-localematcher" "0.2.27"
+    tslib "2.4.0"
+
 "@formatjs/fast-memoize@1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@formatjs/fast-memoize/-/fast-memoize-1.2.0.tgz#1123bfcc5d21d761f15d8b1c32d10e1b6530355d"
@@ -1329,6 +1337,13 @@
   integrity sha512-JTJeLiNwexN4Gy0cMxoUPvJbKhXdnSuo5jPrDafEZpnDWlJ5VDYta8zUVVozO/pwzEmFVHEUpgiEDj+39L4oMg==
   dependencies:
     tslib "^2.1.0"
+
+"@formatjs/intl-localematcher@0.2.27":
+  version "0.2.27"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.2.27.tgz#8a837ddca17a55d86e4ab68bcbb25b15f547d61d"
+  integrity sha512-XHYcVas2ebDTh3VtfdluvbTjqyMUHqFHARnuJo5KYF/0MKOTmozVSK7PJGnu1IEHdmRdTWuG6TB+2RnkasaxVw==
+  dependencies:
+    tslib "2.4.0"
 
 "@gar/promisify@^1.0.1":
   version "1.1.2"
@@ -8525,12 +8540,12 @@ nested-error-stacks@^2.0.0, nested-error-stacks@^2.1.0:
   resolved "https://registry.yarnpkg.com/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz#0fbdcf3e13fe4994781280524f8b96b0cdff9c61"
   integrity sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==
 
-next-intl@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.2.0.tgz#4392baf60fa9b759cfeb74c246ced02d628f1fed"
-  integrity sha512-XYHEE7+qwOsvtsZGkXYQGnZojHs6L6z2CItqPZLNI0rMpfOYgTH4uDEMRjjfk0e2E/fd7n03hAACkKGHNXg4Eg==
+next-intl@^2.7.3:
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.7.3.tgz#6062c80c3a933da6fccc8c8cee849af732daabea"
+  integrity sha512-S2INTs6H08NeMkbjQW+SEg0OvA7zkuO6sdh1Tb6XBWzvwpj5nUfmUB74KSb1vqtvP7eXsUublyJWwL4+e6TUfA==
   dependencies:
-    use-intl "^2.2.0"
+    use-intl "^2.7.3"
 
 next@^12.0.4:
   version "12.0.4"
@@ -11316,6 +11331,11 @@ tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
+tslib@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
+  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
+
 tslib@^1.8.1:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
@@ -11626,11 +11646,12 @@ use-composed-ref@^1.0.0:
   dependencies:
     ts-essentials "^2.0.3"
 
-use-intl@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.2.0.tgz#93d5617af91c558e55d4be08ec13493bc7d524c3"
-  integrity sha512-0DXPPRia9DYoSv4K6M6Jh6HG/WOSHy5T9lyfBNYMW2YinQAlXn0o9JWqXPfhK7J4Y+PW0iCcYOT4KPafNTMckA==
+use-intl@^2.7.3:
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.7.3.tgz#3b848b33aa23b21288c8eed327db5f79a30c522b"
+  integrity sha512-qECHUDGCF0WDDboX2wAO+OAui0HlI47eCX/JfVeVaJJioRcmnTOFe8KkPQbk1Vgt/B68ImxGCWAAGhlQKPhgpg==
   dependencies:
+    "@formatjs/ecma402-abstract" "^1.11.4"
     intl-messageformat "^9.3.18"
 
 use-isomorphic-layout-effect@^1.0.0:
