@@ -355,7 +355,7 @@
     "startDate": "2022-06-17T13:00:00.000Z",
     "endDate": "2022-07-10T13:00:00.000Z",
     "location": "International-Online",
-    "link": "https://gitcoin.co/hackathon/sustainable/onboard",
+    "link": "https://globalblockjam.com/",
     "src": "/img/events/blockjam.png"
   },
   {
@@ -375,7 +375,7 @@
     "startDate": "2022-06-24T18:00:00.000Z",
     "endDate": "2022-06-26T19:00:00.000Z",
     "location": "New York",
-    "link": "https://fs.ethglobal.com/",
+    "link": "https://ny.ethglobal.com/",
     "src": "/img/events/eth-newyork.png"
   }
   
