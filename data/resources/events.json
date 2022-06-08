@@ -217,5 +217,170 @@
     "location": "Amsterdam, Netherlands",
     "link": "https://solana.com/riptide",
     "src": "/img/events/riptide.png"
+  },
+  {
+    "id": "polkadot-hackathon",
+    "title": "Polkadot-Hackathon: North America Edition",
+    "description": "Bringing the cutting edge of blockchain to your region",
+    "startDate": "2022-05-30T00:00:00.000Z",
+    "endDate": "2022-07-11T23:59:59.000Z",
+    "location": "International-Online",
+    "link": "https://polkadot-na.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "src": "/img/events/polkadot-hackathon.png"
+  },
+  {
+    "id": "aelf-legend",
+    "title": "aelf Web3.0 Hackathon - Legend X",
+    "description": "Build a fully-functioning C# application on aelf to win over $500,000 in prizes!",
+    "startDate": "2022-04-20T00:00:00.000Z",
+    "endDate": "2022-06-15T14:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://hackathon.aelf.com/",
+    "src": "/img/events/aelf.png"
+  },
+  {
+    "id": "xdc-dapp",
+    "title": "XDC dApp Summer Hackathon",
+    "description": "If you can imagine it, you can Build it on XDC. Build a dApp this summer on XDC Network",
+    "startDate": "2022-05-25T21:00:00.000Z",
+    "endDate": "2022-07-25T21:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://xdc.devpost.com/",
+    "src": "/img/events/xdc.png"
+  },
+  {
+    "id": "tron-hackathon",
+    "title": "TRON Grand Hackathon 2022",
+    "description": "Accelerate the Future",
+    "startDate": "2022-05-16T13:00:00.000Z",
+    "endDate": "2022-07-25T21:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://trondao.org/hackathon/",
+    "src": "/img/events/tron-hackathon.png"
+  },
+  {
+    "id": "xrpl-hackathon",
+    "title": "XRPL Hackathon: Creating Real World Impact",
+    "description": "real impact on people's lives",
+    "startDate": "2022-05-26T17:45:00.000Z",
+    "endDate": "2022-07-11T21:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://xrplimpact.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "src": "/img/events/xprl-hack.png"
+  },
+  {
+    "id": "hackathon-forgood",
+    "title": "Technology at the service of sustainable and inclusive finance",
+    "description": "Hackathon 2022 of the Fintech Chair of Paris Dauphine University",
+    "startDate": "2022-05-16T09:45:00.000Z",
+    "endDate": "2022-07-13T07:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://chaire-fintech.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "src": "/img/events/forgood-hack.png"
+  },
+  {
+    "id": "metaverse-blockathon",
+    "title": "Metaverse Blockathon",
+    "description": "Partnering with the Metaverse Summit, BlockathonDAO is hosting the Metaverse Blockathon. Come build the Metaverse Future with us!",
+    "startDate": "2022-05-29T04:00:00.000Z",
+    "endDate": "2022-06-08T01:45:00.000Z",
+    "location": "International-Online",
+    "link": "https://blockathon.xyz/metaverse-summit/",
+    "src": "/img/events/blockathon.png"
+  },
+  {
+    "id": "supernova-hackathon",
+    "title": "Supernova",
+    "description": "Internet Computer Web3 Hackathon",
+    "startDate": "2022-05-10T19:00:00.000Z",
+    "endDate": "2022-06-20T18:45:00.000Z",
+    "location": "International-Online",
+    "link": "https://dfinity.org/supernova/",
+    "src": "/img/events/supernova-hack.png"
+  },
+  {
+    "id": "cortx-filecoin",
+    "title": "CORTX & Filecoin Integration Challenge 2022",
+    "description": "Change the way the world does data by connecting CORTX™— Seagate’s open-source object storage software — with the tools and platforms that underpin the data revolution.",
+    "startDate": "2022-05-06T19:00:00.000Z",
+    "endDate": "2022-06-27T06:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://seagate-cortx-hackathon2022.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "src": "/img/events/cortx-hack.png"
+  },
+  {
+    "id": "cuny-hackathon",
+    "title": "CUNY Virtual Hackathon",
+    "description": "Designed to bring the student body and technology community together. This event features fun, collaborative challenges focused on education.",
+    "startDate": "2022-06-18T04:00:00.000Z",
+    "endDate": "2022-06-20T19:30:00.000Z",
+    "location": "United States Only",
+    "link": "https://cunyvirtualhackathon.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "src": "/img/events/cuny-hack.png"
+  },
+  {
+    "id": "hacksmart-hackathon",
+    "title": "HackSmart - Crypto Battle Hackathon",
+    "description": "Bring your A game and defeat the other teams with your SmartBCH project to win huge prizes.",
+    "startDate": "2022-06-24T13:00:00.000Z",
+    "endDate": "2022-06-26T13:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://hacksmart.org/",
+    "src": "/img/events/hacksmart.png"
+  },
+  {
+    "id": "consensus-experience",
+    "title": "The Consensus Experience",
+    "description": "The 2022 Consensus festival is a showcase and celebration of all that crypto has to offer. Thousands of the world's brightest minds and impactful voices will take over Austin, Texas, June 9-12 – and expect to see events and parties in the days before and after! ",
+    "startDate": "2022-06-07T18:00:00.000Z",
+    "endDate": "2022-06-12T16:45:00.000Z",
+    "location": "Austin, Texas",
+    "link": "https://www.coindesk.com/consensus2022/",
+    "src": "/img/events/consensus-exp.png"
+  },
+  {
+    "id": "sustainable-blockchain",
+    "title": "Sustainable Blockchain Hackathon",
+    "description": "Do you believe in making the next generation of the internet as “green” as possible? Come and hack sustainable, environmentally friendly tools at the Sustainable Blockchain Hackathon.",
+    "startDate": "2022-06-23T06:00:00.000Z",
+    "endDate": "2022-07-18T06:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://gitcoin.co/hackathon/sustainable/onboard",
+    "src": "https://c.gitcoin.co/sustainablelogo.png"
+  },
+  {
+    "id": "blockjam",
+    "title": "BlockJam 2022",
+    "description": "BlockJam 2022 is a free global virtual conference and hackathon for bringing game devs into the Web3 ecosystem. This value packed conference starts on June 17th and then kicks off with 2-days of talks and sessions from Web3 & Gaming experts followed by a GameJam i.e., a hackathon starting on June 20th with a $50K prize pool for the coolest game devs out there.",
+    "startDate": "2022-06-17T13:00:00.000Z",
+    "endDate": "2022-07-10T13:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://globalblockjam.com/",
+    "src": "/img/events/blockjam.png"
+  },
+  {
+    "id": "hack-fs",
+    "title": "Hack FS",
+    "description": "Build the foundation for the decentralized web. A Hackathon by ETHGlobal and Protocol Labs.",
+    "startDate": "2022-07-08T13:00:00.000Z",
+    "endDate": "2022-07-29T13:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://fs.ethglobal.com/",
+    "src": "/img/events/hack-fs.png"
+  },
+  {
+    "id": "eth-new-york",
+    "title": "ETH New York",
+    "description": "New York's premier blockchain hackathon is back! Discover a new frontier with ETHereum and build innovative projects to win bounties!",
+    "startDate": "2022-06-24T18:00:00.000Z",
+    "endDate": "2022-06-26T19:00:00.000Z",
+    "location": "New York",
+    "link": "https://ny.ethglobal.com/",
+    "src": "/img/events/eth-newyork.png"
   }
+  
+
+
+
+
 ]
