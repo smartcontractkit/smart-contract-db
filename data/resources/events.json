@@ -377,6 +377,16 @@
     "location": "New York",
     "link": "https://ny.ethglobal.com/",
     "src": "/img/events/eth-newyork.png"
+  },
+  {
+    "id": "polygon-Hackathon",
+    "title": "Polygon Hackathon",
+    "description": "Dive into Web3 this summer and build a new dApp with Polygon",
+    "startDate": "2022-06-15T14:00:00.000Z",
+    "endDate": "2022-08-01T21:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://buidlit.polygon.technology/",
+    "src": "/img/events/polygon-hackathon.png"
   }
   
 
