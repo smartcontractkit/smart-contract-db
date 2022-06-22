@@ -377,10 +377,115 @@
     "location": "New York",
     "link": "https://ny.ethglobal.com/",
     "src": "/img/events/eth-newyork.png"
+  },
+  {
+    "id": "polygon-Hackathon",
+    "title": "Polygon Hackathon",
+    "description": "Dive into Web3 this summer and build a new dApp with Polygon",
+    "startDate": "2022-06-15T14:00:00.000Z",
+    "endDate": "2022-08-01T21:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://buidlit.polygon.technology/",
+    "src": "/img/events/polygon-hackathon.png"
+  },
+  {
+    "id": "eth-cc-5",
+    "title": "Ethereum Community Conference 5",
+    "description": "The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Three intense days of conferences, networking and learning.",
+    "startDate": "2022-07-19T00:00:00.000Z",
+    "endDate": "2022-07-21T23:00:00.000Z",
+    "location": "Paris - France",
+    "link": "https://ethcc.io/",
+    "src": "/img/events/eth-conference.png"
+  },
+  {
+    "id": "ic3-blockchain",
+    "title": "IC3 Blockchain Camp 2022",
+    "description": "Join us for the 7th Annual IC3 Blockchain Camp! This 7-day experience will be hosted in-person on the Cornell Campus in Ithaca, NY. Our Camp technical committee of Surya Bakshi, Tyler Kell and Patrick McCorry is preparing another immersive coding and learning experience.",
+    "startDate": "2022-08-01T00:00:00.000Z",
+    "endDate": "2022-08-07T23:00:00.000Z",
+    "location": "Ithaca - New York",
+    "link": "https://www.initc3.org/events/2022-08-01-ic3-blockchain-camp-2022",
+    "src": "/img/events/ic3-blockchain.png"
+  },
+  {
+    "id": "usenix-event",
+    "title": "Usenix Security Symposium",
+    "description": "The 31st USENIX Security Symposium will take place on August 10–12, 2022, at the Boston Marriott Copley Place in Boston, MA, USA. The USENIX Security Symposium brings together researchers, practitioners, system administrators, system programmers, and others interested in the latest advances in the security and privacy of computer systems and networks.",
+    "startDate": "2022-08-10T00:00:00.000Z",
+    "endDate": "2022-08-12T23:00:00.000Z",
+    "location": "Boston - MA",
+    "link": "https://www.usenix.org/conference/usenixsecurity22",
+    "src": "/img/events/usenix-event.png"
+  },
+  {
+    "id": "messari-mainnet",
+    "title": "Messari Mainnet",
+    "description": "Mainnet is an immersive, agenda-setting summit held annually by Messari",
+    "startDate": "2022-09-21T00:00:00.000Z",
+    "endDate": "2022-09-23T23:00:00.000Z",
+    "location": "New York - USA",
+    "link": "https://mainnet.events/",
+    "src": "/img/events/messari-mainnet.png"
+  },
+  {
+    "id": "token-2049",
+    "title": "Token 2049",
+    "description": "TOKEN2049 is the premier crypto event, organized annually in Singapore and London, where founders and executives of leading Web3 companies share their view on the market.",
+    "startDate": "2022-09-28T15:00:00.000Z",
+    "endDate": "2022-09-29T23:00:00.000Z",
+    "location": "Singapore",
+    "link": "https://www.token2049.com/",
+    "src": "/img/events/token-2049.jpg"
+  },
+  {
+    "id": "smartcon-2022",
+    "title": "SmartCon 2022",
+    "description": "Register for this two-day conference where you’ll learn about the latest Web3 developments directly from researchers, developers, and founders at the forefront of blockchain innovation.",
+    "startDate": "2022-09-28T15:00:00.000Z",
+    "endDate": "2022-09-29T23:00:00.000Z",
+    "location": "New York - USA",
+    "link": "https://smartcon.chain.link/",
+    "src": "/img/events/smartcon-2022.png"
+  },
+  {
+    "id": "gopher-con",
+    "title": "GopherCon",
+    "description": "GopherCon is an annual conference which began in 2014 and is dedicated to the Go programming language. It is organized by a community-driven group of developers who wish to promote the use of Go, the formation of an inclusive and supportive Go community, and the education of Go developers.",
+    "startDate": "2022-10-06T15:00:00.000Z",
+    "endDate": "2022-10-08T23:00:00.000Z",
+    "location": "Chicago - IL",
+    "link": "https://www.gophercon.com/home",
+    "src": "/img/events/gopher-con.png"
+  },
+  {
+    "id": "devcon-2022",
+    "title": "DevCon",
+    "description": "Devcon is an intensive introduction for new Ethereum explorers, a global family reunion for those already a part of our ecosystem, and a source of energy and creativity for all.",
+    "startDate": "2022-10-11T15:00:00.000Z",
+    "endDate": "2022-10-14T23:00:00.000Z",
+    "location": "Bogotá - Colombia",
+    "link": "https://devcon.org/en/",
+    "src": "/img/events/devcon-2022.png"
+  },
+  {
+    "id": "solana-breakpoint",
+    "title": "Break Point 2022",
+    "description": "The Solana ecosystem gathered in Lisbon in 2021 for the first-ever, real-life, worldwide celebration: Breakpoint. It was where the builders, enthusiasts, and dreamers making the future came to work, learn, and play.",
+    "startDate": "2022-11-04T15:00:00.000Z",
+    "endDate": "2022-11-07T23:00:00.000Z",
+    "location": "Lisbon - Portugal",
+    "link": "https://solana.com/breakpoint",
+    "src": "/img/events/solana-breakpoint.png"
+  },
+  {
+    "id": "acm-ccs",
+    "title": "ACM CCS 2022",
+    "description": "The ACM Conference on Computer and Communications Security (CCS) is the flagship annual conference of the Special Interest Group on Security, Audit and Control (SIGSAC) of the Association for Computing Machinery (ACM).",
+    "startDate": "2022-11-07T15:00:00.000Z",
+    "endDate": "2022-11-11T23:00:00.000Z",
+    "location": "Los Angeles - CA",
+    "link": "https://www.sigsac.org/ccs/CCS2022/",
+    "src": "/img/events/acm-ccs.png"
   }
-  
-
-
-
-
 ]
