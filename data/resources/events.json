@@ -487,5 +487,55 @@
     "location": "Los Angeles - CA",
     "link": "https://www.sigsac.org/ccs/CCS2022/",
     "src": "/img/events/acm-ccs.png"
+  },
+  {
+    "id": "scrypto-challange",
+    "title": "Scrypto Lending Challenge",
+    "description": "Explore Scrypto and Build a Lending dApp",
+    "startDate": "2022-07-17T09:00:00.000Z",
+    "endDate": "2022-07-18T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://scrypto-lending.devpost.com/",
+    "src": "/img/events/scrypto-challenge.png"
+  },
+  {
+    "id": "web3-infinity",
+    "title": "Web3 Infinity Hackathon",
+    "description": "Decentralize the Data, Empower the World!",
+    "startDate": "2022-07-01T05:00:00.000Z",
+    "endDate": "2022-07-28T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://web3infinityhackathon.devpost.com/",
+    "src": "/img/events/web3-infinity.png"
+  },
+  {
+    "id": "ripple-Innovate",
+    "title": "Ripple CBDC Innovate",
+    "description": "Build or update a fintech or payments solution that utilizes CBDC and is capable of being run on the XRP Ledger.",
+    "startDate": "2022-06-27T05:00:00.000Z",
+    "endDate": "2022-08-25T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://ripplecbdc.devpost.com/",
+    "src": "/img/events/ripple-hackathon.png"
+  },
+  {
+    "id": "block-et",
+    "title": "BlockET",
+    "description": "A 2-day competitive technical and journalistic blog writing event presented by IET-VIT.",
+    "startDate": "2022-07-09T05:00:00.000Z",
+    "endDate": "2022-07-10T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://blocket.devpost.com/",
+    "src": "/img/events/blockET.png"
+  },
+  {
+    "id": "eth-cc",
+    "title": "EthCC Hack 2022",
+    "description": "Hacking away in the City of Light towards Regen Summer.",
+    "startDate": "2022-07-22T05:00:00.000Z",
+    "endDate": "2022-07-24T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://ethcchack2022.devpost.com/",
+    "src": "/img/events/ethcc-hack.png"
   }
 ]
