@@ -383,7 +383,7 @@
     "title": "Polygon Hackathon",
     "description": "Dive into Web3 this summer and build a new dApp with Polygon",
     "startDate": "2022-06-15T14:00:00.000Z",
-    "endDate": "2022-08-01T21:00:00.000Z",
+    "endDate": "2022-08-22T21:00:00.000Z",
     "location": "International-Online",
     "link": "https://buidlit.polygon.technology/",
     "src": "/img/events/polygon-hackathon.png"
@@ -503,7 +503,7 @@
     "title": "Web3 Infinity Hackathon",
     "description": "Decentralize the Data, Empower the World!",
     "startDate": "2022-07-01T05:00:00.000Z",
-    "endDate": "2022-07-28T23:00:00.000Z",
+    "endDate": "2022-08-17T23:00:00.000Z",
     "location": "International-Online",
     "link": "https://web3infinityhackathon.devpost.com/",
     "src": "/img/events/web3-infinity.png"
@@ -537,5 +537,36 @@
     "location": "International-Online",
     "link": "https://ethcchack2022.devpost.com/",
     "src": "/img/events/ethcc-hack.png"
+  },
+  {
+    "id": "evmos-hackathon",
+    "title": "Evmos Momentum Hackathon led by Web3Scholarships",
+    "description": "Bring the world of Ethereum-based applications and assets to the interoperable networks of the Cosmos ecosystem.",
+    "startDate": "2022-07-18T14:00:00.000Z",
+    "endDate": "2022-08-31T18:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://momentumhack.evmos.org/",
+    "src": "/img/events/evmos-hackathon.png"
+  },
+  {
+    "id": "aeternity-hackathon",
+    "title": "Æternity Universe Two Hæckathon",
+    "description": "Join the developer community and revolutionize the future of finance!",
+    "startDate": "2022-08-01T07:00:00.000Z",
+    "endDate": "2022-09-18T10:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://universe-two-haeckathon.devpost.com/",
+    "src": "/img/events/aeternity-hackathon.png"
+  },
+
+  {
+    "id": "web3-puerto-rico",
+    "title": "Web3 Hackathon Puerto Rico",
+    "description": "Driving adoption of Web3 applications for NFTs, DeFi, Gaming and DAOs.",
+    "startDate": "2022-08-26T16:00:00.000Z",
+    "endDate": "2022-08-28T16:00:00.000Z",
+    "location": "Puerto Rico",
+    "link": "https://web3hackathonpr.devpost.com/",
+    "src": "/img/events/web3-puerto-rico.png"
   }
 ]
