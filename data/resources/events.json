@@ -543,10 +543,10 @@
     "title": "Evmos Momentum Hackathon led by Web3Scholarships",
     "description": "Bring the world of Ethereum-based applications and assets to the interoperable networks of the Cosmos ecosystem.",
     "startDate": "2022-07-18T14:00:00.000Z",
-    "endDate": "2022-08-31T18:00:00.000Z",
+    "endDate": "2022-09-20T18:00:00.000Z",
     "location": "International-Online",
     "link": "https://momentumhack.evmos.org/",
-    "src": "/img/events/evmos-hackathon.png"
+    "src": "/img/events/evmos-hack.png"
   },
   {
     "id": "aeternity-hackathon",
@@ -568,5 +568,111 @@
     "location": "Puerto Rico",
     "link": "https://web3hackathonpr.devpost.com/",
     "src": "/img/events/web3-puerto-rico.png"
+  },
+
+  {
+    "id": "metafi-hack",
+    "title": "MetaFi The CoinEx Smart Chain Challenge",
+    "description": "Build a Fun and Socialized Meta world with CSC and win $100,000 in Prize",
+    "startDate": "2022-08-10T06:00:00.000Z",
+    "endDate": "2022-10-12T06:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://cscchallenge.devpost.com/",
+    "src": "/img/events/metefi-hackathon.png"
+  },
+
+  {
+    "id": "eth-warsaw",
+    "title": "ETHWarsaw",
+    "description": "ETHWarsaw 2022 Hackathon",
+    "startDate": "2022-08-30T13:00:00.000Z",
+    "endDate": "2022-09-04T08:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://ethwarsaw.devpost.com/",
+    "src": "/img/events/eth-warsaw.png"
+  },
+
+  {
+    "id": "moonbean-hack",
+    "title": "Moonbeam Connected Contracts",
+    "description": "Solving Multi-Chain Fragmentation and Improving Web3 User Experiences",
+    "startDate": "2022-08-15T15:00:00.000Z",
+    "endDate": "2022-09-26T21:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://moonbeam.devpost.com/",
+    "src": "/img/events/moonbean-hack.png"
+  },
+
+  {
+    "id": "pli-blockathon",
+    "title": "PLI BLOCKATHON INDIA 22",
+    "description": "Blockchain Hackathon for Developers, Students and Research Scholars",
+    "startDate": "2022-08-18T04:00:00.000Z",
+    "endDate": "2022-09-23T12:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://plugin.devpost.com/",
+    "src": "/img/events/pli-blockathon.png"
+  },
+
+  {
+    "id": "near-hack",
+    "title": "NEAR MetaBUILD III Hackathon",
+    "description": "Our world has changed. Meet new challenges in a way a true buidler would do, hack your way to the top. Build the next big thing on NEAR.",
+    "startDate": "2022-09-23T14:00:00.000Z",
+    "endDate": "2022-11-21T21:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://metabuild.devpost.com/",
+    "src": "/img/events/near-hack.png"
+  },
+
+  {
+    "id": "codeup-hack",
+    "title": "CodeUp-Hack-22",
+    "description": "Accessing BlockChain Digital Economy",
+    "startDate": "2022-09-05T22:00:00.000Z",
+    "endDate": "2022-09-10T22:00:00.000Z",
+    "location": "Nigeria",
+    "link": "https://codeup-hack-22.devpost.com/",
+    "src": "/img/events/codeup.png"
+  },
+  {
+    "id": "near-nyc",
+    "title": "NEAR Hacks NYC",
+    "description": "The hackathon for the NEAR Ecosystem in NYC during Messari Mainnet",
+    "startDate": "2022-09-22T04:00:00.000Z",
+    "endDate": "2022-09-25T16:00:00.000Z",
+    "location": "New York",
+    "link": "https://nyc.devpost.com/",
+    "src": "/img/events/nyc-near.png"
+  },
+  {
+    "id": "kiev-hack",
+    "title": "Kyiv Tech Summit",
+    "description": "Kyiv Tech Summit is a WEB3 Hackathon focused on using the power of technology to solve real on-the-ground issues in Ukraine",
+    "startDate": "2022-09-06T04:00:00.000Z",
+    "endDate": "2022-09-09T16:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://kyiv-tech-summit.devpost.com/",
+    "src": "/img/events/kyiv-hack.png"
+  },
+  {
+    "id": "eth-global",
+    "title": "ETHOnline",
+    "description": "Industry leading summits and our largest group of hackers ever.",
+    "startDate": "2022-09-02T00:00:00.000Z",
+    "endDate": "2022-09-28T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://online.ethglobal.com/",
+    "src": "/img/events/eth-online.png"
+  },
+  {
+    "id": "moralis-filecoin",
+    "title": "Web3: Moralis x Filecoin",
+    "description": "The perfect opportunity to get into Web3.",
+    "startDate": "2022-08-29T00:00:00.000Z",
+    "endDate": "2022-09-30T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://moralis.io/filecoin-hackathon/",
+    "src": "/img/events/moralis-filecoin.png"
   }
 ]
