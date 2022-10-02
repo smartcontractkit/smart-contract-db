@@ -260,12 +260,12 @@
   },
   {
     "id": "xrpl-hackathon",
-    "title": "XRPL Hackathon: Creating Real World Impact",
-    "description": "real impact on people's lives",
-    "startDate": "2022-05-26T17:45:00.000Z",
-    "endDate": "2022-07-11T21:00:00.000Z",
+    "title": "XRPL Hackathon: NFT Launch Party",
+    "description": "Build scalable, sustainable, functional NFTs with XRPL",
+    "startDate": "2022-10-31T00:00:00.000Z",
+    "endDate": "2022-12-05T21:00:00.000Z",
     "location": "International-Online",
-    "link": "https://xrplimpact.devpost.com/?ref_feature=challenge&ref_medium=discover",
+    "link": "https://xrplnft.devpost.com/",
     "src": "/img/events/xprl-hack.png"
   },
   {
@@ -629,8 +629,8 @@
     "id": "codeup-hack",
     "title": "CodeUp-Hack-22",
     "description": "Accessing BlockChain Digital Economy",
-    "startDate": "2022-09-05T22:00:00.000Z",
-    "endDate": "2022-09-10T22:00:00.000Z",
+    "startDate": "2022-10-03T22:00:00.000Z",
+    "endDate": "2022-10-08T22:00:00.000Z",
     "location": "Nigeria",
     "link": "https://codeup-hack-22.devpost.com/",
     "src": "/img/events/codeup.png"
@@ -674,5 +674,46 @@
     "location": "International-Online",
     "link": "https://moralis.io/filecoin-hackathon/",
     "src": "/img/events/moralis-filecoin.png"
+  },
+  {
+    "id": "evm-idea",
+    "title": "EVMxIdeathon",
+    "description": "Ideas that inspire, hacking that transcends.",
+    "startDate": "2022-09-19T00:00:00.000Z",
+    "endDate": "2022-10-31T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://evmxideathon.devpost.com/",
+    "src": "/img/events/evmxld.png"
+  },
+  {
+    "id": "tron3-hack",
+    "title": "TRON Grand Hackathon - Season 3",
+    "description": "HackaTRON",
+    "startDate": "2022-09-20T00:00:00.000Z",
+    "endDate": "2022-11-14T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://trons3.devpost.com/",
+    "src": "/img/events/tron3-hack.png"
+  },
+  {
+    "id": "code-dao",
+    "title": "CodeDAO Web3 Hackathon",
+    "description": "Develop a next-generation fully decentralized Web3 application with CYFS, feel the power of a fully decentralized and free web.",
+    "startDate": "2022-10-15T00:00:00.000Z",
+    "endDate": "2022-10-21T00:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://codedao-web3-hackathon.devpost.com/",
+    "src": "/img/events/code-dao.png"
+  },
+  {
+    "id": "chainlink-fall2022",
+    "title": "Chainlink Hackathon Fall 2022",
+    "description": "No matter your experience level, the Chainlink Fall 2022 Hackathon has the resources and mentorship you need to take your development journey to the next level.",
+    "startDate": "2022-10-14T00:00:00.000Z",
+    "endDate": "2022-11-21T00:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://chain.link/hackathon?utm_medium=paid-search&utm_source=cpc&utm_campaign=FY22Q3-fall-hackathon&utm_content=&utm_term=brand",
+    "src": "/img/events/chainlink-fall2022.png"
   }
+  
 ]
