@@ -714,6 +714,47 @@
     "location": "International-Online",
     "link": "https://chain.link/hackathon?utm_medium=paid-search&utm_source=cpc&utm_campaign=FY22Q3-fall-hackathon&utm_content=&utm_term=brand",
     "src": "/img/events/chainlink-fall2022.png"
+  },
+  {
+    "id": "nft-sf",
+    "title": "NFT San Fracisco",
+    "description": "The conference will be the first of its kind in the Bay Area and aims to bring together a diverse group of NFT community members, including artists, investors, and entrepreneurs",
+    "startDate": "2022-10-31T00:00:00.000Z",
+    "endDate": "2022-10-31T23:00:00.000Z",
+    "location": "San Francisco",
+    "link": "https://nftsanfrancisco.xyz",
+    "src": "/img/events/nft-sf.png"
+  },
+  {
+    "id": "blokchain-summit",
+    "title": "World Blockchain Summit",
+    "description": "TWorld Blockchain Summit is a global series of elite gatherings that take place in 19+ destinations across the world.",
+    "startDate": "2022-10-17T00:00:00.000Z",
+    "endDate": "2022-10-181T23:00:00.000Z",
+    "location": "Dubai",
+    "link": "https://worldblockchainsummit.com/dubai/index",
+    "src": "/img/events/blockchain-summit.png"
+  },
+  {
+    "id": "crypto-expo",
+    "title": "Crypto Expo Dubai",
+    "description": "Join the Premier Cryptocurrency Event",
+    "startDate": "2022-10-05T00:00:00.000Z",
+    "endDate": "2022-10-061T23:00:00.000Z",
+    "location": "Dubai",
+    "link": "https://cryptoexpodubai.com",
+    "src": "/img/events/crypto-expo.png"
+  },
+  {
+    "id": "web3-conference",
+    "title": "Web3 Conference EU",
+    "description": "The web3 conference for Developers.",
+    "startDate": "2022-12-02T00:00:00.000Z",
+    "endDate": "2022-12-021T23:00:00.000Z",
+    "location": "Amsterdan",
+    "link": "https://web3conference.eu",
+    "src": "/img/events/web3-eu.png"
   }
+
   
 ]
