@@ -824,8 +824,35 @@
     "location": "International-Online",
     "link": "https://blockhack-global-fe-2022.devpost.com/",
     "src": "/img/events/blockhack.png"
+  },
+  {
+    "id": "web3-puerto-rico",
+    "title": "Web3 Hackathon Puerto Rico 2.0",
+    "description": "Driving the mass adoption of Web3 technologies in Puerto Rico.",
+    "startDate": "2022-11-11T00:00:00.000Z",
+    "endDate": "2022-12-06T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://web3-hackathon-pr-2-0.devpost.com/",
+    "src": "/img/events/puerto-rico.png"
+  },
+  {
+    "id": "castlethon",
+    "title": "Castlethon 4.0",
+    "description": "Innovation and entrepreneurship on the metaverse.",
+    "startDate": "2022-12-16T00:00:00.000Z",
+    "endDate": "2022-12-18T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://castlethon-4.devpost.com/",
+    "src": "/img/events/castle.png"
+  },
+  {
+    "id": "heroes-reborn",
+    "title": "Hack The League Chapter 2",
+    "description": "Heroes Reborn",
+    "startDate": "2023-01-21T00:00:00.000Z",
+    "endDate": "2023-01-22T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://hack-the-league-chapter-2.devpost.com/",
+    "src": "/img/events/league-2.png"
   }
-
-
-  
 ]
