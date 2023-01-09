@@ -854,5 +854,65 @@
     "location": "International-Online",
     "link": "https://hack-the-league-chapter-2.devpost.com/",
     "src": "/img/events/league-2.png"
+  },
+  {
+    "id": "hack-x",
+    "title": "Hackathon X",
+    "description": "Create a crypto app with its own unique voting for changes feature",
+    "startDate": "2022-12-30T00:00:00.000Z",
+    "endDate": "2023-02-01T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://x-hackathon.devpost.com/",
+    "src": "/img/events/hackathon-x.png"
+  },
+  {
+    "id": "icon-hack",
+    "title": "Icon Hyperbuild",
+    "description": "Transcend blockchain barriers and build your dream cross-chain project using one of the world's most connected networks, ICON.",
+    "startDate": "2023-01-26T00:00:00.000Z",
+    "endDate": "2023-03-16T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://iconhyperbuild.devpost.com/",
+    "src": "/img/events/icon-hack.png"
+  },
+  {
+    "id": "player3-hack",
+    "title": "Ready Player 3",
+    "description": "Join thousands of other builders for thirdweb's Gaming Hackathon! Build innovative web3 games with thirdweb's GamingKit and UnitySDK. Win up to $15,000 in prizes!",
+    "startDate": "2023-01-16T00:00:00.000Z",
+    "endDate": "2023-01-31T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://readyplayer3.devpost.com/",
+    "src": "/img/events/player3-hack.png"
+  },
+  {
+    "id": "soroban-hack",
+    "title": "Hacka-Soroban-athon",
+    "description": "Experiment, write smart contracts, build tools, and get familiar with Soroban's developer environment.",
+    "startDate": "2023-01-13T00:00:00.000Z",
+    "endDate": "2023-01-22T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://hacka-soroban-athon.devpost.com/",
+    "src": "/img/events/soroban-hack.png"
+  },
+  {
+    "id": "denver-event",
+    "title": "ETH Denver 2023",
+    "description": "WELCOME TO THE LARGEST AND LONGEST RUNNING ETH EVENT IN THE WORLD",
+    "startDate": "2023-02-24T00:00:00.000Z",
+    "endDate": "2023-03-05T23:00:00.000Z",
+    "location": "Denver",
+    "link": "https://www.ethdenver.com/",
+    "src": "/img/events/denver.png"
+  },
+  {
+    "id": "space-warp",
+    "title": "Filecoin Space Warp",
+    "description": "Space Warp is a jam-packed program leading up to the launch of Filecoin’s Virtual Machine on mainnet in Feb 2023.",
+    "startDate": "2023-01-20T00:00:00.000Z",
+    "endDate": "2023-02-10T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://spacewarp.fvm.dev/",
+    "src": "/img/events/space-hack.png"
   }
 ]
