@@ -914,5 +914,65 @@
     "location": "International-Online",
     "link": "https://spacewarp.fvm.dev/",
     "src": "/img/events/space-hack.png"
+  },
+  {
+    "id": "fantom-hack",
+    "title": "Fantom Hackathon Q1 2023",
+    "description": "Create innovative, scalable, and functional apps on Fantom.",
+    "startDate": "2023-01-25T00:00:00.000Z",
+    "endDate": "2023-03-08T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://fantomq12023.devpost.com/",
+    "src": "/img/events/fantom-hack.png"
+  },
+  {
+    "id": "hackfest-hack",
+    "title": "Hackfest - Advaita",
+    "description": "Build Great, Learn Larger",
+    "startDate": "2023-01-23T00:00:00.000Z",
+    "endDate": "2023-02-10T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://hackfest-advaita.devpost.com/",
+    "src": "/img/events/hackfest.png"
+  },
+  {
+    "id": "shr-hack",
+    "title": "#SHR Hack 2023",
+    "description": "Create identity solutions that would affect your day-to-day lives on campus.",
+    "startDate": "2023-02-06T00:00:00.000Z",
+    "endDate": "2023-03-06T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://shrhack2023.devpost.com/",
+    "src": "/img/events/shr-hack.png"
+  },
+  {
+    "id": "building-bitcoin",
+    "title": "Building on Bitcoin Hackathon",
+    "description": "A Smart Contract Challenge that lets you experiment and get familiar with Clarity's developer environment.",
+    "startDate": "2023-02-24T00:00:00.000Z",
+    "endDate": "2023-03-08T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://building-on-btc-hack.devpost.com/",
+    "src": "/img/events/clarity-hack.png"
+  },
+  {
+    "id": "openweb-gdl",
+    "title": "Open Web House GDL",
+    "description": "OWH es un Hackathon Presencial de 3 días enfocado a desarrolladores de software de Latonoamérica que quieran construir en WEB 3, desarrollar Smart Contracts, DApps, y mucho más.",
+    "startDate": "2023-03-06T00:00:00.000Z",
+    "endDate": "2023-03-08T23:00:00.000Z",
+    "location": "Mexico",
+    "link": "https://open-web-house-gdl.devpost.com/",
+    "src": "/img/events/openweb-hack.png"
+  },
+  {
+    "id": "treehack",
+    "title": "TreeHacks 2023",
+    "description": "Stanford University's Premier Hackathon - Join us to build apps, machines, and communities on Stanford Campus.",
+    "startDate": "2023-02-17T00:00:00.000Z",
+    "endDate": "2023-02-19T23:00:00.000Z",
+    "location": "Mexico",
+    "link": "https://treehacks-2023.devpost.com/",
+    "src": "/img/events/treehack.png"
   }
 ]
