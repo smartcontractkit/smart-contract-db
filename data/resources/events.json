@@ -971,8 +971,48 @@
     "description": "Stanford University's Premier Hackathon - Join us to build apps, machines, and communities on Stanford Campus.",
     "startDate": "2023-02-17T00:00:00.000Z",
     "endDate": "2023-02-19T23:00:00.000Z",
-    "location": "Mexico",
+    "location": "International-Online",
     "link": "https://treehacks-2023.devpost.com/",
     "src": "/img/events/treehack.png"
+  },
+  {
+    "id": "sustain-hack",
+    "title": "Sustainable Blockchain Hackathon",
+    "description": "Bringing together sustainability gurus and developers to build new solutions at the intersection of web3 and the environment!",
+    "startDate": "2023-02-20T00:00:00.000Z",
+    "endDate": "2023-04-02T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://sbsboston.devpost.com/",
+    "src": "/img/events/sustain.png"
+  },
+  {
+    "id": "eth-dubai",
+    "title": "ETHDubai x SushiSwap x Mantle Hackathon",
+    "description": "The Middle-East's biggest Ethereum hackathon",
+    "startDate": "2023-02-08T00:00:00.000Z",
+    "endDate": "2023-03-15T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://ethdubai-sushiswap-hackathon.devpost.com/",
+    "src": "/img/events/eth-dubai.png"
+  },
+  {
+    "id": "scrypto-defi",
+    "title": "Scrypto DeFi Challenge",
+    "description": "Build the next billion dollar decentralized application (dApp), built using Scrypto on Radix",
+    "startDate": "2023-02-20T00:00:00.000Z",
+    "endDate": "2023-03-24T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://scryptodefi.devpost.com/",
+    "src": "/img/events/radix.png"
+  },
+  {
+    "id": "xpr-ledger",
+    "title": "Unlocking the Potential of XRP Ledger",
+    "description": "Build a functional app using the XRPL's powerful features",
+    "startDate": "2023-02-15T00:00:00.000Z",
+    "endDate": "2023-03-24T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://unlockingxrpl.devpost.com/",
+    "src": "/img/events/ledger.png"
   }
 ]
