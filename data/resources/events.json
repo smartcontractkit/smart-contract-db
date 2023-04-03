@@ -1014,5 +1014,45 @@
     "location": "International-Online",
     "link": "https://unlockingxrpl.devpost.com/",
     "src": "/img/events/ledger.png"
+  },
+  {
+    "id": "dao-fi",
+    "title": "DAO-Fi Fusion: The DAO and DeFi Code Challenge",
+    "description": "Join this unique code challenge and revolutionize the way people collaborate in the future!",
+    "startDate": "2023-03-15T00:00:00.000Z",
+    "endDate": "2023-05-22T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://dao-fi-fusion-code-challenge.devpost.com/",
+    "src": "/img/events/dao-fusion.png"
+  },
+  {
+    "id": "protocol-labs",
+    "title": "Protocol Labs (Filecoin Green)-Sustainable Blockchain Hackathon",
+    "description": "Bringing together sustainability gurus and developers to build new solutions at the intersection of web3 and the environment!",
+    "startDate": "2023-02-20T00:00:00.000Z",
+    "endDate": "2023-04-06T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://sbsboston.devpost.com/",
+    "src": "/img/events/hack-boston.png"
+  },
+  {
+    "id": "theta-hackathon",
+    "title": "Theta Network 2023 Hackathon",
+    "description": "Theta is the leading blockchain in the media and entertainment space. Join us in building products, integrations and tools for the Theta ecosystem!",
+    "startDate": "2023-03-27T00:00:00.000Z",
+    "endDate": "2023-05-26T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://theta2023.devpost.com/",
+    "src": "/img/events/theta.png"
+  },
+  {
+    "id": "chainlink-spring-2023",
+    "title": "Chainlink Spring 2023 Hackathon",
+    "description": "New tools. Bigger ideas. Limitless opportunities. Web3 builders have more tools than ever before. Now is the time to build the next breakthrough dApp.",
+    "startDate": "2023-04-28T00:00:00.000Z",
+    "endDate": "2023-06-09T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://chain.link/hackathon",
+    "src": "/img/events/chainlink-spring.png"
   }
 ]
