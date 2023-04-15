@@ -558,7 +558,6 @@
     "link": "https://universe-two-haeckathon.devpost.com/",
     "src": "/img/events/aeternity-hackathon.png"
   },
-
   {
     "id": "web3-puerto-rico",
     "title": "Web3 Hackathon Puerto Rico",
@@ -569,7 +568,6 @@
     "link": "https://web3hackathonpr.devpost.com/",
     "src": "/img/events/web3-puerto-rico.png"
   },
-
   {
     "id": "metafi-hack",
     "title": "MetaFi The CoinEx Smart Chain Challenge",
@@ -580,7 +578,6 @@
     "link": "https://cscchallenge.devpost.com/",
     "src": "/img/events/metefi-hackathon.png"
   },
-
   {
     "id": "eth-warsaw",
     "title": "ETHWarsaw",
@@ -591,7 +588,6 @@
     "link": "https://ethwarsaw.devpost.com/",
     "src": "/img/events/eth-warsaw.png"
   },
-
   {
     "id": "moonbean-hack",
     "title": "Moonbeam Connected Contracts",
@@ -602,7 +598,6 @@
     "link": "https://moonbeam.devpost.com/",
     "src": "/img/events/moonbean-hack.png"
   },
-
   {
     "id": "pli-blockathon",
     "title": "PLI BLOCKATHON INDIA 22",
@@ -613,7 +608,6 @@
     "link": "https://plugin.devpost.com/",
     "src": "/img/events/pli-blockathon.png"
   },
-
   {
     "id": "near-hack",
     "title": "NEAR MetaBUILD III Hackathon",
@@ -624,7 +618,6 @@
     "link": "https://metabuild.devpost.com/",
     "src": "/img/events/near-hack.png"
   },
-
   {
     "id": "codeup-hack",
     "title": "CodeUp-Hack-22",
@@ -1054,5 +1047,45 @@
     "location": "International-Online",
     "link": "https://chain.link/hackathon",
     "src": "/img/events/chainlink-spring.png"
+  },
+  {
+    "id": "fvm-hack",
+    "title": "FVM Dataverse Hack",
+    "description": "Build the new data economy with the Filecoin Virtual Machine",
+    "startDate": "2023-05-01T00:00:00.000Z",
+    "endDate": "2023-05-24T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://fvmdataverse.devpost.com",
+    "src": "/img/events/fvm-hack.png"
+  },
+  {
+    "id": "consensus-event",
+    "title": "Consensus 2023",
+    "description": "Consensus is organized by CoinDesk, a leading crypto wallet used to trade multiple digital currencies. It is the longest-running gathering of blockchain, crypto, and Web3 enthusiasts.",
+    "startDate": "2023-04-26T00:00:00.000Z",
+    "endDate": "2023-04-28T23:00:00.000Z",
+    "location": "Auistin Texas",
+    "link": "https://consensus.coindesk.com",
+    "src": "/img/events/coindesk.png"
+  },
+  {
+    "id": "blockchain-economy",
+    "title": "Blockchain Economy Istanbul Summit",
+    "description": "This year’s speakers include the Managing Director of Financial Market at OKX, the CMO at BIT.com. It’s guaranteed to be a fun-filled, value-laden two-day summit where you can forge new connections and gain valuable insights.",
+    "startDate": "2023-05-08T00:00:00.000Z",
+    "endDate": "2023-05-11T23:00:00.000Z",
+    "location": "Istanbul, Turkey",
+    "link": "https://blockchaineconomy.istanbul/en",
+    "src": "/img/events/blockchain-economy.png"
+  },
+  {
+    "id": "blockchain-expo",
+    "title": "Blockchain Expo North America",
+    "description": "After a successful 2022 run, the Blockchain Expo North America is back for its 2023 edition. Leading digital experts will grace the event to explore critical blockchain technologies and approaches that will help businesses use this emerging tech for their business growth.",
+    "startDate": "2023-05-17T00:00:00.000Z",
+    "endDate": "2023-05-18T23:00:00.000Z",
+    "location": "Santa Clara Convention Centre (California, USA)",
+    "link": "https://blockchain-expo.com/northamerica/",
+    "src": "/img/events/blockchain-expo.png"
   }
 ]
