@@ -31,7 +31,7 @@
 
 .listItem:hover > .link > div > .title > .listItemTitle {
   transform: translate(0.75rem);
-  width: 97%;
+  width: 95%;
 }
 
 .listItemArrowIcon {
