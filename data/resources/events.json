@@ -1088,5 +1088,45 @@
     "location": "Santa Clara Convention Centre (California, USA)",
     "link": "https://blockchain-expo.com/northamerica/",
     "src": "/img/events/blockchain-expo.png"
+  },
+  {
+    "id": "delphi-hack",
+    "title": "Delphi Labs Cosmos Hackathon",
+    "description": "Pitch your idea and team for a chance to win prizes and a spot in the upcoming Delphi Labs Accelerator",
+    "startDate": "2023-05-01T00:00:00.000Z",
+    "endDate": "2023-06-09T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://delphilabs.devpost.com",
+    "src": "/img/events/delphi.png"
+  },
+  {
+    "id": "hackonchain-hack",
+    "title": "HackOnChain Blockchain Hackathon",
+    "description": "Build the future of blockchain: L2s, privacy and analytics",
+    "startDate": "2023-05-26T00:00:00.000Z",
+    "endDate": "2023-06-28T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://hackonchain-warsaw.devpost.com",
+    "src": "/img/events/hackonchain.png"
+  },
+  {
+    "id": "olympi-hack",
+    "title": "OlympiHacks",
+    "description": "Improvise, adapt, overcome. Olympians advancing the adoption of technology.",
+    "startDate": "2023-05-19T00:00:00.000Z",
+    "endDate": "2023-06-21T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://olympihacks.devpost.com",
+    "src": "/img/events/olympi.png"
+  },
+  {
+    "id": "oepnweb-hack",
+    "title": "Open Web House MTY ft. CriptoMexico",
+    "description": "Open Web House es un evento IRL enfocado a entusiastas de la blockchain que quieran sumarse como constructores de la web 3.0. No te pierdas esta edición ft CriptoMéxico",
+    "startDate": "2023-05-23T00:00:00.000Z",
+    "endDate": "2023-06-27T23:00:00.000Z",
+    "location": "International-Online",
+    "link": "https://owh-mty-ft-criptomexico.devpost.com",
+    "src": "/img/events/openweb.png"
   }
 ]
