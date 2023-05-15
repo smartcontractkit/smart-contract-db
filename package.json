@@ -38,7 +38,7 @@
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.3.12",
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^8.0.1",
     "@types/gtag.js": "0.0.8",
     "@types/react": "17.0.36",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
