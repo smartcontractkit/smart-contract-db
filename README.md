@@ -1,3 +1,5 @@
+This repostitory has been archived. For learning resources please refer to https://github.com/smartcontractkit/blockchain-developer-hub
+-----------------------------------------------
 # Resources for Learning About Smart Contracts
 
 Smart Contract DB is a resources archive for learning and sharing about smart contracts and crypto. Here you'll find events, courses, and other learning materials. This archive is intended for use by developers and anyone seeking to learn more about the crypto world.
